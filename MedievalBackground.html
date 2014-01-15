@@ -1,0 +1,499 @@
+<!DOCTYPE html>  
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>MedievalBackground</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+/*
+This document has been created with Marked.app <http://markedapp.com>, Copyright 2011 Brett Terpstra
+Please leave this notice in place, along with any additional credits below.
+---------------------------------------------------------------
+Title: Avenue
+Author: Bram de Haan <http://atelierbramdehaan.nl>
+Description: modern retro
+ */
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+a img {
+  border: none;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+button, input {
+  line-height: normal;
+}
+button, input, select, textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  /* vertical-align: middle; */
+}
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+  cursor: pointer;
+  /* overflow: visible; */
+}
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  padding: 0 !important;
+}
+#wrapper {
+  margin-bottom: 0;
+}
+#wrapper img {
+  max-width: 100%;
+  height: auto;
+}
+#wrapper dd {
+  margin-bottom: 1em;
+}
+#wrapper li > p:first-child {
+  margin: 0;
+}
+#wrapper caption, #wrapper col, #wrapper colgroup, #wrapper table, #wrapper tbody, #wrapper td, #wrapper tfoot, #wrapper th, #wrapper thead, #wrapper tr {
+  border-spacing: 0;
+}
+#wrapper table {
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-collapse: collapse;
+  display: table;
+  empty-cells: hide;
+  margin: -1px 0 23px;
+  padding: 0;
+  table-layout: fixed;
+  width: 100%;
+}
+#wrapper caption {
+  display: table-caption;
+  font-weight: 700;
+}
+#wrapper col {
+  display: table-column;
+}
+#wrapper colgroup {
+  display: table-column-group;
+}
+#wrapper tbody {
+  display: table-row-group;
+}
+#wrapper tfoot {
+  display: table-footer-group;
+}
+#wrapper thead {
+  display: table-header-group;
+  border-bottom: solid 1px #999;
+}
+#wrapper td, #wrapper th {
+  display: table-cell;
+}
+#wrapper tr {
+  display: table-row;
+}
+#wrapper table th, #wrapper table td {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  padding: 0 1em;
+}
+#wrapper dt, #wrapper th {
+  font-weight: 700;
+}
+#wrapper dd {
+  padding-left: 1.4em;
+}
+#wrapper table tr:nth-child(even) {
+  background: rgba(200, 200, 200, 0.25);
+}
+#wrapper figure {
+  display: inline-block;
+  position: relative;
+  margin: 1em 0 2em;
+}
+#wrapper figcaption {
+  font-family: AvenirNext-Italic, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  font-style: italic;
+  text-align: center;
+}
+#wrapper figure:hover > figcaption {
+  /* background: rgba(0,0,0,1) */
+}
+/* #wrapper pre { moved down to base styles; } */
+.poetry #wrapper pre {
+  display: block;
+  font-family: Georgia, Garamond, serif !important;
+  font-size: 110% !important;
+  font-style: italic;
+  line-height: 1.6;
+  margin-left: 1em;
+}
+.poetry #wrapper pre code {
+  font-family: Georgia, Garamond, serif !important;
+
+}
+#wrapper sup, #wrapper sub, #wrapper a.footnote {
+  font-size: 1.4ex;
+  height: 0;
+  line-height: 1;
+  position: relative;
+  vertical-align: super;
+}
+#wrapper sub {
+  vertical-align: sub;
+  top: -1px;
+}
+#wrapper .footnote {
+  font-size: .8rem;
+  vertical-align: super;
+}
+#wrapper .footnotes p {
+  font-size: 1.9ex;
+}
+#wrapper ul ul {
+  margin-left: 1em;
+}
+
+#wrapper ul ul,
+#wrapper ol ol {
+  margin-left: 1em;
+}
+#wrapper li ul,
+#wrapper li ol {
+  margin-bottom: 0;
+}
+
+@media print {
+  body {
+    overflow: auto;
+  }
+
+  img, pre, blockquote, table, figure, p {
+    page-break-inside: avoid;
+  }
+
+  #wrapper {
+    background: #fff;
+    color: #000;
+    font-size: 85%;
+    padding: 10px;
+    position: relative;
+    text-indent: 0;
+  }
+}
+
+@media screen {
+  .inverted, .inverted #wrapper {
+    background: #222;
+  }
+  .inverted pre,
+  .inverted img {
+    border-color: #111;
+    background: #1a1a1a;
+  }
+  .inverted pre * {
+    background: #1a1a1a !important;
+  }
+
+  .inverted hr {
+    border-color: #999 !important;
+  }
+
+  .inverted p, .inverted td, .inverted li, .inverted h1, .inverted h2, .inverted h3, .inverted h4, .inverted h5, .inverted h6, .inverted pre, .inverted code, .inverted th, .inverted .math, .inverted caption, .inverted dd, .inverted dt {
+    color: #f9f9f9 !important;
+  }
+
+  .inverted table tr:nth-child(odd), .inverted table th:nth-child(odd), .inverted table td:nth-child(odd) {
+    background: none;
+  }
+
+  .inverted a {
+    color: #ff5778;
+  }
+}
+.max-width {
+  max-width: 100%;
+  height: auto;
+}
+/* ::Base styles Almost exclusively single element selectors */
+/* ------------------------------------------------------------ */
+html {
+  font-size: 100%;
+}
+body {
+  font: 100%/1.388 AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  color: #111;
+  padding: 0 5% 1rem !important;
+}
+a {
+  color: crimson;
+}
+a:hover, a:focus, a:active {
+  color: #ff2450;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: AvenirNextCondensed-DemiBold, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  /* margin: 0; */
+  padding: .5em 0 0;
+}
+h2, h3, h4, h5 {
+  border-bottom: 1px solid #777;
+}
+h1 {
+  font-size: 2.25rem;
+  line-height: 1.11111;
+}
+h2 {
+  font-size: 1.875rem;
+  line-height: 1.33333;
+}
+h3 {
+  font-size: 1.375rem;
+  line-height: 1.45455;
+}
+h4 {
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+h5 {
+  font-size: 1.125rem;
+  line-height: 1.33333;
+}
+h6 {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+pre, label {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+p {
+  font-size: 1.388rem;
+  line-height: 1.33333;
+  /* margin: 0; */
+  padding: .5em 0;
+  max-width: 30em;
+}
+h2 + p,
+h3 + p,
+h4 + p,
+h5 + p {
+  padding-top: 0;
+  margin-top: 1px;
+  border-top: 1px solid #999;
+}
+ol, ul {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0 0 2em 0;
+}
+li {
+  line-height: auto;
+}
+pre {
+  display: block;
+  margin: 1.4em auto;
+  background: #fcf9f1;
+  /* f9f9f9; */
+  padding: 15px 10px 10px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  border: solid 1px  #f0e0b2;
+  font-family: Consolas, Menlo, Monaco, monospace !important;
+  font-size: .875rem;
+  max-width: 90%;
+}
+pre * {
+  background: #fcf9f1 !important;
+}
+code {
+  font-family: Consolas, Menlo, Monaco, monospace;
+}
+ul {
+  list-style-position: outside;
+  list-style-type: square;
+}
+ol {
+  list-style-position: outside;
+  list-style-type: decimal;
+}
+strong, b {
+  font-family: AvenirNext-Bold, AvenirNextCondensed-DemiBold, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  font-weight: 600;
+}
+em, i, q {
+  font-family: AvenirNext-BoldItalic, AvenirNext-Italic, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  font-style: italic;
+}
+blockquote {
+  padding-left: 1em;
+  border-left: 0.3125em solid #c0c0c0;
+  line-height: normal;
+  /* margin: 0; */
+}
+blockquote p {
+  font-family: AvenirNext-Italic, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  font-style: italic;
+  /* margin: 0; */
+  font-size: 1.25rem;
+  line-height: 1.2;
+  margin: 1.2em 0 1.2em 0;
+}
+img {
+ padding: 1em;
+ background-color: #e6e6e6;
+ border: 1px solid #ddd;
+ -webkit-border-radius: 3px;
+ -moz-border-radius: 3px;
+ -o-border-radius: 3px;
+ border-radius: 3px;
+}
+
+@media screen and (max-width: 750px) {
+  -webkit-text-size-adjust: none;
+}
+
+#generated-toc-clone,#generated-toc{display:none!important}
+
+</style>
+<style>#wrapper { max-width:800px; margin:0 auto }</style>
+</head>
+<body class="normal poetry firstload">
+  <div id="wrapper">
+      <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Class notes 1/14 – do not cite or circulate" />
+  <title>Notes on the Medieval Background</title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+<div id="header">
+<h1 class="title">Notes on the Medieval Background</h1>
+<h2 class="author">Class notes 1/14 – do not cite or circulate</h2>
+</div>
+<div id="">
+<ul>
+<li><a href="#medieval-philosophy"><span class="toc-section-number">1</span> Medieval Philosophy</a><ul>
+<li><a href="#hylomorphism"><span class="toc-section-number">1.1</span> Hylomorphism</a></li>
+<li><a href="#demonstrative-science"><span class="toc-section-number">1.2</span> Demonstrative Science</a></li>
+<li><a href="#aristotelian-empiricism"><span class="toc-section-number">1.3</span> Aristotelian Empiricism</a></li>
+<li><a href="#the-four-causes"><span class="toc-section-number">1.4</span> The Four Causes</a></li>
+<li><a href="#cosmology"><span class="toc-section-number">1.5</span> Cosmology</a></li>
+</ul></li>
+</ul>
+</div>
+<h1 id="medievalphilosophy"><a href="#medieval-philosophy"><span class="header-section-number">1</span> Medieval Philosophy</a></h1>
+<p>The philosophical doctrines to which the moderns were primarily reacting were those of the ‘School’ philosophies as advocated by teachers or “<a href="http://en.wikipedia.org/wiki/Scholasticism">scholastics</a>” at the major univerisities of the medieval era (Oxford, Cambridge, Paris, Bologna, Salamanca). These centers of learning trained for the main professions (medicine, law, and theology) and ‘natural philosophy’ via a ‘liberal arts’ curriculum of (trivium) grammer, rhetoric, and logic, and (quadrivium) mathematics, geometry, astronomy, and music. Scholastic philosophy thus constituted the primary set of philosophical doctrines in the <a href="http://plato.stanford.edu/entries/medieval-philosophy/">medieval period</a>.</p>
+<p>The period of scholastic philosophy which would have had the greatest influence on the modern period roughly begins with <a href="http://plato.stanford.edu/entries/augustine/">Augustine</a> (354–430), and the synthesis of Christian and classical Greek philosophy, and ends with <a href="http://plato.stanford.edu/entries/aquinas/">Aquinas</a> (1225–1274), who combined Catholic doctrine with Aristotelian metaphysics in original and influential ways. Subsequent to Aquinas’s death, scholastic doctrine would see criticism from both within and without, and radically decline in influnce through the end of the sixteenth century, only to have its fortunes briefly revived in the seventeenth century in the work of figures like <a href="http://en.wikipedia.org/wiki/Francisco_Suárez">Francisco Suárez</a> (1548–1617).</p>
+<p>Scholastic philosophy cannot be easily characterized. Philosophers from the scholastic period occupied a bewildering array of positions regarding a variety of issues in <a href="http://plato.stanford.edu/entries/skepticism-medieval/">epistemology</a>, <a href="http://plato.stanford.edu/entries/medieval-syllogism/">logic</a>, <a href="http://plato.stanford.edu/entries/medieval-terms/">philosophy of language</a>, <a href="http://plato.stanford.edu/entries/representation-medieval/">philosophy of mind</a>, and <a href="http://plato.stanford.edu/entries/universals-medieval/">metaphysics</a>. However, there were several general doctrines or methods of inquiry which were broadly shared by the scholastics, and were gradually modified, questioned, and ultimately rejected, by modern philosophical theory.</p>
+<h2 id="hylomorphism"><a href="#hylomorphism"><span class="header-section-number">1.1</span> Hylomorphism</a></h2>
+<p>Aristotle’s <a href="http://plato.stanford.edu/entries/aristotle/#Hyl">hylomorphism</a> is a central part of his philosophy, and one of the most influential parts of his overall doctrine. Its basic conceptual vocabulary was retained not only in the medieval period, but also well into the modern period.</p>
+<p>The doctrine of matter and form, which is the basis of hylomorphism, is best illustrated by examples. Consider two types of change. First, there is <em>generative</em> change, as in the building of a house where none existed before, or the conception of a child. Second, there is <em>qualitative</em> change, wherein something which already exists is altered, as when a piece of fruit changes color, or a person gets older. Aristotle endorsed a principle, popular in both his time and in the modern era (and in <a href="http://www.nytimes.com/2012/03/25/books/review/a-universe-from-nothing-by-lawrence-m-krauss.html">contemporary physics</a> as well) that nothing can come from nothing. So he needed to explain both generative and qualitative change in a way which didn’t violate this principle. This meant explaining change in terms of (i) something underlying and persisting; and (ii) something gained or lost (<span class="citation">Shields (2007)</span>, ch. 2). These correspond to Aristotle’s notions of <em>matter</em> and <em>form</em> respectively. Matter is what persists through all change, like the bricks of a house. And form is what may be gained or lost, either in alteration (losing the form <em>young</em> and gaining the form <em>old</em>) or in generation (losing the form <em>lump</em> and gaining the form <em>statue</em>).</p>
+<p>The notions of matter and form are paired with two other notions, that of potentiality and actuality. Matter is something that potentially has some feature F, as a lump of bronze may potentially take the shape of a statue. Form is that which makes some bit of matter, which is potentially F, <em>actually</em> F (literally, in the case of the statue, less literally in the case of, e.g., a human being.). See <a href="http://plato.stanford.edu/entries/aristotle/#Hyl">Shields’ discussion</a> for further explanation and citation.</p>
+<p>The basic unit of explanation for Aristotle is called a <a href="http://plato.stanford.edu/entries/aristotle/#Sub"><em>substance</em></a>. Since all the substances in nature, including human beings, exhibit change, all substances are complexes of matter and form. The form possessed by a some parcel of matter determines it as the kind of thing that it is, e.g. determines a bit of matter as <em>gold</em> or as <em>living</em>. Substances, their features, and their behavior, are the subject matter of any proper science, so we should look now at the structure of Aristotelian science.</p>
+<h2 id="demonstrativescience"><a href="#demonstrative-science"><span class="header-section-number">1.2</span> Demonstrative Science</a></h2>
+<p>Our contemporary notion of scientific knowledge only came into existence in the 19th century. Before then, and going back to <a href="http://plato.stanford.edu/entries/aristotle/">Aristotle</a>, the dominant conception of theoretical knowledge known as ‘<em>Scientia</em>’ (Greek: ‘<em>Epistêmê</em>’) concerned any body of knowledge organized according to some principle or set of principles which exemplified the explanatory relations of what was best known and explanatorily basic, from what was least known and explanatorily derivative (cf. <span class="citation">Jardine (1988)</span>; <span class="citation">Randall (1961)</span>; <span class="citation">De Jong and Betti (2010)</span>). A ‘science’ was thus distinguished from a mere aggregate of known facts in virtue of the presence of such explanatory connections between facts.</p>
+<p>For example, when asked why trees lose their leaves in the fall, one might reply, “because the wind blows them off”. One might even label trees which feature this characteristic as <a href="http://en.wikipedia.org/wiki/Deciduous">‘deciduous’</a>. Neither the label, in and of itself, nor the description would be a particularity deep or fruitful form of explanation. A better one would be one that articulated <em>why</em> there is this connection between season and plant behavior. For example that diminished sunlight in the autumn inhibits the production of chlorophyll, which is required for photosynthesis, and without photosynthesis trees go dormant. Now the ‘deciduous’ label has a more explanatory role. We can deduce, from the fact that a tree is deciduous, that it has certain characteristics, and that these characteristics play an important explanatory role in understanding the tree’s behavior. Not only that, but the explanation is also importantly <em>asymmetrical</em> in nature. A tree is deciduous in virtue of its failure to produce chlorophyll at particular times, and in turn, this lack of chlorophyll production explain why it fails to photosynthesize, rather than the other way around.</p>
+<p>Aristotle puts it this way:</p>
+<blockquote>
+<p>We suppose ourselves to possess unqualified scientific knowledge of a thing, as opposed to knowing it in the accidental way in which the sophist knows, when we think that we know the cause on which the fact depends, as the cause of that fact and of no other, and, further, that the fact could not be other than it is….The proper object of unqualified scientific knowledge is something which cannot be other than it is. (Aristotle, Posterior Analytics, I.2)</p>
+</blockquote>
+<p>Note that Aristotle believed that scientific explanation not only captures asymmetrical explanatory relations but also ones which are, in some sense, <em>necessary</em>. One way in which this is captured is via <a href="http://plato.stanford.edu/entries/aristotle-logic/">syllogism</a>. A syllogism is an argument from which a conclusion logically follows from some set of premises or assumptions. In Aristotle’s logic (and in the logic used into the early modern era) the premises were typically understood to be things that were already known. So a conclusion C follows from some premises A and B, if and only if it is impossible for C to be false while A and B are true (and known). Hence, Aristotle takes proper scientific explanation to be structured in the manner of a logical derivation, where, from basic knowledge, one derives other knowledge via logical argument. As Chris Shields <a href="http://plato.stanford.edu/entries/aristotle/#Sci">puts it</a></p>
+<blockquote>
+<p>the currency of science is demonstration (<em>apodeixis</em>), where a demonstration is a deduction with premises revealing the causal structures of the world, set forth so as to capture what is necessary and to reveal what is better known and more intelligible by nature (APo 71b33–72a5, Phys. 184a16–23, EN 1095b2–4).</p>
+</blockquote>
+<p>Hence, the structure of scientific knowledge is <em>demonstrative</em> and its demonstrations exhibit asymmetric explanatory relations between the things known. The demonstrative structure of scientific knowledge raises the problem of how such demonstrations get started. How do we know the premises of a demonstrative argument? As Aristotle puts it:</p>
+<blockquote>
+<p>Some people think that since knowledge obtained via demonstration requires the knowledge of primary things, there is no knowledge. Others think that there is knowledge and that all knowledge is demonstrable. Neither of these views is either true or necessary. The first group, those supposing that there is no knowledge at all, contend that we are confronted with an infinite regress. They contend that we cannot know posterior things because of prior things if none of the prior things is primary. Here what they contend is correct: it is indeed impossible to traverse an infinite series. Yet, they maintain, if the regress comes to a halt, and there are first principles, they will be unknowable, since surely there will be no demonstration of first principles—given, as they maintain, that only what is demonstrated can be known. But if it is not possible to know the primary things, then neither can we know without qualification or in any proper way the things derived from them. Rather, we can know them instead only on the basis of a hypothesis, to wit, <em>if</em> the primary things obtain, then so too do the things derived from them. The other group agrees that knowledge results only from demonstration, but believes that nothing stands in the way of demonstration, since they admit circular and reciprocal demonstration as possible. (<em>APo</em>. 72b5–21)</p>
+</blockquote>
+<p>Aristotle argues that at least some knowledge is basic and non-demonstrative.</p>
+<blockquote>
+<p>We contend that not all knowledge is demonstrative: knowledge of the immediate premises is indemonstrable. Indeed, the necessity here is apparent; for if it is necessary to know the prior things, that is, those things from which the demonstration is derived, and if eventually the regress comes to a standstill, it is necessary that these immediate premises be indemonstrable. (APo. 72b21–23)</p>
+</blockquote>
+<p>Specifically, Aristotle believed that we reliably gained knowledge of the world via the senses, which then allowed for the subsumption of particulars known via the senses under universals (categories, kinds, attributes), which itself allowed for propositional knowledge of the kind found in syllogistic argument. We’ll discuss some of these points below.</p>
+<p>The issue of whether science is demonstrative, and whether there is non-demonstrative knowledge of first principles, becomes a major issue in the 17th and 18th centuries. We’ll see this especially in our study of Descartes and Locke. Central exemplars of demonstrative science include geometry and basic number theory. A major question in the 17th and 18th centuries concerned whether there was a demonstrative science of nature (physics) and whether there was a demonstrative science of morality.</p>
+<h2 id="aristotelianempiricism"><a href="#aristotelian-empiricism"><span class="header-section-number">1.3</span> Aristotelian Empiricism</a></h2>
+<p>One of the central doctrines of Aristotelianism was a form of empiricism. Repeated in the scholastic era via the motto ‘<em>nihil est in intellectu quod prius non fuit in sensu</em>’ (nothing in the intellect that was not first in the senses), this means that all knowledge must ultimately be sensory knowledge, or put another way, that all knowledge is grounded in sensory experience. This in turn require two things. First, reality, if we are to know it in the way demanded by proper science, must be essentially sensible. Second, our sensory faculties (vision, touch, smell, etc.) must be reliable in bringing us into cognitive contact with reality. If our sensory apprehension of reality systematically distorts its character, or otherwise causes us to have false beliefs concerning reality, then we cannot rely it in the acquisition of knowledge. Hence the questions of whether knowledge is grounded in experience, and whether the senses are a reliable means of apprehending reality, would be central to the philosophical systems of modern thinkers such as Descartes, Locke, Leibniz, Hume and Kant.</p>
+<h2 id="thefourcauses"><a href="#the-four-causes"><span class="header-section-number">1.4</span> The Four Causes</a></h2>
+<p>Aristotle articulates an explanatory scheme involving four distinct notions of ‘cause’. He puts it this way in his <em>Physics</em>:</p>
+<blockquote>
+<p>One way in which cause is spoken of is that out of which a thing comes to be and which persists, e.g. the bronze of the statue, the silver of the bowl, and the genera of which the bronze and the silver are species.</p>
+<p>In another way cause is spoken of as the form or the pattern, i.e. what is mentioned in the account (logos) belonging to the essence and its genera, e.g. the cause of an octave is a ratio of 2:1, or number more generally, as well as the parts mentioned in the account (logos).</p>
+<p>Further, the primary source of the change and rest is spoken of as a cause, e.g. the man who deliberated is a cause, the father is the cause of the child, and generally the maker is the cause of what is made and what brings about change is a cause of what is changed.</p>
+<p>Further, the end (telos) is spoken of as a cause. This is that for the sake of which (hou heneka) a thing is done, e.g. health is the cause of walking about. ‘Why is he walking about?’ We say: ‘To be healthy’— and, having said that, we think we have indicated the cause. (Phys. 194b23–35)</p>
+</blockquote>
+<p>This results in four distinct kinds of explanation, which answer four questions—viz., <em>what is it?</em>, <em>what is it made of?</em>, <em>what brought it about?</em>, and <em>what is it for?</em> :</p>
+<ol style="list-style-type: decimal">
+<li>The <strong>material cause</strong>: that from which something is generated and out of which it is made, e.g. the bronze of a statue.</li>
+<li>The <strong>formal cause</strong>: the structure which the matter realizes and in terms of which it comes to be something determinate, e.g., the shape of the president, in virtue of which this quantity of bronze is said to be a statue of a president.</li>
+<li>The <strong>efficient cause</strong>: the agent responsible for a quantity of matter’s coming to be informed, e.g. the sculptor who shaped the quantity of bronze into its current shape, the shape of the president.</li>
+<li>The <strong>final cause</strong>: the purpose or goal of the compound of form and matter, e.g. the statue was created for the purpose of honoring the president.</li>
+</ol>
+<p>According to Aristotle, citation of the four causes is both <em>necessary</em> and <em>sufficient</em> for providing an adequate explanation. As <a href="http://plato.stanford.edu/entries/aristotle/#FouCauAccExpAde">Shields</a> points out, since not all four causes are present in every instance to be explained, it cannot be that <em>all four</em> are necessary for an adequate explanation.</p>
+<blockquote>
+<p>for example, coincidences lack final causes, since they do not occur for the sake of anything; that is, after all, what makes them coincidences. If a debtor is on his way to the market to buy milk and she runs into her creditor, who is on his way to the same market to buy bread, then she may agree to pay the money owed immediately. Although resulting in a wanted outcome, their meeting was not for the sake of settling the debt; nor indeed was it for the sake of anything at all. It was a simple co-incidence. Hence, it lacks a final cause. (<span class="citation">Shields (2013)</span>)</p>
+</blockquote>
+<p>One of the central disputes in the modern era concerns whether anything more than material and efficient causal explanations are needed in an adequate science of nature. A characteristic position taken by Descartes, Locke, Spinoza, and others is that there are no unambiguous formal explanations and that there are no final causes other than those explicitly dependent on the will of human beings (this latter position is especially clear in Spinoza and, in slightly weaker form, Kant).</p>
+<h2 id="cosmology"><a href="#cosmology"><span class="header-section-number">1.5</span> Cosmology</a></h2>
+<p>The theory of the heavens and the place of the Earth in the universe was relatively stable until near the end of the Renaissance, when Copernicus, Galileo, Kepler, and others argued that the Earth and other planets and stars moved through space, and via imperfect (i.e. elliptical) orbits (<span class="citation">Kuhn (1957)</span>).</p>
+<p>Before Copernicus, the dominant geocentric model, articulated by <a href="http://en.wikipedia.org/wiki/Ptolemy#Astronomy">Claudius Ptolemy</a>, in which the entire universe rotated on a series of fixed ‘<a href="http://en.wikipedia.org/wiki/Celestial_spheres">celestial spheres</a>’ in which were embedded all the stars and planets. The various ‘spheres’ operated according to different laws. For example, material decay was a feature only of matter in the ‘sublunary’ sphere (i.e. in proximity to the Earth). The material (the aether) which constituted the rest of the ‘superlunary’ world (i.e. the world beyond the moon) was incorruptible. This idea that there were different laws for different parts of the cosmos would be radically challenged by Descartes, Newton, and Kant.</p>
+<p>There were considered to be four fundamental qualities of things (related to <a href="http://plato.stanford.edu/entries/empedocles/">Empedocles’s</a> four elements), viz., <em>hot</em>, <em>cold</em>, <em>wet</em>, and <em>dry</em>. The combination of these qualities gives rise to (and thus explain) the four elements (earth [cold, dry], air [hot, wet], water [cold, wet], and fire [hot, dry]) and to all the other sensible qualities of things (e.g. texture, color, odor, taste, etc.). Aristotle thus considered hot, cold, wet, and dry the <em>primary qualities</em>, with other qualities, such as texture being <em>secondary</em>. <a href="http://plato.stanford.edu/entries/boyle/">Robert Boyle</a> and <a href="http://plato.stanford.edu/entries/locke/">John Locke</a> would go on to radically revise this model of explanation (see <a href="http://www.earlymoderntexts.com/pdfs/locke1690book2_1.pdf"><em>Essay</em>, II.8</a>). They would retain a primary/secondary distinction but revise the membership of these categories.</p>
+<p><strong>References</strong></p>
+<div class="references">
+<p>De Jong, Willem R., and Arianna Betti. 2010. “The Classical Model of Science: a Millennia-Old Model of Scientific Rationality.” <em>Synthese</em> 174 (2): 185–203. <a href="http://link.springer.com/article/10.1007/s11229-008-9417-4">http://link.springer.com/article/10.1007/s11229-008-9417-4</a>.</p>
+<p>Jardine, Nicholas. 1988. “Epistemology of the Sciences.” In <em>The Cambridge History of Renaissance Philosophy</em>, edited by Charles B. Schmitt, Quentin Skinner, Eckhard Kessler, and Jill Kraye, 685–711. Cambridge: Cambridge University Press.</p>
+<p>Kuhn, Thomas S. 1957. <em>The Copernican Revolution: Planetary Astronomy in the Development of Western Thought</em>. Cambridge, MA: Harvard University Press.</p>
+<p>Randall, John Herman. 1961. <em>The School of Padua: and the Emergence of Modern Science</em>. Padova: Editrice Antenore.</p>
+<p>Shields, Christopher. 2007. <em>Aristotle</em>. London: Routledge.</p>
+<p>———. 2013. “Aristotle.” In <em>The Stanford Encyclopedia of Philosophy</em>, edited by Edward N. Zalta, Winter 2013. <a href="http://plato.stanford.edu/archives/win2013/entries/aristotle/">http://plato.stanford.edu/archives/win2013/entries/aristotle/</a>.</p>
+</div>
+</body>
+</html>
+
+<!-- ##END MARKED WRAPPER## -->
+    </div>
+</body>
+</html>
