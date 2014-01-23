@@ -1,0 +1,532 @@
+<!DOCTYPE html>  
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>Meditation 2</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+/*
+This document has been created with Marked.app <http://markedapp.com>, Copyright 2011 Brett Terpstra
+Please leave this notice in place, along with any additional credits below.
+---------------------------------------------------------------
+Title: Avenue
+Author: Bram de Haan <http://atelierbramdehaan.nl>
+Description: modern retro
+ */
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+a img {
+  border: none;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+button, input {
+  line-height: normal;
+}
+button, input, select, textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  /* vertical-align: middle; */
+}
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+  cursor: pointer;
+  /* overflow: visible; */
+}
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  padding: 0 !important;
+}
+#wrapper {
+  margin-bottom: 0;
+}
+#wrapper img {
+  max-width: 100%;
+  height: auto;
+}
+#wrapper dd {
+  margin-bottom: 1em;
+}
+#wrapper li > p:first-child {
+  margin: 0;
+}
+#wrapper caption, #wrapper col, #wrapper colgroup, #wrapper table, #wrapper tbody, #wrapper td, #wrapper tfoot, #wrapper th, #wrapper thead, #wrapper tr {
+  border-spacing: 0;
+}
+#wrapper table {
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-collapse: collapse;
+  display: table;
+  empty-cells: hide;
+  margin: -1px 0 23px;
+  padding: 0;
+  table-layout: fixed;
+  width: 100%;
+}
+#wrapper caption {
+  display: table-caption;
+  font-weight: 700;
+}
+#wrapper col {
+  display: table-column;
+}
+#wrapper colgroup {
+  display: table-column-group;
+}
+#wrapper tbody {
+  display: table-row-group;
+}
+#wrapper tfoot {
+  display: table-footer-group;
+}
+#wrapper thead {
+  display: table-header-group;
+  border-bottom: solid 1px #999;
+}
+#wrapper td, #wrapper th {
+  display: table-cell;
+}
+#wrapper tr {
+  display: table-row;
+}
+#wrapper table th, #wrapper table td {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  padding: 0 1em;
+}
+#wrapper dt, #wrapper th {
+  font-weight: 700;
+}
+#wrapper dd {
+  padding-left: 1.4em;
+}
+#wrapper table tr:nth-child(even) {
+  background: rgba(200, 200, 200, 0.25);
+}
+#wrapper figure {
+  display: inline-block;
+  position: relative;
+  margin: 1em 0 2em;
+}
+#wrapper figcaption {
+  font-family: AvenirNext-Italic, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  font-style: italic;
+  text-align: center;
+}
+#wrapper figure:hover > figcaption {
+  /* background: rgba(0,0,0,1) */
+}
+/* #wrapper pre { moved down to base styles; } */
+.poetry #wrapper pre {
+  display: block;
+  font-family: Georgia, Garamond, serif !important;
+  font-size: 110% !important;
+  font-style: italic;
+  line-height: 1.6;
+  margin-left: 1em;
+}
+.poetry #wrapper pre code {
+  font-family: Georgia, Garamond, serif !important;
+
+}
+#wrapper sup, #wrapper sub, #wrapper a.footnote {
+  font-size: 1.4ex;
+  height: 0;
+  line-height: 1;
+  position: relative;
+  vertical-align: super;
+}
+#wrapper sub {
+  vertical-align: sub;
+  top: -1px;
+}
+#wrapper .footnote {
+  font-size: .8rem;
+  vertical-align: super;
+}
+#wrapper .footnotes p {
+  font-size: 1.9ex;
+}
+#wrapper ul ul {
+  margin-left: 1em;
+}
+
+#wrapper ul ul,
+#wrapper ol ol {
+  margin-left: 1em;
+}
+#wrapper li ul,
+#wrapper li ol {
+  margin-bottom: 0;
+}
+
+@media print {
+  body {
+    overflow: auto;
+  }
+
+  img, pre, blockquote, table, figure, p {
+    page-break-inside: avoid;
+  }
+
+  #wrapper {
+    background: #fff;
+    color: #000;
+    font-size: 85%;
+    padding: 10px;
+    position: relative;
+    text-indent: 0;
+  }
+}
+
+@media screen {
+  .inverted, .inverted #wrapper {
+    background: #222;
+  }
+  .inverted pre,
+  .inverted img {
+    border-color: #111;
+    background: #1a1a1a;
+  }
+  .inverted pre * {
+    background: #1a1a1a !important;
+  }
+
+  .inverted hr {
+    border-color: #999 !important;
+  }
+
+  .inverted p, .inverted td, .inverted li, .inverted h1, .inverted h2, .inverted h3, .inverted h4, .inverted h5, .inverted h6, .inverted pre, .inverted code, .inverted th, .inverted .math, .inverted caption, .inverted dd, .inverted dt {
+    color: #f9f9f9 !important;
+  }
+
+  .inverted table tr:nth-child(odd), .inverted table th:nth-child(odd), .inverted table td:nth-child(odd) {
+    background: none;
+  }
+
+  .inverted a {
+    color: #ff5778;
+  }
+}
+.max-width {
+  max-width: 100%;
+  height: auto;
+}
+/* ::Base styles Almost exclusively single element selectors */
+/* ------------------------------------------------------------ */
+html {
+  font-size: 100%;
+}
+body {
+  font: 100%/1.388 AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  color: #111;
+  padding: 0 5% 1rem !important;
+}
+a {
+  color: crimson;
+}
+a:hover, a:focus, a:active {
+  color: #ff2450;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: AvenirNextCondensed-DemiBold, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  /* margin: 0; */
+  padding: .5em 0 0;
+}
+h2, h3, h4, h5 {
+  border-bottom: 1px solid #777;
+}
+h1 {
+  font-size: 2.25rem;
+  line-height: 1.11111;
+}
+h2 {
+  font-size: 1.875rem;
+  line-height: 1.33333;
+}
+h3 {
+  font-size: 1.375rem;
+  line-height: 1.45455;
+}
+h4 {
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+h5 {
+  font-size: 1.125rem;
+  line-height: 1.33333;
+}
+h6 {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+pre, label {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+p {
+  font-size: 1.388rem;
+  line-height: 1.33333;
+  /* margin: 0; */
+  padding: .5em 0;
+  max-width: 30em;
+}
+h2 + p,
+h3 + p,
+h4 + p,
+h5 + p {
+  padding-top: 0;
+  margin-top: 1px;
+  border-top: 1px solid #999;
+}
+ol, ul {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0 0 2em 0;
+}
+li {
+  line-height: auto;
+}
+pre {
+  display: block;
+  margin: 1.4em auto;
+  background: #fcf9f1;
+  /* f9f9f9; */
+  padding: 15px 10px 10px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  border: solid 1px  #f0e0b2;
+  font-family: Consolas, Menlo, Monaco, monospace !important;
+  font-size: .875rem;
+  max-width: 90%;
+}
+pre * {
+  background: #fcf9f1 !important;
+}
+code {
+  font-family: Consolas, Menlo, Monaco, monospace;
+}
+ul {
+  list-style-position: outside;
+  list-style-type: square;
+}
+ol {
+  list-style-position: outside;
+  list-style-type: decimal;
+}
+strong, b {
+  font-family: AvenirNext-Bold, AvenirNextCondensed-DemiBold, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  font-weight: 600;
+}
+em, i, q {
+  font-family: AvenirNext-BoldItalic, AvenirNext-Italic, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  font-style: italic;
+}
+blockquote {
+  padding-left: 1em;
+  border-left: 0.3125em solid #c0c0c0;
+  line-height: normal;
+  /* margin: 0; */
+}
+blockquote p {
+  font-family: AvenirNext-Italic, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  font-style: italic;
+  /* margin: 0; */
+  font-size: 1.25rem;
+  line-height: 1.2;
+  margin: 1.2em 0 1.2em 0;
+}
+img {
+ padding: 1em;
+ background-color: #e6e6e6;
+ border: 1px solid #ddd;
+ -webkit-border-radius: 3px;
+ -moz-border-radius: 3px;
+ -o-border-radius: 3px;
+ border-radius: 3px;
+}
+
+@media screen and (max-width: 750px) {
+  -webkit-text-size-adjust: none;
+}
+
+@media print{
+#generated-toc-clone,#generated-toc{display:none!important}
+}
+
+</style>
+<style>#wrapper { max-width:800px; margin:0 auto }</style>
+</head>
+<body class="normal poetry">
+  <div id="wrapper">
+      <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Class notes (1/23) – do not cite or circulate" />
+  <title>Meditation 2</title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+<div id="header">
+<h1 class="title">Meditation 2</h1>
+<h2 class="author">Class notes (1/23) – do not cite or circulate</h2>
+</div>
+<div id="">
+<ul>
+<li><a href="#the-structure-of-meditation-2">The Structure of <em>Meditation</em> 2</a><ul>
+<li><a href="#an-archimedean-point">An Archimedean Point</a></li>
+<li><a href="#the-cogito">The ‘<em>Cogito</em>’</a><ul>
+<li><a href="#two-objections">Two Objections</a><ul>
+<li><a href="#the-substance-theory">The Substance Theory</a></li>
+</ul></li>
+<li><a href="#inference-or-intuition">Inference or Intuition?</a></li>
+<li><a href="#the-aim-of-the-cogito">The Aim of the <em>Cogito</em></a></li>
+</ul></li>
+<li><a href="#the-nature-of-the-i-as-subject">The Nature of the ‘I’ as Subject</a></li>
+<li><a href="#the-wax-argument-knowledge-of-body">The Wax Argument &amp; Knowledge of Body</a></li>
+</ul></li>
+</ul>
+</div>
+<h1 id="the-structure-of-meditation-2"><a href="#the-structure-of-meditation-2">The Structure of <em>Meditation</em> 2</a></h1>
+<p>There are two main claims made in <em>Meditation</em> 2. First, Descartes argues, in the ’<em>cogito’</em>, that the one thing he cannot be decieved of is his own existence as a thinking thing. Second, Descartes argues that he has a particular nature, and that he knows this nature better than that of any body.</p>
+<ul>
+<li>The review of doubt; the <em>Cogito</em> (7:24-5; M.3-4)</li>
+<li>The nature of the ‘I’ as thinking thing (7:25-7; EMT M.4-5)</li>
+<li>The mind’s unknown relation to body (7:27; EMT M.5)</li>
+<li>The mind itself is not ‘imageable’ (7:27-8; EMT M.5)</li>
+<li>The variety and unity of thought (7:28-9; EMT M.5-6)</li>
+<li>The ‘Wax Argument’ — our knowledge of body (7:29-33; EMT M.6-7)</li>
+<li>Analysis of the nature and content of perceptual judgment (7:32; EMT M.7-8)</li>
+<li>The Mind is better known than (any) body (7:33-4; EMT M.8)</li>
+</ul>
+<h2 id="an-archimedean-point"><a href="#an-archimedean-point">An Archimedean Point</a></h2>
+<p>Descartes’s method of doubt has forced him to give up nearly all his beliefs. But he still holds out for the possbility that some belief is certain.</p>
+<blockquote>
+<p>Archimedes used to demand just one firm and immovable point in order to shift the entire earth; so I too can hope for great things if I manage to find just one thing, however slight, that is certain and unshakeable. (7:24; EMT M.4)</p>
+</blockquote>
+<p>Why just one certain belief? One might reasonably wonder whether anything could be gotten from having just one certain belief. Gary Hatfield (<span class="citation">Hatfield (2003)</span>, 101) highlights three different answers to this question — (1) the ‘foundationalist’ answer: what is certain is a ‘first principle’ from which we derive other knowledge; (2) the ‘systematicity’ answer: what is certain is systematically connected with other knowledge (e.g. knowledge that 2 + 2 = 4 maight be systematically related to knowlege that 1 + 1 + 2 = 4, etc.); (3) the ‘methodological’ answer: what is certain reveal a method for deriving other certainties.</p>
+<p>It is not clear which of these three answers Descartes has in mind in his statement concerning an Archimedian point. So we’ll simply have to see how he develops his argument.</p>
+<h2 id="the-cogito"><a href="#the-cogito">The ‘<em>Cogito</em>’</a></h2>
+<p>Here is the crux of Descartes’s argument:</p>
+<blockquote>
+<p>I have convinced myself that there is absolutely nothing in the world, no sky, no earth, no minds, no bodies. Does it now follow that I too do not exist? No: if I convinced myself of something then I certainly existed. But there is a deceiver of supreme power and cunning who is deliberately and constantly deceiving me. In that case I too undoubtedly exist, if he is deceiving me; and let him deceive me as much as he can, he will never bring it about that I am nothing so long as I think that I am something. So after considering everything very thoroughly, I must finally conclude that this proposition, <em>I am, I exist</em>, is necessarily true whenever it is put forward by me or conceived in my mind. (7:25; EMT M.4)</p>
+</blockquote>
+<p>Thus, Descartes’s ‘Archimedean point’ is the proposition ‘I am thinking, therefore I exist’. How should we understand this? We want to know at least the following three things — viz., (1) what is the conclusion of the argument (i.e. what is it that is established)?; (2) how is the conclusion established?; (3) what role does the conclusion play in Descartes broader philosophical theory (i.e. can we use the <em>cogito</em> to determine which of the three answers discussed above is the right one)?</p>
+<p>To answer (1), Descartes appears to draw two conclusions from the argument. The first is limited to the conclusion that the Meditator exists. Granting that the subject of ‘I’ in the antecedent of the conditional is thinking, then that same subject, according to the conclusion, exists. Descartes also draws a more ambitious conclusion, viz., that the nature of the subject is that of a thinking thing or substance. In other words, the ‘I’ of ‘I exist’ is a particular sort of thing, a thinking thing. This more ambitious conclusion is pursued by Descartes throughout the rest of the <em>Meditation</em>.</p>
+<p>Descartes seems correct to argue that from the fact that one is thinking, one can conclude that one exists. But it is not clear that this is all he needs for even his weaker conclusion. In fact, there are two serious objections to just the weak conclusion of the argument, much less the stronger version.</p>
+<h3 id="two-objections"><a href="#two-objections">Two Objections</a></h3>
+<p>First, we can ask what entitles Descartes (or the meditator) to the use of the first-person pronoun in the premise of his argument? Doesn’t the use of ‘I’ in ‘I am thinking’ <em>presuppose</em> the existence of the subject? Remember, the Meditator is here doubting his own existence. If knowledge of one’s own (as Meditator) existence is supposed to be the <em>conclusion</em> of an argument or inference we cannot assume the conclusion in the course of articulating the premises. To do so would be committing a logical fallacy — viz., <em><a href="http://en.wikipedia.org/wiki/Begging_the_question">begging the question</a></em> (cf. <span class="citation">Dicker (2013)</span>).</p>
+<p>In response we might reformulate Descartes’s argument in a way <a href="http://en.wikipedia.org/wiki/Cogito_ergo_sum">first suggested</a> by <a href="http://en.wikipedia.org/wiki/Georg_Christoph_Lichtenberg">Georg Lichtenberg</a>. According to this formulation, instead of ‘I am thinking, therefore I exist’ we should state the argument as ‘There is thinking (or ’there is a thought’, therefore I exist’. The problem with this version of the argument, however, is that it is invalid. There is no assurance that from the mere existence of a thought it is oneself, <em>qua</em> Meditator, that exists. All that may be concluded is that some thought exists, or perhaps more strongly, that some thinking thing exists, but there is no assurance that the very same think which thinks in the premise is the thing which thinks in the conclusion (cf. <span class="citation">Dicker (2013)</span>, ch. 2; <span class="citation">Williams (1978)</span>, ch. 3; <span class="citation">Hatfield (2003)</span>, 103-4). All we have is a train of thoughts. Compare:</p>
+<p>(T1) It is thought: <em>P</em> (T2) It is thought: <em>Q</em></p>
+<p>Does it follow from these that (T3) It is thought: P &amp; Q ? It seems that T3 cannot follow, unless we have some means for connecting T1 and T2.</p>
+<p>In other words, there is an issue of the apparent separateness of the thoughts expressed in Descartes’s argument, to which the application of ‘I’ presupposes an answer that Descartes cannot use without begging the question. So it seems that his supposed Archimedian point is in danger of either begging the question or being invalid. Is there a way out?</p>
+<h4 id="the-substance-theory"><a href="#the-substance-theory">The Substance Theory</a></h4>
+<p>One possible strategy, which Descartes at various points seems to take, is to assume a particular metaphysics regarding our understanding of the nature of an individual object and its properties. Call this the ‘<em>Substance Theory</em>’. According to the Substance Theory, all things are composed of various properties as well as an underlying ‘substance’ which has them. This is in contrast to what is typically called a ‘<em>Bundle Theory</em>’, according to which things are nothing more than bundles, collections, or aggregates of properties. One of the reasons to favor the Substance Theory over the Bundle Theory has to do with the issue of generation and change. Intuitively, there is a difference between a thing’s coming into being (generation) and that thing’s changing some of its properties (qualitative change). But if there is such a distinction then there must, in addition to the properties or qualities of a thing, be some underlying thing which persists through addition or subtraction of properties (i.e. qualitative change). On the face of it the Bundle Theory cannot make this distinction, though there is <a href="http://plato.stanford.edu/entries/substance/">significant debate</a> about this.</p>
+<p>Reformulated with the assumption of a substance ontology, Descartes’s <em>Cogito</em> might be rendered as follows (<span class="citation">Dicker (2013)</span>, 54-5).</p>
+<ol style="list-style-type: decimal">
+<li>A thing is composed of its properties or characteristics <em>plus</em> an underlying substance to which they belong</li>
+<li>If there is a property or characteristic, then there must be a substance to which it belongs.</li>
+<li>A thought is a property.</li>
+<li>If there is a thought, then there is a substance to which it belongs.</li>
+<li>There is a thought.</li>
+<li><span class="math">∴ </span> There is a substance to which this thought belongs: “I”.</li>
+</ol>
+<p>One key premise here is (2), sometimes called the ‘substance-property principle’, which rules out the existence of properties that do not ‘belong’ to any substance. Descartes endorses this principle in a variety of his work (O&amp;R 7:222; Pr 8A:8, 25). The other premises are either plausibly or explicitly endorsed by him as well. What’s more, we have avoided stating the argument in a question begging way. So the question is whether the conclusion follows.</p>
+<p>Unfortunately for Descartes, it is not obvious that it does. There remains the question of what allows us to call the existence of the thinking substance ‘I’. Hence, even the reconstruction seems to remain invalid, insofar as it attempts to prove from the existence of thought that oneself, <em>qua</em> Meditator, exists as the thinker of that thought. So, while it is true that from that ‘I am thinking’ one may legitimately infer ‘I exist’, Descartes needs something stronger—viz., from ‘there is thinking’ that ‘I exist’, and this cannot be done, it seems by the argument he provides.</p>
+<h3 id="inference-or-intuition"><a href="#inference-or-intuition">Inference or Intuition?</a></h3>
+<p>There is a further question concerning the nature of the apparent inference from ‘I am thinking’ to ‘I exist’. Is it correct to consider this an inference, which might be put in premise-conclusion form. Or is it rather that Descartes intends us to read the claim as something grasped ‘intuitively’ and without recourse to argument? Remember that Descartes intends the <em>Cogito</em> to be his Archimedian point, so we would like to know how the <em>Cogito</em> relates to Descartes’s foundationalism. Is the <em>Cogito</em> a bit of <em>inferential</em> knowledge, or is it non-inferential?</p>
+<p>Descartes interestingly thinks that the answer is ‘both’ (9A:206). First, he seems to think that our grasp of the <em>Cogito</em> is intuitive — we come to see its conclusion ‘all at once’. So the Meditator does not derive it by means of any explicit argument, such as via syllogism. But, Descartes concedes, the structure of the <em>Cogito</em> is inferentially complex, so that in reflecting on what is known via the <em>Cogito</em> one is led to articulate distinct premises from which the conclusion ‘I exist’ ultimately follows (<span class="citation">Hatfield (2003)</span>, 112).</p>
+<h3 id="the-aim-of-the-cogito"><a href="#the-aim-of-the-cogito">The Aim of the <em>Cogito</em></a></h3>
+<p>Even if we grant that the <em>Cogito</em> grounds the Meditator’s certainty of his own existence, this doesn’t seem to provide Descartes with what he wants — viz., a first principle from which the rest of his philosophical system is derived, in any of the three senses (foundational, systematic, methodological) discussed above. We’ll have to revisit this question as Descartes’s argument in the <em>Meditations</em> unfolds.</p>
+<h2 id="the-nature-of-the-i-as-subject"><a href="#the-nature-of-the-i-as-subject">The Nature of the ‘I’ as Subject</a></h2>
+<p>Recall that the <em>Cogito</em> aimed to derive two conclusions, a weak and a strong. We’ve seen that there are problems with the weak conclusion, but what of the strong? The Meditator claims to know not only that he exists, but that he is a particular kind of thing — a thinking thing.</p>
+<blockquote>
+<p>At present I am not admitting anything except what is necessarily true. I am, then, in the strict sense only a thing that thinks; that is, I am a mind, or intelligence, or intellect, or reason — words whose meaning I have been ignorant of until now. But for all that I am a thing which is real and which truly exists. But what kind of a thing? As I have just said — a thinking thing. [7:27]</p>
+</blockquote>
+<p>The Meditator draws this conclusion based on the fact that, as far as he knows, he has no body (remember the evil demon) nor any connection to a material world. This doesn’t yet show that the existence of his mind (or minds generally) may be had independent of any material object, but it does show (according to Descartes) that the mind is intelligible independently of any body. This might also explain why Descartes/the Meditator says that his is ‘ignorant’ of the meanings of the words ‘mind, intellect, or reason’ until he has gone through this method of doubt. Prior to this meditation he might have thought that the intelligibility of something’s being a mind or intellect was importantly connected to its being a body.</p>
+<p>Descartes further understands the ‘I’ in terms of the kinds of activity it can undertake. A thinking thing is “a thing that doubts, understands, affirms, denies, is willing, is unwilling, and also imagines and has sensory perceptions” (7:28). Here we see a reference to sensory experience, which might formerly have been associated with having a body, but now is understood merely in terms of what are, presumably, conscious experiences. This might also give us some hint as to what unifies such a collection of activities. They are, one and all, kinds of activity which are available to consciousness. We cannot yet say whether Descaertes/the Meditator intend to equate thinking with consciousness, or even to consider it essential. But it does provide a unifying characteristic to what is otherwise a motley collection.</p>
+<p>For example, Descartes makes light of the issue of the ‘ownership’ of the various activities. He says,</p>
+<blockquote>
+<p>Is it not one and the same “I” who is now doubting almost everything, who nonetheless understands some things, who affirms that this one thing is true, denies everything else, desires to know more, is unwilling to be deceived, imagines many things even involuntarily, and notices many things as apparently coming from the senses? (7:28-9)</p>
+</blockquote>
+<p>One reason why he might make light of the question whether there is one and the same ‘I’ aware of all these activities is that they are all available to consciousness is roughly the same unmediated manner.</p>
+<h2 id="the-wax-argument-knowledge-of-body"><a href="#the-wax-argument-knowledge-of-body">The Wax Argument &amp; Knowledge of Body</a></h2>
+<p>Descartes considers an objection to his argument thus far, viz., that perhaps one may still think that material bodies are better and more clearly known than the mind. After all, the Meditator’s reflections thus far have been very abstract, and the knowledge of the mind fairly limited, specifically to the kinds of activities of which it is capable (and it isn’t even clear what binds this list of activities together or if the list is even complete).</p>
+<p>So, asks the Meditator, what is it that is supposedly so clearly known about body? The example of the wax aims to show at least two things. First, that our grasp of the wax as a particular kind of material body depends fundamentally on the <em>intellect</em> rather than the senses. Second, our understanding of the wax as a material body is ultimately just as abstract as our grasp of ourselves as thinking beings, hence our cognitive grasp of material body has no real advantage over that of the mind.</p>
+<p>So what is it that is so clearly understood about body, specifically, the piece of wax the Meditator contemplates? Descartes’s first aim is to show that the fact that we can have a sensory ‘image’ of the wax via our various sense modalities does not tell us anything clearly about the <em>wax</em>. All it does is present us with a specific array of determinate qualities, all of which change or can change under various circumstances. However, as the Meditator notes, despite changes of quality we understand something as persisting, viz., the wax itself. So what is this persisting thing, and whence comes our cognitive grasp of it if it is not any particular sensory quality grasped via the senses?</p>
+<p>Descartes/the Meditator argues that the wax is <em>extendible</em>, <em>flexible</em>, and <em>changeable</em>.</p>
+<blockquote>
+<p>But what is meant here by “flexible” and “changeable”? Is it what I picture in my imagination: that this piece of wax is capable of changing from a round shape to a square shape, or from a square shape to a triangular shape? Not at all: for I can grasp that the wax is capable of countless changes of this kind, yet I am unable to run through this immeasurable number of changes in my imagination, from which it follows that it is not the faculty of imagination that gives me my grasp of the wax as flexible and changeable. (7:31; EMT M.7)</p>
+</blockquote>
+<p>Here we have a kind of argument from elimination. We know, the Meditator argues, that the wax is fleixble and changeable, but we know this not via any sensory ‘image’. Instead we seem to grasp it independently, via the intellect alone. Gary Hatfield reconstructs the argument as follows (<span class="citation">Hatfield (2003)</span>, 130-1).</p>
+<ol style="list-style-type: decimal">
+<li>I can grasp that this melted wax is flexible and changeable so as to be capable of innumerable changes of shape.</li>
+<li>Imagination could allow me to grasp this fact only by repre- senting these changes by an image of each possible shape.</li>
+<li>My imagination cannot represent the innumerable shapes required.</li>
+<li>It is not the imagination that allows me to grasp this capability of the wax.</li>
+<li>But I do grasp this capability, so it must be by a faculty other than (sense or) imagination: call it the mind itself.</li>
+</ol>
+<p>So, according to the Meditator/Descartes, the nature of the wax as extended, flexible, and changable (i.e. as a body persisting through qualitative change) is ultimately known via the <em>intellect</em> and not via the <em>senses</em> (or the imagination).</p>
+<p>This argument also makes clear why the Meditator might reasonably claim that our cognitive grasp of body is no less abstract than our grasp of ourselves as thinking things. What’s more, according to the Meditator, since our cognitive grasp of body is ultimately via thought, and we are acquainted with our thoughts more intimately than with any body (as the method of doubt was supposed to show), we actually know our nature as thinking beings better than any body.</p>
+<blockquote>
+<p>What, I ask, is this ‘I’ which seems to perceive the wax so distinctly? Surely my awareness of my own self is not merely much truer and more certain than my awareness of the wax, but also much more distinct and evident, For if I judge that the wax exists from the fact that I see it, clearly this same fact entails much more evidently that I myself also exist. It is possible that what I see is nor really the wax; it is possible that I do not even have eyes with which to see anything. But when I see, or think I see (I am not here distinguishing the two), it is simply not possible that I who am now thinking am not something. By the same token, if I judge that the wax exists from the fact that I touch it, the same result follows, namely that I exist. If I judge that it exists from the fact that I imagine it, or for any other reason, exactly the same thing follows, And the result that I have grasped in the case of the wax may be applied to everything else located outside me. (7:33; EMT M.7-8)</p>
+</blockquote>
+<p>Thus, the pure intellect is set up, contrary to Aristotelianism, as the fundamental organ of human cognition, and as one whose nature can be known via pure reflection.</p>
+<div class="references">
+<h1><a href="#references">References</a></h1>
+<p>Dicker, Georges. 2013. <em>Descartes: an Analytic and Historical Introduction</em>. Second. Oxford University Press.</p>
+<p>Hatfield, Gary. 2003. <em>Routledge Philosophy GuideBook to Descartes and the Meditations</em>. London: Routledge.</p>
+<p>Williams, Bernard. 1978. <em>Descartes: the Project of Pure Enquiry</em>. 2005th ed. London: Routledge.</p>
+</div>
+</body>
+</html>
+
+<!-- ##END MARKED WRAPPER## -->
+    </div>
+</body>
+</html>
