@@ -1,0 +1,544 @@
+<!DOCTYPE html>  
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>Meditation3</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+/*
+This document has been created with Marked.app <http://markedapp.com>, Copyright 2011 Brett Terpstra
+Please leave this notice in place, along with any additional credits below.
+---------------------------------------------------------------
+Title: Avenue
+Author: Bram de Haan <http://atelierbramdehaan.nl>
+Description: modern retro
+ */
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+a img {
+  border: none;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+button, input {
+  line-height: normal;
+}
+button, input, select, textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  /* vertical-align: middle; */
+}
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+  cursor: pointer;
+  /* overflow: visible; */
+}
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  padding: 0 !important;
+}
+#wrapper {
+  margin-bottom: 0;
+}
+#wrapper img {
+  max-width: 100%;
+  height: auto;
+}
+#wrapper dd {
+  margin-bottom: 1em;
+}
+#wrapper li > p:first-child {
+  margin: 0;
+}
+#wrapper caption, #wrapper col, #wrapper colgroup, #wrapper table, #wrapper tbody, #wrapper td, #wrapper tfoot, #wrapper th, #wrapper thead, #wrapper tr {
+  border-spacing: 0;
+}
+#wrapper table {
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-collapse: collapse;
+  display: table;
+  empty-cells: hide;
+  margin: -1px 0 23px;
+  padding: 0;
+  table-layout: fixed;
+  width: 100%;
+}
+#wrapper caption {
+  display: table-caption;
+  font-weight: 700;
+}
+#wrapper col {
+  display: table-column;
+}
+#wrapper colgroup {
+  display: table-column-group;
+}
+#wrapper tbody {
+  display: table-row-group;
+}
+#wrapper tfoot {
+  display: table-footer-group;
+}
+#wrapper thead {
+  display: table-header-group;
+  border-bottom: solid 1px #999;
+}
+#wrapper td, #wrapper th {
+  display: table-cell;
+}
+#wrapper tr {
+  display: table-row;
+}
+#wrapper table th, #wrapper table td {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  padding: 0 1em;
+}
+#wrapper dt, #wrapper th {
+  font-weight: 700;
+}
+#wrapper dd {
+  padding-left: 1.4em;
+}
+#wrapper table tr:nth-child(even) {
+  background: rgba(200, 200, 200, 0.25);
+}
+#wrapper figure {
+  display: inline-block;
+  position: relative;
+  margin: 1em 0 2em;
+}
+#wrapper figcaption {
+  font-family: AvenirNext-Italic, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  font-style: italic;
+  text-align: center;
+}
+#wrapper figure:hover > figcaption {
+  /* background: rgba(0,0,0,1) */
+}
+/* #wrapper pre { moved down to base styles; } */
+.poetry #wrapper pre {
+  display: block;
+  font-family: Georgia, Garamond, serif !important;
+  font-size: 110% !important;
+  font-style: italic;
+  line-height: 1.6;
+  margin-left: 1em;
+}
+.poetry #wrapper pre code {
+  font-family: Georgia, Garamond, serif !important;
+
+}
+#wrapper sup, #wrapper sub, #wrapper a.footnote {
+  font-size: 1.4ex;
+  height: 0;
+  line-height: 1;
+  position: relative;
+  vertical-align: super;
+}
+#wrapper sub {
+  vertical-align: sub;
+  top: -1px;
+}
+#wrapper .footnote {
+  font-size: .8rem;
+  vertical-align: super;
+}
+#wrapper .footnotes p {
+  font-size: 1.9ex;
+}
+#wrapper ul ul {
+  margin-left: 1em;
+}
+
+#wrapper ul ul,
+#wrapper ol ol {
+  margin-left: 1em;
+}
+#wrapper li ul,
+#wrapper li ol {
+  margin-bottom: 0;
+}
+
+@media print {
+  body {
+    overflow: auto;
+  }
+
+  img, pre, blockquote, table, figure, p {
+    page-break-inside: avoid;
+  }
+
+  #wrapper {
+    background: #fff;
+    color: #000;
+    font-size: 85%;
+    padding: 10px;
+    position: relative;
+    text-indent: 0;
+  }
+}
+
+@media screen {
+  .inverted, .inverted #wrapper {
+    background: #222;
+  }
+  .inverted pre,
+  .inverted img {
+    border-color: #111;
+    background: #1a1a1a;
+  }
+  .inverted pre * {
+    background: #1a1a1a !important;
+  }
+
+  .inverted hr {
+    border-color: #999 !important;
+  }
+
+  .inverted p, .inverted td, .inverted li, .inverted h1, .inverted h2, .inverted h3, .inverted h4, .inverted h5, .inverted h6, .inverted pre, .inverted code, .inverted th, .inverted .math, .inverted caption, .inverted dd, .inverted dt {
+    color: #f9f9f9 !important;
+  }
+
+  .inverted table tr:nth-child(odd), .inverted table th:nth-child(odd), .inverted table td:nth-child(odd) {
+    background: none;
+  }
+
+  .inverted a {
+    color: #ff5778;
+  }
+}
+.max-width {
+  max-width: 100%;
+  height: auto;
+}
+/* ::Base styles Almost exclusively single element selectors */
+/* ------------------------------------------------------------ */
+html {
+  font-size: 100%;
+}
+body {
+  font: 100%/1.388 AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  color: #111;
+  padding: 0 5% 1rem !important;
+}
+a {
+  color: crimson;
+}
+a:hover, a:focus, a:active {
+  color: #ff2450;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: AvenirNextCondensed-DemiBold, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  /* margin: 0; */
+  padding: .5em 0 0;
+}
+h2, h3, h4, h5 {
+  border-bottom: 1px solid #777;
+}
+h1 {
+  font-size: 2.25rem;
+  line-height: 1.11111;
+}
+h2 {
+  font-size: 1.875rem;
+  line-height: 1.33333;
+}
+h3 {
+  font-size: 1.375rem;
+  line-height: 1.45455;
+}
+h4 {
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+h5 {
+  font-size: 1.125rem;
+  line-height: 1.33333;
+}
+h6 {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+pre, label {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+p {
+  font-size: 1.388rem;
+  line-height: 1.33333;
+  /* margin: 0; */
+  padding: .5em 0;
+  max-width: 30em;
+}
+h2 + p,
+h3 + p,
+h4 + p,
+h5 + p {
+  padding-top: 0;
+  margin-top: 1px;
+  border-top: 1px solid #999;
+}
+ol, ul {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0 0 2em 0;
+}
+li {
+  line-height: auto;
+}
+pre {
+  display: block;
+  margin: 1.4em auto;
+  background: #fcf9f1;
+  /* f9f9f9; */
+  padding: 15px 10px 10px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  border: solid 1px  #f0e0b2;
+  font-family: Consolas, Menlo, Monaco, monospace !important;
+  font-size: .875rem;
+  max-width: 90%;
+}
+pre * {
+  background: #fcf9f1 !important;
+}
+code {
+  font-family: Consolas, Menlo, Monaco, monospace;
+}
+ul {
+  list-style-position: outside;
+  list-style-type: square;
+}
+ol {
+  list-style-position: outside;
+  list-style-type: decimal;
+}
+strong, b {
+  font-family: AvenirNext-Bold, AvenirNextCondensed-DemiBold, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  font-weight: 600;
+}
+em, i, q {
+  font-family: AvenirNext-BoldItalic, AvenirNext-Italic, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  font-style: italic;
+}
+blockquote {
+  padding-left: 1em;
+  border-left: 0.3125em solid #c0c0c0;
+  line-height: normal;
+  /* margin: 0; */
+}
+blockquote p {
+  font-family: AvenirNext-Italic, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  font-style: italic;
+  /* margin: 0; */
+  font-size: 1.25rem;
+  line-height: 1.2;
+  margin: 1.2em 0 1.2em 0;
+}
+img {
+ padding: 1em;
+ background-color: #e6e6e6;
+ border: 1px solid #ddd;
+ -webkit-border-radius: 3px;
+ -moz-border-radius: 3px;
+ -o-border-radius: 3px;
+ border-radius: 3px;
+}
+
+@media screen and (max-width: 750px) {
+  -webkit-text-size-adjust: none;
+}
+
+@media print{
+#generated-toc-clone,#generated-toc{display:none!important}
+}
+
+</style>
+<style>#wrapper { max-width:800px; margin:0 auto }</style>
+</head>
+<body class="normal poetry">
+  <div id="wrapper">
+      <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Class notes (1/28) – do not cite or circulate" />
+  <title>Meditation 3— God &amp; the Truth Rule</title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+<div id="header">
+<h1 class="title"><em>Meditation</em> 3— God &amp; the Truth Rule</h1>
+<h2 class="author">Class notes (1/28) – do not cite or circulate</h2>
+</div>
+<div id="">
+<ul>
+<li><a href="#ideas">Ideas</a><ul>
+<li><a href="#objective-formal-reality">Objective &amp; Formal Reality</a></li>
+<li><a href="#vivacity-clarity-the-truth-rule">Vivacity, Clarity, &amp; the Truth Rule</a></li>
+<li><a href="#ideas-and-internalism-about-content">Ideas and Internalism about Content</a></li>
+</ul></li>
+<li><a href="#proof-of-gods-existence">Proof of God’s Existence</a><ul>
+<li><a href="#the-sources-of-our-ideas">The Sources of Our Ideas</a></li>
+<li><a href="#objective-reality-the-causal-principle">Objective Reality &amp; the Causal Principle</a></li>
+<li><a href="#the-first-proof-god-and-the-objective-reality-of-our-ideas">The First Proof — God and the Objective Reality of our Ideas</a><ul>
+<li><a href="#two-objections">Two Objections</a></li>
+</ul></li>
+<li><a href="#proof-from-gods-preservation-of-finite-beings">Proof from God’s preservation of finite beings</a></li>
+</ul></li>
+</ul>
+</div>
+<p>The third <em>Meditation</em> contains an important proof of God, but also provides discussion of various metaphysical principles, how we can be certain of the truth of our ides, and a significant discussion of the nature of ideas.</p>
+<ol style="list-style-type: decimal">
+<li>Review of <em>Meditation</em> 2 (7:34-5)</li>
+<li>The ‘truth rule’ &amp; vivid and clear perception (7:35)</li>
+<li>Challenges to the truth rule (7:35-6)</li>
+<li>The sources of our ideas &amp; the resemblance thesis (7:36-40)</li>
+<li>The ‘Natural light’ of Reason (7:38-9)</li>
+<li>Ideas &amp; Degrees of Reality (7:40)</li>
+<li>The Causal principle (7:40-2)</li>
+<li>First proof of God’s existence — from the idea of God (7:42-7)</li>
+<li>Second proof of God’s existence — from preservation (7:47-51)</li>
+<li>Innate ideas &amp; the idea of God (7:51-2)</li>
+<li>God is not a deceiver (7:52)</li>
+</ol>
+<h1 id="ideas"><a href="#ideas">Ideas</a></h1>
+<p>Descartes’s <a href="http://plato.stanford.edu/entries/descartes-ideas/">theory of ideas</a> is central to both his epistemology and his metaphysics. In the third <em>Meditation</em>, Descartes uses his theory of ideas to both explain aspects of our cognition of ourselvs and the external world, as well as proof of the existence of God.</p>
+<h2 id="objective-formal-reality"><a href="#objective-formal-reality">Objective &amp; Formal Reality</a></h2>
+<p>Descartes distinguishes three different ‘levels’ or degrees of being. The most fundamental level of being is that of being a <em><a href="http://plato.stanford.edu/entries/substance/">substance</a></em>. Substances and their powers are the fundamental units of explanation in Descartes’s metaphysics. Descartes distinguishes two kinds of substance, material and mental. Substance is defined by its principle <em>attribute</em>, which characterizes the fundamental feature of a substance. In the case of material substance, this attribute is <em>extension</em>, in the case of mental substance, thought. Attributes have a level of being which is thus derivative from the type of substance whose attribute they are. At the third and most derivative level of being we have <em>modes</em>, which are ways in which something may be. So, for example, <em>shape</em> is a mode of extension (it is a way in which something may be extended), and extension is the principle or essential attribute of material substance. Ideas are modes of thought, the principle attribute of mental substance.</p>
+<p>Near the beginning of the <em>Third Meditation</em>, Descartes distinguishes ideas from other modes of thought.</p>
+<blockquote>
+<p>First, however, considerations of order appear to dictate that I now classify my thoughts into definite kinds, and ask which of them can properly be said to be the bearers of truth and falsity. Some of my thoughts are as it were the images of things, and it is only in these cases that the term ‘idea’ is strictly appropriate — for example, when I think of a man, or a chimera, or the sky, or an angel, or God. Other thoughts have various additional forms: thus when I will, or am afraid, or affirm, or deny, there is always a particular thing which I take as the object of my thought, but my thought includes something more than the likeness of that thing. Some thoughts in this category are called volitions or emotions, while others are called judgments. (7:36–7; EMT M.10)</p>
+</blockquote>
+<p>Emotions, judgment, ideas, and acts of will are all modes of the mind. But ideas are distinguished from these other mental modes in virtue of being “as it were the images of things.” As we saw in the Wax Argument from the last meditation, Descartes does not think that all our ideas are <em>sensory</em> images of things. We can have purely intellectual ideas of objects, as Descartes argues we do in the case of the wax. But our sensory and intellectual ideas share a common feature, which makes them both <em>ideas</em>—viz., they present an object to the mind, either by resembling them (as is perhaps the case with sensory ideas), or by some other means. As he says in reply to both Hobbes and Gassendi, an idea is what is immediately present to or perceived by the mind (7:366, 393).</p>
+<p>Descartes introduces two ways of considering an idea. The first is the idea merely as a mode of the mind. In this sense the ‘<em>formal reality</em>’ of the idea is that of a mental mode. But an idea may also be considered in virtue of what it makes present to the mind — what it, as it were, is an image of — this is to consider the ‘<em>objective reality</em>’ of the idea (7:40-1; EMT M.11-12)</p>
+<p>Reality, according to Descartes, comes in degrees or levels (much as being does). The highest level of reality is that of an infinite substance. The only such substance is God. So the highest level of reality is ascribed to God. The next highest level of reality is that of finite or created substance as defined by its principle attribute (be it mental or material) . Finally, at the lowest level of reality, we have modes or characteristics of substances other than (or derived from) their principle attribute. Each degree of reality is dependent on the prior. So modes depend on the attributes of substances, and finite substance depends on the creative activity of infinite substance. This is true not only of the formal reality of things but also the objective reality of our ideas of things.</p>
+<h2 id="vivacity-clarity-the-truth-rule"><a href="#vivacity-clarity-the-truth-rule">Vivacity, Clarity, &amp; the Truth Rule</a></h2>
+<p>One of the interpretations we considered in the <em>Second Meditation</em> was that Descartes aimed, in the <em>Cogito</em>, to extract a particular method for gaining knowledge. He suggests something along these lines at the beginning of the <em>Third Meditation</em>.</p>
+<blockquote>
+<p>I am certain that I am a thinking thing. Do I not therefore also know what is required for my being certain about anything? In this first item of knowledge there is simply a clear and distinct perception of what I am asserting; this would not be enough to make me certain of the truth of the matter if it could ever turn out that something which I perceived with such clarity and vivacity was false. So I now seem to be able to lay it down as a general rule that whatever I perceive very clearly and vividly is true. (7:35; EMT M.9)</p>
+</blockquote>
+<p>As Hatfield indicates, there is a fairly straightforward argument being made here (<span class="citation">Hatfield (2003)</span>, 144).</p>
+<ol style="list-style-type: decimal">
+<li>I know with certainty that I am a thinking thing.</li>
+<li>This knowledge is based solely on a clear and distinct perception of its truth.</li>
+<li>Clear and distinct perception would not be sufficient to yield such knowledge if it were in any way fallible.</li>
+<li><span class="math">∴ </span> Clear and distinct perception provides a sufficient ground for knowledge; whatever I so perceive is true.</li>
+</ol>
+<p>The argument is valid. It’s conclusion provides us with a general rule for acquiring knowledge. This principle is often called the ‘truth rule’. The question is whether any sense can be made of the second premise, that the knowledge gained via the <em>Cogito</em> is due entirely to the clarity and vivacity of the relevant ideas. Is there a way to recognize clear and vivid ideas and to distinguish them from all other kinds of idea?</p>
+<p>We’ll postpone until the <em>Fifth Meditation</em> the issue of whether there is a form of vicious circularity inherent in Descartes’s argument.</p>
+<h2 id="ideas-and-internalism-about-content"><a href="#ideas-and-internalism-about-content">Ideas and Internalism about Content</a></h2>
+<p>Descartes’s notion of an idea suggests that our ideas could be just as they are and yet nothing beyond one’s mind could exist. In Descartes’s terms, the objective reality of one’s ideas (setting to the side issues concerning ideas of God) is something we can consider independently of the question as to whether anything exists which corresponds to those ideas. This notion of <a href="http://plato.stanford.edu/entries/mental-representation/">mental content</a> is sometime called a ‘<a href="http://plato.stanford.edu/entries/content-narrow/">narrow</a>’ conception of mental content, in contrast to ‘wide’ or ‘<a href="http://plato.stanford.edu/entries/content-externalism/">externalist</a>’ conceptions of content.</p>
+<p>This help inaugurate a view of mental content that remains influential today. Is mental representation something that may be considered wholly independently from the subject’s environment? Or is mental representation ineluctably tied up with a subject’s environs so that the former cannot be intelligibly discussed independently of the latter?</p>
+<h1 id="proof-of-gods-existence"><a href="#proof-of-gods-existence">Proof of God’s Existence</a></h1>
+<p>After giving his brief argument for the truth rule, Descartes goes on to talk of the sources of our ideas and the possibility that there is a deceitful God. Why is the issue of God and His characteristics important? Descartes worries that so long as he may reasonably consider the possibility of a deceitful God, he cannot be sure of the truth of any claim, seemingly including the <em>Cogito</em>.</p>
+<blockquote>
+<p>what about when I was considering something simple and straightforward in arithmetic or geometry, for example that two plus three makes five? Did I not at least see these things clearly enough to affirm their truth? Indeed, the only reason for my later judgment that they were open to doubt was that it occurred to me that perhaps some God could have given me a nature such that I was deceived even in matters which seemed most evident. And whenever my preconceived belief in the supreme power of God comes to mind, I cannot but admit that it would be easy for him, if he so desired, to bring it about that I go wrong even in those matters which I think I see utterly clearly with my mind’s eye. (7:36; EMT M.10)</p>
+</blockquote>
+<p>Here the ‘preconceived notion’ of an all powerful God threatens to derail the Meditator’s confidence in even the clearest of mathematical ideas. Descartes goes on to exclaim that when he put the issue of God out of his mind and just considers clear and vivid ideas, as in the <em>Cogito</em> reasoning or in mathematics, then he cannot be anything other than certain of their truth.</p>
+<p>So in order that he may rid himself of doubt about the certainty of such fundamental truths, Descartes explains that</p>
+<blockquote>
+<p>I shall examine whether there is a God, and (if there is) whether he can be a deceiver. If I don’t settle this, it seems, then I can never be quite certain about anything else. (7:36; EMT M.10)</p>
+</blockquote>
+<p>Descartes articulates two proofs in this <em>Meditation</em> for the existence of God. The first depends on the nature of the Meditator’s idea of God. The second depends on the the relationship between the Meditator as a finite being and the creative powers of an infinite God.</p>
+<h2 id="the-sources-of-our-ideas"><a href="#the-sources-of-our-ideas">The Sources of Our Ideas</a></h2>
+<blockquote>
+<p>Among my ideas, some appear to be innate, some to be adventitious, and others to have been invented by me. My understanding of what a thing is, what truth is, and what thought is, seems to derive simply from my own nature. But my hearing a noise, as I do now, or seeing the sun, or feeling the fire, comes from things which are located outside me, or so I have hitherto judged. Lastly, sirens, hippogriffs and the like are my own invention. (7:37–8; EMT M.10-11)</p>
+</blockquote>
+<p>Descartes distinguishes three sources for our ideas. Ideas may be ‘innate’, ‘adventitious’, or ‘invented’. Innate ideas are those which are had by the subject simply in virtue of having a mind. Adventitious ideas are those which seem to come unbidden from sources external to the subject. Invented ideas are fictions, generated by (in some sense) voluntary acts of imagination.</p>
+<p>Descartes notes that in the case of adventitious ideas, one is inclined to take them to resemble their causes. But, Descartes notes, there is no reason to believe that this is true. He cites three reasons, and seeks to undermine them. First, he notes that we simply have “a spontaneous impulse to believe” that it is true (7:38; EMT M.11). But this he dismisses this as a reason because natural impulse is fallible (7:39; EMT M.11). Second, he notes that such ideas simply come into the mind, and often quite involuntarily (e.g. opening one’s eyes in a lit room results in a lot of involuntary ideas). But this involuntary character is no reason, he thinks, to believe that such ideas resemble anything objective, or that they even arise from anything beyond the subject. For example, dreams are involuntary in their ‘feel’ but they are wholly subjective. He then denies that such ideas must resemble their sources even if they do come from something beyond the subject.</p>
+<blockquote>
+<p>even if these ideas do come from things other than myself, it doesn’t follow that they must resemble those things. Indeed, I think I have often discovered objects to be very unlike my ideas of them. For example, I find within me two different ideas of the sun: •one seems to come from the senses—it is a prime example of an idea that I reckon to have an external source—and it makes the sun appear very small; •the other is based on astronomical reasoning—i.e. it is based on notions that are innate in me (or else it is constructed by me in some other way)—and it shows the sun to be many times larger than the earth. Obviously these ideas cannot both resemble the external sun; and reason convinces me that the idea that seems to have come most directly from the sun itself in fact does not resemble it at all. (7:39; EMT M.11)</p>
+</blockquote>
+<p>Hence, though we can distinguish different possible sources of our ideas, at this point the Meditator has no reason to think that any of her ideas come from anything other than herself, nor that they in any way resemble or otherwise reveal how things are without her mind, in the objective world.</p>
+<h2 id="objective-reality-the-causal-principle"><a href="#objective-reality-the-causal-principle">Objective Reality &amp; the Causal Principle</a></h2>
+<blockquote>
+<p>In order for a given idea to contain such and such objective reality, it must surely derive it from some cause which contains at least as much formal reality as there is objective reality in the idea. For if we suppose that an idea contains something which was not in its cause, it must have got this from nothing; yet the mode of being by which a thing exists objectively in the intellect by way of idea, imperfect though it may be, is certainly not nothing, and so it cannot come from nothing. (7:41; EMT M.12)</p>
+</blockquote>
+<p>Something cannot come from nothing. This is a truth which the Meditator suggests is “obvious by the natural light”. This was a principle commonly accepted in Descartes’s time, and still remain a reasonable one. When put in terms of Descartes’s views on the hierarchy of reality, something with a lesser degree of reality cannot be the cause of something with a greater degree; the reality of the cause must be equal to or exceed the effect. When applied to the objective content of an idea, it means that there must be a cause of the content of an idea whose reality is at least as great as the reality of that which is ‘depicted’ by the idea. So, for example, when one has an idea as of a horse (a finite substance) then it must have been caused by something that has at least the reality of a finite substance. This doesn’t mean that it has to have been caused by an actual horse. But, according to the principle, it cannot be the case that an idea whose objective content is that of a finite substance could be caused by a mere mode.</p>
+<h2 id="the-first-proof-god-and-the-objective-reality-of-our-ideas"><a href="#the-first-proof-god-and-the-objective-reality-of-our-ideas">The First Proof — God and the Objective Reality of our Ideas</a></h2>
+<p>Descartes then straightforwardly applies this principle to the idea of God. This raises an immediate problem, for the idea of God is the idea of “a substance that is infinite, independent, supremely intelligent, supremely powerful, and which created both myself and everything else (if anything else there be) that exists” (7:45; EMT M.14). According to the causal principle, a finite substance cannot have an idea whose objective content is greater the reality of its cause. This means that neither the Meditator, nor any other finite substance (or their modes) could be the cause of the Meditator’s idea of God. In fact there is only one possible being who could be the cause of the Meditator’s idea — viz., God. Hence, given that the Meditator has such an idea, God must exist.</p>
+<h3 id="two-objections"><a href="#two-objections">Two Objections</a></h3>
+<ol style="list-style-type: decimal">
+<li>Do we really have such an idea of God?
+<ul>
+<li>According to Descartes, we must have an idea of God as an infinite being because our ideas of finite things presuppose an idea of infinity. He says, “my perception of the infinite, that is God, is in some way priori to my perception of the finite, that is myself” (7:45; EMT M.14)
+<ul>
+<li>Descartes illustrates this by means of awareness of a lack presupposing an awareness of perfection or presence. But a clearer example might be one involving awareness of a spatial boundary. Awareness of the boundary presupposes an awareness of the space extending beyond the boundary. This may be iterated, such that awareness of any particular space seems to presuppose an awareness of an infinitely extended space of which this local space is merely a limitation (Kant makes much of this argument in his later discussion of space).</li>
+</ul></li>
+</ul></li>
+<li>Does the idea of God really require an infinite cause?
+<ul>
+<li>Why couldn’t the idea of an infinite substance simply be constructed from the idea of a finite substance, whose limits are then abstracted away to generate the idea of God?
+<ul>
+<li>Here again, Descartes argues that we cannot <em>generate</em> the idea of god via a construction out of finite materials, since the finite presumes a grasp of the infinite.</li>
+</ul></li>
+<li>Nevertheless, one might object that at best, Descartes’s argument yields only the conclusion that an infinite substance must be the cause of our idea of God. But why think that this infinite substance is God rather than something else?
+<ul>
+<li>It is not clear that Descartes, at least at this point in the <em>Meditations</em> has a reply to this objection. It may be that he gives such a reply only in his proof for God’s existence as offered in the <em>Fifth Meditation</em>. However, he does make several references here to God’s ‘perfection’ (EMT M.14), which might suggest that the issue isn’t simply one of infinite power, but of infinite perfection, and that any being possessing such perfection must be God.</li>
+</ul></li>
+</ul></li>
+</ol>
+<h2 id="proof-from-gods-preservation-of-finite-beings"><a href="#proof-from-gods-preservation-of-finite-beings">Proof from God’s preservation of finite beings</a></h2>
+<p>The Meditator then asks “whether I myself, who have this idea [of God], could exist if no [more perfect] being existed” (7:48; EMT 15). He then offers a proof by process of elimination. Four causes of his existence are considered, viz., self-causation, his parents, another less perfect being, and finally, God. Descartes rules out the first since any being that could create itself from nothing would be God.</p>
+<p>Descartes then rules out the other options by appeal to a ‘<em>conservation</em>’ principle. He says,</p>
+<blockquote>
+<p>a life-span can be divided into countless parts, each completely independent of the others, so that from my existing at one time it doesn’t follow that I exist at later times, unless some cause keeps me in existence—one might say that it creates me afresh at each moment. Anyone who thinks hard about the nature of time will understand that what it takes to •bring a thing into existence is also needed to •keep it in existence at each moment of its duration. So there’s no real distinction between •preservation and •creation—only a conceptual one—and this is something that the natural light makes evident. So I have to ask myself whether I have the power to bring it about that I, who now exist, will still exist a minute from now. For since I am nothing but a thinking thing—or anyway that is the only part of me that I am now concerned with—if I had such a power I would undoubtedly be aware of it. But I experience no such power, and this shows me quite clearly that I depend ·for my continued existence· on some being other than myself (7:49; EMT M.15-16).</p>
+</blockquote>
+<p>In other words, something is needed to sustain the Meditator’s existence as a finite being. This cannot come from the Meditator’s parents or any other finite substance. So it must come from an infinite substance — God.</p>
+<div class="references">
+<h1><a href="#references">References</a></h1>
+<p>Hatfield, Gary. 2003. <em>Routledge Philosophy GuideBook to Descartes and the Meditations</em>. London: Routledge.</p>
+</div>
+</body>
+</html>
+
+<!-- ##END MARKED WRAPPER## -->
+    </div>
+</body>
+</html>
