@@ -1,0 +1,491 @@
+<!DOCTYPE html>  
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>Meditation4</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+/*
+This document has been created with Marked.app <http://markedapp.com>, Copyright 2011 Brett Terpstra
+Please leave this notice in place, along with any additional credits below.
+---------------------------------------------------------------
+Title: Avenue
+Author: Bram de Haan <http://atelierbramdehaan.nl>
+Description: modern retro
+ */
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+a img {
+  border: none;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+button, input {
+  line-height: normal;
+}
+button, input, select, textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  /* vertical-align: middle; */
+}
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+  cursor: pointer;
+  /* overflow: visible; */
+}
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  padding: 0 !important;
+}
+#wrapper {
+  margin-bottom: 0;
+}
+#wrapper img {
+  max-width: 100%;
+  height: auto;
+}
+#wrapper dd {
+  margin-bottom: 1em;
+}
+#wrapper li > p:first-child {
+  margin: 0;
+}
+#wrapper caption, #wrapper col, #wrapper colgroup, #wrapper table, #wrapper tbody, #wrapper td, #wrapper tfoot, #wrapper th, #wrapper thead, #wrapper tr {
+  border-spacing: 0;
+}
+#wrapper table {
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-collapse: collapse;
+  display: table;
+  empty-cells: hide;
+  margin: -1px 0 23px;
+  padding: 0;
+  table-layout: fixed;
+  width: 100%;
+}
+#wrapper caption {
+  display: table-caption;
+  font-weight: 700;
+}
+#wrapper col {
+  display: table-column;
+}
+#wrapper colgroup {
+  display: table-column-group;
+}
+#wrapper tbody {
+  display: table-row-group;
+}
+#wrapper tfoot {
+  display: table-footer-group;
+}
+#wrapper thead {
+  display: table-header-group;
+  border-bottom: solid 1px #999;
+}
+#wrapper td, #wrapper th {
+  display: table-cell;
+}
+#wrapper tr {
+  display: table-row;
+}
+#wrapper table th, #wrapper table td {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  padding: 0 1em;
+}
+#wrapper dt, #wrapper th {
+  font-weight: 700;
+}
+#wrapper dd {
+  padding-left: 1.4em;
+}
+#wrapper table tr:nth-child(even) {
+  background: rgba(200, 200, 200, 0.25);
+}
+#wrapper figure {
+  display: inline-block;
+  position: relative;
+  margin: 1em 0 2em;
+}
+#wrapper figcaption {
+  font-family: AvenirNext-Italic, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  font-style: italic;
+  text-align: center;
+}
+#wrapper figure:hover > figcaption {
+  /* background: rgba(0,0,0,1) */
+}
+/* #wrapper pre { moved down to base styles; } */
+.poetry #wrapper pre {
+  display: block;
+  font-family: Georgia, Garamond, serif !important;
+  font-size: 110% !important;
+  font-style: italic;
+  line-height: 1.6;
+  margin-left: 1em;
+}
+.poetry #wrapper pre code {
+  font-family: Georgia, Garamond, serif !important;
+
+}
+#wrapper sup, #wrapper sub, #wrapper a.footnote {
+  font-size: 1.4ex;
+  height: 0;
+  line-height: 1;
+  position: relative;
+  vertical-align: super;
+}
+#wrapper sub {
+  vertical-align: sub;
+  top: -1px;
+}
+#wrapper .footnote {
+  font-size: .8rem;
+  vertical-align: super;
+}
+#wrapper .footnotes p {
+  font-size: 1.9ex;
+}
+#wrapper ul ul {
+  margin-left: 1em;
+}
+
+#wrapper ul ul,
+#wrapper ol ol {
+  margin-left: 1em;
+}
+#wrapper li ul,
+#wrapper li ol {
+  margin-bottom: 0;
+}
+
+@media print {
+  body {
+    overflow: auto;
+  }
+
+  img, pre, blockquote, table, figure, p {
+    page-break-inside: avoid;
+  }
+
+  #wrapper {
+    background: #fff;
+    color: #000;
+    font-size: 85%;
+    padding: 10px;
+    position: relative;
+    text-indent: 0;
+  }
+}
+
+@media screen {
+  .inverted, .inverted #wrapper {
+    background: #222;
+  }
+  .inverted pre,
+  .inverted img {
+    border-color: #111;
+    background: #1a1a1a;
+  }
+  .inverted pre * {
+    background: #1a1a1a !important;
+  }
+
+  .inverted hr {
+    border-color: #999 !important;
+  }
+
+  .inverted p, .inverted td, .inverted li, .inverted h1, .inverted h2, .inverted h3, .inverted h4, .inverted h5, .inverted h6, .inverted pre, .inverted code, .inverted th, .inverted .math, .inverted caption, .inverted dd, .inverted dt {
+    color: #f9f9f9 !important;
+  }
+
+  .inverted table tr:nth-child(odd), .inverted table th:nth-child(odd), .inverted table td:nth-child(odd) {
+    background: none;
+  }
+
+  .inverted a {
+    color: #ff5778;
+  }
+}
+.max-width {
+  max-width: 100%;
+  height: auto;
+}
+/* ::Base styles Almost exclusively single element selectors */
+/* ------------------------------------------------------------ */
+html {
+  font-size: 100%;
+}
+body {
+  font: 100%/1.388 AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  color: #111;
+  padding: 0 5% 1rem !important;
+}
+a {
+  color: crimson;
+}
+a:hover, a:focus, a:active {
+  color: #ff2450;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: AvenirNextCondensed-DemiBold, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  /* margin: 0; */
+  padding: .5em 0 0;
+}
+h2, h3, h4, h5 {
+  border-bottom: 1px solid #777;
+}
+h1 {
+  font-size: 2.25rem;
+  line-height: 1.11111;
+}
+h2 {
+  font-size: 1.875rem;
+  line-height: 1.33333;
+}
+h3 {
+  font-size: 1.375rem;
+  line-height: 1.45455;
+}
+h4 {
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+h5 {
+  font-size: 1.125rem;
+  line-height: 1.33333;
+}
+h6 {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+pre, label {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+p {
+  font-size: 1.388rem;
+  line-height: 1.33333;
+  /* margin: 0; */
+  padding: .5em 0;
+  max-width: 30em;
+}
+h2 + p,
+h3 + p,
+h4 + p,
+h5 + p {
+  padding-top: 0;
+  margin-top: 1px;
+  border-top: 1px solid #999;
+}
+ol, ul {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0 0 2em 0;
+}
+li {
+  line-height: auto;
+}
+pre {
+  display: block;
+  margin: 1.4em auto;
+  background: #fcf9f1;
+  /* f9f9f9; */
+  padding: 15px 10px 10px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  border: solid 1px  #f0e0b2;
+  font-family: Consolas, Menlo, Monaco, monospace !important;
+  font-size: .875rem;
+  max-width: 90%;
+}
+pre * {
+  background: #fcf9f1 !important;
+}
+code {
+  font-family: Consolas, Menlo, Monaco, monospace;
+}
+ul {
+  list-style-position: outside;
+  list-style-type: square;
+}
+ol {
+  list-style-position: outside;
+  list-style-type: decimal;
+}
+strong, b {
+  font-family: AvenirNext-Bold, AvenirNextCondensed-DemiBold, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  font-weight: 600;
+}
+em, i, q {
+  font-family: AvenirNext-BoldItalic, AvenirNext-Italic, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  font-style: italic;
+}
+blockquote {
+  padding-left: 1em;
+  border-left: 0.3125em solid #c0c0c0;
+  line-height: normal;
+  /* margin: 0; */
+}
+blockquote p {
+  font-family: AvenirNext-Italic, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  font-style: italic;
+  /* margin: 0; */
+  font-size: 1.25rem;
+  line-height: 1.2;
+  margin: 1.2em 0 1.2em 0;
+}
+img {
+ padding: 1em;
+ background-color: #e6e6e6;
+ border: 1px solid #ddd;
+ -webkit-border-radius: 3px;
+ -moz-border-radius: 3px;
+ -o-border-radius: 3px;
+ border-radius: 3px;
+}
+
+@media screen and (max-width: 750px) {
+  -webkit-text-size-adjust: none;
+}
+
+@media print{
+#generated-toc-clone,#generated-toc{display:none!important}
+}
+
+</style>
+<style>#wrapper { max-width:800px; margin:0 auto }</style>
+</head>
+<body class="normal poetry firstload">
+  <div id="wrapper">
+      <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Class notes (1/30) – do not cite or circulate" />
+  <title>Meditation 4 — Judgment &amp; Error</title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+<div id="header">
+<h1 class="title">Meditation 4 — Judgment &amp; Error</h1>
+<h2 class="author">Class notes (1/30) – do not cite or circulate</h2>
+</div>
+<div id="">
+<ul>
+<li><a href="#the-structure-of-meditation-4">The Structure of <em>Meditation 4</em></a></li>
+<li><a href="#god-error">God &amp; Error</a><ul>
+<li><a href="#descartess-theodicy">Descartes’s Theodicy</a></li>
+<li><a href="#freedom-and-judgment">Freedom and Judgment</a></li>
+</ul></li>
+</ul>
+</div>
+<h1 id="the-structure-of-meditation-4"><a href="#the-structure-of-meditation-4">The Structure of <em>Meditation 4</em></a></h1>
+<ol style="list-style-type: decimal">
+<li>Immaterial things known without images (7:52-3)</li>
+<li>God is no deceiver (7:53)</li>
+<li>God &amp; the mental powers of created beings (7:53-6)</li>
+<li>Analysis of judgment: the intellect &amp; will (7:56-7)</li>
+<li>Error &amp; God’s goodness (7:56-62)</li>
+<li>Freedom of will (7:57-9)</li>
+<li>Vivid &amp; Clear perceptions are true (7:62)</li>
+</ol>
+<h1 id="god-error"><a href="#god-error">God &amp; Error</a></h1>
+<p>In the <em>First Meditation</em> Descartes raises the issue of the compatibility of a non-deceitful god with the existence of error.</p>
+<blockquote>
+<p>I sometimes think that others go wrong even when they think they have the most perfect knowledge; so how do I know that I myself don’t go wrong every time I add two and three or count the sides of a square? Well, ·you might say·, God would not let me be deceived like that, because he is said to be supremely good. But, ·I reply·, if God’s goodness would stop him from letting me be deceived •all the time, you would expect it to stop him from allowing me to be deceived even •occasionally; yet clearly I sometimes am deceived. (7:21; EMT M.2)</p>
+</blockquote>
+<p>Descartes goes on to grant the possibility that there is thus no God. By the end of <em>Meditation 3</em> that is no longer an option for the Meditator. So how should we understand the existence of error given the (presumed proven) existence of a perfect God?</p>
+<blockquote>
+<p>I realize that I am somewhere in between God and nothingness, or between supreme being and non-being. Now, the positive reality that I have been given by the supreme being contains nothing that could lead me astray in my beliefs. I make mistakes, not surprisingly, because my nature involves nothingness or non-being—that is, because I am not myself the supreme being, and lack countless perfections. So error is not something real that depends on God, but is merely ·something negative, a lack·, a defect. There is, therefore, nothing positively error-producing in the faculty of judgment that God gave me. When I go wrong I do so because the faculty of true judgment that I have from God is in my case not free of all limitations, ·that is, because it partly involves nothingness·.</p>
+</blockquote>
+<h2 id="descartess-theodicy"><a href="#descartess-theodicy">Descartes’s Theodicy</a></h2>
+<p>There are three initial points that Descartes makes in favor of the compatibility of evil—in this case, error—and the existence of an all-powerful creator. First, Descartes notes that “it is no cause for surprise if I don’t always understand why God acts as he does.” (EMT M.19). So there may be facts about reality we simply do not or cannot understand because of our finitude. Second, imperfection should be judged at the level of all of creation, rather than locally. Third, and perhaps most centrally for Descartes, error is, in our case, a function of the relationship between two distinct faculties, rather than (say) the product of some single faculty or mental activity. Error depends on both the intellect and the will (EMT M.19).</p>
+<blockquote>
+<p>The intellect doesn’t affirm or deny anything; its role is only to present me with ideas regarding which I can make judgments; so strictly speaking it doesn’t involve any error at all.</p>
+</blockquote>
+<p>So the intellect only presents the mind as a whole with ideas which it considers, and according to which it judges. It’s judgment, however depends on the will. The will is totally free and “entirely without limits” (EMT M.19) and in this sense is as perfect as any faculty could be; in this sense one is “somehow like God” (EMT M.19). But Descartes understands the freedom of the will in a very specific way.</p>
+<blockquote>
+<p>the ·freedom of the· will consists in the fact that when the intellect presents us with a candidate for acceptance or denial, or for pursuit or avoidance, we have no sense that we are pushed one way or the other by any external force.</p>
+</blockquote>
+<p>The possibility of error thus depends on the relationship between the will, understood as a faculty which drives the acceptance or denial of ideas, and the intellect, which presents ideas for the will’s consideration.</p>
+<blockquote>
+<p>the power of willing that God has given me, being extremely broad in its scope and also perfect of its kind, is not the cause of my mistakes. Nor is my power of understanding to blame: God gave it to me, so there can be no error in its activities; when I understand something I undoubtedly understand it correctly. Well, then, where do my mistakes come from? Their source is the fact that my will has a wider scope than my intellect has, ·so that I am free to form beliefs on topics that I don’t understand·. Instead of ·behaving as I ought to, namely by· restricting my will to the territory that my understanding covers, ·that is, suspending judgment when I am not intellectually in control·, I let my will run loose, applying it to matters that I don’t understand. In such cases there is nothing to stop the will from veering this way or that, so it easily turns away from what is true and good. That is the source of my error and sin. (7:58; EMT M.20)</p>
+</blockquote>
+<p>So, because the will is unbounded, is completely free, the possibility is opened that one accepts as true things which are not and vice versa. When the faculties are used <em>correctly</em> there will be no error. What we should do is train ourselves so that we assent only to truths which are known clearly and vividly.</p>
+<blockquote>
+<p>If when I don’t perceive the truth vividly and clearly enough I simply suspend judgment, it’s clear that I am behaving correctly and avoiding error. It is a misuse of my free will to have an opinion in such cases (7:58; EMT M.20)</p>
+</blockquote>
+<p>So error isn’t, for Descartes, simply assenting to something false, rather it consists in making judgments in circumstances in which we know such assent could occur.</p>
+<p>A further indication of God’s goodness, according to Descartes, is that the will is irresistibly inclined to accept vivid and clear ideas.</p>
+<blockquote>
+<p>A while ago I asked whether anything in the world exists, and I came to realize that the fact of my raising this question shows quite clearly that I exist. I understood this so vividly that I couldn’t help judging that it was true. This was not the ‘couldn’t help’ that comes from being compelled by some external force. What happened was just this: a great light in the intellect was followed by a great inclination in the will. (7:58-9; EMT M.20)</p>
+</blockquote>
+<p>If God had made the faculties this way and it were <em>not the case</em> that vivid and clear ideas were true, then God would be responsible for error. But since we know that vivid and clear ideas are always true (remember the truth rule) and we know that God is perfect, and thus no deceiver, then we can conclude that he could not be a cause of error.</p>
+<h2 id="freedom-and-judgment"><a href="#freedom-and-judgment">Freedom and Judgment</a></h2>
+<p>A question will likely have occurred to one in the course of examining Descartes’s doctrine of error. How do we have freedom to judge, as we must in Descartes’s explanation of error, if we are irresistibly inclined to accept vivid and clear ideas?</p>
+<p>There are perhaps two kinds of freedom here (following <span class="citation">Hatfield (2003)</span>, 192-3).</p>
+<p>First, there is the ‘freedom of indifference’ that allows to go accept or deny some idea. This free will stands in contrast to a sort of fatalism that would have us always act in some particular way. But we have a further sort of freedom, to act in accordance with our own nature, as opposed to some external constraint. This ‘freedom of spontaneity’ characterizes our will’s attraction to the true. As Descartes puts it in the <em>Second Replies</em>,</p>
+<blockquote>
+<p>the will of a thinking thing is drawn voluntarily and freely (for that is the essence of will), but nevertheless inevitably, towards a clearly known good (7:166).</p>
+</blockquote>
+<p>It is not obvious that these two accounts of freedom are incompatible with one another, especially if we don’t consider Descartes as <em>defining</em> freedom of the will in accordance with either account. However, he perhaps comes closest to doing so when he says,</p>
+<blockquote>
+<p>I can be free without being inclined both ways. Indeed, the more strongly I incline in one direction the more free my choice is—if my inclination comes from •natural knowledge (that is, from my seeing clearly that reasons of truth and goodness point that way) or from •divine grace (that is, from some mental disposition that God has given me)…When no reason inclines me in one direction rather than another, I have a feeling of indifference—·that is, of its not mattering which way I go·—and that is the poorest kind of freedom. (7:57-8; EMT M.20)</p>
+</blockquote>
+<p>So, perhaps we are left with account in which there are distinct ‘levels’ or grades of freedom, with the freedom of indifference at the lowest level and the freedom to act in accordance with one’s nature at the highest.</p>
+<div class="references">
+<p>Hatfield, Gary. 2003. <em>Routledge Philosophy GuideBook to Descartes and the Meditations</em>. London: Routledge.</p>
+</div>
+</body>
+</html>
+
+<!-- ##END MARKED WRAPPER## -->
+    </div>
+</body>
+</html>
