@@ -1,0 +1,509 @@
+<!DOCTYPE html>  
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>Meditation5</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+/*
+This document has been created with Marked.app <http://markedapp.com>, Copyright 2011 Brett Terpstra
+Please leave this notice in place, along with any additional credits below.
+---------------------------------------------------------------
+Title: Avenue
+Author: Bram de Haan <http://atelierbramdehaan.nl>
+Description: modern retro
+ */
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+a img {
+  border: none;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+button, input {
+  line-height: normal;
+}
+button, input, select, textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  /* vertical-align: middle; */
+}
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+  cursor: pointer;
+  /* overflow: visible; */
+}
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  padding: 0 !important;
+}
+#wrapper {
+  margin-bottom: 0;
+}
+#wrapper img {
+  max-width: 100%;
+  height: auto;
+}
+#wrapper dd {
+  margin-bottom: 1em;
+}
+#wrapper li > p:first-child {
+  margin: 0;
+}
+#wrapper caption, #wrapper col, #wrapper colgroup, #wrapper table, #wrapper tbody, #wrapper td, #wrapper tfoot, #wrapper th, #wrapper thead, #wrapper tr {
+  border-spacing: 0;
+}
+#wrapper table {
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-collapse: collapse;
+  display: table;
+  empty-cells: hide;
+  margin: -1px 0 23px;
+  padding: 0;
+  table-layout: fixed;
+  width: 100%;
+}
+#wrapper caption {
+  display: table-caption;
+  font-weight: 700;
+}
+#wrapper col {
+  display: table-column;
+}
+#wrapper colgroup {
+  display: table-column-group;
+}
+#wrapper tbody {
+  display: table-row-group;
+}
+#wrapper tfoot {
+  display: table-footer-group;
+}
+#wrapper thead {
+  display: table-header-group;
+  border-bottom: solid 1px #999;
+}
+#wrapper td, #wrapper th {
+  display: table-cell;
+}
+#wrapper tr {
+  display: table-row;
+}
+#wrapper table th, #wrapper table td {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  padding: 0 1em;
+}
+#wrapper dt, #wrapper th {
+  font-weight: 700;
+}
+#wrapper dd {
+  padding-left: 1.4em;
+}
+#wrapper table tr:nth-child(even) {
+  background: rgba(200, 200, 200, 0.25);
+}
+#wrapper figure {
+  display: inline-block;
+  position: relative;
+  margin: 1em 0 2em;
+}
+#wrapper figcaption {
+  font-family: AvenirNext-Italic, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  font-style: italic;
+  text-align: center;
+}
+#wrapper figure:hover > figcaption {
+  /* background: rgba(0,0,0,1) */
+}
+/* #wrapper pre { moved down to base styles; } */
+.poetry #wrapper pre {
+  display: block;
+  font-family: Georgia, Garamond, serif !important;
+  font-size: 110% !important;
+  font-style: italic;
+  line-height: 1.6;
+  margin-left: 1em;
+}
+.poetry #wrapper pre code {
+  font-family: Georgia, Garamond, serif !important;
+
+}
+#wrapper sup, #wrapper sub, #wrapper a.footnote {
+  font-size: 1.4ex;
+  height: 0;
+  line-height: 1;
+  position: relative;
+  vertical-align: super;
+}
+#wrapper sub {
+  vertical-align: sub;
+  top: -1px;
+}
+#wrapper .footnote {
+  font-size: .8rem;
+  vertical-align: super;
+}
+#wrapper .footnotes p {
+  font-size: 1.9ex;
+}
+#wrapper ul ul {
+  margin-left: 1em;
+}
+
+#wrapper ul ul,
+#wrapper ol ol {
+  margin-left: 1em;
+}
+#wrapper li ul,
+#wrapper li ol {
+  margin-bottom: 0;
+}
+
+@media print {
+  body {
+    overflow: auto;
+  }
+
+  img, pre, blockquote, table, figure, p {
+    page-break-inside: avoid;
+  }
+
+  #wrapper {
+    background: #fff;
+    color: #000;
+    font-size: 85%;
+    padding: 10px;
+    position: relative;
+    text-indent: 0;
+  }
+}
+
+@media screen {
+  .inverted, .inverted #wrapper {
+    background: #222;
+  }
+  .inverted pre,
+  .inverted img {
+    border-color: #111;
+    background: #1a1a1a;
+  }
+  .inverted pre * {
+    background: #1a1a1a !important;
+  }
+
+  .inverted hr {
+    border-color: #999 !important;
+  }
+
+  .inverted p, .inverted td, .inverted li, .inverted h1, .inverted h2, .inverted h3, .inverted h4, .inverted h5, .inverted h6, .inverted pre, .inverted code, .inverted th, .inverted .math, .inverted caption, .inverted dd, .inverted dt {
+    color: #f9f9f9 !important;
+  }
+
+  .inverted table tr:nth-child(odd), .inverted table th:nth-child(odd), .inverted table td:nth-child(odd) {
+    background: none;
+  }
+
+  .inverted a {
+    color: #ff5778;
+  }
+}
+.max-width {
+  max-width: 100%;
+  height: auto;
+}
+/* ::Base styles Almost exclusively single element selectors */
+/* ------------------------------------------------------------ */
+html {
+  font-size: 100%;
+}
+body {
+  font: 100%/1.388 AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  color: #111;
+  padding: 0 5% 1rem !important;
+}
+a {
+  color: crimson;
+}
+a:hover, a:focus, a:active {
+  color: #ff2450;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: AvenirNextCondensed-DemiBold, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  /* margin: 0; */
+  padding: .5em 0 0;
+}
+h2, h3, h4, h5 {
+  border-bottom: 1px solid #777;
+}
+h1 {
+  font-size: 2.25rem;
+  line-height: 1.11111;
+}
+h2 {
+  font-size: 1.875rem;
+  line-height: 1.33333;
+}
+h3 {
+  font-size: 1.375rem;
+  line-height: 1.45455;
+}
+h4 {
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+h5 {
+  font-size: 1.125rem;
+  line-height: 1.33333;
+}
+h6 {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+pre, label {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+p {
+  font-size: 1.388rem;
+  line-height: 1.33333;
+  /* margin: 0; */
+  padding: .5em 0;
+  max-width: 30em;
+}
+h2 + p,
+h3 + p,
+h4 + p,
+h5 + p {
+  padding-top: 0;
+  margin-top: 1px;
+  border-top: 1px solid #999;
+}
+ol, ul {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0 0 2em 0;
+}
+li {
+  line-height: auto;
+}
+pre {
+  display: block;
+  margin: 1.4em auto;
+  background: #fcf9f1;
+  /* f9f9f9; */
+  padding: 15px 10px 10px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  border: solid 1px  #f0e0b2;
+  font-family: Consolas, Menlo, Monaco, monospace !important;
+  font-size: .875rem;
+  max-width: 90%;
+}
+pre * {
+  background: #fcf9f1 !important;
+}
+code {
+  font-family: Consolas, Menlo, Monaco, monospace;
+}
+ul {
+  list-style-position: outside;
+  list-style-type: square;
+}
+ol {
+  list-style-position: outside;
+  list-style-type: decimal;
+}
+strong, b {
+  font-family: AvenirNext-Bold, AvenirNextCondensed-DemiBold, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  font-weight: 600;
+}
+em, i, q {
+  font-family: AvenirNext-BoldItalic, AvenirNext-Italic, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  font-style: italic;
+}
+blockquote {
+  padding-left: 1em;
+  border-left: 0.3125em solid #c0c0c0;
+  line-height: normal;
+  /* margin: 0; */
+}
+blockquote p {
+  font-family: AvenirNext-Italic, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  font-style: italic;
+  /* margin: 0; */
+  font-size: 1.25rem;
+  line-height: 1.2;
+  margin: 1.2em 0 1.2em 0;
+}
+img {
+ padding: 1em;
+ background-color: #e6e6e6;
+ border: 1px solid #ddd;
+ -webkit-border-radius: 3px;
+ -moz-border-radius: 3px;
+ -o-border-radius: 3px;
+ border-radius: 3px;
+}
+
+@media screen and (max-width: 750px) {
+  -webkit-text-size-adjust: none;
+}
+
+
+@media print{
+#generated-toc-clone,#generated-toc{display:none!important}
+}
+
+</style>
+
+</head>
+<body class="normal">
+  <div id="wrapper">
+      <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Class notes (2/4) – do not cite or circulate" />
+  <title>Meditation 5</title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+<div id="header">
+<h1 class="title">Meditation 5</h1>
+<h2 class="author">Class notes (2/4) – do not cite or circulate</h2>
+</div>
+<div id="">
+<ul>
+<li><a href="#the-structure-of-meditation-5"><span class="toc-section-number">1</span> The Structure of <em>Meditation</em> 5</a></li>
+<li><a href="#the-ontological-argument"><span class="toc-section-number">2</span> The Ontological Argument</a><ul>
+<li><a href="#structure-of-the-argument"><span class="toc-section-number">2.1</span> Structure of the Argument</a></li>
+<li><a href="#the-argument"><span class="toc-section-number">2.2</span> The Argument</a></li>
+<li><a href="#the-three-objections"><span class="toc-section-number">2.3</span> The Three Objections</a><ul>
+<li><a href="#existence-and-essence"><span class="toc-section-number">2.3.1</span> Existence and Essence</a></li>
+<li><a href="#real-or-fictitious"><span class="toc-section-number">2.3.2</span> Real or Fictitious?</a></li>
+<li><a href="#hypothetical-necessity"><span class="toc-section-number">2.3.3</span> Hypothetical Necessity</a></li>
+</ul></li>
+<li><a href="#cateruss-objection"><span class="toc-section-number">2.4</span> Caterus’s Objection</a></li>
+</ul></li>
+<li><a href="#the-cartesian-circle"><span class="toc-section-number">3</span> The Cartesian Circle</a></li>
+</ul>
+</div>
+<h1 id="the-structure-of-meditation-5"><span class="header-section-number">1</span> The Structure of <em>Meditation</em> 5</h1>
+<ol style="list-style-type: decimal">
+<li>Essence of matter is extension (7:63, 71; EMT M.23, 26)</li>
+<li>Innate ideas of essences (7:63–5; EMT M.23)</li>
+<li>Ontological argument (7:65–8; EMT M.24-5)</li>
+<li>Primacy of clear and vivid perception (7:68–9; EMT M.25)</li>
+<li>Knowledge of God needed to banish doubt (7:69–71; EMT M.25-6)</li>
+</ol>
+<h1 id="the-ontological-argument"><span class="header-section-number">2</span> The Ontological Argument</h1>
+<h2 id="structure-of-the-argument"><span class="header-section-number">2.1</span> Structure of the Argument</h2>
+<ol style="list-style-type: decimal">
+<li>Statement of the ontological argument (7:65; EMT M.24)</li>
+<li>Objection 1: existence is separable from essence (7:66; EMT M.24)</li>
+<li>Objection 2: existence in thought is different from real existence (7:66; EMT M.24)</li>
+<li>Objection 3: the necessity of God’s existence is only hypothetical (7:67; EMT M.25)</li>
+</ol>
+<h2 id="the-argument"><span class="header-section-number">2.2</span> The Argument</h2>
+<p>The ontological argument differs from Descartes’s previous proofs in that it purports to prove God’s existence simply from a clear and distinct idea of His essence. So this isn’t a proof that relies on the cause of the idea, or on the finitude of the subject.</p>
+<blockquote>
+<p>I can easily believe that in the case of God, also, existence can be separated from essence, ·letting us answer the •essence question about God while leaving the •existence question open·, so that God can be thought of as not existing. But on more careful reflection it becomes quite evident that, just as having-internal-angles-equal-to-180° can’t be separated from the idea ·or essence· of a triangle, and as the idea of highlands can’t be separated from the idea of lowlands, so existence can’t be separated from the essence of God.</p>
+</blockquote>
+<h2 id="the-three-objections"><span class="header-section-number">2.3</span> The Three Objections</h2>
+<h3 id="existence-and-essence"><span class="header-section-number">2.3.1</span> Existence and Essence</h3>
+<p>The first objection is that we readily distinguish between the essence of a thing, what it is for that thing to be the kind of thing it is, and the existence of a thing. A ready example of this can be seen in geometry. Geometrical figures, as described by, e.g. Euclid, have essences. That is, they have definite characteristics that categorize them as the things they are (triangles have three sides and angles that sum to 180˚, quadrilateral figures have four sides and angles that sum to 360˚, etc.). However, it would be wrong to say that, for these figures, their essence is inseperable from their existence. If we can make this distinction in the case of geometric figures, then why not with God?</p>
+<p>Descartes replies that careful consideration of the content of the idea of God shows us that God’s essence is insperable from His existence.</p>
+<blockquote>
+<p>on more careful reflection it becomes quite evident that, just as having-internal-angles-equal-to-180° can’t be separated from the idea ·or essence· of a triangle, and as the idea of highlands can’t be separated from the idea of lowlands, so existence can’t be separated from the essence of God. Just as it is self-contradictory to think of highlands in a world where there are no lowlands, so it is self-contradictory to think of God as not existing—that is, to think of a supremely perfect being as lacking a perfection, namely the perfection of existence. (7:66; EMT M.24)</p>
+</blockquote>
+<p>Here we get a clarificationn of Descartes’s view. The reason why it would be self-contradictory to think of God as lacking existence is because existence, according to Descartes, is a perfection, and God has all perfections, so He must also exist.</p>
+<h3 id="real-or-fictitious"><span class="header-section-number">2.3.2</span> Real or Fictitious?</h3>
+<p>The next objection worries about how we can be sure that the content of our ideas matches reality.</p>
+<blockquote>
+<p>I can’t think of God except as existing, just as I can’t think of a river without banks. From the latter fact, though, it certainly doesn’t follow that there are any rivers in the world; so why should it follow from the former fact that God exists? How things are in reality is not settled by my thought; and just as I can imagine a winged horse even though no horse has wings, so I can attach existence to God in my thought even if no God exists. (7:66-7; EMT M.24)</p>
+</blockquote>
+<p>So the objection asks (i) whether it would follow simply from one’s thought that God exists that He exists, which (ii) seems fallacious given other examples of fictitious thought, such as thinking of a winged horse.</p>
+<p>Descartes replies that this objection gets things the wrong way round.</p>
+<blockquote>
+<p>from the fact that I can’t think of God except as existing it follows that God and existence are inseparable, which is to say that God really exists. My thought doesn’t make it so; it doesn’t create necessities. The influence runs the opposite way: the necessity of the thing constrains how I can think, depriving me of the freedom to think of God without existence (that is, a supremely perfect being without a supreme perfection), like my freedom to imagine a horse with or without wings.</p>
+</blockquote>
+<p>Descartes denies that his claim is that thinking makes it so—the necessity of God’s features constrain our thinking concerning them. Descartes also denies that the connection could be merely fictitious. If it were then the connection would be under the thinker’s control, in the way that thinking of a horse as winged (or not) is under the thinker’s control. Hence, Descartes assumes that thought of fictitious connections is always subject to the thinker’s will, while what is intrinsically connected will be inseperable in thought.</p>
+<h3 id="hypothetical-necessity"><span class="header-section-number">2.3.3</span> Hypothetical Necessity</h3>
+<blockquote>
+<p>once I have supposed that •all perfections belong to God, I must suppose that he exists, because existence is one of the perfections. But what entitles me to suppose God to have all perfections? Similarly, if I suppose that •all quadrilaterals can be inscribed in a circle, I have to conclude that a rhombus can be inscribed in a circle; but that is plainly false, which shows that the original supposition was wrong. (7:67; EMT M.25)</p>
+</blockquote>
+<p>In other words, if we assume that God has all perfections, and that existence is such a perfection, then Descartes’s conclusion follows. But why make these assumptions?</p>
+<p>Descartes’s reply again draws on the distinction between the content of a fictitious idea, whose characterisitcs may be seperated at will, and the content of the idea of God, which necessarily posits His possession of all perfections, including existence.</p>
+<blockquote>
+<p>I agree that I don’t have to think about God at all; but whenever I do choose to think of him, bringing the idea of the first and supreme being out of my mind’s store, I must attribute all perfections to him, even if I don’t attend to them individually straight away. This necessity ·in my thought· guarantees that, when I later realize that existence is a perfection, I am right to conclude then that the first and supreme being exists…When on the other hand I examine what figures can be inscribed in a circle, I am not compelled to think that this class includes all quadrilaterals. Indeed, I cannot—while thinking vividly and clearly—even pretend that all quadrilaterals can be inscribed in a circle.</p>
+</blockquote>
+<p>So the idea of God includes &lt;existence&gt;, in the just the same (necessary) way that the idea of a triangle includes &lt;three sided&gt;. We know that “This idea isn’t a fiction, a creature of my thought, but rather an image of a true and unchanging nature” because we have a clear and vivid perception of it.</p>
+<h2 id="cateruss-objection"><span class="header-section-number">2.4</span> Caterus’s Objection</h2>
+<blockquote>
+<p>Let it be granted that the word ‘God’ means to everyone what this argument says it means, namely ‘something such that nothing greater than it can be thought of’. But it doesn’t follow from this that everyone understands that ‘God’ signifies something that exists in the real world. All that follows is that everyone understands that ‘God’ signifies something that exists in the thought of the intellect. To show that this being exists in the real world you need the premise that there really is something such that nothing greater than it can be thought of; and that premise won’t be allowed by ·the very people you are trying to argue against, namely· those who maintain that God doesn’t exist. (7:99; EMT M.11-12)</p>
+</blockquote>
+<p>In other words, do we really know that such a being exists that corresponds to our concept? Descartes takes the objection to be a version of the second objection discussed above—viz., whether the concept of God is fictional. But Caterus seems to be objecting to the claim that our ideas reliably and accurately track the nature of extra-mental reality, not the claim that our idea of God is fictitious. Caterus’s objection is especially telling, given that for Descartes the idea of God is innate. The question is thus how an innate idea, an idea that does not originate from the external world, could nevertheless accurately reflect reality. This worry holds as much for geometrical figures, which determine the essential properties of all material beings, as it does for God.</p>
+<p>Descartes’s argument really hinges on his fundamental claim that clear and vivid ideas, despite their being innate,</p>
+<h1 id="the-cartesian-circle"><span class="header-section-number">3</span> The Cartesian Circle</h1>
+<p>As was suggested in the discussion of the <em>Third Meditation</em>, the need for a proof of God hinges, at least in part, on the need for a certification of clear and vivid ideas as guaranteeing truth. At the end of the <em>Fifth Meditation</em> Descartes makes clear that such a proof is necessary if we are to achieve certainty of even the simplest things, such as basic mathematical truths.</p>
+<blockquote>
+<p>But now I have seen that God exists, and have understood that everything else depends on him and that he is not a deceiver; from which I have inferred that everything that I vividly and clearly perceive must be true. So even when I am no longer attending to the arguments that led me to accept this (·i.e. the proposition about triangles·), as long as I remember that I vividly and clearly perceived it no counter-arguments can make me doubt it. It is something that I know for certain ·and in an unshakable way· to be true…Thus I see plainly that the certainty and truth of all knowledge depends strictly on my awareness of the true God. So much so that until I became aware of him I couldn’t perfectly know anything. (EMT M.26)</p>
+</blockquote>
+<p>In the <em>Third Meditation</em> Descartes argued that his clear and vivid idea of God grounded certainty of God’s existence. God’s existence and nature were then used to ground the truth rule. Arnauld, in the <em>Fourth Objections</em> points out that this reasoning is circular.</p>
+<blockquote>
+<p>I have one further worry, namely how Descartes avoids reasoning in a circle when he says that it’s only because ·we know that· God exists that we are sure that whatever we vividly and clearly perceive is true. But we can be sure that God exists only because we vividly and clearly perceive this; so before we can be sure that God exists we need to be able to be sure that whatever we perceive clearly and evidently is true. (7:214; EMT O&amp;R.75)</p>
+</blockquote>
+<p>Descartes’s reply relies on the distinction between knowledge, at a time, derived from one’s clear and vivid ideas, and knowledge at some later time based on the <em>memory</em> of such a derivation (EMT O&amp;R.75; cf. O&amp;R.25-6). Descartes argues that the <em>proof</em> of God relies only the on the clear and vivid idea of God, while the subject’s capacity to <em>retain</em> knowledge (but not the reliability of clear and vivid ideas themselves), such as through memory, relies on the the proof of God’s existence, and the fact that He is no deceiver.</p>
+<p>Is this a convincing means of getting out of the circle?</p>
+</body>
+</html>
+
+<!-- ##END MARKED WRAPPER## -->
+    </div>
+</body>
+</html>
