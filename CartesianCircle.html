@@ -1,0 +1,542 @@
+<!DOCTYPE html>  
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>CartesianCircle</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+/*
+This document has been created with Marked.app <http://markedapp.com>, Copyright 2011 Brett Terpstra
+Please leave this notice in place, along with any additional credits below.
+---------------------------------------------------------------
+Title: Avenue
+Author: Bram de Haan <http://atelierbramdehaan.nl>
+Description: modern retro
+ */
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+a img {
+  border: none;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+button, input {
+  line-height: normal;
+}
+button, input, select, textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  /* vertical-align: middle; */
+}
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+  cursor: pointer;
+  /* overflow: visible; */
+}
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  padding: 0 !important;
+}
+#wrapper {
+  margin-bottom: 0;
+}
+#wrapper img {
+  max-width: 100%;
+  height: auto;
+}
+#wrapper dd {
+  margin-bottom: 1em;
+}
+#wrapper li > p:first-child {
+  margin: 0;
+}
+#wrapper caption, #wrapper col, #wrapper colgroup, #wrapper table, #wrapper tbody, #wrapper td, #wrapper tfoot, #wrapper th, #wrapper thead, #wrapper tr {
+  border-spacing: 0;
+}
+#wrapper table {
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-collapse: collapse;
+  display: table;
+  empty-cells: hide;
+  margin: -1px 0 23px;
+  padding: 0;
+  table-layout: fixed;
+  width: 100%;
+}
+#wrapper caption {
+  display: table-caption;
+  font-weight: 700;
+}
+#wrapper col {
+  display: table-column;
+}
+#wrapper colgroup {
+  display: table-column-group;
+}
+#wrapper tbody {
+  display: table-row-group;
+}
+#wrapper tfoot {
+  display: table-footer-group;
+}
+#wrapper thead {
+  display: table-header-group;
+  border-bottom: solid 1px #999;
+}
+#wrapper td, #wrapper th {
+  display: table-cell;
+}
+#wrapper tr {
+  display: table-row;
+}
+#wrapper table th, #wrapper table td {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  padding: 0 1em;
+}
+#wrapper dt, #wrapper th {
+  font-weight: 700;
+}
+#wrapper dd {
+  padding-left: 1.4em;
+}
+#wrapper table tr:nth-child(even) {
+  background: rgba(200, 200, 200, 0.25);
+}
+#wrapper figure {
+  display: inline-block;
+  position: relative;
+  margin: 1em 0 2em;
+}
+#wrapper figcaption {
+  font-family: AvenirNext-Italic, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  font-style: italic;
+  text-align: center;
+}
+#wrapper figure:hover > figcaption {
+  /* background: rgba(0,0,0,1) */
+}
+/* #wrapper pre { moved down to base styles; } */
+.poetry #wrapper pre {
+  display: block;
+  font-family: Georgia, Garamond, serif !important;
+  font-size: 110% !important;
+  font-style: italic;
+  line-height: 1.6;
+  margin-left: 1em;
+}
+.poetry #wrapper pre code {
+  font-family: Georgia, Garamond, serif !important;
+
+}
+#wrapper sup, #wrapper sub, #wrapper a.footnote {
+  font-size: 1.4ex;
+  height: 0;
+  line-height: 1;
+  position: relative;
+  vertical-align: super;
+}
+#wrapper sub {
+  vertical-align: sub;
+  top: -1px;
+}
+#wrapper .footnote {
+  font-size: .8rem;
+  vertical-align: super;
+}
+#wrapper .footnotes p {
+  font-size: 1.9ex;
+}
+#wrapper ul ul {
+  margin-left: 1em;
+}
+
+#wrapper ul ul,
+#wrapper ol ol {
+  margin-left: 1em;
+}
+#wrapper li ul,
+#wrapper li ol {
+  margin-bottom: 0;
+}
+
+@media print {
+  body {
+    overflow: auto;
+  }
+
+  img, pre, blockquote, table, figure, p {
+    page-break-inside: avoid;
+  }
+
+  #wrapper {
+    background: #fff;
+    color: #000;
+    font-size: 85%;
+    padding: 10px;
+    position: relative;
+    text-indent: 0;
+  }
+}
+
+@media screen {
+  .inverted, .inverted #wrapper {
+    background: #222;
+  }
+  .inverted pre,
+  .inverted img {
+    border-color: #111;
+    background: #1a1a1a;
+  }
+  .inverted pre * {
+    background: #1a1a1a !important;
+  }
+
+  .inverted hr {
+    border-color: #999 !important;
+  }
+
+  .inverted p, .inverted td, .inverted li, .inverted h1, .inverted h2, .inverted h3, .inverted h4, .inverted h5, .inverted h6, .inverted pre, .inverted code, .inverted th, .inverted .math, .inverted caption, .inverted dd, .inverted dt {
+    color: #f9f9f9 !important;
+  }
+
+  .inverted table tr:nth-child(odd), .inverted table th:nth-child(odd), .inverted table td:nth-child(odd) {
+    background: none;
+  }
+
+  .inverted a {
+    color: #ff5778;
+  }
+}
+.max-width {
+  max-width: 100%;
+  height: auto;
+}
+/* ::Base styles Almost exclusively single element selectors */
+/* ------------------------------------------------------------ */
+html {
+  font-size: 100%;
+}
+body {
+  font: 100%/1.388 AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  color: #111;
+  padding: 0 5% 1rem !important;
+}
+a {
+  color: crimson;
+}
+a:hover, a:focus, a:active {
+  color: #ff2450;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: AvenirNextCondensed-DemiBold, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  /* margin: 0; */
+  padding: .5em 0 0;
+}
+h2, h3, h4, h5 {
+  border-bottom: 1px solid #777;
+}
+h1 {
+  font-size: 2.25rem;
+  line-height: 1.11111;
+}
+h2 {
+  font-size: 1.875rem;
+  line-height: 1.33333;
+}
+h3 {
+  font-size: 1.375rem;
+  line-height: 1.45455;
+}
+h4 {
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+h5 {
+  font-size: 1.125rem;
+  line-height: 1.33333;
+}
+h6 {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+pre, label {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+p {
+  font-size: 1.388rem;
+  line-height: 1.33333;
+  /* margin: 0; */
+  padding: .5em 0;
+  max-width: 30em;
+}
+h2 + p,
+h3 + p,
+h4 + p,
+h5 + p {
+  padding-top: 0;
+  margin-top: 1px;
+  border-top: 1px solid #999;
+}
+ol, ul {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0 0 2em 0;
+}
+li {
+  line-height: auto;
+}
+pre {
+  display: block;
+  margin: 1.4em auto;
+  background: #fcf9f1;
+  /* f9f9f9; */
+  padding: 15px 10px 10px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  border: solid 1px  #f0e0b2;
+  font-family: Consolas, Menlo, Monaco, monospace !important;
+  font-size: .875rem;
+  max-width: 90%;
+}
+pre * {
+  background: #fcf9f1 !important;
+}
+code {
+  font-family: Consolas, Menlo, Monaco, monospace;
+}
+ul {
+  list-style-position: outside;
+  list-style-type: square;
+}
+ol {
+  list-style-position: outside;
+  list-style-type: decimal;
+}
+strong, b {
+  font-family: AvenirNext-Bold, AvenirNextCondensed-DemiBold, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  font-weight: 600;
+}
+em, i, q {
+  font-family: AvenirNext-BoldItalic, AvenirNext-Italic, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  font-style: italic;
+}
+blockquote {
+  padding-left: 1em;
+  border-left: 0.3125em solid #c0c0c0;
+  line-height: normal;
+  /* margin: 0; */
+}
+blockquote p {
+  font-family: AvenirNext-Italic, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  font-style: italic;
+  /* margin: 0; */
+  font-size: 1.25rem;
+  line-height: 1.2;
+  margin: 1.2em 0 1.2em 0;
+}
+img {
+ padding: 1em;
+ background-color: #e6e6e6;
+ border: 1px solid #ddd;
+ -webkit-border-radius: 3px;
+ -moz-border-radius: 3px;
+ -o-border-radius: 3px;
+ border-radius: 3px;
+}
+
+@media screen and (max-width: 750px) {
+  -webkit-text-size-adjust: none;
+}
+
+
+@media print{
+#generated-toc-clone,#generated-toc{display:none!important}
+}
+
+</style>
+<style>#wrapper { max-width:900px; margin:0 auto }</style>
+</head>
+<body class="normal poetry">
+  <div id="wrapper">
+      <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Class notes (2/6) – do not cite or circulate" />
+  <title>The Cartesian Circle</title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+<div id="header">
+<h1 class="title">The Cartesian Circle</h1>
+<h2 class="author">Class notes (2/6) – do not cite or circulate</h2>
+</div>
+<div id="">
+<ul>
+<li><a href="#the-circle"><span class="toc-section-number">1</span> The Circle</a><ul>
+<li><a href="#denying-premise-1-the-memory-gambit"><span class="toc-section-number">1.1</span> Denying Premise (1) — The Memory Gambit</a></li>
+<li><a href="#rejecting-premise-2"><span class="toc-section-number">1.2</span> Rejecting Premise (2)</a></li>
+<li><a href="#high-standards-for-doubt"><span class="toc-section-number">1.3</span> High Standards for Doubt</a></li>
+<li><a href="#van-cleves-solution"><span class="toc-section-number">1.4</span> Van Cleve’s Solution</a><ul>
+<li><a href="#the-plight-of-the-atheist"><span class="toc-section-number">1.4.1</span> The Plight of the Atheist</a></li>
+<li><a href="#breaking-out-of-the-circle"><span class="toc-section-number">1.4.2</span> Breaking Out of the Circle</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#references">References</a></li>
+</ul>
+</div>
+<h1 id="the-circle"><span class="header-section-number">1</span> The Circle</h1>
+<p>The problem of the circle is not, according to Van Cleve, merely Descartes’s problem. It is our problem as well, for it arises in the articulation of any suitably sophiticated epistemological account. The generalized form of the problem is known as the ‘Problem of the Criterion’ and amy be understood as asking:</p>
+<blockquote>
+<p>how can I know any epistemic principles unless I first know some other propositions from which to derive them? But how can I know those other propositions unless I first know some epistemic principles? (<span class="citation">Van Cleve (1979)</span>, 56)</p>
+</blockquote>
+<p>Van Cleve articulates the problem of the circle this way:</p>
+<blockquote>
+<p>The problem of the Cartesian Circle arose for Descartes because he appeared to commit himself to each of the following propositions:</p>
+<blockquote>
+<ol style="list-style-type: decimal">
+<li>I can know (be certain) that (p) whatever I perceive clearly and distinctly is true only if I first know (am certain) that (q) God exists and is not a deceiver.<br /></li>
+<li>I can know (be certain) that (q) God exists and is not a deceiver only if I first know (am certain) that (p) whatever I perceive clearly and distinctly is true.</li>
+</ol>
+</blockquote>
+<p>Obviously, if (1) and (2) are both true, I can never be certain of either p or q. (<span class="citation">Van Cleve (1979)</span>, 55)</p>
+</blockquote>
+<p>The only way out of the circle is deny either premise (1) or (2)</p>
+<h2 id="denying-premise-1-the-memory-gambit"><span class="header-section-number">1.1</span> Denying Premise (1) — The Memory Gambit</h2>
+<p>Perhaps we can deny premise (1) by claiming that God’s guarantee is required only for the accuracy and general reliability of our memories, rather than for underwriting the reliability of clear and vivid ideas themselves. Harry Frankfurt (<span class="citation">Frankfurt (2008 [1970])</span>, ch.14) offers one set of reasons for thinking that the Memory Gambit is not part of Descartes’s strategy. But Van Cleve offers another. First, consider what Descartes says about the plight of the atheist in the second set of <em>Objections and Replies</em>:</p>
+<blockquote>
+<p>The fact that an atheist can be “clearly aware that the three angles of a triangle are equal to two right angles” is something I do not dispute. But I maintain that this awareness of his is not true knowledge, since no act of awareness that can be rendered doubtful seems fit to be called knowledge. Now since we are supposing that this individual is an atheist, he cannot be certain that he is not being deceived on matters which seem to him to be very evident (as I fully explained). And although this doubt may not occur to him, it can still crop up if someone else raises the point or if he looks into the matter himself. So he will never be free of this doubt until he acknowledges that God exists. (7:141; EMT O&amp;R.26)</p>
+</blockquote>
+<p>Van Cleve argues that the above passage supports the claim that the atheist cannot rely on memory in coming to know truths via clear and vivid ideas. He puts the argument as follows:</p>
+<ol style="list-style-type: lower-alpha">
+<li>I remember clearly and vividly perceiving p.</li>
+<li>So, I did clearly and vividly perceive p.</li>
+<li>So, p is true.</li>
+</ol>
+<p>The atheist cannot move from (a) to (c). The Memory Gambit says that the atheist cannot move from (a) to (b). Van Cleve thinks that we can reject this claim and still think that the move to (c) is problematic, since it is still an open possibility that, given (a) and (b), (c) is nevertheless false. So we need some guarantee of the move to (c), and that is where God comes in. Thus, Van Cleve concludes, Descartes cannot reject premise (1) after all.</p>
+<h2 id="rejecting-premise-2"><span class="header-section-number">1.2</span> Rejecting Premise (2)</h2>
+<p>Van Cleve examines two strategies for rejecting premise (2). The first, by Alan Gewirth, attempts to show that Descartes needs God only to prove the <em>metaphysical certainty</em> of clear and vivid ideas, while <em>psychological certainty</em> consists only of an irresistible compulsion to believe, and is all that we need have prior to proving the existence of God.</p>
+<p>Van Cleve’s primary objection is that Gewirth never gives us a means of passing from psychological certainty to metaphysical certainty.</p>
+<blockquote>
+<p>What is added when at the end of the argument we say that God’s veracity and other things clearly and distinctly perceived are metaphysically certain? Just this: that we are psychologically certain not only of those propositions themselves, but also of the falsehood of every reason for doubting them. Thus, we have not advanced to a new kind of certainty at all. We have merely extended the class of psychological certainties. Descartes played for higher stakes. The certainty he sought was certainty in a sense entailing both maximal evidence and truth. Despite what Gewirth says, metaphysical certainty in his sense entails neither. It remains at bottom a purely psychological notion. (<span class="citation">Van Cleve (1979)</span>, 60-1)</p>
+</blockquote>
+<p>Van Cleve rejects Feldman’s strategy for similar reasons. Ultimately, Van Cleve denies that their conceptions of ‘metaphysical certainty’ are up to Descartes’s high standards (<span class="citation">Van Cleve (1979)</span>, 62-3).</p>
+<h2 id="high-standards-for-doubt"><span class="header-section-number">1.3</span> High Standards for Doubt</h2>
+<p>Why should we give any credence to such slight doubts as that there might be a deceiver capable of making what seems evident to one false? Here I present Van Cleve’s revised argument (<span class="citation">Van Cleve (1979)</span>, 65). First, a few definitions:</p>
+<dl>
+<dt>Epistemic Possibliity:</dt>
+<dd><p>if P is a proposition that S is considering at t, then P is epistemically possible for S at t if and only if S is not certain at t of not-P</p>
+</dd>
+<dt>The Demon Hypothesis:</dt>
+<dd><p>an evil demon brings it about that whatever seems evident to me is false</p>
+</dd>
+<dt><em>T</em>:</dt>
+<dd><p>any manifestly evident propositions, such as <em>2+3=5</em></p>
+</dd>
+</dl>
+<p>Van Cleve puts his argument as follows:</p>
+<ol style="list-style-type: decimal">
+<li>The following proposition is epistemically possible for me: T seems evident to me and the Demon Hypothesis is true.</li>
+<li>If (P entails Q) is certain for me, and P is epistemically possible for me, then Q is epistemically possible for me.</li>
+<li>I am certain that the following entailment holds: (T seems evident to me and the Demon Hypothesis is true) entails (T is false).</li>
+<li><span class="math">∴ </span> (T is false) is epistemically possible for me. [by (1)-(3)]</li>
+<li><span class="math">∴ </span> I am not certain that T is true. [(4), definition]</li>
+</ol>
+<p>Van Cleve makes two important points with this argument. First, that the activity of doubt presupposes the certainty of <em>something</em>, in this case, at least the entailment relation as described in (2). Second, one need not be certain of the truth of one’s doubts. They need merely be <em>epistemically possible</em>.</p>
+<p>Finally, as Van Cleve notes, the only disputable premise in the above argument is premise (1). So one can challenge the argument only by challenging the epistemic possibility of radical doubt/the evil demon. This is equivalent to being certain that the evil demon scenario is impossible. And <em>that</em> is a very high standard of certainty indeed.</p>
+<h2 id="van-cleves-solution"><span class="header-section-number">1.4</span> Van Cleve’s Solution</h2>
+<p>Van Cleve draws a distinction between two kinds of certainty, one particular, one general:</p>
+<blockquote>
+<ol style="list-style-type: upper-alpha">
+<li><p>For all P, if I clearly and distinctly perceive that P, then I am certain that P.</p></li>
+<li><p>I am certain that (for all P, if I clearly and distinctly perceive that P, then P). (<span class="citation">Van Cleve (1979)</span>, 66-7)</p></li>
+</ol>
+</blockquote>
+<p>The first claim (A) is particular. It says that one can be certain of a particular proposition P when one clearly and distinctly (vividly) perceives it. The second claim (B) is a general claim. It says that clear and distinct perception is connected to truth.</p>
+<h3 id="the-plight-of-the-atheist"><span class="header-section-number">1.4.1</span> The Plight of the Atheist</h3>
+<p>The distinction between (A) and (B) explains how Descartes thinks the theist has an advantage over the atheist without invoking the Memory Gambit as described above. Van Cleve explains:</p>
+<blockquote>
+<p>[Descartes] concedes that even the atheist can be certain that the three angles of a triangle are equal to two right angles if he is clearly and distinctly perceiving this at the time. (A) is thus true of atheist and Descartes alike. But if at a later time both men merely remember having a clear and distinct perception of that theorem, Descartes will still be certain of it, but the atheist will not. This is not because (as the Memory Gambit would have it) Descartes can trust his memory and the atheist cannot. It is rather because Descartes can be certain (after he has proved the veracity of God) that anything he once clearly and distinctly perceived is true, whereas the atheist cannot. So (B) is true of Descartes, but not of the atheist. (<span class="citation">Van Cleve (1979)</span>, 68)</p>
+</blockquote>
+<h3 id="breaking-out-of-the-circle"><span class="header-section-number">1.4.2</span> Breaking Out of the Circle</h3>
+<p>If the distinction between (A) and (B) is sound then Van Cleve’s interpretation allows Descartes to straightforwardly reject premise (2) of the circle above. Recall that premise (2) says:</p>
+<ol start="2" style="list-style-type: decimal">
+<li>I can know (be certain) that (q) God exists and is not a deceiver only if I first know (am certain) that (p) whatever I perceive clearly and distinctly is true.</li>
+</ol>
+<p>So, according to Van Cleve, Descartes need only think that that prior to proof of God’s existence and non-deceptive nature, the Meditator need only be certain of <em>particular</em> clear and vivacious ideas, not of the general principle (as articulated in (B)) that clarity and vivacity of one’s ideas is connected to (or a guarantor of) truth.</p>
+<p>Thus, by the end of <em>Meditation</em> 2 the Meditator has a stock of truths which she may know for certain—viz., the <em>cogito</em>, and perhaps some of the particular metaphysical principles the Meditator relies on, such as the causal principle (a cause must contain at least as much reality as its effect). Van Cleve notes,</p>
+<blockquote>
+<p>The fact that I clearly and distinctly perceive a proposition does not serve as a ground for accepting it. It is a source of knowledge, but not a ground. Nor does proposition (A) serve as a ground. Rather, it is a fact that enables knowledge to get started. (We can authenticate this fact later if we wish, but need not do so in the beginning.) (<span class="citation">Van Cleve (1979)</span>, 69)</p>
+</blockquote>
+<p>This point is important for getting Descartes out of the circle. It has to be the case that (A) can be true without the Meditator’s requiring justification for believing (A)’s truth.</p>
+<blockquote>
+<p>I maintain that in order to become certain of a proposition I do not need to know that I am clearly and distinctly perceiving it, nor that whatever I so perceive is either certain or true. It is enough that I <em>do</em> clearly and distinctly perceive the proposition. (A) <em>says</em> that this is enough. For (A) says that perceiving something clearly and distinctly is <em>sufficient</em> to render me certain of it…The point I have been insisting upon could be summed up as follows: (A) is not a principle I have to <em>apply</em> in order to gain knowledge; I need only <em>fall under</em> it. (<span class="citation">Van Cleve (1979)</span>, 69-70)</p>
+</blockquote>
+<p>So, from the <em>fact</em> that the Meditator falls under (A), and thus knows with certainty some stock of propositions (such as the <em>cogito</em>), she can derive (A) For all P, if I clearly and distinctly perceive that P, then I am certain that P — Van Cleve takes (A) to be equivalent to Descartes’s ‘truth rule’ (<span class="citation">Van Cleve (1979)</span>, 71). Knowledge of this principle then grounds knowledge of higher-order propositions, such as that ‘I am certain that I am a thinking being’, etc.</p>
+<blockquote>
+<p>Descartes’s procedure could be summed up thus: by falling under proposition (A) (that is, the C&amp;D Rule [or ‘truth rule’]), he becomes certain of premises from which he eventually derives proposition (A) itself. But since he does not have to use proposition (A) at any step along the way, there is no circle. (<span class="citation">Van Cleve (1979)</span>, 71)</p>
+</blockquote>
+<p>Hence, perhaps surprisingly, Descartes turns out to be a kind of <a href="http://plato.stanford.edu/entries/justep-intext/">epistemological externalist</a> insofar as he thinks that our most basic beliefs admit of a warrant (viz., falling under the (A) rule) that need not be available to reflection.</p>
+<h1 id="references" class="unnumbered">References</h1>
+<hr />
+<!--  -->
+
+
+
+<div class="references">
+<p>Frankfurt, Harry G. 2008 [1970]. <em>Demons, Dreamers, and Madmen: The Defense of Reason in Descartes’s <span style="font-style:normal;">“Meditations”</span></em>. Princeton, NJ: Princeton University Press.</p>
+<p>Van Cleve, James. 1979. “Foundationalism, Epistemic Principles, and the Cartesian Circle.” <em>The Philosophical Review</em> 88 (1) (January): 55–91. doi:<a href="http://dx.doi.org/10.2307/2184779">10.2307/2184779</a>. <a href="http://www.jstor.org/stable/2184779">http://www.jstor.org/stable/2184779</a>.</p>
+</div>
+</body>
+</html>
+
+<!-- ##END MARKED WRAPPER## -->
+    </div>
+</body>
+</html>
