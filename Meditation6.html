@@ -1,0 +1,587 @@
+<!DOCTYPE html>  
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>Meditation6</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+/*
+This document has been created with Marked.app <http://markedapp.com>, Copyright 2011 Brett Terpstra
+Please leave this notice in place, along with any additional credits below.
+---------------------------------------------------------------
+Title: Avenue
+Author: Bram de Haan <http://atelierbramdehaan.nl>
+Description: modern retro
+ */
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+a img {
+  border: none;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+button, input {
+  line-height: normal;
+}
+button, input, select, textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  /* vertical-align: middle; */
+}
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+  cursor: pointer;
+  /* overflow: visible; */
+}
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  padding: 0 !important;
+}
+#wrapper {
+  margin-bottom: 0;
+}
+#wrapper img {
+  max-width: 100%;
+  height: auto;
+}
+#wrapper dd {
+  margin-bottom: 1em;
+}
+#wrapper li > p:first-child {
+  margin: 0;
+}
+#wrapper caption, #wrapper col, #wrapper colgroup, #wrapper table, #wrapper tbody, #wrapper td, #wrapper tfoot, #wrapper th, #wrapper thead, #wrapper tr {
+  border-spacing: 0;
+}
+#wrapper table {
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-collapse: collapse;
+  display: table;
+  empty-cells: hide;
+  margin: -1px 0 23px;
+  padding: 0;
+  table-layout: fixed;
+  width: 100%;
+}
+#wrapper caption {
+  display: table-caption;
+  font-weight: 700;
+}
+#wrapper col {
+  display: table-column;
+}
+#wrapper colgroup {
+  display: table-column-group;
+}
+#wrapper tbody {
+  display: table-row-group;
+}
+#wrapper tfoot {
+  display: table-footer-group;
+}
+#wrapper thead {
+  display: table-header-group;
+  border-bottom: solid 1px #999;
+}
+#wrapper td, #wrapper th {
+  display: table-cell;
+}
+#wrapper tr {
+  display: table-row;
+}
+#wrapper table th, #wrapper table td {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  padding: 0 1em;
+}
+#wrapper dt, #wrapper th {
+  font-weight: 700;
+}
+#wrapper dd {
+  padding-left: 1.4em;
+}
+#wrapper table tr:nth-child(even) {
+  background: rgba(200, 200, 200, 0.25);
+}
+#wrapper figure {
+  display: inline-block;
+  position: relative;
+  margin: 1em 0 2em;
+}
+#wrapper figcaption {
+  font-family: AvenirNext-Italic, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  font-style: italic;
+  text-align: center;
+}
+#wrapper figure:hover > figcaption {
+  /* background: rgba(0,0,0,1) */
+}
+/* #wrapper pre { moved down to base styles; } */
+.poetry #wrapper pre {
+  display: block;
+  font-family: Georgia, Garamond, serif !important;
+  font-size: 110% !important;
+  font-style: italic;
+  line-height: 1.6;
+  margin-left: 1em;
+}
+.poetry #wrapper pre code {
+  font-family: Georgia, Garamond, serif !important;
+
+}
+#wrapper sup, #wrapper sub, #wrapper a.footnote {
+  font-size: 1.4ex;
+  height: 0;
+  line-height: 1;
+  position: relative;
+  vertical-align: super;
+}
+#wrapper sub {
+  vertical-align: sub;
+  top: -1px;
+}
+#wrapper .footnote {
+  font-size: .8rem;
+  vertical-align: super;
+}
+#wrapper .footnotes p {
+  font-size: 1.9ex;
+}
+#wrapper ul ul {
+  margin-left: 1em;
+}
+
+#wrapper ul ul,
+#wrapper ol ol {
+  margin-left: 1em;
+}
+#wrapper li ul,
+#wrapper li ol {
+  margin-bottom: 0;
+}
+
+@media print {
+  body {
+    overflow: auto;
+  }
+
+  img, pre, blockquote, table, figure, p {
+    page-break-inside: avoid;
+  }
+
+  #wrapper {
+    background: #fff;
+    color: #000;
+    font-size: 85%;
+    padding: 10px;
+    position: relative;
+    text-indent: 0;
+  }
+}
+
+@media screen {
+  .inverted, .inverted #wrapper {
+    background: #222;
+  }
+  .inverted pre,
+  .inverted img {
+    border-color: #111;
+    background: #1a1a1a;
+  }
+  .inverted pre * {
+    background: #1a1a1a !important;
+  }
+
+  .inverted hr {
+    border-color: #999 !important;
+  }
+
+  .inverted p, .inverted td, .inverted li, .inverted h1, .inverted h2, .inverted h3, .inverted h4, .inverted h5, .inverted h6, .inverted pre, .inverted code, .inverted th, .inverted .math, .inverted caption, .inverted dd, .inverted dt {
+    color: #f9f9f9 !important;
+  }
+
+  .inverted table tr:nth-child(odd), .inverted table th:nth-child(odd), .inverted table td:nth-child(odd) {
+    background: none;
+  }
+
+  .inverted a {
+    color: #ff5778;
+  }
+}
+.max-width {
+  max-width: 100%;
+  height: auto;
+}
+/* ::Base styles Almost exclusively single element selectors */
+/* ------------------------------------------------------------ */
+html {
+  font-size: 100%;
+}
+body {
+  font: 100%/1.388 AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  color: #111;
+  padding: 0 5% 1rem !important;
+}
+a {
+  color: crimson;
+}
+a:hover, a:focus, a:active {
+  color: #ff2450;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: AvenirNextCondensed-DemiBold, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  /* margin: 0; */
+  padding: .5em 0 0;
+}
+h2, h3, h4, h5 {
+  border-bottom: 1px solid #777;
+}
+h1 {
+  font-size: 2.25rem;
+  line-height: 1.11111;
+}
+h2 {
+  font-size: 1.875rem;
+  line-height: 1.33333;
+}
+h3 {
+  font-size: 1.375rem;
+  line-height: 1.45455;
+}
+h4 {
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+h5 {
+  font-size: 1.125rem;
+  line-height: 1.33333;
+}
+h6 {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+pre, label {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+p {
+  font-size: 1.388rem;
+  line-height: 1.33333;
+  /* margin: 0; */
+  padding: .5em 0;
+  max-width: 30em;
+}
+h2 + p,
+h3 + p,
+h4 + p,
+h5 + p {
+  padding-top: 0;
+  margin-top: 1px;
+  border-top: 1px solid #999;
+}
+ol, ul {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0 0 2em 0;
+}
+li {
+  line-height: auto;
+}
+pre {
+  display: block;
+  margin: 1.4em auto;
+  background: #fcf9f1;
+  /* f9f9f9; */
+  padding: 15px 10px 10px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  border: solid 1px  #f0e0b2;
+  font-family: Consolas, Menlo, Monaco, monospace !important;
+  font-size: .875rem;
+  max-width: 90%;
+}
+pre * {
+  background: #fcf9f1 !important;
+}
+code {
+  font-family: Consolas, Menlo, Monaco, monospace;
+}
+ul {
+  list-style-position: outside;
+  list-style-type: square;
+}
+ol {
+  list-style-position: outside;
+  list-style-type: decimal;
+}
+strong, b {
+  font-family: AvenirNext-Bold, AvenirNextCondensed-DemiBold, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  font-weight: 600;
+}
+em, i, q {
+  font-family: AvenirNext-BoldItalic, AvenirNext-Italic, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  font-style: italic;
+}
+blockquote {
+  padding-left: 1em;
+  border-left: 0.3125em solid #c0c0c0;
+  line-height: normal;
+  /* margin: 0; */
+}
+blockquote p {
+  font-family: AvenirNext-Italic, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  font-style: italic;
+  /* margin: 0; */
+  font-size: 1.25rem;
+  line-height: 1.2;
+  margin: 1.2em 0 1.2em 0;
+}
+img {
+ padding: 1em;
+ background-color: #e6e6e6;
+ border: 1px solid #ddd;
+ -webkit-border-radius: 3px;
+ -moz-border-radius: 3px;
+ -o-border-radius: 3px;
+ border-radius: 3px;
+}
+
+@media screen and (max-width: 750px) {
+  -webkit-text-size-adjust: none;
+}
+
+
+@media print{
+#generated-toc-clone,#generated-toc{display:none!important}
+}
+
+</style>
+<style>#wrapper { max-width:900px; margin:0 auto }</style>
+</head>
+<body class="normal poetry">
+  <div id="wrapper">
+      <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Class notes (2/11-13) – do not cite or circulate" />
+  <title>Meditation 6</title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+<div id="header">
+<h1 class="title">Meditation 6</h1>
+<h2 class="author">Class notes (2/11-13) – do not cite or circulate</h2>
+</div>
+<div id="">
+<ul>
+<li><a href="#structure-of-the-meditation"><span class="toc-section-number">1</span> Structure of the <em>Meditation</em></a></li>
+<li><a href="#the-real-distinction-argument"><span class="toc-section-number">2</span> The ‘Real Distinction’ Argument</a><ul>
+<li><a href="#real-distinction"><span class="toc-section-number">2.1</span> Real Distinction</a><ul>
+<li><a href="#conceptual-distinctness"><span class="toc-section-number">2.1.1</span> Conceptual Distinctness</a></li>
+<li><a href="#modal-distinctness"><span class="toc-section-number">2.1.2</span> Modal Distinctness</a></li>
+<li><a href="#real-distinctness"><span class="toc-section-number">2.1.3</span> Real Distinctness</a></li>
+</ul></li>
+<li><a href="#the-argument"><span class="toc-section-number">2.2</span> The Argument</a><ul>
+<li><a href="#gods-power"><span class="toc-section-number">2.2.1</span> God’s Power</a></li>
+<li><a href="#knowing-ones-essence"><span class="toc-section-number">2.2.2</span> Knowing One’s Essence</a></li>
+<li><a href="#the-real-distinctness-of-mind-and-body"><span class="toc-section-number">2.2.3</span> The Real Distinctness of Mind and Body</a></li>
+<li><a href="#an-objection-excluding-ignorance"><span class="toc-section-number">2.2.4</span> An Objection: Excluding Ignorance</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#proof-of-the-external-world"><span class="toc-section-number">3</span> Proof of the External World</a><ul>
+<li><a href="#the-role-of-senses-vs.the-intellect"><span class="toc-section-number">3.1</span> The Role of Senses vs. The Intellect</a></li>
+</ul></li>
+<li><a href="#references">References</a></li>
+</ul>
+</div>
+<h1 id="structure-of-the-meditation"><span class="header-section-number">1</span> Structure of the <em>Meditation</em></h1>
+<ol style="list-style-type: decimal">
+<li>Intellect vs. Imagination (7:71-3; EMT M.27)</li>
+<li>Review of doubt about the senses (7:74-8; EMT M.28-9)</li>
+<li>The ‘Real Distinction’ argument (7:78; EMT M.29)</li>
+<li>Mind as intellectual substance (7:78-9; EMT M.29-30)</li>
+<li>The existence of external objects (7:78-80; EMT M.30)</li>
+<li>The mind-body union (7:80-1; EMT M.30)</li>
+<li>The role of the senses vs. the intellect (7:82-3; EMT M.30-1)</li>
+<li>Sensory error (7:83-9; EMT M.31-3)</li>
+<li>The dream doubt removed (7:89-90; EMT M.34)</li>
+</ol>
+<p>Here I focus primarily on the ‘Real Distinction’ argument and the argument for the existence of an external world.</p>
+<h1 id="the-real-distinction-argument"><span class="header-section-number">2</span> The ‘Real Distinction’ Argument</h1>
+<p>Here Descartes famously distinguishes the mind from the body and argues that not only are we aware of ourselves fundamentally as thinking things, but that thinking things (mental substance) are in principle independent of any material body.</p>
+<p>The argument appears as the first step in a larger argument aimed at proving the existence of material bodies even in the face of the kinds of doubt raised in previous <em>Meditations</em>.</p>
+<h2 id="real-distinction"><span class="header-section-number">2.1</span> Real Distinction</h2>
+<p>Descartes distinguishes between three kinds of distinction, <em>real</em>, <em>modal</em>, and <em>conceptual</em> (<em>Principles</em>, §§60-2; 8A:28-31). Let’s take these in reverse order.</p>
+<h3 id="conceptual-distinctness"><span class="header-section-number">2.1.1</span> Conceptual Distinctness</h3>
+<p>Descartes defines a <em>conceptual distinction</em> as,</p>
+<blockquote>
+<p>a distinction between a substance and some attribute of that substance without which the substance is unintelligible; alternatively, it is a distinction between two such attributes of a single substance. Such a distinction is recognized by our inability to form a clear and distinct idea of the substance if we exclude from it the attribute in question, or, alternatively, by our inability to perceive clearly the idea of one of the two attributes if we separate it from the other. (8A:30)</p>
+</blockquote>
+<p>This distinction depends on facts about what is <em>intelligible</em> or otherwise required for the understanding to form a clear and vivid idea of something. But it is not yet a claim about <em>what kind of things exist</em> or real metaphysical connections between conceptually distinguishable things. Hence, though there is a conceptual distinction between a substance and its attributes, the fact of such a distinction does not show that we have two metaphysically distinct entities—viz., a substance, on the one hand, and its attributes, on the other.</p>
+<h3 id="modal-distinctness"><span class="header-section-number">2.1.2</span> Modal Distinctness</h3>
+<p>Descartes explains that a <em>modal distinction</em>,</p>
+<blockquote>
+<p>can be taken in two ways: firstly, as a distinction between a mode, properly so called, and the substance of which it is a mode; and secondly, as a distinction between two modes of the same substance. The first kind of modal distinction can be recognized from the fact that we can clearly perceive a substance apart from the mode which we say differs from it, whereas we cannot, conversely, understand the mode apart from the substance…The second kind of modal distinction is recognized from the fact that we are able to arrive at knowledge of one mode apart from another, and vice versa, whereas we cannot know either mode apart from the substance in which they both inhere. For example, if a stone is in motion and is square-shaped, I can understand the square shape without the motion and, conversely, the motion without the square shape; but I can understand neither the motion nor the shape apart from the substance of the stone. (8A:29-30)</p>
+</blockquote>
+<p>The notion of a modal distinction is thus closely related to that of a conceptual distinction. Descartes had in fact lumped the two together in his replies to the <em>First set of Objections</em> to the <em>Meditations</em>, concerning the wax argument. Here we have the claim that we can (i) distinguish (or make intelligible) a mode of a substance from substance itself; and (ii) one mode from another. Once again though, we cannot draw any conclusion from the existence of a modal distinction to any conclusion concerning reality. Hence, from the fact that I may modally distinguish shape from motion, I cannot conclude that one can really exist without the other.</p>
+<h3 id="real-distinctness"><span class="header-section-number">2.1.3</span> Real Distinctness</h3>
+<p>Descartes defines a real distinction as follows.</p>
+<blockquote>
+<p>Strictly speaking, a real distinction exists only between two or more substances; and we can perceive that two substances are really distinct simply from the fact that we can clearly and distinctly understand one apart from the other.</p>
+</blockquote>
+<p>Here Descartes claims that, in the case of real distinctness, we can conclude something about how things are in reality on the basis of our pure and distinct ideas. In other words, insofar as one can vividly and clearly distinguish two substances from one another (either numerically or qualitatively), those things <em>really are distinct</em> from one another.</p>
+<h2 id="the-argument"><span class="header-section-number">2.2</span> The Argument</h2>
+<blockquote>
+<p>[A] I know that if I have a vivid and clear thought of something, God could have created it in a way that exactly corresponds to my thought. So the fact that I can vividly and clearly think of one thing apart from another assures me that the two things are distinct from one another—·that is, that they are two·—since they can be separated by God. Never mind how they could be separated; that does not affect the judgment that they are distinct. ·So my mind is a distinct thing from my body. [B] Furthermore, my mind is me, for the following reason·. I know that I exist and that nothing else belongs to my nature or essence except that I am a thinking thing; from this it follows that my essence consists solely in my being a thinking thing, even though there may be a body that is very closely joined to me. [C] I have a vivid and clear idea of •myself as something that thinks and isn’t extended, and one of •body as something that is extended and does not think. So it is certain that •I am really distinct from •my body and can exist without it. (EMT M.29)</p>
+</blockquote>
+<p>We should read this text as trying to prove three distinct claims (see <span class="citation">Hatfield (2003)</span>, 250).</p>
+<ol style="list-style-type: decimal">
+<li><em>Complete Being<sub>T</sub></em>: a thinking thing can exist as a substance whose sole essence is thought.</li>
+<li><em>Complete Being<sub>B</sub></em>: body can exist as a substance whose sole essence is extension.</li>
+<li><em>Mutual Exclusion</em>: mental substance has no bodily modes, and bodily substance has no mental modes.</li>
+</ol>
+<p>Why all three? One might think that all that is necessary for distinctness is showing (1) and (2). However, proving the first two claims leaves open the possibility that there may be some mental beings which could not exist or operate without a body and vice versa. Descartes wishes to exclude this as a possibility, if for no other reason than it was a view broadly held by his Aristotelian opponents, so showing (3) is required as well as (1) and (2).</p>
+<p>We can raise several basic questions about the argument. For example, what role does God’s power to separate mind from body play in A? Is B the argument or do we only get the full argument in C? Or is C really just an elaboration of B?</p>
+<h3 id="gods-power"><span class="header-section-number">2.2.1</span> God’s Power</h3>
+<blockquote>
+<p>[A] I know that if I have a vivid and clear thought of something, God could have created it in a way that exactly corresponds to my thought. So the fact that I can vividly and clearly think of one thing apart from another assures me that the two things are distinct from one another—·that is, that they are two·—since they can be separated by God. Never mind how they could be separated; that does not affect the judgment that they are distinct. ·So my mind is a distinct thing from my body.</p>
+</blockquote>
+<p>Here is what part A <a href="http://plato.stanford.edu/entries/descartes-modal/#ReaDis">seems to be arguing</a>:</p>
+<ol style="list-style-type: decimal">
+<li>I clearly and distinctly understand mind apart from body and body apart from mind.</li>
+<li>God can bring about whatever I clearly and distinctly perceive.</li>
+<li>God can bring about that mind is apart from body and body is apart from mind.</li>
+<li>If God can bring about that mind is apart from body and body is apart from mind, then mind and body can exist apart.</li>
+<li><span class="math">∴ </span> Mind and body can exist apart.</li>
+</ol>
+<p>Would this be a convincing argument? Perhaps the most important worry in the argument, given the context in which Descartes was arguing, comes from the appeal to God. Even assuming such a being exists, the worry is that God could (let’s assume) <em>miraculously</em> bring it about that a mind (or mental substance) exists apart from any body. But since an all-powerful God can do anything, this conclusion comes as no surprise. What Descartes wants is a stronger conclusion—viz., that it is in the <em>nature</em> of mental and material substance to be able to exist apart from one another. In other words, mind and body an exist apart not just given a miraculous act of God, but rather by their very natures.</p>
+<p>To the extent, then, that the argument relies on appeal to God, it does so only to remind the reader that God stands behind our vivid and clear ideas, validating their connection to reality.</p>
+<p>So what does passage A do? It tells us two important things (cf. <span class="citation">Hatfield (2003)</span>, 252). First, that clear and vivid ideas are a guide to what is really metaphysically possible (this will be severely disputed by Locke and Kant, among others). Second, it gives us a specific basis or <em>criterion</em> for real distinctness—viz., the conceivability of a thing’s independent existence (cf. the discussion in the <em>Principles</em> above).</p>
+<h3 id="knowing-ones-essence"><span class="header-section-number">2.2.2</span> Knowing One’s Essence</h3>
+<blockquote>
+<p>[B] Furthermore, my mind is me, for the following reason·. I know that I exist and that nothing else belongs to my nature or essence except that I am a thinking thing; from this it follows that my essence consists solely in my being a thinking thing, even though there may be a body that is very closely joined to me.</p>
+</blockquote>
+<p>B reports two findings. First, that one exists. Second, that nothing else belongs to one (as <em>Meditator</em>) than thinking—thinking constitutes one’s <em>essence</em>. Does it follow from one’s existence as a thinking thing that one is <em>solely</em> a thinking thing and not having either bodily features or being itself a process of some corporal body? Not without further assumptions. However, Descartes does hold that the essence of a substance is articulated by its ‘principle attribute’ and that all modes of a substance depend upon and must be conceived in terms of this principle attribute. Hence, if the essence of oneself is thought, then one’s principle attribute is thought (or thinking), and thus, all modes of oneself would have to be (strictly speaking) conceivable solely in terms of modifications of thought.</p>
+<p>This connection between attribute and modes, along with the assumption that clear and vivid ideas are an accurate guide to reality (or real possibility) would yield the conclusion that a purely mental substance could exist independently of any physical/corporeal characteristics. But perhaps Descartes either felt the need to make the argument independently of any assumption regarding the connection between mode and essence, or he wanted to make explicit the point regarding our vivid and clear idea of real distinctness; in any case he goes on to do just this.</p>
+<h3 id="the-real-distinctness-of-mind-and-body"><span class="header-section-number">2.2.3</span> The Real Distinctness of Mind and Body</h3>
+<blockquote>
+<p>[C] I have a vivid and clear idea of •myself as something that thinks and isn’t extended, and one of •body as something that is extended and does not think. So it is certain that •I am really distinct from •my body and can exist without it.</p>
+</blockquote>
+<p>According to the Meditator’s vivid and clear ideas:</p>
+<ol style="list-style-type: lower-roman">
+<li>The self is a thinking and non-extended thing</li>
+<li>Corporeal substance is extended and non-thinking</li>
+</ol>
+<p>This gives us <em>Mutual Exclusion</em> — claim (3) above. But we need the “Complete Being” theses to be shown as well—viz., that a thinking thing can exist as a substance whose sole essence is thought and a body can exist as a substance whose sole essence is extension. But passage B provided the claim that each of us knows ourself as a being whose sole essence is thought. So we get <em>Complete Being<sub>T</sub></em>. Perhaps Descartes thought it was permissible to simply assume <em>Complete Being<sub>B</sub></em>. If so then we get all three of our needed claims for meeting Descartes’s goal of showing that the mind is really distinct from the body.</p>
+<p>Hatfield sums up the argument this way:</p>
+<blockquote>
+<p>Putting the three passages together, A provides the criterion for a real distinction between substances (capability of existing apart); it also offers clear and distinct perception as the method for determining whether the criterion is met. B affirms that a thinking thing can exist on its own. C affirms that this thinking thing has no properties peculiar to bodies. But if it can exist as a thing that has no bodily properties, it can exist apart from bodies. Which, by the criterion in A, means that mind is a substance really distinct from body. (<span class="citation">Hatfield (2003)</span>, 254-5)</p>
+</blockquote>
+<h3 id="an-objection-excluding-ignorance"><span class="header-section-number">2.2.4</span> An Objection: Excluding Ignorance</h3>
+<p>We asked, above, how it was that the Meditator could know that thought is not identical with features or process of a material body. Versions of this objection were pressed forcefully by Caterus (in the <em>First Set of Objections</em>) and by Arnauld (in the <em>Fourth Set</em>). How do we know that the apparent distinctness of mind and body is not due to our ignorance of their real identity? Arnauld puts the issue in terms of someone ignorant of the Pythagorean theorem trying to reason about the essential features of triangles.</p>
+<blockquote>
+<p>Suppose someone knows for certain that the angle in a semi-circle is a right angle, and thus that this angle and the diameter of the circle form a right-angled triangle. In spite of knowing this, he may •doubt, or •not yet have grasped for certain, that the square on the hypotenuse equals the sum of the squares on the other two sides; indeed he may even •deny this if he has been misled by some fallacy. (·For brevity’s sake, I’ll express this as ‘the triangle’s having the property P’·.) But now, if he argues in the same way that Descartes does, he may appear to have confirmation of his false belief, as follows: ‘I vividly and clearly perceive that the triangle is right- angled; but I doubt that it has the property P; therefore it doesn’t belong to the essence of the triangle that it has the property P.’ (7:198-204; EMT O&amp;R.56-7)</p>
+</blockquote>
+<p>In other words, one might have a clear and vivid idea of a triangle without understanding the Pythagorean theorem, but this doesn’t mean that the properties specified by the theorem, specifically that the square of the hypotenuse (the side opposite the right angle) is equal to the sum of the squares of the other two sides, are not in fact essential properties of the triangle. Descartes thus needs to explain why his Real Distinction argument doesn’t generate the same problem.</p>
+<p>Descartes’s answer, perhaps unsurprisingly, refers to what the Meditator has learned so far in the course of her meditations. Specifically, he appeals to (i) the fact that the Meditator has clear and vivid ideas of mind and body, where each excludes the features of other; (ii) the nature of clear and vivid ideas is such that they adequately represent how reality is (or what is really possible). So Descartes simply denies Arnauld’s premise, that the subject has a clear and vivid idea of a right triangle. If they really did have such an idea, Descartes argues, they would know that the Pythagorean theorem is true of such triangles.</p>
+<p>Hence, to reject Descartes’s argument we must reject either (i) the claim that we (or the Meditator) have clear and vivid ideas of the mind as distinct from the body, or (ii) that clear and vivid perception is a reliable guide to real possibility/actuality.</p>
+<h1 id="proof-of-the-external-world"><span class="header-section-number">3</span> Proof of the External World</h1>
+<p>After concluding that the Meditator is distinct from her body, Descartes goes on to argue that neither imagination nor sensation are essential to the self, conceived purely as a thinking thing (EMT M.29). But this then raises the question of how and why the Meditating subject comes to have such sensory perceptions.</p>
+<blockquote>
+<p>I have a passive faculty of sensory perception, that is, an ability to receive and recognize ideas of perceptible objects; but I would have no use for this unless something—myself or something else—had an active faculty for producing those ideas in the first place. But this faculty can’t be in me, since clearly it does not presuppose any thought on my part, and sensory ideas are produced without my cooperation and often even against my will. So sensory ideas must be produced by some substance other than me—a substance that actually has (either in a straightforward way or in a higher form) all the reality that is represented in the ideas that it produces. (M.30)</p>
+</blockquote>
+<p>Assuming that the sensory faculty is passive (this was a common Aristotelian assumption), Descartes argues that we need some explanation of origin of our sensory ides. It cannot come from the subject herself because the ideas arise involuntarily (this assumption might be questioned since, for example, the content of our dreams is not voluntary but comes from ‘within’ us). So there must be some external cause of our sensory ideas, which itself respects the causal principle (as discussed in <em>Meditation 3</em>).</p>
+<p>There are three possible sources for our ideas of material things. Either they come from bodies themselves, they come from a ‘higher’ non-material being (like an angel/demon), or they come from God.</p>
+<blockquote>
+<p>sensory ideas must be produced by some substance other than me—a substance that actually has (either in a straightforward way or in a higher form) all the reality that is represented in the ideas that it produces. Either (a) this substance is a body, in which case it will •straightforwardly contain everything that is represented in the ideas; or else (b) it is God, or some creature more noble than a body, in which case it will contain •in a higher form whatever is to be found in the ideas.</p>
+</blockquote>
+<p>Descartes then gives his argument for rejecting (b):</p>
+<blockquote>
+<p>I can ·reject (b), and· be confident that God does not transmit sensory ideas to me either directly from himself or through some creature that does not straightforwardly contain what is represented in the ideas. God has given me no way of recognizing any such ‘higher form’ source for these ideas; on the contrary, he has strongly inclined me to believe that bodies produce them. So if the ideas were transmitted from a source other than corporeal things, God would be a deceiver; and he is not. So bodies exist.</p>
+</blockquote>
+<p>Descartes’s argument here seems to be that since we are naturally strongly inclined to assent to beliefs that the causes of our sensory ideas are the material bodies which those ideas purport to reveal, any other causal origin of such ideas would amount to a deceitful act on the part of God. One might object here, as Gassendi does (EMT O&amp;R.109-10), that it isn’t at all clear why we should assume that when a body acts as a cause on the mind, that our ideas should reveal it accurately — “an efficient cause is something external to the effect and often of a quite different nature” (7:288; O&amp; R.109). We thus need some reason to think that sensory ideas really do tell us truths about our environment, if we are supposed to find it plausible that any causal origin other than that of material bodies would be deceitful. In response to this kind of worry Descartes says,</p>
+<blockquote>
+<p>They [our sensory ideas] may not all correspond exactly with my sensory intake of them, for much of what comes in through the senses is obscure and confused. But at least bodies have all the properties that I vividly and clearly understand, that is, all that fall within the province of pure mathematics.</p>
+</blockquote>
+<p>So our sensory ideas may not all correspond, resemble, or otherwise reveal how things truly are in our environment (e.g. their colors, tastes, and sounds) but they do at least reveal to us the specific determinations of objects that reflect their geometrical (and intellectually known) essences. The argument thus looks something like this:</p>
+<ol style="list-style-type: decimal">
+<li>We have sensory ideas, which purport to be of external material things</li>
+<li>The function of our sensory faculty is to reveal information about our environment</li>
+<li>Our sensory faculty is passive, so our sensory ideas must come from somewhere external to us</li>
+<li>Sensory ideas come from either (a) bodies or (b) ‘higher’ non-material beings (angels, God) [causal principle]</li>
+<li>If our sensory ideas of bodies were not caused by bodies then God would be a deceiver [from 1, 2, 4]</li>
+<li>God is no deceiver</li>
+<li><span class="math">∴ </span> There exist material bodies that are the causes of our ideas</li>
+</ol>
+<p>We thus need premise (2) in order to secure the claim that God would be deceitful if our sensory ideas were not caused by bodies. Otherwise one could object that it might not be deceitful of God to furnish our minds with sensory ideas, so long as they are not the kind of thing which is supposed to tell us about the external world.</p>
+<h2 id="the-role-of-senses-vsthe-intellect"><span class="header-section-number">3.1</span> The Role of Senses vs. The Intellect</h2>
+<p>Perception of clear and vivid ideas via the Intellect (or Understanding) provides us with knowledge of the essences of things — extension and its modes in the case of bodies, thought and its modes in the case of thinking beings. The senses have an altogether different role. They do reveal some of the actual properties of bodies, such as size and shape, but Descartes argues that their main function is not to reveal truths about the natures of objects in our environments, but rather to serve us practically to inform us of objects to seek or avoid in the promotion of our bodily well-being.</p>
+<blockquote>
+<p>My ‘nature’, then, in this limited sense, does indeed teach me to avoid what hurts and to seek out what gives pleasure, and so on. But it doesn’t appear to teach us to rush to conclusions about things located outside us without pausing to think about the question; for knowledge of the truth about such things seems to belong to the mind alone, not to the combination of mind and body. So, although a star has no more effect on my eye than a candle’s flame, my thinking of the star as no bigger than the flame does not come from any positive ·‘natural’· inclination to believe this; it’s just a habit of thought that I have had ever since childhood, with no rational basis for it…(EMT M.31)</p>
+</blockquote>
+<p>So sensory ideas (i) inform us about our environment, which is necessary for the success of Descartes’s proof of the external world; (ii) are primarily for distinguishing bodily goods from bads, not for telling us really are. We then need to be careful about making judgments based on our sensory reports of our environment.</p>
+<blockquote>
+<p>I now realize that in these cases and many others I have been in the habit of misusing the order of nature. The right way to use the sensory perceptions that nature gives me is as a guide to what is beneficial or harmful for my mind-body complex; and they are vivid and clear enough for that. But it is a misuse of them to treat them as reliable guides to the essential nature of the bodies located outside me, for on that topic they give only very obscure and confused information. (EMT M.31)</p>
+</blockquote>
+<h1 id="references" class="unnumbered">References</h1>
+<hr />
+<!--  -->
+
+
+
+
+<div class="references">
+<p>Hatfield, Gary. 2003. <em>Routledge Philosophy GuideBook to Descartes and the Meditations</em>. London: Routledge.</p>
+</div>
+</body>
+</html>
+
+<!-- ##END MARKED WRAPPER## -->
+    </div>
+</body>
+</html>
