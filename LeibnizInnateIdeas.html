@@ -1,0 +1,532 @@
+<!DOCTYPE html>  
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>LeibnizInnateIdeas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+/*
+This document has been created with Marked.app <http://markedapp.com>, Copyright 2011 Brett Terpstra
+Please leave this notice in place, along with any additional credits below.
+---------------------------------------------------------------
+Title: Avenue
+Author: Bram de Haan <http://atelierbramdehaan.nl>
+Description: modern retro
+ */
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+a img {
+  border: none;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+button, input {
+  line-height: normal;
+}
+button, input, select, textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  /* vertical-align: middle; */
+}
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+  cursor: pointer;
+  /* overflow: visible; */
+}
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  padding: 0 !important;
+}
+#wrapper {
+  margin-bottom: 0;
+}
+#wrapper img {
+  max-width: 100%;
+  height: auto;
+}
+#wrapper dd {
+  margin-bottom: 1em;
+}
+#wrapper li > p:first-child {
+  margin: 0;
+}
+#wrapper caption, #wrapper col, #wrapper colgroup, #wrapper table, #wrapper tbody, #wrapper td, #wrapper tfoot, #wrapper th, #wrapper thead, #wrapper tr {
+  border-spacing: 0;
+}
+#wrapper table {
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-collapse: collapse;
+  display: table;
+  empty-cells: hide;
+  margin: -1px 0 23px;
+  padding: 0;
+  table-layout: fixed;
+  width: 100%;
+}
+#wrapper caption {
+  display: table-caption;
+  font-weight: 700;
+}
+#wrapper col {
+  display: table-column;
+}
+#wrapper colgroup {
+  display: table-column-group;
+}
+#wrapper tbody {
+  display: table-row-group;
+}
+#wrapper tfoot {
+  display: table-footer-group;
+}
+#wrapper thead {
+  display: table-header-group;
+  border-bottom: solid 1px #999;
+}
+#wrapper td, #wrapper th {
+  display: table-cell;
+}
+#wrapper tr {
+  display: table-row;
+}
+#wrapper table th, #wrapper table td {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  padding: 0 1em;
+}
+#wrapper dt, #wrapper th {
+  font-weight: 700;
+}
+#wrapper dd {
+  padding-left: 1.4em;
+}
+#wrapper table tr:nth-child(even) {
+  background: rgba(200, 200, 200, 0.25);
+}
+#wrapper figure {
+  display: inline-block;
+  position: relative;
+  margin: 1em 0 2em;
+}
+#wrapper figcaption {
+  font-family: AvenirNext-Italic, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  font-style: italic;
+  text-align: center;
+}
+#wrapper figure:hover > figcaption {
+  /* background: rgba(0,0,0,1) */
+}
+/* #wrapper pre { moved down to base styles; } */
+.poetry #wrapper pre {
+  display: block;
+  font-family: Georgia, Garamond, serif !important;
+  font-size: 110% !important;
+  font-style: italic;
+  line-height: 1.6;
+  margin-left: 1em;
+}
+.poetry #wrapper pre code {
+  font-family: Georgia, Garamond, serif !important;
+
+}
+#wrapper sup, #wrapper sub, #wrapper a.footnote {
+  font-size: 1.4ex;
+  height: 0;
+  line-height: 1;
+  position: relative;
+  vertical-align: super;
+}
+#wrapper sub {
+  vertical-align: sub;
+  top: -1px;
+}
+#wrapper .footnote {
+  font-size: .8rem;
+  vertical-align: super;
+}
+#wrapper .footnotes p {
+  font-size: 1.9ex;
+}
+#wrapper ul ul {
+  margin-left: 1em;
+}
+
+#wrapper ul ul,
+#wrapper ol ol {
+  margin-left: 1em;
+}
+#wrapper li ul,
+#wrapper li ol {
+  margin-bottom: 0;
+}
+
+@media print {
+  body {
+    overflow: auto;
+  }
+
+  img, pre, blockquote, table, figure, p {
+    page-break-inside: avoid;
+  }
+
+  #wrapper {
+    background: #fff;
+    color: #000;
+    font-size: 85%;
+    padding: 10px;
+    position: relative;
+    text-indent: 0;
+  }
+}
+
+@media screen {
+  .inverted, .inverted #wrapper {
+    background: #222;
+  }
+  .inverted pre,
+  .inverted img {
+    border-color: #111;
+    background: #1a1a1a;
+  }
+  .inverted pre * {
+    background: #1a1a1a !important;
+  }
+
+  .inverted hr {
+    border-color: #999 !important;
+  }
+
+  .inverted p, .inverted td, .inverted li, .inverted h1, .inverted h2, .inverted h3, .inverted h4, .inverted h5, .inverted h6, .inverted pre, .inverted code, .inverted th, .inverted .math, .inverted caption, .inverted dd, .inverted dt {
+    color: #f9f9f9 !important;
+  }
+
+  .inverted table tr:nth-child(odd), .inverted table th:nth-child(odd), .inverted table td:nth-child(odd) {
+    background: none;
+  }
+
+  .inverted a {
+    color: #ff5778;
+  }
+}
+.max-width {
+  max-width: 100%;
+  height: auto;
+}
+/* ::Base styles Almost exclusively single element selectors */
+/* ------------------------------------------------------------ */
+html {
+  font-size: 100%;
+}
+body {
+  font: 100%/1.388 AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  color: #111;
+  padding: 0 5% 1rem !important;
+}
+a {
+  color: crimson;
+}
+a:hover, a:focus, a:active {
+  color: #ff2450;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: AvenirNextCondensed-DemiBold, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  /* margin: 0; */
+  padding: .5em 0 0;
+}
+h2, h3, h4, h5 {
+  border-bottom: 1px solid #777;
+}
+h1 {
+  font-size: 2.25rem;
+  line-height: 1.11111;
+}
+h2 {
+  font-size: 1.875rem;
+  line-height: 1.33333;
+}
+h3 {
+  font-size: 1.375rem;
+  line-height: 1.45455;
+}
+h4 {
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+h5 {
+  font-size: 1.125rem;
+  line-height: 1.33333;
+}
+h6 {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+pre, label {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+p {
+  font-size: 1.388rem;
+  line-height: 1.33333;
+  /* margin: 0; */
+  padding: .5em 0;
+  max-width: 30em;
+}
+h2 + p,
+h3 + p,
+h4 + p,
+h5 + p {
+  padding-top: 0;
+  margin-top: 1px;
+  border-top: 1px solid #999;
+}
+ol, ul {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0 0 2em 0;
+}
+li {
+  line-height: auto;
+}
+pre {
+  display: block;
+  margin: 1.4em auto;
+  background: #fcf9f1;
+  /* f9f9f9; */
+  padding: 15px 10px 10px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  border: solid 1px  #f0e0b2;
+  font-family: Consolas, Menlo, Monaco, monospace !important;
+  font-size: .875rem;
+  max-width: 90%;
+}
+pre * {
+  background: #fcf9f1 !important;
+}
+code {
+  font-family: Consolas, Menlo, Monaco, monospace;
+}
+ul {
+  list-style-position: outside;
+  list-style-type: square;
+}
+ol {
+  list-style-position: outside;
+  list-style-type: decimal;
+}
+strong, b {
+  font-family: AvenirNext-Bold, AvenirNextCondensed-DemiBold, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  font-weight: 600;
+}
+em, i, q {
+  font-family: AvenirNext-BoldItalic, AvenirNext-Italic, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  font-style: italic;
+}
+blockquote {
+  padding-left: 1em;
+  border-left: 0.3125em solid #c0c0c0;
+  line-height: normal;
+  /* margin: 0; */
+}
+blockquote p {
+  font-family: AvenirNext-Italic, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  font-style: italic;
+  /* margin: 0; */
+  font-size: 1.25rem;
+  line-height: 1.2;
+  margin: 1.2em 0 1.2em 0;
+}
+img {
+ padding: 1em;
+ background-color: #e6e6e6;
+ border: 1px solid #ddd;
+ -webkit-border-radius: 3px;
+ -moz-border-radius: 3px;
+ -o-border-radius: 3px;
+ border-radius: 3px;
+}
+
+@media screen and (max-width: 750px) {
+  -webkit-text-size-adjust: none;
+}
+
+
+@media print{
+#generated-toc-clone,#generated-toc{display:none!important}
+}
+
+</style>
+<style>#wrapper { max-width:900px; margin:0 auto }</style>
+</head>
+<body class="normal poetry">
+  <div id="wrapper">
+      <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Class notes (2/20) – do not cite or circulate" />
+  <title>Leibniz on Innate Ideas</title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+<div id="header">
+<h1 class="title">Leibniz on Innate Ideas</h1>
+<h2 class="author">Class notes (2/20) – do not cite or circulate</h2>
+</div>
+<div id="">
+<ul>
+<li><a href="#leibnizs-new-essays-on-human-understanding"><span class="toc-section-number">1</span> Leibniz’s <em>New Essays on Human Understanding</em></a></li>
+<li><a href="#on-innate-ideas"><span class="toc-section-number">2</span> On Innate Ideas</a><ul>
+<li><a href="#the-dispositional-account-of-ideas"><span class="toc-section-number">2.1</span> The Dispositional Account of Ideas</a></li>
+<li><a href="#potential-knowledge"><span class="toc-section-number">2.2</span> ‘Potential’ Knowledge</a></li>
+<li><a href="#reflection-and-innateness"><span class="toc-section-number">2.3</span> Reflection and Innateness</a></li>
+<li><a href="#leibnizs-reasons-for-denying-the-blank-slate-claim"><span class="toc-section-number">2.4</span> Leibniz’s Reasons for Denying the ‘Blank Slate’ Claim</a></li>
+</ul></li>
+<li><a href="#references">References</a></li>
+</ul>
+</div>
+<h1 id="leibnizs-new-essays-on-human-understanding"><span class="header-section-number">1</span> Leibniz’s <em>New Essays on Human Understanding</em></h1>
+<p><a href="http://plato.stanford.edu/entries/leibniz/">Gottfried Wilhelm Leibniz</a> (1646–1716) wrote the <em>New Essays</em> (or ‘<em>Nouveaux essais sur l’entendement humain</em>’, as it was originally called in French) as an extended commentary on Locke’s <em>Essay Concerning Human Understanding</em>. It was finished in 1704, and is one of only two long-form works that Leibniz completed (the other being his <em>Theodicy</em> of 1710). However, Locke died shortly after Leibniz completed the work and he is reported to have decided against publishing a critical work on Locke so soon after his death. Leibniz thus put the manuscript away and it would not end up being published until long after Leibniz had died, in 1765.</p>
+<p>Though originally written as a philosophical treatise and commentary, Leibniz converted the book to dialogue form in order to make it more reader friendly. This was probably a mistake. Despite the awkwardness of its presentation it is an important work, both as a statement of Leibniz’s views, and as a sophisticated and sustained rationalist treatment of the nature of the mind.</p>
+<p>The dialogue takes place between two figures: Philalethes (‘lover of truth’ - who broadly represents Locke) and Theophilus (‘lover of God’ - who broadly represents Leibniz).</p>
+<h1 id="on-innate-ideas"><span class="header-section-number">2</span> On Innate Ideas</h1>
+<p>In the opening pages of the <em>New Essays</em> Leibniz explicitly aligns his philosophical views with those of Plato and against what he takes to be the Aristotelian empiricism of Locke. He says,</p>
+<blockquote>
+<p>although Locke says hundreds of fine things that I applaud, our systems are very different. His is closer to Aristotle and mine to Plato, although each of us parts company at many points from the teachings of both these ancient writers. (I.Preface.2)<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a></p>
+</blockquote>
+<h2 id="the-dispositional-account-of-ideas"><span class="header-section-number">2.1</span> The Dispositional Account of Ideas</h2>
+<blockquote>
+<p>Locke seems to claim that in us there is nothing potential, indeed nothing of which we aren’t always actually aware. But he can’t hold strictly to this, for that would make his position too paradoxical. ·It is obvious to everyone, and Locke would presumably not deny it, that· we aren’t always aware of dispositions that we do nevertheless have (I.Preface.4)</p>
+</blockquote>
+<p>Leibniz is here trying to avoid one of the central criticisms Locke levies at the strong version of Nativism—viz., that if we are not aware of innate ideas or principles, as children and the various others Locke lists presumably are not, then we do not have any innate ideas.</p>
+<p>What Leibniz points out is that there are many ideas that a subject might be said to ‘have’ in the sense that the subject has the disposition to think using them (e.g. if I tell you that an elephant makes a poor typist you come to have a thought that you presumably weren’t entertaining a moment ago, but nevertheless had the disposition to do so).</p>
+<p>Recall that Locke argued against two versions of Nativist view. According to the strong version all children would have knowledge of metaphysical and logical truths. Locke thinks this is clearly empirically false. According to the weak version, ideas and principles are innate in the sense that through the use of reason, mature and rational people would come to assent to the content of the ideas or principles. But Locke thinks this is either false (because it would make derivative knowledge innate) or trivial (because it would make all knowledge innate).</p>
+<p>Locke puts the triviality thesis this way,</p>
+<blockquote>
+<p>All that is left for these innatists to claim is this·: Maxims or innate truths are never known or noticed before the use of reason, and may be assented to at some time after that, but there is no saying when. But that is true of all other knowable truths; so it doesn’t help to mark off innately known truths from others. (EHU I.ii.13)</p>
+</blockquote>
+<p>We saw that Descartes has his own reply to the argument Locke levies at strong Nativism based on the claim that prior to adulthood the mind is too immersed in the sensory experience of the body to adequately reflect on the innate ideas it possesses. But the triviality worry is perhaps more difficult to answer. Leibniz takes up this challenge.</p>
+<blockquote>
+<p><strong>Phil</strong>: But suppose that truths can be imprinted on the understanding without being perceived by it: I don’t see how they can differ, so far as their origin is concerned, from ones that the understanding is merely capable of coming to know.</p>
+</blockquote>
+<blockquote>
+<p><strong>Theo</strong>: The mind is capable not merely of •knowing them but of •finding them within itself. If all it had was the mere capacity to receive those items of knowledge—a passive power to do so, as indeterminate as the power of wax to receive shapes or of an empty page to receive words—it wouldn’t be the source of necessary truths, as I have just shown that it is. (I.i.20)</p>
+</blockquote>
+<p>So the challenge that Leibniz takes up from Locke is to show how the innateness of at least some ideas is compatible with (i) their being dispositions, and thus of our not always being aware of them (as with children) and (ii) the trivial claim that the mind has a capacity to understand things that are presented to it.</p>
+<p>Leibniz tries to illustrate the non-trivial sense in which he thinks innate ideas are dispositional by appeal to an analogy.</p>
+<blockquote>
+<p>If the soul were like an empty page, then truths would be in us in the way that the shape of Hercules is in an uncarved piece of marble that is entirely neutral as to whether it takes Hercules’ shape or some other. Contrast that piece of marble with one that is veined in a way that marks out the shape of Hercules rather than other shapes. This latter block would be more inclined to take that shape than the former would, and Hercules would be in a way innate in it, even though it would take a lot of work to expose the veins and to polish them into clarity. This is how ideas and truths are innate in us—as inclinations, dispositions, tendencies, or natural potentialities, and not as actual thinkings, though these potentialities are always accompanied by certain actual thinkings, often insensible ones, which correspond to them. (I.Preface.4; cf.I.i.21, 24-5)</p>
+</blockquote>
+<p>There is a sense in which the figure of Hercules is ‘in’ the second block of marble in a way in which it is not ‘in’ the first block. According to Leibniz, the second, veined block would be more ‘inclined’ or disposed to take on the shape of Hercules. So the claim is not that the mind is simply a passive capacity to understand what it is presented with, but rather that it has an inclination or propensity—a disposition—to understand certain kinds of things and in particular ways. This needn’t show that the dispositions possessed by the mind are <em>reliable</em>. Something more would need to be said for that conclusion. But Leibniz’s point is perhaps enough to avoid the worry of triviality.</p>
+<p>On Leibniz’s view, the basic principles of logic, mathematics, and metaphysics are all principles which work with the grain of the mind (to stay with the marble analogy).</p>
+<h2 id="potential-knowledge"><span class="header-section-number">2.2</span> ‘Potential’ Knowledge</h2>
+<p>In addition to Leibniz’s claim that our innate knowledge is dispositional (or that the ideas which constitute this knowledge are dispositional), Leibniz also argues that we have inexplicit or ‘potential’ knowledge.</p>
+<blockquote>
+<p>we use these [logical] maxims without having them explicitly in mind. It’s rather like what happens with enthymemes [= ‘arguments in which one or more of the premises is left unstated’]: we have the suppressed premises potentially in mind although they are absent not only from our statement of the argument but also from our thinking of it. (I.i.18)</p>
+</blockquote>
+<p>Leibniz argues that, for example, ‘all the propositions of arithmetic and geometry should be regarded as innate’ (I.i.19). Exactly what he means by this is not altogether clear. It would seem to invite just the kinds of empirical objections that Locke raises in his <em>Essay</em>. The appeal to enthymemes suggests one possible interpretation of Leibniz’s argument. An enthymeme is an argument with a missing or ‘suppressed’ premise. For example, the inference that ‘Locke is mortal because he is human’ is enthymatic. It fails to make explicit the premise that all humans are mortal. Once that premise is made explicit the inference is valid. Presumably, any person who made the former inference would be prepared to make the latter, in which the missing premise is made explicit.</p>
+<p>Leibniz might be thinking that something similar is true of innate ideas. One is said to have them enthymematically in the sense that, when challenged one would be able to supply the missing premise in an argument.</p>
+<p>In the end, though, it isn’t really clear that this strategy is sound. The claim that certain mathematical truths follow logically from others in no way guarantees that if someone is certain that 2 + 2 = 4 is true, that they have come to that truth by means of a manipulation of logical rules (as Leibniz believes) (cf. <span class="citation">Wilson (1967)</span>, 359). Worse, it isn’t clear how we could attribute such ‘potential’ knowledge to children, who seem unable to explain the abstract principles that justify their certainty in particular truths such as the principle of non-contradiction and the denial of some particular contradiction. The child simply cannot articulate the general principle when challenged. So Leibniz’s appeal to enthymemes isn’t obviously plausible, at least as a general explanation of the ‘potential’ way in which innate ideas are known.</p>
+<h2 id="reflection-and-innateness"><span class="header-section-number">2.3</span> Reflection and Innateness</h2>
+<p>In response to the Lockean view that we gain many ideas via reflection Leibniz makes the following puzzling claim:</p>
+<blockquote>
+<p>After devoting the whole of <em>Essay</em> Book I to rejecting innate illumination, understood in a certain sense, at the start of Book II and from there on he admits that some ideas don’t originate in •sensation and instead come from •reflection. But to <em>reflect</em> is simply to <em>attend to what is within us</em>, and <strong>something that we carry with us already is not something that came from the senses!</strong> So it can’t be denied that there is a great deal that is innate in our minds ·and didn’t come through the senses·, because we are innate to ourselves, so to speak. (I.Preface.4)</p>
+</blockquote>
+<p>Leibniz’s claim seems to be that it is in virtue of reflection on one’s own nature that one comes to have the innate ideas characteristic of metaphysics and logic (e.g. <em>being, unity, change, identity, etc.</em>). Is such reflection supposed to be equivalent to innateness?</p>
+<p>Remember that, for Locke, reflection is,</p>
+<blockquote>
+<p>the notice that the mind takes of <em>what</em> it is doing, and <em>how</em>. (I am here using ‘operations’ in a broad sense, to cover not only the <em>actions</em> of the mind on its ideas but also <em>passive states</em> that can arise from them, such as is the satisfaction or uneasiness arising from any thought.) (II.i.4)</p>
+</blockquote>
+<p>Locke, interestingly, seems to take the kinds of activity (or ‘operation’) of which the mind is capable as being themselves innate. There are certain things that minds can <em>do</em> simply in virtue of being minds. What Locke denies is that the mind has any material upon which to work prior to experience.</p>
+<p>Is there a substantive disagreement here between Locke and Leibniz?</p>
+<h2 id="leibnizs-reasons-for-denying-the-blank-slate-claim"><span class="header-section-number">2.4</span> Leibniz’s Reasons for Denying the ‘Blank Slate’ Claim</h2>
+<p>According to Locke’s positive conception of the mind, the mind is a ‘tabula rasa’ or blank slate, which derives all of its knowledge from experience. Experience consists of two sources—sensations, or ideas from external things, and reflection, or ideas gained from introspecting on the activity of the mind.</p>
+<ol style="list-style-type: decimal">
+<li><strong>Parallelism</strong>: There is no genuine causal interaction between minds and bodies</li>
+<li><strong>Individuation</strong>: Minds cannot be qualitatively identical (because blank) but numerically distinct at birth/creation</li>
+<li><strong>Necessity</strong>: Sense experience can never give us knowledge of necessary truths, but only of contingent matters of fact</li>
+</ol>
+<p>Leibniz finds the denial of innate ideas to be the result of confused thinking concerning the nature of mind—specifically, of confusing it (if only analogically) with body.</p>
+<blockquote>
+<p>I admit that experience is necessary if the soul is to be given such-and-such ·specific· thoughts, and if it is to attend to the ideas that are within us. But how could experience and the senses provide the ideas? Does the soul have windows? Is it similar to writing-paper or like wax? Clearly, those who take this view of the soul are treating it as basically a material thing. (II.i.36)</p>
+</blockquote>
+<p>In support of (3) Leibniz says the following:</p>
+<blockquote>
+<p>Although the senses are necessary for all our actual knowledge, they aren’t sufficient to provide it all, because The senses never give us anything but instances, i.e. particular or singular truths. But however many instances confirm a general truth, they aren’t enough to establish its universal necessity; for it needn’t be the case that what has happened always will—·let alone that it must·—happen in the same way. (I.Preface.2-3)</p>
+</blockquote>
+<p>This is perhaps the strongest argument of Leibniz’s against Locke’s empiricism and in favor of some version of Nativism. There is still an important question here regarding how the understanding or intellect furnishes the subject with knowledge of necessity, but experience (or at least sensation) seems to provide no basis for such knowledge.</p>
+<h1 id="references" class="unnumbered">References</h1>
+<hr />
+<!-- -->
+
+
+
+
+<div class="references">
+<p>Bennett, Jonathan. 2001. <em>Learning from Six Philosophers: Descartes, Spinoza, Leibniz, Locke, Berkeley, Hume</em>. Oxford: Clarendon Press.</p>
+<p>Garber, Daniel. 2011. <em>Leibniz: Body, Substance, Monad</em>. Oxford University Press.</p>
+<p>Gennaro, Rocco J. 1999. “Leibniz on Consciousness and Self-Consciousness.” In <em>New Essays on the Rationalists</em>, edited by Rocco J. Gennaro, 353–71. Oxford: Oxford University Press.</p>
+<p>Jolley, Nicholas. 1986. <em>Leibniz and Locke: A Study of the &quot;New Essays on Human Understanding&quot;</em>. Oxford: Clarendon Press.</p>
+<p>———. 1990. <em>The Light of the Soul: Theories of Ideas in Leibniz, Malebranche, and Descartes</em>. Oxford University Press.</p>
+<p>———, ed. 1995. <em>The Cambridge Companion to Leibniz</em>. Cambridge University Press.</p>
+<p>Look, Brandon C. 2013. “Gottfried Wilhelm Leibniz.” In <em>The Stanford Encyclopedia of Philosophy</em>, edited by Edward N. Zalta, Fall 2013. <a href="http://plato.stanford.edu/archives/fall2013/entries/leibniz/">http://plato.stanford.edu/archives/fall2013/entries/leibniz/</a>.</p>
+<p>McRae, Robert. 1976. <em>Leibniz: Perception, Apperception, and Thought</em>. Vol. 32. Toronto: University of Toronto Press. <a href="http://www.getcited.org/pub/101667776">http://www.getcited.org/pub/101667776</a>.</p>
+<p>Wilson, Margaret D. 1967. “Leibniz and Locke on &quot;First Truths&quot;.” <em>Journal of the History of Ideas</em> 28 (3) (July): 347–366. doi:<a href="http://dx.doi.org/10.2307/2708623">10.2307/2708623</a>. <a href="http://www.jstor.org/stable/2708623">http://www.jstor.org/stable/2708623</a>.</p>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Here I cite the <em>New Essays</em> by book/chapter/page number in the <em>EMT</em> version. Citation of Locke’s <em>Essay</em> will be by book/chapter/paragraph.<a href="#fnref1">↩</a></p></li>
+</ol>
+</div>
+</body>
+</html>
+
+<!-- ##END MARKED WRAPPER## -->
+    </div>
+</body>
+</html>
