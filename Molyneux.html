@@ -1,0 +1,500 @@
+<!DOCTYPE html>  
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>Molyneux</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+/*
+This document has been created with Marked.app <http://markedapp.com>, Copyright 2011 Brett Terpstra
+Please leave this notice in place, along with any additional credits below.
+---------------------------------------------------------------
+Title: Avenue
+Author: Bram de Haan <http://atelierbramdehaan.nl>
+Description: modern retro
+ */
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+a img {
+  border: none;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+button, input {
+  line-height: normal;
+}
+button, input, select, textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  /* vertical-align: middle; */
+}
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+  cursor: pointer;
+  /* overflow: visible; */
+}
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  padding: 0 !important;
+}
+#wrapper {
+  margin-bottom: 0;
+}
+#wrapper img {
+  max-width: 100%;
+  height: auto;
+}
+#wrapper dd {
+  margin-bottom: 1em;
+}
+#wrapper li > p:first-child {
+  margin: 0;
+}
+#wrapper caption, #wrapper col, #wrapper colgroup, #wrapper table, #wrapper tbody, #wrapper td, #wrapper tfoot, #wrapper th, #wrapper thead, #wrapper tr {
+  border-spacing: 0;
+}
+#wrapper table {
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-collapse: collapse;
+  display: table;
+  empty-cells: hide;
+  margin: -1px 0 23px;
+  padding: 0;
+  table-layout: fixed;
+  width: 100%;
+}
+#wrapper caption {
+  display: table-caption;
+  font-weight: 700;
+}
+#wrapper col {
+  display: table-column;
+}
+#wrapper colgroup {
+  display: table-column-group;
+}
+#wrapper tbody {
+  display: table-row-group;
+}
+#wrapper tfoot {
+  display: table-footer-group;
+}
+#wrapper thead {
+  display: table-header-group;
+  border-bottom: solid 1px #999;
+}
+#wrapper td, #wrapper th {
+  display: table-cell;
+}
+#wrapper tr {
+  display: table-row;
+}
+#wrapper table th, #wrapper table td {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  padding: 0 1em;
+}
+#wrapper dt, #wrapper th {
+  font-weight: 700;
+}
+#wrapper dd {
+  padding-left: 1.4em;
+}
+#wrapper table tr:nth-child(even) {
+  background: rgba(200, 200, 200, 0.25);
+}
+#wrapper figure {
+  display: inline-block;
+  position: relative;
+  margin: 1em 0 2em;
+}
+#wrapper figcaption {
+  font-family: AvenirNext-Italic, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  font-style: italic;
+  text-align: center;
+}
+#wrapper figure:hover > figcaption {
+  /* background: rgba(0,0,0,1) */
+}
+/* #wrapper pre { moved down to base styles; } */
+.poetry #wrapper pre {
+  display: block;
+  font-family: Georgia, Garamond, serif !important;
+  font-size: 110% !important;
+  font-style: italic;
+  line-height: 1.6;
+  margin-left: 1em;
+}
+.poetry #wrapper pre code {
+  font-family: Georgia, Garamond, serif !important;
+
+}
+#wrapper sup, #wrapper sub, #wrapper a.footnote {
+  font-size: 1.4ex;
+  height: 0;
+  line-height: 1;
+  position: relative;
+  vertical-align: super;
+}
+#wrapper sub {
+  vertical-align: sub;
+  top: -1px;
+}
+#wrapper .footnote {
+  font-size: .8rem;
+  vertical-align: super;
+}
+#wrapper .footnotes p {
+  font-size: 1.9ex;
+}
+#wrapper ul ul {
+  margin-left: 1em;
+}
+
+#wrapper ul ul,
+#wrapper ol ol {
+  margin-left: 1em;
+}
+#wrapper li ul,
+#wrapper li ol {
+  margin-bottom: 0;
+}
+
+@media print {
+  body {
+    overflow: auto;
+  }
+
+  img, pre, blockquote, table, figure, p {
+    page-break-inside: avoid;
+  }
+
+  #wrapper {
+    background: #fff;
+    color: #000;
+    font-size: 85%;
+    padding: 10px;
+    position: relative;
+    text-indent: 0;
+  }
+}
+
+@media screen {
+  .inverted, .inverted #wrapper {
+    background: #222;
+  }
+  .inverted pre,
+  .inverted img {
+    border-color: #111;
+    background: #1a1a1a;
+  }
+  .inverted pre * {
+    background: #1a1a1a !important;
+  }
+
+  .inverted hr {
+    border-color: #999 !important;
+  }
+
+  .inverted p, .inverted td, .inverted li, .inverted h1, .inverted h2, .inverted h3, .inverted h4, .inverted h5, .inverted h6, .inverted pre, .inverted code, .inverted th, .inverted .math, .inverted caption, .inverted dd, .inverted dt {
+    color: #f9f9f9 !important;
+  }
+
+  .inverted table tr:nth-child(odd), .inverted table th:nth-child(odd), .inverted table td:nth-child(odd) {
+    background: none;
+  }
+
+  .inverted a {
+    color: #ff5778;
+  }
+}
+.max-width {
+  max-width: 100%;
+  height: auto;
+}
+/* ::Base styles Almost exclusively single element selectors */
+/* ------------------------------------------------------------ */
+html {
+  font-size: 100%;
+}
+body {
+  font: 100%/1.388 AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  color: #111;
+  padding: 0 5% 1rem !important;
+}
+a {
+  color: crimson;
+}
+a:hover, a:focus, a:active {
+  color: #ff2450;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: AvenirNextCondensed-DemiBold, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  /* margin: 0; */
+  padding: .5em 0 0;
+}
+h2, h3, h4, h5 {
+  border-bottom: 1px solid #777;
+}
+h1 {
+  font-size: 2.25rem;
+  line-height: 1.11111;
+}
+h2 {
+  font-size: 1.875rem;
+  line-height: 1.33333;
+}
+h3 {
+  font-size: 1.375rem;
+  line-height: 1.45455;
+}
+h4 {
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+h5 {
+  font-size: 1.125rem;
+  line-height: 1.33333;
+}
+h6 {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+pre, label {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+p {
+  font-size: 1.388rem;
+  line-height: 1.33333;
+  /* margin: 0; */
+  padding: .5em 0;
+  max-width: 30em;
+}
+h2 + p,
+h3 + p,
+h4 + p,
+h5 + p {
+  padding-top: 0;
+  margin-top: 1px;
+  border-top: 1px solid #999;
+}
+ol, ul {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0 0 2em 0;
+}
+li {
+  line-height: auto;
+}
+pre {
+  display: block;
+  margin: 1.4em auto;
+  background: #fcf9f1;
+  /* f9f9f9; */
+  padding: 15px 10px 10px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  border: solid 1px  #f0e0b2;
+  font-family: Consolas, Menlo, Monaco, monospace !important;
+  font-size: .875rem;
+  max-width: 90%;
+}
+pre * {
+  background: #fcf9f1 !important;
+}
+code {
+  font-family: Consolas, Menlo, Monaco, monospace;
+}
+ul {
+  list-style-position: outside;
+  list-style-type: square;
+}
+ol {
+  list-style-position: outside;
+  list-style-type: decimal;
+}
+strong, b {
+  font-family: AvenirNext-Bold, AvenirNextCondensed-DemiBold, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  font-weight: 600;
+}
+em, i, q {
+  font-family: AvenirNext-BoldItalic, AvenirNext-Italic, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  font-style: italic;
+}
+blockquote {
+  padding-left: 1em;
+  border-left: 0.3125em solid #c0c0c0;
+  line-height: normal;
+  /* margin: 0; */
+}
+blockquote p {
+  font-family: AvenirNext-Italic, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  font-style: italic;
+  /* margin: 0; */
+  font-size: 1.25rem;
+  line-height: 1.2;
+  margin: 1.2em 0 1.2em 0;
+}
+img {
+ padding: 1em;
+ background-color: #e6e6e6;
+ border: 1px solid #ddd;
+ -webkit-border-radius: 3px;
+ -moz-border-radius: 3px;
+ -o-border-radius: 3px;
+ border-radius: 3px;
+}
+
+@media screen and (max-width: 750px) {
+  -webkit-text-size-adjust: none;
+}
+
+
+@media print{
+#generated-toc-clone,#generated-toc{display:none!important}
+}
+
+</style>
+<style>#wrapper { max-width:900px; margin:0 auto }</style>
+</head>
+<body class="normal poetry">
+  <div id="wrapper">
+      <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Class notes (2/25) – do not cite or circulate" />
+  <title>Molyneux’s Question</title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+<div id="header">
+<h1 class="title">Molyneux’s Question</h1>
+<h2 class="author">Class notes (2/25) – do not cite or circulate</h2>
+</div>
+<div id="">
+<ul>
+<li><a href="#phrasing-molyneuxs-question"><span class="toc-section-number">1</span> Phrasing Molyneux’s Question</a></li>
+<li><a href="#the-cheselden-experiments"><span class="toc-section-number">2</span> The Cheselden Experiments</a></li>
+<li><a href="#leibniz-on-molyneuxs-question"><span class="toc-section-number">3</span> Leibniz on Molyneux’s Question</a></li>
+<li><a href="#berkeleys-claim-of-heterogeneity"><span class="toc-section-number">4</span> Berkeley’s Claim of Heterogeneity</a></li>
+<li><a href="#references">References</a></li>
+</ul>
+</div>
+<p><a href="http://plato.stanford.edu/entries/molyneux-problem/">Molyneux’s question</a> concerned the relationship between tactile and visual sensations in the perception of shape and distance. It was a sort of litmus test for many 17th and 18th century theories of perception.</p>
+<h1 id="phrasing-molyneuxs-question"><span class="header-section-number">1</span> Phrasing Molyneux’s Question</h1>
+<p>The initial statement of the problem by William Molyneux in 1688:</p>
+<blockquote>
+<p>A Man, being born blind, and having a Globe and a Cube, nigh of the same bignes, Committed into his Hands, and being taught or Told, which is Called the Globe, and which the Cube, so as easily to distinguish them by his Touch or Feeling; Then both being taken from Him, and Laid on a Table, Let us Suppose his Sight Restored to Him; Whether he Could, by his Sight, and before he touch them, know which is the Globe and which the Cube? Or Whether he Could know by his Sight, before he stretch’d out his Hand, whether he Could not Reach them, tho they were Removed 20 or 1000 feet from Him?</p>
+</blockquote>
+<blockquote>
+<p>If the Learned and Ingenious Author of the Forementiond Treatise think this Problem Worth his Consideration and Answer, He may at any time Direct it to One that Much Esteems him, and is,</p>
+</blockquote>
+<blockquote>
+<p>His Humble Servant William Molyneux High Ormonds Gate in Dublin. Ireland</p>
+</blockquote>
+<p>This was revised in the subsequent publication of the question in the second edition of Locke’s <em>An Essay Concerning Human Understanding</em> (1694)</p>
+<blockquote>
+<p>Suppose a Man born blind, and now adult, and taught by his touch to distinguish between a Cube, and a Sphere of the same metal, and nighly of the same bigness, so as to tell, when he felt one and t’other; which is the Cube, which the Sphere. Suppose then the Cube and Sphere placed on a Table, and the Blind Man to be made to see. Qaere, Whether by his sight, before he touch’d them, he could now distinguish, and tell, which is the Globe, which the Cube. (EHU II.IX.8)</p>
+</blockquote>
+<p>In the second version we see that Molyneux no longer enquires as to whether <em>distance</em> could be known by sight, for Molyneux’s own experimental investigations had convinced him that distance was not directly perceived but was rather the result of an act of judgment. This idea would later be developed by Berkeley to great effect.</p>
+<p>Locke’s question concerned whether a newly-sighted subject could visually distinguish a sphere from a cube, and report or otherwise articulate the visual perception of that difference. Locke answered this question in the negative.</p>
+<blockquote>
+<p>I agree with this thinking Gentleman, whom I am proud to call my Friend, in his answer to this Problem; and am of opinion that the Blind Man, at first sight, would not be able with certainty to say which was the Globe, which the Cube, whilst he only saw them; though he could unerringly name them by his touch, and certainly distinguish them by the difference of their Figures felt.</p>
+</blockquote>
+<p>It seems compatible with Locke’s stated position that the subject could detect <em>some difference or other</em> between the two shapes, even if, as Locke says, she could not name that difference or otherwise have confidence that she knew one from the other.</p>
+<h1 id="the-cheselden-experiments"><span class="header-section-number">2</span> The Cheselden Experiments</h1>
+<p>In 1728, <a href="http://en.wikipedia.org/wiki/William_Cheselden">William Cheselden</a> published what would become, in the words of the historian Nicholas Pastore “the most celebrated case study in the history of science until the early case studies of Freud came along at the beginning of the twentieth century” (<span class="citation">Pastore (1971)</span>, 99). This <a href="http://plato.stanford.edu/entries/molyneux-problem/#3">influential report</a> concerned a patient of Cheselden’s, blind from an early age, whose sight at the age of thirteen was largely restored via surgery removing his cataracts. Though Cheselden did not have any knowledge of Molyneux’s question or Locke’s discussion of it, his observations led many to believe that the empirical evidence best supported a negative answer to Molyneux’s question.</p>
+<blockquote>
+<p>When he first saw, he was so far from making any Judgment about Distances, that he thought all Objects whatever touch’d his Eyes, (as he express’d it) as what he felt, did his Skin…He knew not the Shape of any Thing, nor any one Thing from another, however different in Shape or Magnitude; but upon being told what Things were, whose Form he before knew from feeling, he would carefully observe, that he might know them again…Having often forgot which was the Cat, and which the Dog, he was ashame’d to ask; but catching the Cat (which he knew by feeling) he was observe’d to look at her stedfastly, and then setting her down, said, So Puss! I shall know you another Time. (Cheselden, 1728)</p>
+</blockquote>
+<p>Cheselden’s surgery was taken by many to confirm Locke and Berkeley’s negative answers to Molyneux’s question. A newly sighted person cannot visually distinguish a cube from a sphere, nor can they discern distance. However, the ‘evidence’ was also contested. We’ll look at Leibniz’s discussion in particular.</p>
+<h1 id="leibniz-on-molyneuxs-question"><span class="header-section-number">3</span> Leibniz on Molyneux’s Question</h1>
+<p>Leibniz believes that a purely negative answer to Molyneux is incorrect. Provided certain conditions obtain, Leibniz argues, the subject <em>should</em> be able to distinguish between the sphere and the cube.</p>
+<blockquote>
+<p>If you will just consider my reply, you will see that I have included in it a condition:. . . .namely •that the blind man has been told that the two shaped bodies that are before him are a cube and a sphere, and •that he merely has the problem of telling which is which. Given this condition, it seems to me beyond question that the newly sighted man could discern them by applying rational principles to the sensory knowledge that he has already acquired by touch. (I’m not talking about what he might actually do on the spot, when he is dazzled and confused by the strangeness—or, one should add, unaccustomed to making inferences.) (II.ix.51)</p>
+</blockquote>
+<p>Note that Leibniz here actually provides two provisos on his positive answer. The first is that the blind subject be prompted with the information that there are two differently shaped bodies before him—a globe and a cube. Leibniz believes that a fairly straightforward line of reasoning should allow the blind subject to deduce which is a sphere and which a cube.</p>
+<blockquote>
+<p>My view rests on the fact that in the case of the sphere there are no distinguished points on the surface of the sphere taken in itself, since everything there is uniform and without angles, whereas in the case of the cube there are eight points that are distinguished from all the others. If there weren’t that way of recognising shapes, a blind man couldn’t learn the rudiments of geometry by touch, nor could a sighted person learn them by sight without touch. (II.ix.51)</p>
+</blockquote>
+<p>Note that Leibniz’s position turns on the fact that the visual look to a sphere discloses the fact that its surface is ‘uniform and without angles’ and that the look of the cube is one which tells the subject that ‘there are eight points [on its surface] that are distinguished from all others’. Leibniz thus assumes that the way these objects look is not something that itself need be learned, otherwise he thinks that the subject would be unable to distinguish one from the other.</p>
+<p>Leibniz’s second proviso is that the subject may be unable to distinguish the two shapes merely because of physical/physiological problems having to do with the trauma of surgery or atrophy of the relevant sense organ. We now know that the development of the visual system involves periods of particular sensitivity to the presence or deprivation of light (<span class="citation">Degenaar (1996)</span>, 119; <span class="citation">Chow, Riesen, and Newell (1957)</span>). So, depending on when the subject first acquired their cataracts, there may be severe developmental problems in their capacity to cognitively process visual information. This makes it difficult to assess much of the supposed empirical evidence for or against a positive answer to Molyneux’s question.</p>
+<h1 id="berkeleys-claim-of-heterogeneity"><span class="header-section-number">4</span> Berkeley’s Claim of Heterogeneity</h1>
+<p>An issue raised by Molyneux’s question concerns what Berekeley in his <em>New Theory of Vision</em> would call the “heterogenity” of our visual and tactile sensations. Berkeley argues in the <em>New Theory of Vision</em> that the objects and properties sensed via the differing sense modalities are <em>different</em>. Hence there is no one thing which is both seen and touched.</p>
+<blockquote>
+<p>it be certain, a man no more sees or feels the same thing, than he hears and feels the same thing (§47). if we take a close and accurate view of things, it must be acknowledged that we never see and feel one and the same object. That which is seen is one thing, and that which is felt is another; if the visible figure and extension be not the same with the tangible figure and extension, we are not to infer that one and the same thing has divers extensions. The true consequence is, that the objects of sight and touch are two distinct things (§49).</p>
+</blockquote>
+<p>The “things” which Berkeley is concerned with here are the immediate objects of sense—viz. the proper sensibles associated with each sense modality—e.g., color for vision, sound for hearing, and texture for touch. Berkeley thus argues that while we may commonly think that we hear or see an object as far away, what we really do is hear a sound or visually sense a colored array, which we then associate with tactile cues which suggest distance. Hence there is no one thing, on Berkeley’s view, which is sensed as being close or far away, or as visually square and square to the touch.</p>
+<p>This position yields an answer to Molyneux’s question similar to that of Locke and Molyneux himself. The blind person could not in fact visually identify a cube as a cube or a sphere as a sphere, even though she could do so by touch alone. This conclusion is, Berkeley thinks, most readily explained by the fact that the senses do not have common objects.</p>
+<blockquote>
+<p>Now, if a square surface perceived by touch be of the same sort with a square surface perceived by sight; it is certain the blind man here mentioned might know a square surface, as soon as he saw it: it is no more but introduced into his mind, by a new inlet, an idea he has been already well acquainted with. Since, therefore he is supposed to have known by his touch, that a cube is a body terminated by square surfaces, and that a sphere is not terminated by square surfaces; upon the supposition that a visible and tangible square differ only <em>in numero</em>, it follows, that he might know, by the unerring mark of the square surfaces, which was the cube and which not, while he only saw them. We must therefore allow, either that visible extension and figures are specifically distinct from tangible extension and figures, or else, that the solution of this problem, given by those two thoughtful and ingenious men is wrong (§133).</p>
+</blockquote>
+<p>Berkeley, of course, does not think that Molyneux and Locke are wrong. The thought experiment, he thinks, deserves a negative answer.</p>
+<h1 id="references" class="unnumbered">References</h1>
+<hr />
+<!-- -->
+
+
+<div class="references">
+<p>Chow, Kao Liang, Austin H. Riesen, and Frank W. Newell. 1957. “Degeneration of Retinal Ganglion Cells in Infant Chimpanzees Reared in Darkness.” <em>The Journal of Comparative Neurology</em> 107 (1): 27–42. doi:<a href="http://dx.doi.org/10.1002/cne.901070103">10.1002/cne.901070103</a>. <a href="http://0-onlinelibrary.wiley.com.library.unl.edu/doi/10.1002/cne.901070103/abstract">http://0-onlinelibrary.wiley.com.library.unl.edu/doi/10.1002/cne.901070103/abstract</a>.</p>
+<p>Degenaar, Marjolein. 1996. <em>Molyneux’s Problem: Three Centuries of Discussion on the Perception of Forms</em>. Dordrecht: Kluwer Academic Publishers.</p>
+<p>Degenaar, Marjolein, and Gert-Jan Lokhorst. 2014. “Molyneux’s Problem.” In <em>The Stanford Encyclopedia of Philosophy</em>, edited by Edward N. Zalta, Spring 2014. <a href="http://plato.stanford.edu/archives/spr2014/entries/molyneux-problem/">http://plato.stanford.edu/archives/spr2014/entries/molyneux-problem/</a>.</p>
+<p>Evans, G. 2002. “Molyneuxs Question.” In <em>Vision and Mind: Selected Readings in the Philosophy of Perception</em>, edited by Alva Noë and Evan Thompson, 319–349. Cambridge: MIT Press.</p>
+<p>Pastore, Nicholas. 1971. <em>Selective History of Theories of Visual Perception: 1650-1950</em>. Oxford: Oxford University Press.</p>
+<p>Sassen, Brigitte. 2004. “Kant on Molyneux’s Problem.” <em>British Journal for the History of Philosophy</em> 12 (3): 471–485. doi:<a href="http://dx.doi.org/10.1080/0960878042000253114">10.1080/0960878042000253114</a>. <a href="http://www.tandfonline.com/doi/abs/10.1080/0960878042000253114">http://www.tandfonline.com/doi/abs/10.1080/0960878042000253114</a>.</p>
+<p>Smith, A. D. 2000. “Space and Sight.” <em>Mind</em> 109 (435): 481–518.</p>
+<p>Van Cleve, James. 2006. “Touch, Sound, and Things Without the Mind.” <em>Metaphilosophy</em> 37 (2): 162–182. doi:<a href="http://dx.doi.org/10.1111/j.1467-9973.2006.00429.x">10.1111/j.1467-9973.2006.00429.x</a>.</p>
+</div>
+</body>
+</html>
+
+<!-- ##END MARKED WRAPPER## -->
+    </div>
+</body>
+</html>
