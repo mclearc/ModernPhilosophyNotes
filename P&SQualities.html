@@ -1,0 +1,627 @@
+<!DOCTYPE html>  
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>P&SQualities</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+/*
+This document has been created with Marked.app <http://markedapp.com>, Copyright 2011 Brett Terpstra
+Please leave this notice in place, along with any additional credits below.
+---------------------------------------------------------------
+Title: Avenue
+Author: Bram de Haan <http://atelierbramdehaan.nl>
+Description: modern retro
+ */
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+a img {
+  border: none;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+button, input {
+  line-height: normal;
+}
+button, input, select, textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  /* vertical-align: middle; */
+}
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+  cursor: pointer;
+  /* overflow: visible; */
+}
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  padding: 0 !important;
+}
+#wrapper {
+  margin-bottom: 0;
+}
+#wrapper img {
+  max-width: 100%;
+  height: auto;
+}
+#wrapper dd {
+  margin-bottom: 1em;
+}
+#wrapper li > p:first-child {
+  margin: 0;
+}
+#wrapper caption, #wrapper col, #wrapper colgroup, #wrapper table, #wrapper tbody, #wrapper td, #wrapper tfoot, #wrapper th, #wrapper thead, #wrapper tr {
+  border-spacing: 0;
+}
+#wrapper table {
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-collapse: collapse;
+  display: table;
+  empty-cells: hide;
+  margin: -1px 0 23px;
+  padding: 0;
+  table-layout: fixed;
+  width: 100%;
+}
+#wrapper caption {
+  display: table-caption;
+  font-weight: 700;
+}
+#wrapper col {
+  display: table-column;
+}
+#wrapper colgroup {
+  display: table-column-group;
+}
+#wrapper tbody {
+  display: table-row-group;
+}
+#wrapper tfoot {
+  display: table-footer-group;
+}
+#wrapper thead {
+  display: table-header-group;
+  border-bottom: solid 1px #999;
+}
+#wrapper td, #wrapper th {
+  display: table-cell;
+}
+#wrapper tr {
+  display: table-row;
+}
+#wrapper table th, #wrapper table td {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  padding: 0 1em;
+}
+#wrapper dt, #wrapper th {
+  font-weight: 700;
+}
+#wrapper dd {
+  padding-left: 1.4em;
+}
+#wrapper table tr:nth-child(even) {
+  background: rgba(200, 200, 200, 0.25);
+}
+#wrapper figure {
+  display: inline-block;
+  position: relative;
+  margin: 1em 0 2em;
+}
+#wrapper figcaption {
+  font-family: AvenirNext-Italic, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  font-style: italic;
+  text-align: center;
+}
+#wrapper figure:hover > figcaption {
+  /* background: rgba(0,0,0,1) */
+}
+/* #wrapper pre { moved down to base styles; } */
+.poetry #wrapper pre {
+  display: block;
+  font-family: Georgia, Garamond, serif !important;
+  font-size: 110% !important;
+  font-style: italic;
+  line-height: 1.6;
+  margin-left: 1em;
+}
+.poetry #wrapper pre code {
+  font-family: Georgia, Garamond, serif !important;
+
+}
+#wrapper sup, #wrapper sub, #wrapper a.footnote {
+  font-size: 1.4ex;
+  height: 0;
+  line-height: 1;
+  position: relative;
+  vertical-align: super;
+}
+#wrapper sub {
+  vertical-align: sub;
+  top: -1px;
+}
+#wrapper .footnote {
+  font-size: .8rem;
+  vertical-align: super;
+}
+#wrapper .footnotes p {
+  font-size: 1.9ex;
+}
+#wrapper ul ul {
+  margin-left: 1em;
+}
+
+#wrapper ul ul,
+#wrapper ol ol {
+  margin-left: 1em;
+}
+#wrapper li ul,
+#wrapper li ol {
+  margin-bottom: 0;
+}
+
+@media print {
+  body {
+    overflow: auto;
+  }
+
+  img, pre, blockquote, table, figure, p {
+    page-break-inside: avoid;
+  }
+
+  #wrapper {
+    background: #fff;
+    color: #000;
+    font-size: 85%;
+    padding: 10px;
+    position: relative;
+    text-indent: 0;
+  }
+}
+
+@media screen {
+  .inverted, .inverted #wrapper {
+    background: #222;
+  }
+  .inverted pre,
+  .inverted img {
+    border-color: #111;
+    background: #1a1a1a;
+  }
+  .inverted pre * {
+    background: #1a1a1a !important;
+  }
+
+  .inverted hr {
+    border-color: #999 !important;
+  }
+
+  .inverted p, .inverted td, .inverted li, .inverted h1, .inverted h2, .inverted h3, .inverted h4, .inverted h5, .inverted h6, .inverted pre, .inverted code, .inverted th, .inverted .math, .inverted caption, .inverted dd, .inverted dt {
+    color: #f9f9f9 !important;
+  }
+
+  .inverted table tr:nth-child(odd), .inverted table th:nth-child(odd), .inverted table td:nth-child(odd) {
+    background: none;
+  }
+
+  .inverted a {
+    color: #ff5778;
+  }
+}
+.max-width {
+  max-width: 100%;
+  height: auto;
+}
+/* ::Base styles Almost exclusively single element selectors */
+/* ------------------------------------------------------------ */
+html {
+  font-size: 100%;
+}
+body {
+  font: 100%/1.388 AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  color: #111;
+  padding: 0 5% 1rem !important;
+}
+a {
+  color: crimson;
+}
+a:hover, a:focus, a:active {
+  color: #ff2450;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: AvenirNextCondensed-DemiBold, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  /* margin: 0; */
+  padding: .5em 0 0;
+}
+h2, h3, h4, h5 {
+  border-bottom: 1px solid #777;
+}
+h1 {
+  font-size: 2.25rem;
+  line-height: 1.11111;
+}
+h2 {
+  font-size: 1.875rem;
+  line-height: 1.33333;
+}
+h3 {
+  font-size: 1.375rem;
+  line-height: 1.45455;
+}
+h4 {
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+h5 {
+  font-size: 1.125rem;
+  line-height: 1.33333;
+}
+h6 {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+pre, label {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+p {
+  font-size: 1.388rem;
+  line-height: 1.33333;
+  /* margin: 0; */
+  padding: .5em 0;
+  max-width: 30em;
+}
+h2 + p,
+h3 + p,
+h4 + p,
+h5 + p {
+  padding-top: 0;
+  margin-top: 1px;
+  border-top: 1px solid #999;
+}
+ol, ul {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0 0 2em 0;
+}
+li {
+  line-height: auto;
+}
+pre {
+  display: block;
+  margin: 1.4em auto;
+  background: #fcf9f1;
+  /* f9f9f9; */
+  padding: 15px 10px 10px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  border: solid 1px  #f0e0b2;
+  font-family: Consolas, Menlo, Monaco, monospace !important;
+  font-size: .875rem;
+  max-width: 90%;
+}
+pre * {
+  background: #fcf9f1 !important;
+}
+code {
+  font-family: Consolas, Menlo, Monaco, monospace;
+}
+ul {
+  list-style-position: outside;
+  list-style-type: square;
+}
+ol {
+  list-style-position: outside;
+  list-style-type: decimal;
+}
+strong, b {
+  font-family: AvenirNext-Bold, AvenirNextCondensed-DemiBold, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  font-weight: 600;
+}
+em, i, q {
+  font-family: AvenirNext-BoldItalic, AvenirNext-Italic, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  font-style: italic;
+}
+blockquote {
+  padding-left: 1em;
+  border-left: 0.3125em solid #c0c0c0;
+  line-height: normal;
+  /* margin: 0; */
+}
+blockquote p {
+  font-family: AvenirNext-Italic, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  font-style: italic;
+  /* margin: 0; */
+  font-size: 1.25rem;
+  line-height: 1.2;
+  margin: 1.2em 0 1.2em 0;
+}
+img {
+ padding: 1em;
+ background-color: #e6e6e6;
+ border: 1px solid #ddd;
+ -webkit-border-radius: 3px;
+ -moz-border-radius: 3px;
+ -o-border-radius: 3px;
+ border-radius: 3px;
+}
+
+@media screen and (max-width: 750px) {
+  -webkit-text-size-adjust: none;
+}
+
+
+@media print{
+#generated-toc-clone,#generated-toc{display:none!important}
+}
+
+</style>
+<style>#wrapper { max-width:900px; margin:0 auto }</style>
+</head>
+<body class="normal poetry">
+  <div id="wrapper">
+      <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Class notes (3/4) – do not cite or circulate" />
+  <title>The Primary/Secondary Quality Distinction</title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+<div id="header">
+<h1 class="title">The Primary/Secondary Quality Distinction</h1>
+<h2 class="author">Class notes (3/4) – do not cite or circulate</h2>
+</div>
+<div id="">
+<ul>
+<li><a href="#background"><span class="toc-section-number">1</span> Background</a></li>
+<li><a href="#mechanism-materialism"><span class="toc-section-number">2</span> Mechanism &amp; Materialism</a></li>
+<li><a href="#galileo-on-real-qualities"><span class="toc-section-number">3</span> Galileo on Real Qualities</a><ul>
+<li><a href="#background-galileo-15-february-1564-8-january-1642"><span class="toc-section-number">3.1</span> Background: Galileo (15 February 1564 – 8 January 1642)</a></li>
+<li><a href="#the-assayer"><span class="toc-section-number">3.2</span> The Assayer</a><ul>
+<li><a href="#galileos-scientific-rationalism-the-conceivability-argument"><span class="toc-section-number">3.2.1</span> Galileo’s Scientific Rationalism &amp; the Conceivability Argument</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#locke-on-ideas-qualities"><span class="toc-section-number">4</span> Locke on Ideas &amp; Qualities</a><ul>
+<li><a href="#lockes-adaptation-of-the-primarysecondary-distinction"><span class="toc-section-number">4.1</span> Locke’s Adaptation of the Primary/Secondary Distinction</a><ul>
+<li><a href="#problems"><span class="toc-section-number">4.1.1</span> Problems</a></li>
+</ul></li>
+<li><a href="#restating-the-primarysecondary-distinction"><span class="toc-section-number">4.2</span> Restating the Primary/Secondary Distinction</a></li>
+<li><a href="#the-arguments-for-the-primarysecondary-distinction"><span class="toc-section-number">4.3</span> The Arguments for the Primary/Secondary Distinction</a><ul>
+<li><a href="#the-porphyry-case3"><span class="toc-section-number">4.3.1</span> The Porphyry Case</a></li>
+<li><a href="#the-almond-case"><span class="toc-section-number">4.3.2</span> The Almond Case</a></li>
+<li><a href="#the-water-case"><span class="toc-section-number">4.3.3</span> The Water Case</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#references">References</a></li>
+</ul>
+</div>
+<h1 id="background"><span class="header-section-number">1</span> Background</h1>
+<p>Aristotle distinguishes between primary and secondary qualities in his discussion of generation and change (<em>On Generation and Corruption</em>, bk. II). He argues that we should distinguish between qualities that are responsible or otherwise explain the coming-to-be and passing-away of things (primary qualities) and qualities which are distinct from these, which are features of things, and which are explained by appeal to relationships among the primary qualities.</p>
+<p>Primary qualities for Aristotle include hot, cold, wet, dry. These qualities are the basic explanatory building blocks for things. Relationships amongst these qualities define the four basic elements—viz. earth, air, fire, and water—out of which everything was thought to be made.</p>
+<p>The Aristotelian distinction understood the primary qualities as qualities that were manifest to our senses, and thus understood the physical world—nature—as the kind of thing whose fundamental features were primarily intelligible via the senses. This would all change by the seventeenth century.</p>
+<h1 id="mechanism-materialism"><span class="header-section-number">2</span> Mechanism &amp; Materialism</h1>
+<p>The seventeenth century saw the rise of two distinct but related positions: <em>mechanism</em> and <em>materialism</em>. <em>Materialism</em> is a metaphysical theory concerning the natural world. It claims that the natural world consists fundamentally of a kind of <em>stuff</em> — matter — and that this stuff, organized in various ways according to natural laws as characterized by physics, determines the nature and features of all the objects we experience as part of the objective (and thus mind-independent) natural world. Materialism thus says that there is fundamentally only one kind of thing — matter. Materialism thus stands in opposition to a <em>dualist</em> view like that articulated by Descartes. Descartes argues that there are fundamentally <em>two</em> kinds of thing — matter, and mind — and that the natural world consists of these two kinds of thing interacting with one another, sometimes in very special ways (as with the ensouled bodies of human beings).</p>
+<p><em>Mechanism</em> is part of a theory of <em>explanation</em>. Lisa Downing puts it this way,</p>
+<blockquote>
+<p>[Mechanistic doctrine] states that all macroscopic bodily phenomena should be explained in terms of the motions and impacts of submicroscopic particles, or corpuscles, each of which can be fully characterized in terms of a strictly limited range of (primary) properties: size, shape, motion (or mobility), and, perhaps, solidity or impenetrability. (<span class="citation">Downing (1998)</span>, 381)</p>
+</blockquote>
+<p>A ‘corpuscle’ is a extremely small parcel of matter with a determinate size, shape, motion, location, etc. It is the features of individual corpuscles, plus their interactions, which mechanism takes to explain the characteristics and behavior of the material world. Locke sometimes frames mechanism in terms of what he calls the ‘corpuscularian hypothesis’.</p>
+<blockquote>
+<p>I have argued for this [viz., our knowledge of the features and behaviour of material bodies] in terms of the <em>corpuscularian hypothesis</em>—·the theory that all the workings of the material world are to be understood in terms of collisions between tiny portions of matter, tiny corpuscles·—because that’s the theory that is thought to go furthest in intelligibly explaining those qualities of bodies (IV.iii.16).</p>
+</blockquote>
+<p>There is a great deal to be said about both doctrines, and their development and influence in the seventeenth and eighteenth centuries. But here I focus on just one issue—the specific properties corpuscles were thought to have, and the explanatory role of these properties relative to all the other apparent characteristics of objects.</p>
+<p>Notice two things about mechanism. First, it ultimately concerns unobservable, or at least, <em>unobserved</em> entities (corpuscles). This means that the explanation of observable phenomena depends on the existence and characteristics of unobserved phenomena. This, in and of itself, is a dramatically anti-Aristotelian move. The fundamental explanatory level of reality is one which is removed from our direct apprehension in experience.</p>
+<p>Second, the explanatorily relevant features of corpuscles are primarily their <em>geometric</em> properties—viz., size, shape, location, and state of motion. What are not included are those features which we might think of as tied to specific ways of sensing the world—e.g. their colors, tastes, or smells.<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a> This bifurcation in explanatory role meant both that greater emphasis was placed on our <em>mathematical</em> understanding of the natural world, and that our purely sensory grasp of the natural world no longer played a significant role (perhaps no role at all) in telling us how and why the world appears to us as it does.</p>
+<h1 id="galileo-on-real-qualities"><span class="header-section-number">3</span> Galileo on Real Qualities</h1>
+<h2 id="background-galileo-15-february-1564-8-january-1642"><span class="header-section-number">3.1</span> Background: Galileo (15 February 1564 – 8 January 1642)</h2>
+<p><a href="http://plato.stanford.edu/entries/galileo/">Galileo Galilee</a> was an Italian physicist, mathematician, astronomer, and philosopher who played a major role in the Scientific Revolution. His achievements include improvements to the telescope and consequent astronomical observations and support for <a href="http://plato.stanford.edu/entries/copernicus/">Copernicanism</a>.</p>
+<p>His contributions to observational astronomy include the telescopic confirmation of the phases of Venus, the discovery of the four largest satellites of Jupiter (named the Galilean moons in his honour), and the observation and analysis of sunspots. Galileo also worked in applied science and technology, inventing an improved military compass and other instruments.</p>
+<p>Galileo’s championing of heliocentrism was controversial within his lifetime, when most subscribed to some form of the Ptolemaic geocentric system. He met with opposition from astronomers, who doubted heliocentrism for various reasons. The matter was investigated by the Roman Inquisition in 1615, and they concluded that it could be supported as only a possibility, not an established fact. Galileo later defended his views in Dialogue Concerning the Two Chief World Systems, which appeared to attack Pope Urban VIII and thus alienated him and the Jesuits, who had both supported Galileo up until this point. In 1633 he was tried by the Inquisition, found “vehemently suspect of heresy”, forced to recant, and spent the rest of his life under house arrest.</p>
+<h2 id="the-assayer"><span class="header-section-number">3.2</span> The Assayer</h2>
+<p>The Assayer was written in 1623 as a defense of Galileo’s scientific and philosophical views against Jesuit criticism. Specifically, it was written in response to Jesuit professor Orazio Grassi, whose <em>Astronomical Balance</em> of 1619 criticized various aspects of Galileo’s views concerning astronomy and physics. It particularly pleased the new pope, Urban VIII, to whom it had been dedicated. Galileo’s dispute with Grassi permanently alienated many of the Jesuits who had previously been sympathetic to his ideas, and Galileo and his friends were convinced that these Jesuits were responsible for bringing about his later condemnation, though the evidence for this is not conclusive (cf. <span class="citation">Blackwell and Foscarini (1991)</span>; <span class="citation">Blackwell (2008)</span>).</p>
+<p>To “assay” is to examine something in order to assess its nature, particularly in respect to testing a metal or ore in order to determine its quality or worth. So the title of Galileo’s works references the idea of examination of worth in its own examination of the physical and astronomical doctrines put forward by Grassi.</p>
+<h3 id="galileos-scientific-rationalism-the-conceivability-argument"><span class="header-section-number">3.2.1</span> Galileo’s Scientific Rationalism &amp; the Conceivability Argument</h3>
+<p>Galileo argues that we should distinguish between two different classes of feature which a material body might have, and that only one of these classes is relevant to providing explanations of the nature and behavior of physical phenomena.</p>
+<blockquote>
+<p>Now I say that whenever I conceive any material or corporeal substance, I immediately feel the need to think of it as bounded, and as having this or that shape…[etc.]…From these conditions I cannot separate such a substance by any stretch of my imagination. But that it must be white or red, bitter or sweet, noisy or silent, and of sweet or foul odor, my mind does not feel compelled to bring in as necessary accompaniments. Without the senses as our guides, reason or imagination unaided would probably never arrive at qualities like these. Hence I think that tastes, odors, colors, and so on are no more than mere names so far as the object in which we place them is concerned, and that they reside only in the consciousness (Galileo, p. 274).</p>
+</blockquote>
+<p>We might formalize his argument as follows:</p>
+<ol style="list-style-type: decimal">
+<li>Thinking of a material object requires thinking of it as having a particular set of qualities (i.e. size, shape, location, motion, etc.)</li>
+<li>Thinking of a material object does not require thinking of it as having specific sensory qualities (e.g. color, taste, smell, sound)</li>
+<li>The only qualities possessed by a material object are those which we must attribute to it in thought</li>
+<li><span class="math">∴ </span> Sensory qualities are not qualities of material objects, but rather features of our consciousness of those objects — i.e. “sensations” [from 2, 3]</li>
+<li><span class="math">∴ </span> If there were no conscious beings there would be no sensory qualities (e.g. colors, tastes, smells, etc.). [from 4]</li>
+</ol>
+<p>Galileo thus argues from the conceivable separation of the geometric qualities of objects from the proper sensibles such as color and smell, to the fundamentality of the geometric qualities and the ultimate unreality (or subject-dependence) of the purely sensory qualities.</p>
+<p>Central to this argument is the assumption which lies behind premise (3), that the only qualities we need attribute to a material being are those which we must attribute to it in thought. This assumes what we can call ‘<em>modal rationalism</em>’,</p>
+<dl>
+<dt>Modal Rationalism:</dt>
+<dd>The actual, possible, and necessary features of reality may be determined by examining the actual, possible, and necessary of the concepts used to think about reality
+</dd>
+</dl>
+<p>This view should be familiar from reading Descartes. Descartes also thought that we could move from claims about dependence and distinctness relations concerning our thoughts (e.g. that our thoughts of material body depend, one and all, on our thought of extension) to dependence or distinctions about things in the mind-independent world (e.g. that all the properties of a material substance depend, as its modes, on extension). This assumption lies behind his ‘real distinction’ argument concerning the independence of mental substance from the existence of any body. Descartes, of course, attempts to justify his modal rationalism in the <em>Meditations</em> by appealing to the existence and veracity of God. Galileo, in contrast, provides no such epistemological ground for his assumption.</p>
+<h1 id="locke-on-ideas-qualities"><span class="header-section-number">4</span> Locke on Ideas &amp; Qualities</h1>
+<p>In the <em>Essay</em> Locke, in a way similar to that of Galileo and Descartes, distinguishes between our idea of a thing and the features or ‘qualities’ of the thing itself.</p>
+<blockquote>
+<p>Whatever the mind perceives in itself—whatever is the immediate object of perception, thought, or understanding—I call an idea; and the power to produce an idea in our mind I call a quality of the thing that has that power (E II.viii.8)</p>
+</blockquote>
+<p>So, qualities are in objects, and they are powers to produce minds in us. Locke thus seems to distinguish between things that depend on <em>us</em>—ideas in minds, and things that depend on <em>objects</em>—powers to to cause those ideas. Moreover, Locke sometimes distinguishes between the ‘active’ and ‘passive’ powers of an object. Active powers are those powers of a substance to causally affect other substances—fire has the active power to melt gold. Passive powers are those powers of a substance <em>to be causally affected by others</em>—gold has the passive power to be melted by fire. It is tempting, and perhaps correct, to read Locke here as using the term ‘power’ to describe the modal features of an object—what it is possible (perhaps <em>physically</em> possible) for the object to affect and be affected by.</p>
+<h2 id="lockes-adaptation-of-the-primarysecondary-distinction"><span class="header-section-number">4.1</span> Locke’s Adaptation of the Primary/Secondary Distinction</h2>
+<p>Locke thinks that the kinds of qualities in objects may divided into two classes—primary and secondary.</p>
+<blockquote>
+<p>Qualities thus considered in bodies are, First, such as are utterly inseparable from the body, in what state soever it be; and such as in all the alterations and changes it suffers, all the force can be used upon it, it constantly keeps; and such as sense constantly finds in every particle of matter which has bulk enough to be perceived; and the mind finds inseparable from every particle of matter, though less than to make itself singly be perceived by our senses: v.g. Take a grain of wheat, divide it into two parts; each part has still solidity, extension, figure, and mobility: divide it again, and it retains still the same qualities; and so divide it on, till the parts become insensible; they must retain still each of them all those qualities (II.viii.9).</p>
+</blockquote>
+<p>Primary qualities are, for Locke, the geometric/kinetic features of substances—their shape, size, motion, and solidity. These qualities are in bodies independently of our perception of them, and cannot be altered (at least as <em>determinables</em>) or removed from bodies.</p>
+<blockquote>
+<p>Secondly, [there are qualities] which in truth are nothing in the objects themselves but powers to produce various sensations in us by their primary qualities, i.e. by the bulk, figure, texture, and motion of their insensible parts, as colours, sounds, tastes, &amp;c. These I call secondary qualities (II.viii.10, 14, 23).</p>
+</blockquote>
+<p>Next, there are the <em>secondary</em> qualities, which are explanatorily less significant, and are ‘nothing in the objects themselves but powers’. Hence there is some indication here that we have a contrast in the sense in which primary as opposed to secondary qualities are <em>real</em>. Primary qualities are <em>really in</em> bodies, while secondary qualities are <em>mere powers</em> to produce ideas in us. This way of putting the distinction suggests something like Galileo’s conclusion, that the secondary qualities are merely subjective. But it also raises problems.</p>
+<h3 id="problems"><span class="header-section-number">4.1.1</span> Problems</h3>
+<p>Locke initially introduces the notion of a quality in terms of a power to produce ideas. But his definition of a secondary quality is in terms of it being ‘nothing in the object itself’ but a power to produce ideas. But primary qualities are also qualities, and thus powers to produce ideas. So where are supposed to get a <em>distinction</em> between them? We seem to get something like the following argument (see <span class="citation">Rickless (1997)</span> for discussion):</p>
+<ol style="list-style-type: decimal">
+<li>Shape is a primary quality</li>
+<li>If shape is a primary quality then it is a quality</li>
+<li>Qualities are powers to produce ideas</li>
+<li>∴ Shape is a power to produce an idea—presumably the idea of shape</li>
+<li>But secondary qualities are also powers to produce ideas</li>
+<li>∴ There is no primary/secondary distinction between qualities</li>
+</ol>
+<p>This is certainly not the conclusion Locke wants us to draw. We appear to have several options.</p>
+<ol style="list-style-type: upper-alpha">
+<li>Deny that primary qualities are “qualities” in Locke’s sense—i.e. deny that there are powers</li>
+<li>Agree that primary qualities are powers but deny that they are the same sort of power as with secondary qualities</li>
+<li>Posit that Locke uses “quality” in two different senses:
+<ul>
+<li>Quality<sub>1</sub>: X is a quality<sub>1</sub> iff X is a property</li>
+<li>Quality<sub>2</sub>: X is a quality<sub>2</sub> iff X is a power to cause an idea in one’s mind</li>
+</ul></li>
+<li>Maintain that there is only one sense to “quality” but distinguish between real qualities and mere qualities
+<ul>
+<li>“Real” qualities are qualities which are more than mere powers in things, and exist even in the absence of things they affect</li>
+<li>“Mere” qualities are no more than powers in things and cease to exist the things they affect are absent</li>
+</ul></li>
+</ol>
+<p>There is a fair bit of textual evidence for (D).</p>
+<blockquote>
+<p>The particular Bulk, Number, Figure, and Motion of the parts of Fire, or Snow, are really in them, whether any ones Senses perceive them or no: and therefore they may be called real Qualities, because they really exist in those Bodies (II.viii.17)</p>
+</blockquote>
+<blockquote>
+<p>The Idea of Heat, or Light, which we receive by our Eyes, or touch from the Sun, are commonly thought real Qualities, existing in the Sun, and something more than mere Powers in it (II.viii.24)</p>
+</blockquote>
+<blockquote>
+<p>Were there no fit Organs to receive the impressions Fire makes on the Sight and Touch; nor a Mind joined to those Organs to receive the Ideas of Light and Heat, by those impressions from the Fire, or the Sun, there would yet be no more Light, or Heat in the World, than there would be Pain if there were no sensible Creature to feel it, though the Sun should continue just as it is now, and Mount Ætna flame higher than ever it did (II.xxxi.2)</p>
+</blockquote>
+<blockquote>
+<p>Let us consider the red and white colours in porphyry. Hinder light from striking on it, and its colours vanish; when light returns, it produces these appearances in us again. Can anyone think that any real alterations are made in the porphyry by the presence or absence of light; and that those ideas of whiteness and redness are really in porphyry in the light, when it obviously has no colour in the dark?(II.viii.19)</p>
+</blockquote>
+<p>In these passages Locke seems to come extremely close to the Galilean position that all secondary qualities are merely subjective, while primary qualities are <em>real</em> — that is, they really exist in substances independent of the existence of any perceiver.</p>
+<p>Another way putting this is that the real or primary qualities of an object are <em>intrinsic</em> to it. That is, they are had by it independent of any relation that it might have to other things. “Mere” qualities, in contrast, are <em>relational</em>; they depend for their existence in part on the existence and nature of something other than the objects whose qualities they are. Locke indicates this in several places.</p>
+<blockquote>
+<p>the greatest part of the ideas that make our complex idea of gold are yellowness, great weight, ductility, fusibility…all which ideas are nothing else but so many relations to other substances; and are not really in the gold, considered barely in itself, though they depend on those real and primary qualities of its internal constitution (II.xxiii.37)</p>
+</blockquote>
+<blockquote>
+<p>Put a piece of gold anywhere by itself, separate from the reach and influence of all other bodies, it will immediately lose all its colour and weight, and perhaps malleableness too (IV.vi.11)</p>
+</blockquote>
+<h2 id="restating-the-primarysecondary-distinction"><span class="header-section-number">4.2</span> Restating the Primary/Secondary Distinction</h2>
+<p>With these distinctions in hand we might restate the distinction between primary and secondary qualities as follows.</p>
+<dl>
+<dt>Primary Qualities:</dt>
+<dd><p>Qualities of bodies which are “really” in them in the sense of being both: (i) non-relational and (ii) of a determinable which must be had by any body (e.g. solidity, extension, size, shape)</p>
+</dd>
+<dt>Secondary Qualities:</dt>
+<dd><p>Qualities of bodies, which are “merely” in them, and determined by their primary qualities to produce sensory ideas in perceiving subjects. These qualities are both (i) relational and (ii) of determinables which need not be had by every body (e.g. colors, sounds, tastes)</p>
+</dd>
+</dl>
+<h2 id="the-arguments-for-the-primarysecondary-distinction"><span class="header-section-number">4.3</span> The Arguments for the Primary/Secondary Distinction</h2>
+<p>Locke presents a number of different cases in which he thinks we clearly see his primary/secondary distinction at work. Though it is not clear whether he considers these cases to be <em>arguments</em> for the distinction, or merely illustrative of it, I’ll be understanding them as arguments (though perhaps very compressed ones). We’ll take them in turn.<a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a></p>
+<h3 id="the-porphyry-case3"><span class="header-section-number">4.3.1</span> The Porphyry Case<a href="#fn3" class="footnoteRef" id="fnref3"><sup>3</sup></a></h3>
+<blockquote>
+<p>Let us consider the red and white colours in Porphyre: Hinder light but from striking on it, and its Colours Vanish; it no longer produces any such Ideas in us: Upon the return of Light, it produces these appearances on us again. Can any one think any real alterations are made in the Porphyre, by the presence or absence of Light; and that those Ideas of whiteness and redness, are really in Porphyre in the light, when ’tis plain it has no colour in the dark? (II.viii.19)</p>
+</blockquote>
+<ol style="list-style-type: decimal">
+<li>In the dark, porphyry is neither red nor white.</li>
+<li>The real qualities possessed by porphyry in the dark are the same as the real qualities possessed by porphyry in the light.</li>
+<li>∴ Redness and whiteness are not real qualities in porphyry, whether in the light or in the dark.</li>
+</ol>
+<h3 id="the-almond-case"><span class="header-section-number">4.3.2</span> The Almond Case</h3>
+<blockquote>
+<p>Pound an Almond, and the clear white Colour will be altered into a dirty one, and the sweet Taste into an oily one. What real Alteration can the beating of the Pestle make in any Body, but an Alteration of the Texture of it?(II.viii.20)</p>
+</blockquote>
+<ol style="list-style-type: decimal">
+<li>The pounding of an almond changes its color and taste.</li>
+<li>The only real quality in an almond that it is possible to change by pounding it is its texture.</li>
+<li>Neither the color nor the taste of an almond is identical to its texture.</li>
+<li>∴ The color and taste of an almond are not real qualities in it.</li>
+</ol>
+<h3 id="the-water-case"><span class="header-section-number">4.3.3</span> The Water Case</h3>
+<blockquote>
+<p>Ideas being thus distinguished and understood, we may be able to give an Account, how the same Water, at the same time, may produce the Idea of Cold by one Hand, and of Heat by the other: Whereas it is impossible, that the same Water, if those Ideas were really in it, should at the same time be both Hot and Cold (II.viii.21)</p>
+</blockquote>
+<ol style="list-style-type: decimal">
+<li>Water, at the same time, produces an idea of Heat when touched by one hand and produces an idea of Coldness when touched by the other hand.</li>
+<li>Water that produces an idea of Heat when touched by a hand has [the quality] Heat.</li>
+<li>Water that produces an idea of Coldness when touched by a hand has [the quality] Coldness.</li>
+<li>∴ Water, at the same time, has Heat and Coldness. (From 1, 2, 3)</li>
+<li>Heat and Coldness are opposites.</li>
+<li>It is impossible for opposite real qualities to exist in the same substance at the same time.</li>
+<li>Heat is a real quality if and only if Coldness is a real quality.</li>
+<li>∴ Heat and Coldness are not real qualities. (From 4, 5, 6, 7)</li>
+</ol>
+<h1 id="references" class="unnumbered">References</h1>
+<hr />
+<!-- -->
+
+
+<div class="references">
+<p>Ayers, Michael. 1981. “Mechanism, Superaddition, and the Proof of God’s Existence in Locke’s Essay.” <em>The Philosophical Review</em> 90 (2) (April): 210–251. doi:<a href="http://dx.doi.org/10.2307/2184440">10.2307/2184440</a>. <a href="http://www.jstor.org/stable/2184440">http://www.jstor.org/stable/2184440</a>.</p>
+<p>Blackwell, Richard J. 2008. <em>Behind the Scenes at Galileo’s Trial: Including the First English Translation of Melchior Inchofer’s Tractatus Syllepticus</em>. Notre Dame, IN: University of Notre Dame Press.</p>
+<p>Blackwell, Richard J., and Paolo Antonio Foscarini. 1991. <em>Galileo, Bellarmine, and the Bible: including a Translation of Foscarini’s Letter on the Motion of the Earth</em>. Notre Dame, IN: University of Notre Dame Press.</p>
+<p>Downing, Lisa. 1998. “The Status of Mechanism in Locke’s Essay.” <em>The Philosophical Review</em> 107 (3) (July): 381–414. doi:<a href="http://dx.doi.org/10.2307/2998443">10.2307/2998443</a>. <a href="http://www.jstor.org/stable/2998443">http://www.jstor.org/stable/2998443</a>.</p>
+<p>Galilei, Galileo. 2008. <em>The Essential Galileo</em>. Edited by Maurice A Finocchiaro. Indianapolis, IN: Hackett Publishing.</p>
+<p>Langton, Rae. 2000. “Locke’s Relations and God’s Good Pleasure.” <em>Proceedings of the Aristotelian Society</em> 100 (January): 75–91. <a href="http://www.jstor.org/stable/4545318">http://www.jstor.org/stable/4545318</a>.</p>
+<p>Locke, John. 1970. <em>An Essay Concerning Human Understanding</em>. Edited by Peter H. Nidditch. Oxford University Press.</p>
+<p>Pasnau, Robert. 2013. <em>Metaphysical Themes 1274-1671</em>. Oxford: Oxford University Press.</p>
+<p>Rickless, Samuel C. 1997. “Locke on Primary and Secondary Qualities.” <em>Pacific Philosophical Quarterly</em> 78 (3): 297–319. doi:<a href="http://dx.doi.org/10.1111/1468-0114.00041">10.1111/1468-0114.00041</a>.</p>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>One feature—solidity—may or may not occupy a special role, being the only proper sensible (sensory quality tied to a specific sense modality, in this case touch) that may yet be explanatorily fundamental for the mechanist. We’ll return to this issue later when discussing Locke and Descartes’s theories of matter.<a href="#fnref1">↩</a></p></li>
+<li id="fn2"><p>In my analysis of these three cases I follow <span class="citation">Rickless (1997)</span> closely.<a href="#fnref2">↩</a></p></li>
+<li id="fn3"><p><a href="http://en.wikipedia.org/wiki/Porphyry_(geology)">Porphyry</a> is an igneous rock of a reddish white color<a href="#fnref3">↩</a></p></li>
+</ol>
+</div>
+</body>
+</html>
+
+<!-- ##END MARKED WRAPPER## -->
+    </div>
+</body>
+</html>
