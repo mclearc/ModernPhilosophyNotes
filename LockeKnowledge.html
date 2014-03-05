@@ -1,0 +1,607 @@
+<!DOCTYPE html>  
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>LockeKnowledge</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+/*
+This document has been created with Marked.app <http://markedapp.com>, Copyright 2011 Brett Terpstra
+Please leave this notice in place, along with any additional credits below.
+---------------------------------------------------------------
+Title: Avenue
+Author: Bram de Haan <http://atelierbramdehaan.nl>
+Description: modern retro
+ */
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+a img {
+  border: none;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+button, input {
+  line-height: normal;
+}
+button, input, select, textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  /* vertical-align: middle; */
+}
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+  cursor: pointer;
+  /* overflow: visible; */
+}
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  padding: 0 !important;
+}
+#wrapper {
+  margin-bottom: 0;
+}
+#wrapper img {
+  max-width: 100%;
+  height: auto;
+}
+#wrapper dd {
+  margin-bottom: 1em;
+}
+#wrapper li > p:first-child {
+  margin: 0;
+}
+#wrapper caption, #wrapper col, #wrapper colgroup, #wrapper table, #wrapper tbody, #wrapper td, #wrapper tfoot, #wrapper th, #wrapper thead, #wrapper tr {
+  border-spacing: 0;
+}
+#wrapper table {
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-collapse: collapse;
+  display: table;
+  empty-cells: hide;
+  margin: -1px 0 23px;
+  padding: 0;
+  table-layout: fixed;
+  width: 100%;
+}
+#wrapper caption {
+  display: table-caption;
+  font-weight: 700;
+}
+#wrapper col {
+  display: table-column;
+}
+#wrapper colgroup {
+  display: table-column-group;
+}
+#wrapper tbody {
+  display: table-row-group;
+}
+#wrapper tfoot {
+  display: table-footer-group;
+}
+#wrapper thead {
+  display: table-header-group;
+  border-bottom: solid 1px #999;
+}
+#wrapper td, #wrapper th {
+  display: table-cell;
+}
+#wrapper tr {
+  display: table-row;
+}
+#wrapper table th, #wrapper table td {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  padding: 0 1em;
+}
+#wrapper dt, #wrapper th {
+  font-weight: 700;
+}
+#wrapper dd {
+  padding-left: 1.4em;
+}
+#wrapper table tr:nth-child(even) {
+  background: rgba(200, 200, 200, 0.25);
+}
+#wrapper figure {
+  display: inline-block;
+  position: relative;
+  margin: 1em 0 2em;
+}
+#wrapper figcaption {
+  font-family: AvenirNext-Italic, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  font-style: italic;
+  text-align: center;
+}
+#wrapper figure:hover > figcaption {
+  /* background: rgba(0,0,0,1) */
+}
+/* #wrapper pre { moved down to base styles; } */
+.poetry #wrapper pre {
+  display: block;
+  font-family: Georgia, Garamond, serif !important;
+  font-size: 110% !important;
+  font-style: italic;
+  line-height: 1.6;
+  margin-left: 1em;
+}
+.poetry #wrapper pre code {
+  font-family: Georgia, Garamond, serif !important;
+
+}
+#wrapper sup, #wrapper sub, #wrapper a.footnote {
+  font-size: 1.4ex;
+  height: 0;
+  line-height: 1;
+  position: relative;
+  vertical-align: super;
+}
+#wrapper sub {
+  vertical-align: sub;
+  top: -1px;
+}
+#wrapper .footnote {
+  font-size: .8rem;
+  vertical-align: super;
+}
+#wrapper .footnotes p {
+  font-size: 1.9ex;
+}
+#wrapper ul ul {
+  margin-left: 1em;
+}
+
+#wrapper ul ul,
+#wrapper ol ol {
+  margin-left: 1em;
+}
+#wrapper li ul,
+#wrapper li ol {
+  margin-bottom: 0;
+}
+
+@media print {
+  body {
+    overflow: auto;
+  }
+
+  img, pre, blockquote, table, figure, p {
+    page-break-inside: avoid;
+  }
+
+  #wrapper {
+    background: #fff;
+    color: #000;
+    font-size: 85%;
+    padding: 10px;
+    position: relative;
+    text-indent: 0;
+  }
+}
+
+@media screen {
+  .inverted, .inverted #wrapper {
+    background: #222;
+  }
+  .inverted pre,
+  .inverted img {
+    border-color: #111;
+    background: #1a1a1a;
+  }
+  .inverted pre * {
+    background: #1a1a1a !important;
+  }
+
+  .inverted hr {
+    border-color: #999 !important;
+  }
+
+  .inverted p, .inverted td, .inverted li, .inverted h1, .inverted h2, .inverted h3, .inverted h4, .inverted h5, .inverted h6, .inverted pre, .inverted code, .inverted th, .inverted .math, .inverted caption, .inverted dd, .inverted dt {
+    color: #f9f9f9 !important;
+  }
+
+  .inverted table tr:nth-child(odd), .inverted table th:nth-child(odd), .inverted table td:nth-child(odd) {
+    background: none;
+  }
+
+  .inverted a {
+    color: #ff5778;
+  }
+}
+.max-width {
+  max-width: 100%;
+  height: auto;
+}
+/* ::Base styles Almost exclusively single element selectors */
+/* ------------------------------------------------------------ */
+html {
+  font-size: 100%;
+}
+body {
+  font: 100%/1.388 AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  color: #111;
+  padding: 0 5% 1rem !important;
+}
+a {
+  color: crimson;
+}
+a:hover, a:focus, a:active {
+  color: #ff2450;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: AvenirNextCondensed-DemiBold, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  /* margin: 0; */
+  padding: .5em 0 0;
+}
+h2, h3, h4, h5 {
+  border-bottom: 1px solid #777;
+}
+h1 {
+  font-size: 2.25rem;
+  line-height: 1.11111;
+}
+h2 {
+  font-size: 1.875rem;
+  line-height: 1.33333;
+}
+h3 {
+  font-size: 1.375rem;
+  line-height: 1.45455;
+}
+h4 {
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+h5 {
+  font-size: 1.125rem;
+  line-height: 1.33333;
+}
+h6 {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+pre, label {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+p {
+  font-size: 1.388rem;
+  line-height: 1.33333;
+  /* margin: 0; */
+  padding: .5em 0;
+  max-width: 30em;
+}
+h2 + p,
+h3 + p,
+h4 + p,
+h5 + p {
+  padding-top: 0;
+  margin-top: 1px;
+  border-top: 1px solid #999;
+}
+ol, ul {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0 0 2em 0;
+}
+li {
+  line-height: auto;
+}
+pre {
+  display: block;
+  margin: 1.4em auto;
+  background: #fcf9f1;
+  /* f9f9f9; */
+  padding: 15px 10px 10px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  border: solid 1px  #f0e0b2;
+  font-family: Consolas, Menlo, Monaco, monospace !important;
+  font-size: .875rem;
+  max-width: 90%;
+}
+pre * {
+  background: #fcf9f1 !important;
+}
+code {
+  font-family: Consolas, Menlo, Monaco, monospace;
+}
+ul {
+  list-style-position: outside;
+  list-style-type: square;
+}
+ol {
+  list-style-position: outside;
+  list-style-type: decimal;
+}
+strong, b {
+  font-family: AvenirNext-Bold, AvenirNextCondensed-DemiBold, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  font-weight: 600;
+}
+em, i, q {
+  font-family: AvenirNext-BoldItalic, AvenirNext-Italic, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  font-style: italic;
+}
+blockquote {
+  padding-left: 1em;
+  border-left: 0.3125em solid #c0c0c0;
+  line-height: normal;
+  /* margin: 0; */
+}
+blockquote p {
+  font-family: AvenirNext-Italic, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  font-style: italic;
+  /* margin: 0; */
+  font-size: 1.25rem;
+  line-height: 1.2;
+  margin: 1.2em 0 1.2em 0;
+}
+img {
+ padding: 1em;
+ background-color: #e6e6e6;
+ border: 1px solid #ddd;
+ -webkit-border-radius: 3px;
+ -moz-border-radius: 3px;
+ -o-border-radius: 3px;
+ border-radius: 3px;
+}
+
+@media screen and (max-width: 750px) {
+  -webkit-text-size-adjust: none;
+}
+
+
+@media print{
+#generated-toc-clone,#generated-toc{display:none!important}
+}
+
+</style>
+<style>#wrapper { max-width:600px; margin:0 auto }</style>
+</head>
+<body class="normal poetry">
+  <div id="wrapper">
+      <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Class notes (3/6) – do not cite or circulate" />
+  <title>Locke on Knowledge</title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+<div id="header">
+<h1 class="title">Locke on Knowledge</h1>
+<h2 class="author">Class notes (3/6) – do not cite or circulate</h2>
+</div>
+<div id="TOC">
+<ul>
+<li><a href="#the-nature-of-knowledge"><span class="toc-section-number">1</span> The Nature of Knowledge</a><ul>
+<li><a href="#varieties-of-agreementdisagreement"><span class="toc-section-number">1.1</span> Varieties of Agreement/Disagreement</a></li>
+<li><a href="#degrees-of-knowledge"><span class="toc-section-number">1.2</span> ‘Degrees’ of Knowledge</a></li>
+</ul></li>
+<li><a href="#the-prospects-for-scientific-knowledge"><span class="toc-section-number">2</span> The Prospects for Scientific Knowledge</a><ul>
+<li><a href="#the-ideal-of-demonstrative-knowledge"><span class="toc-section-number">2.1</span> The Ideal of Demonstrative Knowledge</a></li>
+<li><a href="#locke-on-the-extent-of-human-knowledge"><span class="toc-section-number">2.2</span> Locke on the Extent of Human Knowledge</a></li>
+<li><a href="#is-locke-a-skeptic"><span class="toc-section-number">2.3</span> Is Locke a Skeptic?</a></li>
+</ul></li>
+<li><a href="#references">References</a></li>
+</ul>
+</div>
+<p>All our concepts come from experience (or are constructions from such materials) but not all of our <em>knowledge</em> comes from experience.</p>
+<p>Locke has a scholastic conception of knowledge proper, just as Descartes does, but unlike Descartes, Locke thinks such knowledge is achievable in Ethics and Mathematics only, and thus, contra Descartes, not in metaphysics or natural science.</p>
+<h1 id="the-nature-of-knowledge"><span class="header-section-number">1</span> The Nature of Knowledge</h1>
+<p>Locke defines knowledge as a relation between our ideas:</p>
+<blockquote>
+<p>Since the mind in all its thoughts and reasonings has no immediate object other than its own ideas, which are all it can contemplate, it is evident that our knowledge has to do only with them. Knowledge, then, seems to me to be nothing but the perception of the connection and agreement, or disagreement and incompatibility, of any of our ideas. That is all it is. (IV.i.1-2)</p>
+</blockquote>
+<p>There are three points of note here. First, as just pointed out, knowledge is a relation between <em>ideas</em>, not (at least in any immediate way) between a knower and the world. While this may be fine for stipulative knowledge (or even a priori knowledge generally), such as that a bachelor is an unmarried male, it does not seem to fit with existential knowledge of contingent matters, such as the color of one’s shirt, or that one had French toast for breakfast. These seems to be cases where one has knowledge of matters of fact or of particular individuals and their characteristics, rather than one’s ideas of them.</p>
+<p>Second, Locke puts significant emphasis on the subject’s own <em>perception</em> of the agreement or disagreement of their ideas. Hence, for as subject to count as a knower, she must herself perceive, or be in a position to perceive, the requisite agreement or disagreement between her ideas. Locke’s <a href="http://plato.stanford.edu/entries/locke-political/">political philosophy</a> emphasizes the authority and sovereignty with respect to matters of right, and this same emphasis can be seen in the importance of one’s subjective perception for knowledge. For Locke, one cannot know things whose justification or evidence is taken merely on the authority of another (whether that be friend, parent, church, or state). One’s ultimate status as a knower stands or falls with the relation to one’s own ideas and not anyone else’s.</p>
+<p>Third, Locke’s conception of knowledge, properly so called, ties knowledge to <em>certainty</em>. If one knows that <em>p</em> then one is certain that <em>p</em>. Here the notion of certainty is not that of a mere subjective state of conviction, it is rather <em>factive</em> — being certain that <em>p</em> entails that <em>p</em> is true. This means that there is no knowledge, properly so called, in cases where there is merely the <em>probability</em> of <em>p</em>’s being true. This high standard for knowledge is something Locke shares with both Descartes and with the Aristotelian scholastic tradition.</p>
+<p>A further point, not made explicitly in the passage above, is that the connections that Locke has in mind concerning our ideas are <em>necessary</em> connections. He makes this point more clearly in his discussion of the limitations of our knowledge concerning the natural world.</p>
+<blockquote>
+<p>I fear that the human understanding hasn’t the power to replace [the corpuscularian hypothesis] by one that could give us a fuller and clearer discovery of the necessary connection and co-existence of the powers that are found to be united in various sorts of bodies. . . . I doubt whether the faculties that we have will ever be able to advance much our general knowledge (as distinct from particular experience) of these matters. (IV.iii.16)</p>
+</blockquote>
+<p>Knowledge is concerned with the necessary connections between ideas, and ultimately, between qualities in the bodies causing those ideas in us. But, Locke argues, we can have no knowledge of these necessary connections, and can only frame hypotheses concerning their possible nature (Locke’s favorite being the corpuscularian hypothesis).</p>
+<h2 id="varieties-of-agreementdisagreement"><span class="header-section-number">1.1</span> Varieties of Agreement/Disagreement</h2>
+<p>If knowledge is agreement or disagreement between ideas, one might ask whether all such relationships are of the same form. Locke thinks that there are in fact four general categories into which such agreement/disagreement might fall.</p>
+<ol style="list-style-type: decimal">
+<li>Identity, or diversity
+<ul>
+<li>in virtue of perceiving an idea one is aware that each idea is identical with itself and different from others (IV.i.4)</li>
+</ul></li>
+<li>Relation
+<ul>
+<li>perception of relations between ideas, even if only juxtaposing them in a single thought (IV.i.5)</li>
+</ul></li>
+<li>Co-existence, or necessary connection
+<ul>
+<li>ideas of characteristics being necessarily connected in a single entity, such as the color and texture of a particular piece of gold (IV.i.6)</li>
+</ul></li>
+<li>Real existence
+<ul>
+<li>perception of the actual existence of something. We have intuitive knowledge of our own existence, and know the existence of mind-independent objects via sensation (IV.xi.1)</li>
+</ul></li>
+</ol>
+<blockquote>
+<p>‘Blue is not yellow’ is of identity; ‘Two triangles on equal bases between two parallells are equal’ is of relation; ‘Iron is magnetizable’ is of co-existence; and ‘God exists’ is of real existence. Though identity and co-existence are themselves relations, they are such special kinds of agreement or disagreement amongst ideas that they deserve to be brought in separately, not under relation in general. (IV.i.7)</p>
+</blockquote>
+<h2 id="degrees-of-knowledge"><span class="header-section-number">1.2</span> ‘Degrees’ of Knowledge</h2>
+<p>Locke distinguishes between types or ‘degrees’ of knowledge. Another way of putting this is to say that though, for Locke, all knowledge is marked by a particular kind of <em>perception</em> of agreement or incompatibility between ideas, there are nevertheless different routes to such perception, different ways of agreement’s being evident (IV.ii.14).</p>
+<p>The most certain is ‘intuitive’ knowledge, which is phenomenologically immediate, and non-inferential.</p>
+<blockquote>
+<p>Sometimes our mind perceives the agreement or disagreement of two ideas immediately—by themselves, without the intervention of any other ideas. I think we may call this intuitive knowledge…the mind perceives—by bare intuition, without the intervention of any other idea—that white is not black, that a circle is not a triangle, that three are more than two and equal to one plus two. (IV.ii.1)</p>
+</blockquote>
+<p>The second is ‘demonstrative’ knowledge, which is mediated by inferences involving intermediate ideas.</p>
+<blockquote>
+<p>The next degree of knowledge occurs when the mind perceives the agreement or disagreement of any ideas, but not immediately…The reason why the mind can’t always perceive, straight off, the agreement or disagreement of two ideas is that it can’t put the ideas together in such a way as to show their agreement or disagreement. In this case the mind has to discover the agreement or disagreement that it is searching for by bringing in one or more intervening ideas; and this is what we call <em>reasoning</em>. (IV.ii.2)</p>
+</blockquote>
+<p>Proofs are understood by Locke to be the means by which we reason to our intended conclusion, and the successful knowledge-yielding proof is a demonstration.</p>
+<p>Demonstrative knowledge, though certain, is nevertheless less obvious or convincing than intuitive knowledge, partly due to limitations in our ability to remember and hold before us all the relevant steps of a proof.</p>
+<blockquote>
+<p>For a complete demonstration, the mind must •perceive the immediate agreement of each pair of ideas in the sequence (starting with one of the ideas in the demonstrated the proposition and ending with the other) and •carry with it a memory of the entire procedure, with no part being left out. In long deductions this is hard to do, which is why demonstrative knowledge is more imperfect than intuitive knowledge, and why men often welcome a falsehood as something they have demonstrated. (IV.ii.7)</p>
+</blockquote>
+<p>Anything that falls short of intuition or demonstration is not itself knowledge, properly so called. It is instead either ‘Belief’ or ‘Opinion’ (IV.ii.14). Locke makes an exception, however, for what he calls ‘sensitive knowledge’, which is less certain than either intuitive or demonstrative knowledge but which is something other than a claim whose truth is merely probable.</p>
+<blockquote>
+<p>I think we may add to the former two sorts of knowledge this third one, knowledge of the existence of particular external objects through the perception and consciousness we have of the actual entrance of ideas from them ·through our senses·. That gives us three degrees of knowledge: intuitive, demonstrative, and sensitive (IV.ii.14)</p>
+</blockquote>
+<p>The obvious question, with respect to sensitive knowledge, is whether it is correct to think of it as genuine <em>knowledge</em> of the existence of mind-independent objects. What about the kinds of skeptical doubts raised by Descartes in the the initial stages of the <em>Meditations</em>? Locke thinks that we have intuitive certainty of the existence of our ideas of external objects (IV.ii.14), the question is whether we know of the existence of those objects themselves. Locke raises and answers the questions as follows:</p>
+<blockquote>
+<p>is there anything more than just that idea in our minds? Can we certainly infer from that idea the existence of something outside us corresponding to it? Some men think this is a real question, because people sometimes have such ideas in their minds at times when no such thing exists, no such object affects their senses. But I think that we are provided with a degree of evidentness that puts us past doubting. For I ask you, [1] are you not irresistibly conscious to yourself of a different perception when you look at the sun by day from what you have when you think about it at night? when you actually taste wormwood or smell a rose, and when you only think about that taste or smell? [2] An idea revived in our minds by our own memory differs from one coming into our minds through our senses, the difference being as obvious as that between any two ideas. If anyone says ‘A dream can do the same thing, and all these ideas could be produced in us without any external objects’, I invite him to dream that I answer him thus: [3] •It doesn’t matter much whether I remove your doubt, because where everything is a dream, reasoning and arguments are of no use, and truth and knowledge are nothing. Also, [4] •I believe you will allow a very obvious difference between dreaming of being in a fire and being actually in it.</p>
+</blockquote>
+<p>I’ve marked out four distinct issues Locke raises concerning skeptical doubt of the existence of an external world. We’ll take them in turn.</p>
+<p>First, Locke points out that there is a distinctive phenomenology to our perceptions that cannot be replicated in thought. This is clearly correct, but doesn’t tell us anything about the veracity of our perceptions, which is what was in question.</p>
+<p>Second, Locke points out that there is a clear difference, again, presumably phenomenologically, between memory and an occurrent perception. Locke is surely correct that we do not typically confuse our memories with occurrent experience, but it is not obvious that a memory and an occurrent experience might be phenomenally indistinguishable. In abnormal circumstances one might have especially vivid memories that, at least in some respects, might closely if not exactly resemble the original experience. And once again, even if memory is always distinguishable from occurrent perception, this does not show that occurrent perception is giving any sort of cognitive access to things without the mind.</p>
+<p>Third, Locke simply denies that anything like reasoning or argument would matter if our epistemic status were on par with dreaming. This is not so much an argument against the possibility that we are radically deceived, as we might be if dreaming, as it is the claim that if we are so deceived, then arguments don’t matter.</p>
+<p>Finally, in the fourth point Locke quips that there is something very obviously different between being in a fire and dreaming or hallucinating being in a fire. This is obviously correct. One is painful, the other isn’t (or not as much). There are also clear differences in practical import. Presumably, actually being in the middle of a fire would lead to all sorts of (avoidance) behaviors that merely dreaming or hallucinating being in the fire might not. Has Locke made a significant point here? Not obviously. Descartes is quite clear that his concern is with slight or ‘metaphysical’ doubt that may have no practical import at all (7:22; EMT M.3).</p>
+<p>What comes through most clearly in these arguments is Locke’s disdain for the question. He has not, it seems, given any satisfactory answer to the question as to whether an external world really exists, but he doesn’t seem to think it a serious or pressing question.</p>
+<p>Note though, that sensitive knowledge is not very extensive. Locke considers it to extend no further than our actual occurrent sensory experience (IV.iii.5). Hence, neither remembered past sensory experience, nor possible future sensory experience is available for underwriting knowledge of the external world. Thus, whatever knowledge we may have of particular occurrent existent things via sense experience, it will be very limited.</p>
+<h1 id="the-prospects-for-scientific-knowledge"><span class="header-section-number">2</span> The Prospects for Scientific Knowledge</h1>
+<p>Our contemporary notion of scientific knowledge only came into existence in the 19th century. The term ‘scientist’ was coined in 1834 by <a href="https://en.wikipedia.org/wiki/Scientist#Historical_development_and_etymology_of_the_term">William Whewell</a>. Before then, and going back to <a href="http://plato.stanford.edu/entries/aristotle/">Aristotle</a>, the dominant conception of theoretical knowledge known as ‘<em>Scientia</em>’ (Greek: ‘<em>Epistêmê</em>’) concerned any organized body of knowledge which demonstrated necessary connections between known truths. Scientific knowledge could be stated in syllogistic argument, reasoning from more fundamental truths, to truths (logically) derivable from them.</p>
+<p>We’ll look both at the notion of a <em>scientia</em> as a system of logical demonstrations and Locke’s pessimism that natural science could ever satisfy such stringent requirements. One of Locke’s great contributions to epistemology was carving out a way between the traditional and highly demanding notion of scientific knowledge and resolute skepticism. Locke attempted to articulate a notion of human knowledge as limited and finite, but as more than mere skepticism. For more extensive discussion see <a href="http://plato.stanford.edu/entries/locke-philosophy-science/">Kochiras (2013)</a>.</p>
+<h2 id="the-ideal-of-demonstrative-knowledge"><span class="header-section-number">2.1</span> The Ideal of Demonstrative Knowledge</h2>
+<p>Aristotle puts the notion of scientific knowledge this way:</p>
+<blockquote>
+<p>We suppose ourselves to possess unqualified scientific knowledge of a thing, as opposed to knowing it in the accidental way in which the sophist knows, when we think that we know the cause on which the fact depends, as the cause of that fact and of no other, and, further, that the fact could not be other than it is….The proper object of unqualified scientific knowledge is something which cannot be other than it is. (Aristotle, <em>Posterior Analytics</em>, I.2)</p>
+</blockquote>
+<p>So, according to Aristotle (and here the scholastics follow him), scientific knowledge is knowledge of asymmetric dependence relations that hold necessarily (in some sense of necessary). Typically, the sense of necessity at issue was that of logical necessity as captured in a logical syllogism. Syllogisms are logical arguments of a particular form in which a predicate is either affirmed or denied of a subject via some intermediate proposition. For example,</p>
+<ol style="list-style-type: decimal">
+<li>Socrates is human</li>
+<li>All humans are mortal</li>
+<li><span class="math">∴ </span> Socrates is mortal</li>
+</ol>
+<p>Here the predicate &lt;mortal&gt; is predicated of Socrates via the intermediate proposition &lt;All humans are mortal&gt;. The chaining together of predicates make evident how Socrates’s mortality is grounded in his humanity—i.e. in his being a human being. So we explain a particular feature of Socrates by saying that he is a being of a particular kind—a human being.</p>
+<p>Now, in scientific knowledge we have an understanding of the conclusion as being <em>caused</em> by the relevant subject matter of the premises. It might seem that, in the case of Socrates’s mortality above, there is no such cause present. However, this is not how the Aristotelian conceives of things. In the above syllogism, the relevant cause or explanation is Socrates’s humanity. In Aristotelian terms, it is the nature of being human to be mortal, and it is the fact that Socrates is human—a member of the <em>species</em> human—that determines, causes, and thus explains, his being mortal. Another way of putting this is that it is a fact about Socrates’s <em>essence</em>—his being human—that explains why he is mortal.</p>
+<p>‘<em>Essence</em>’, for Aristotle, picked out that feature or features of a thing that explain why it is the thing that it is. Essences thus determine (i) kind membership for any individual (e.g. that Socrates is of the kind &lt;human&gt;) and (ii) explain why the particular individual has the manifest properties that it does. It is this sort of explanation that is manifest in deductive syllogisms like the one concerning Socrates above.</p>
+<p>The ultimate aim of a science is to provide knowledge from the reason or ground of a thing, so as to explain why it is the way that it is. This requires appeal to simple real definitions as opposed to compound nominal definitions. Compound definitions denote pseudo-individuals or kinds in the sense that they name items of different categories, most standardly substances and accidents. Hence “musician” is a compound definition denoting a kind of thing—a musical person—which does not have a genuine essence of its own. Musicians are not the kind of thing which are taken to have a common essence which explains why all things of that kind are the way they are (in contrast, say, to “human” or “animal”). No individual goes out of existence by ceasing to be musical (not even a musician, for there are, unfortunately, tone-deaf musicians) while a (human) musician clearly goes out of existence by ceasing to be human.</p>
+<p>Nominal definitions, in contrast, do allow for distinguishing genuine (as opposed to pseudo) individuals, but do so in a way that fails either to identify the principle attribute of the thing or effect a proper division of its genus. To use an example from Locke (E III.x.17), we consider <em>rational animal</em> a better definition of a human being than <em>two legged animal with broad nails</em> because the latter, though (let us say) extensionally correct, fails either to capture the principle characteristic of being human (rationality) or effect a proper division of its genus (animal).<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a></p>
+<p>So, according to the Aristotelian conception of science, scientific inquiry aims at providing knowledge of why something is the way it is, which in turn requires the articulation of a real definition. Real definitions characterize the essences of individuals in a given domain of inquiry. The individuals in this domain are thus fundamental (in the sense of being explanatorily primary). Aristotle’s name for such a fundamental individual is “substance” [<em>ousia</em>]. Given real definitions of substances an inquirer could use general principles, in which the real definitions figure, to provide a priori deductive demonstrations of the non-accidental (i.e. necessary but non-essential) features of any possible object in the relevant domain. Hence the possibility of scientific knowledge depends on the possibility of providing real definitions of things—substances—which thereby constitute the most explanatorily basic entities in the relevant domain of inquiry.</p>
+<h2 id="locke-on-the-extent-of-human-knowledge"><span class="header-section-number">2.2</span> Locke on the Extent of Human Knowledge</h2>
+<p>Locke distinguishes our epistemic attitudes (what he calls ‘Assent’) into three categories—Knowledge, Belief, and Opinion. As we have seen, there are three sorts of knowledge—intuitive, demonstrative, and sensitive. When it comes to existing things Locke thinks our knowledge is very limited.</p>
+<blockquote>
+<p>As to the fourth sort of knowledge that we have, namely knowledge of the real actual existence of things: we have •an intuitive knowledge of our own existence, and •a demonstrative knowledge of the existence of a God, but of the existence of anything else we have only •sensitive knowledge, which is limited to objects that are present to our senses. (IV.iii.21)</p>
+</blockquote>
+<p>Our knowledge of real existing things is thus quite restricted. What about scientific knowledge [<em>scientia</em>] of the kind articulated by Aristotle? Possession of such knowledge isn’t directly of existing things, since we might have knowledge of the essence of things that don’t actually exist. A good example of this would be the objects of Euclidean geometry. The Euclidean definitions of the plane figures articulate the conditions for the existence of those figures (e.g. for anything to be a triangle, its angles must sum to 180˚), whether or not they actually do exist. Unsurprisingly, Locke does think that we have scientific knowledge of geometry (IV.ii.10).</p>
+<p>Locke also thinks that we have scientific knowledge of morality.</p>
+<blockquote>
+<p>Where there is no Property, there is no Injustice, is a Proposition as certain as any Demonstration in Euclid: For the Idea of Property, being a right to any thing; and the Idea to which the Name Injustice is given, being the Invasion or Violation of that right; it is evident, that on the strength of these two Ideas and the Names annexed to them I can as certainly know this Proposition to be true, as that a Triangle has three Angles equal to two right ones. (IV.iii.18).</p>
+</blockquote>
+<p>So morality is characterized by determinate relationships between ideas, that we can know demonstratively, and thus is a body of knowledge as sure any bit of mathematics.</p>
+<p>Can we have scientific knowledge of the natural world? Put another way, is natural philosophy a form of <em>scientia</em>? Answering this question positively would be to say that we could have knowledge of the essences of material substances, and thus of the necessary connections between the essences and the other features of the substances whose essences they are (IV.vi.11). Locke’s radical position (here in stark contrast to Descartes’s) is that we <em>cannot</em> have such knowledge, and thus that natural philosophy is not a form of <em>scientia</em>. Locke gives two reasons for thinking this.</p>
+<p>The first argument he provides is a kind of argument from access. The worry he raises is that our access to mind-independent objects is largely via knowledge of their secondary qualities.</p>
+<blockquote>
+<p>The ideas that our complex ideas of substances are composed of, and that are the focus of most of our knowledge concerning substances, are those of their secondary qualities. I have shown that these all depend on the primary qualities of the substances’ minute and imperceptible parts; or if not on them, on something yet more remote from our comprehension. So we can’t possibly know which of them have a necessary union or inconsistency with which others: not knowing the root they spring from—not knowing what size, shape and texture of parts give rise to the qualities that make our complex idea of gold—we can’t know what other qualities result from (or are incompatible with) that same root and so consequently must always co-exist with that complex idea we have of it (or else are inconsistent with it). (IV.iii.11)</p>
+</blockquote>
+<p>Our knowledge of primary qualities is greatly limited, Locke thinks. We may have knowledge that all the parts of a body must have the determinable properties of shape, size, motion, and solidity, but by and large we do not know the <em>determinates</em> of these properties, so we do not know which determinate qualities go with which others, nor how they combine to produce the wide variety of secondary qualities characteristic of the macroscopic world.</p>
+<p>This connection between the primary and secondary qualities is something that Locke seems to think is totally inscrutable to us (IV.iii.12-13). According to Locke there is simply “no discoverable connection” between the determinate primary qualities of a body and its secondary qualities.</p>
+<blockquote>
+<p>We are so far from knowing what shape, size, or motion of parts produce a yellow colour, a sweet taste, or a sharp sound, that we can’t conceive how any size, shape, or motion of any particles could possibly produce in us the idea of any colour, taste, or sound; there is no conceivable connection between the one and the other. (IV.iii.13)</p>
+</blockquote>
+<p>Locke then sums up his argument as follows:</p>
+<blockquote>
+<p>We need knowledge of two things before we can certainly know the necessary co-existence of any secondary qualities: (1) substances’ real constitutions of minute parts on which their secondary qualities depend, and (2) necessary connections between those and the secondary qualities. We don’t have knowledge of (1), and even if we did, we couldn’t have knowledge of (2)…. Our knowledge in all these enquiries reaches very little further than our experience. (IV.iii.14)</p>
+</blockquote>
+<p>Thus we cannot have scientific knowledge in natural philosophy because (1) we cannot know the real essences of the minute bodies composing the observable world, and (2) even if we could know them we could not discern the necessary connections that exist between those bodies and their observable secondary qualities.</p>
+<p>Locke does acknowledge that we have very limited knowledge of the necessary connections that exist between some of the primary qualities of things.</p>
+<blockquote>
+<p>Some few of the primary Qualities have a necessary dependence, and visible connexion one with another, as Figure necessarily presupposes Extension, receiving or communicating Motion by impulse, supposes Solidity. (IV.iii.14)</p>
+</blockquote>
+<p>But knowledge of such connections is very limited, based partly on the fact that our knowledge of determinate primary qualities of corpuscles is limited by their unobservability (in fact if not in principle, cf. <span class="citation">Downing (1992)</span>), and in part by the possibility that the physical world is causally interconnected in ways such that our ignorance of extremely remote objects (e.g. astronomically remote planets, etc.) would entail our ignorance of aspects of bodies closer to us (cf. IV.vi.11-12)</p>
+<!-- NOTE: 2 obstacles to knowledge: the obscurity of determinate primary qualities of corpuscles and the inscrutability of the connection between determinate primary qualities and determinate/determinable secondary qualities  -->
+
+<h2 id="is-locke-a-skeptic"><span class="header-section-number">2.3</span> Is Locke a Skeptic?</h2>
+<p>If Locke denies that we can have proper scientific knowledge of the natural world, does this make him a skeptic?</p>
+<p>Recall that Locke argues for a kind of knowledge, inferior to intuitive and demonstrative knowledge, but nevertheless worthy of the name—viz., ‘sensitive’ knowledge. Sense experience gives us knowledge of the existence of currently perceived objects via their perceived properties. This does not give us any knowledge of the real essences of things but only what Locke calls their ‘nominal’ essence—that set of characteristics which we use to sort things into kinds (e.g. &lt;dog&gt;, &lt;gold&gt;). Our knowledge of the coexistence of such properties as to make it count as a thing of a certain kind (e.g. as a dog or a piece of gold) is limited to probable rather than certain connections.</p>
+<blockquote>
+<p>For all the Qualities that are co-existent in any Subject, without this dependence and evident connexion of their Ideas one with another, we cannot know certainly any two to co-exist any farther, than Experience, by our Senses, informs us. Thus though we see the yellow Colour, and upon trial find the Weight, Malleableness, Fusibility, and Fixedness, that are united in a piece of Gold; yet because no one of these Ideas has any evident dependence, or necessary connexion with the other, we cannot certainly know, that where any four of these are, the fifth will be there also, how highly probable soever it may be. (IV.iii.14)</p>
+</blockquote>
+<p>For sensitive knowledge to count as knowledge proper of the natural world, it must satisfy two conditions. First, the complex idea which we generate via an act of combination on a set of simple ideas must concern simple ideas which we have actually encountered as coexisting in nature.</p>
+<blockquote>
+<p>Herein therefore is founded the reality of our Knowledge concerning Substances, that all our complex Ideas of them must be such, and such only, as are made up of such simple ones, as have been discovered to co-exist in Nature. And our Ideas being thus true, though not, perhaps, very exact Copies, are yet the Subjects of real (as far as we have any) Knowledge of them. (IV.iv.12)</p>
+</blockquote>
+<p>This condition keeps our sensitive knowledge from being arbitrary or otherwise potentially ungrounded in the nature of how things are outside the mind. Locke’s worry here is that the fundamental principle governing the combination of ideas—viz., logical contradiction—is insufficient to give us knowledge of how qualities might actually combine in the world. A logically coherent combination of ideas might signify a really incoherent or incompatible combination of qualities.</p>
+<p>Second, we can form nominal essences, and thus have general knowledge of the physical world (e.g. that all gold is malleable), insofar as we keep to combinations that accord with experienced regularities. Locke bases this on the grounds that ”whatever have once had an union in Nature, may be united again.“ (IV.iv.12)</p>
+<h1 id="references" class="unnumbered">References</h1>
+<hr />
+<!-- -->
+
+
+
+<div class="references">
+<p>Atherton, Margaret. 1991. “Corpuscles, Mechanism, and Essentialism in Berkeley and Locke.” <em>Journal of the History of Philosophy</em> 29 (1): 47–67. doi:<a href="http://dx.doi.org/10.1353/hph.1991.0021">10.1353/hph.1991.0021</a>.</p>
+<p>———. 2007. “Locke on Essences and Classification.” In <em>The Cambridge Companion to Locke’s &quot;Essay Concerning Human Understanding&quot;</em>, edited by Lex Newman, 258–285. Cambridge: Cambridge University Press. <a href="http://www.lavoisier.fr/livre/notice.asp?ouvrage=1420143">http://www.lavoisier.fr/livre/notice.asp?ouvrage=1420143</a>.</p>
+<p>Ayers, Michael. 1981a. “Mechanism, Superaddition, and the Proof of God’s Existence in Locke’s Essay.” <em>The Philosophical Review</em> 90 (2) (April): 210–251. doi:<a href="http://dx.doi.org/10.2307/2184440">10.2307/2184440</a>. <a href="http://www.jstor.org/stable/2184440">http://www.jstor.org/stable/2184440</a>.</p>
+<p>———. 1981b. “Locke Versus Aristotle on Natural Kinds.” <em>The Journal of Philosophy</em> 78 (5) (May): 247–272. doi:<a href="http://dx.doi.org/10.2307/2025955">10.2307/2025955</a>. <a href="http://www.jstor.org/stable/2025955">http://www.jstor.org/stable/2025955</a>.</p>
+<p>———. 1991. <em>Locke: Epistemology &amp; Ontology</em>. Vol. 1 &amp; 2. London: Routledge.</p>
+<p>———. 1996. “Natures and Laws from Descartes to Hume.” In <em>The Philosophical Canon in the Seventeenth and Eighteenth Centuries: Essays in Honour of John W. Yolton</em>, edited by G. A. J Rogers, Sylvana Tomaselli, and John W Yolton, 83–101. Rochester, N.Y.: University of Rochester Press Rochester NY.</p>
+<p>Downing, Lisa. 1992. “Are Corpuscles Unobservable in Principle for Locke?” <em>Journal of the History of Philosophy</em> 30 (1): 33–52. doi:<a href="http://dx.doi.org/10.1353/hph.1992.0003">10.1353/hph.1992.0003</a>.</p>
+<p>———. 1998. “The Status of Mechanism in Locke’s Essay.” <em>The Philosophical Review</em> 107 (3) (July): 381–414. doi:<a href="http://dx.doi.org/10.2307/2998443">10.2307/2998443</a>. <a href="http://www.jstor.org/stable/2998443">http://www.jstor.org/stable/2998443</a>.</p>
+<p>———. 2007. “Locke’s Ontology.” In <em>The Cambridge Companion to Locke’s Essay Concerning Human Understanding</em>, edited by Lex Newman, 352–380. Cambridge: Cambridge University Press. <a href="http://www.lavoisier.fr/livre/notice.asp?ouvrage=1420143">http://www.lavoisier.fr/livre/notice.asp?ouvrage=1420143</a>.</p>
+<p>Jacovides, Michael. 2007. “Locke on the Propria of Body.” <em>British Journal for the History of Philosophy</em> 15 (3): 485–511. doi:<a href="http://dx.doi.org/10.1080/09608780701444923">10.1080/09608780701444923</a>. <a href="http://www.tandfonline.com/doi/abs/10.1080/09608780701444923">http://www.tandfonline.com/doi/abs/10.1080/09608780701444923</a>.</p>
+<p>Jolley, Nicholas. 1999. <em>Locke: His Philosophical Thought</em>. Oxford: Oxford University Press.</p>
+<p>Kochiras, Hylarie. 2013. “Locke’s Philosophy of Science.” In <em>The Stanford Encyclopedia of Philosophy</em>, edited by Edward N. Zalta, Fall 2013. <a href="http://plato.stanford.edu/archives/fall2013/entries/locke-philosophy-science/">http://plato.stanford.edu/archives/fall2013/entries/locke-philosophy-science/</a>.</p>
+<p>Leary, Nigel. 2009. “How Essentialists Misunderstand Locke.” <em>History of Philosophy Quarterly</em> 26 (3) (July): 273–292. <a href="http://www.jstor.org/stable/27745163">http://www.jstor.org/stable/27745163</a>.</p>
+<p>McCann, Edwin. 1994. “Locke’s Philosophy of Body.” In <em>The Cambridge Companion to Locke</em>, 56–88. Cambridge: Cambridge University Press. <a href="http://books.google.com/books?hl=en&amp;lr=&amp;id=f28fFbiohXMC&amp;oi=fnd&amp;pg=PA56&amp;dq=mccann+locke&amp;ots=fAq_98dkrU&amp;sig=K60nvoZ33Pmk6t6LLBTOdhPOZxU">http://books.google.com/books?hl=en&amp;lr=&amp;id=f28fFbiohXMC&amp;oi=fnd&amp;pg=PA56&amp;dq=mccann+locke&amp;ots=fAq_98dkrU&amp;sig=K60nvoZ33Pmk6t6LLBTOdhPOZxU</a>.</p>
+<p>Newman, Lex. 2004. “Locke on Sensitive Knowledge and the Veil of Perception – Four Misconceptions1.” <em>Pacific Philosophical Quarterly</em> 85 (3): 273–300. doi:<a href="http://dx.doi.org/10.1111/j.1468-0114.2004.00199.x">10.1111/j.1468-0114.2004.00199.x</a>. <a href="http://onlinelibrary.wiley.com.proxy.library.cornell.edu/doi/10.1111/j.1468-0114.2004.00199.x/abstract">http://onlinelibrary.wiley.com.proxy.library.cornell.edu/doi/10.1111/j.1468-0114.2004.00199.x/abstract</a>.</p>
+<p>———. 2007. “Locke on Knowledge.” In <em>The Cambridge Companion to Locke’s “Essay Concerning Human Understanding”</em>, edited by Lex Newman, 313–351. Cambridge: Cambridge University Press. <a href="http://www.lavoisier.fr/livre/notice.asp?ouvrage=1420143">http://www.lavoisier.fr/livre/notice.asp?ouvrage=1420143</a>.</p>
+<p>Osler, Margaret J. 1970. “John Locke and the Changing Ideal of Scientific Knowledge.” <em>Journal of the History of Ideas</em> 31 (1) (January): 3–16. doi:<a href="http://dx.doi.org/10.2307/2708366">10.2307/2708366</a>. <a href="http://www.jstor.org/stable/2708366">http://www.jstor.org/stable/2708366</a>.</p>
+<p>Rickless, Samuel C. 2008. “Is Locke’s Theory of Knowledge Inconsistent?” <em>Philosophy and Phenomenological Research</em> 77 (1): 83–104. doi:<a href="http://dx.doi.org/10.1111/j.1933-1592.2008.00177.x">10.1111/j.1933-1592.2008.00177.x</a>.</p>
+<p>Sorell, Tom, Graham Alan John Rogers, and Jill Kraye, ed. 2009. <em>Scientia in Early Modern Philosophy: Seventeenth-Century Thinkers on Demonstrative Knowledge from First Principles</em>. Dordrecht: Springer.</p>
+<p>Woolhouse, Roger. 1994. “Locke’s Theory of Knowledge.” In <em>The Cambridge Companion to Locke</em>, 146–171. Cambridge: Cambridge University Press.</p>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Cf. <span class="citation">Ayers (1991)</span>, vol. II., 19.<a href="#fnref1">↩</a></p></li>
+</ol>
+</div>
+</body>
+</html>
+
+<!-- ##END MARKED WRAPPER## -->
+    </div>
+</body>
+</html>
