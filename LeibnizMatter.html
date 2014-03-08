@@ -1,0 +1,528 @@
+<!DOCTYPE html>  
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>Matter</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+/*
+This document has been created with Marked.app <http://markedapp.com>, Copyright 2011 Brett Terpstra
+Please leave this notice in place, along with any additional credits below.
+---------------------------------------------------------------
+Title: Avenue
+Author: Bram de Haan <http://atelierbramdehaan.nl>
+Description: modern retro
+ */
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+a img {
+  border: none;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+button, input {
+  line-height: normal;
+}
+button, input, select, textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  /* vertical-align: middle; */
+}
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+  cursor: pointer;
+  /* overflow: visible; */
+}
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  padding: 0 !important;
+}
+#wrapper {
+  margin-bottom: 0;
+}
+#wrapper img {
+  max-width: 100%;
+  height: auto;
+}
+#wrapper dd {
+  margin-bottom: 1em;
+}
+#wrapper li > p:first-child {
+  margin: 0;
+}
+#wrapper caption, #wrapper col, #wrapper colgroup, #wrapper table, #wrapper tbody, #wrapper td, #wrapper tfoot, #wrapper th, #wrapper thead, #wrapper tr {
+  border-spacing: 0;
+}
+#wrapper table {
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-collapse: collapse;
+  display: table;
+  empty-cells: hide;
+  margin: -1px 0 23px;
+  padding: 0;
+  table-layout: fixed;
+  width: 100%;
+}
+#wrapper caption {
+  display: table-caption;
+  font-weight: 700;
+}
+#wrapper col {
+  display: table-column;
+}
+#wrapper colgroup {
+  display: table-column-group;
+}
+#wrapper tbody {
+  display: table-row-group;
+}
+#wrapper tfoot {
+  display: table-footer-group;
+}
+#wrapper thead {
+  display: table-header-group;
+  border-bottom: solid 1px #999;
+}
+#wrapper td, #wrapper th {
+  display: table-cell;
+}
+#wrapper tr {
+  display: table-row;
+}
+#wrapper table th, #wrapper table td {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  padding: 0 1em;
+}
+#wrapper dt, #wrapper th {
+  font-weight: 700;
+}
+#wrapper dd {
+  padding-left: 1.4em;
+}
+#wrapper table tr:nth-child(even) {
+  background: rgba(200, 200, 200, 0.25);
+}
+#wrapper figure {
+  display: inline-block;
+  position: relative;
+  margin: 1em 0 2em;
+}
+#wrapper figcaption {
+  font-family: AvenirNext-Italic, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  font-style: italic;
+  text-align: center;
+}
+#wrapper figure:hover > figcaption {
+  /* background: rgba(0,0,0,1) */
+}
+/* #wrapper pre { moved down to base styles; } */
+.poetry #wrapper pre {
+  display: block;
+  font-family: Georgia, Garamond, serif !important;
+  font-size: 110% !important;
+  font-style: italic;
+  line-height: 1.6;
+  margin-left: 1em;
+}
+.poetry #wrapper pre code {
+  font-family: Georgia, Garamond, serif !important;
+
+}
+#wrapper sup, #wrapper sub, #wrapper a.footnote {
+  font-size: 1.4ex;
+  height: 0;
+  line-height: 1;
+  position: relative;
+  vertical-align: super;
+}
+#wrapper sub {
+  vertical-align: sub;
+  top: -1px;
+}
+#wrapper .footnote {
+  font-size: .8rem;
+  vertical-align: super;
+}
+#wrapper .footnotes p {
+  font-size: 1.9ex;
+}
+#wrapper ul ul {
+  margin-left: 1em;
+}
+
+#wrapper ul ul,
+#wrapper ol ol {
+  margin-left: 1em;
+}
+#wrapper li ul,
+#wrapper li ol {
+  margin-bottom: 0;
+}
+
+@media print {
+  body {
+    overflow: auto;
+  }
+
+  img, pre, blockquote, table, figure, p {
+    page-break-inside: avoid;
+  }
+
+  #wrapper {
+    background: #fff;
+    color: #000;
+    font-size: 85%;
+    padding: 10px;
+    position: relative;
+    text-indent: 0;
+  }
+}
+
+@media screen {
+  .inverted, .inverted #wrapper {
+    background: #222;
+  }
+  .inverted pre,
+  .inverted img {
+    border-color: #111;
+    background: #1a1a1a;
+  }
+  .inverted pre * {
+    background: #1a1a1a !important;
+  }
+
+  .inverted hr {
+    border-color: #999 !important;
+  }
+
+  .inverted p, .inverted td, .inverted li, .inverted h1, .inverted h2, .inverted h3, .inverted h4, .inverted h5, .inverted h6, .inverted pre, .inverted code, .inverted th, .inverted .math, .inverted caption, .inverted dd, .inverted dt {
+    color: #f9f9f9 !important;
+  }
+
+  .inverted table tr:nth-child(odd), .inverted table th:nth-child(odd), .inverted table td:nth-child(odd) {
+    background: none;
+  }
+
+  .inverted a {
+    color: #ff5778;
+  }
+}
+.max-width {
+  max-width: 100%;
+  height: auto;
+}
+/* ::Base styles Almost exclusively single element selectors */
+/* ------------------------------------------------------------ */
+html {
+  font-size: 100%;
+}
+body {
+  font: 100%/1.388 AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  color: #111;
+  padding: 0 5% 1rem !important;
+}
+a {
+  color: crimson;
+}
+a:hover, a:focus, a:active {
+  color: #ff2450;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: AvenirNextCondensed-DemiBold, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  /* margin: 0; */
+  padding: .5em 0 0;
+}
+h2, h3, h4, h5 {
+  border-bottom: 1px solid #777;
+}
+h1 {
+  font-size: 2.25rem;
+  line-height: 1.11111;
+}
+h2 {
+  font-size: 1.875rem;
+  line-height: 1.33333;
+}
+h3 {
+  font-size: 1.375rem;
+  line-height: 1.45455;
+}
+h4 {
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+h5 {
+  font-size: 1.125rem;
+  line-height: 1.33333;
+}
+h6 {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+pre, label {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+p {
+  font-size: 1.388rem;
+  line-height: 1.33333;
+  /* margin: 0; */
+  padding: .5em 0;
+  max-width: 30em;
+}
+h2 + p,
+h3 + p,
+h4 + p,
+h5 + p {
+  padding-top: 0;
+  margin-top: 1px;
+  border-top: 1px solid #999;
+}
+ol, ul {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0 0 2em 0;
+}
+li {
+  line-height: auto;
+}
+pre {
+  display: block;
+  margin: 1.4em auto;
+  background: #fcf9f1;
+  /* f9f9f9; */
+  padding: 15px 10px 10px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  border: solid 1px  #f0e0b2;
+  font-family: Consolas, Menlo, Monaco, monospace !important;
+  font-size: .875rem;
+  max-width: 90%;
+}
+pre * {
+  background: #fcf9f1 !important;
+}
+code {
+  font-family: Consolas, Menlo, Monaco, monospace;
+}
+ul {
+  list-style-position: outside;
+  list-style-type: square;
+}
+ol {
+  list-style-position: outside;
+  list-style-type: decimal;
+}
+strong, b {
+  font-family: AvenirNext-Bold, AvenirNextCondensed-DemiBold, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  font-weight: 600;
+}
+em, i, q {
+  font-family: AvenirNext-BoldItalic, AvenirNext-Italic, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  font-style: italic;
+}
+blockquote {
+  padding-left: 1em;
+  border-left: 0.3125em solid #c0c0c0;
+  line-height: normal;
+  /* margin: 0; */
+}
+blockquote p {
+  font-family: AvenirNext-Italic, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  font-style: italic;
+  /* margin: 0; */
+  font-size: 1.25rem;
+  line-height: 1.2;
+  margin: 1.2em 0 1.2em 0;
+}
+img {
+ padding: 1em;
+ background-color: #e6e6e6;
+ border: 1px solid #ddd;
+ -webkit-border-radius: 3px;
+ -moz-border-radius: 3px;
+ -o-border-radius: 3px;
+ border-radius: 3px;
+}
+
+@media screen and (max-width: 750px) {
+  -webkit-text-size-adjust: none;
+}
+
+
+@media print{
+#generated-toc-clone,#generated-toc{display:none!important}
+}
+
+</style>
+<style>#wrapper { max-width:600px; margin:0 auto }</style>
+</head>
+<body class="normal poetry">
+  <div id="wrapper">
+      <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Class notes () – do not cite or circulate" />
+  <title>Matter &amp; its Critics</title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+<div id="header">
+<h1 class="title">Matter &amp; its Critics</h1>
+<h2 class="author">Class notes () – do not cite or circulate</h2>
+</div>
+<div id="TOC">
+<ul>
+<li><a href="#matter-mechanism"><span class="toc-section-number">1</span> Matter &amp; Mechanism</a></li>
+<li><a href="#leibniz-against-matter"><span class="toc-section-number">2</span> Leibniz Against Matter</a><ul>
+<li><a href="#matter-is-not-a-substance"><span class="toc-section-number">2.1</span> Matter is not a Substance</a></li>
+<li><a href="#matter-is-not-ultimately-real"><span class="toc-section-number">2.2</span> Matter is not Ultimately Real</a></li>
+</ul></li>
+<li><a href="#references">References</a></li>
+</ul>
+</div>
+<h1 id="matter-mechanism"><span class="header-section-number">1</span> Matter &amp; Mechanism</h1>
+<p>The view of the material world for which Descartes and Locke both argue was incredibly influential, both for the growth of natural science, and for the conception of the human being as a member of the natural world. <a href="http://plato.stanford.edu/entries/leibniz/">G.W.F. Leibniz</a>, while sympathetic to aspects of the mechanical system, particularly its attempt to offer explanations in natural philosophy based on a small set of resources (the features of material body) and appeal to a limited set of laws (the laws of motion), nevertheless was <a href="http://plato.stanford.edu/entries/leibniz-physics/">extremely critical</a> of both materialism and those aspects of mechanistic explanation realiant upon it. Here we’ll look at the central features of the theory of matter which Leibniz criticizes, as well as basic elements of his positive theory.</p>
+<p>Mechanism is the thesis that the natural world in all its diversity can be explained solely by a small set of features of bodies (size, shape, motion, and solidity) plus laws of nature governing their interaction. This explanatory claim often went along with another claim concerning the nature of body—viz., that body should be understood as a <em>substance</em> existing independently of mind, and either understood as constitutive of minds (if one were inclined to Materialism), or as a kind of substance distinct from and intelligible independently of mind or mental substance.</p>
+<p>A question that immediately arises for material substance is whether it is infinitely divisible or only divisible to some finite degree or level. The notion of ‘divisible’ that is relevant here is not one concerned with divisibility <em>in practice</em> — i.e. whether someone could actually infinitely divide a chunk of matter, but rather divisibility <em>in principle</em> — i.e. whether the nature of matter itself admits of infinite or only finite divisibility. We’ll see that Leibniz denies that either a finitist or an infinitist answer is metaphysically satisfactory, and uses this as a motivation for constructing his idealist metaphysics.</p>
+<h1 id="leibniz-against-matter"><span class="header-section-number">2</span> Leibniz Against Matter</h1>
+<p>Leibniz articulated a variety of criticisms concerning the prevailing notion of matter amongst the scientifically minded intelligentsia of the seventeenth century. We’ll look at two criticisms—first, his criticism of Descartes’s claim that material bodies are independent substances, and second his criticism of the ultimate reality of matter.</p>
+<h2 id="matter-is-not-a-substance"><span class="header-section-number">2.1</span> Matter is not a Substance</h2>
+<p>Recall that in Descartes’s metaphysical system, the world consisted of two kinds of thing, material substance and mental substance. As substances, material bodies and minds are supposed to individual, subsistant, things that depend on nothing else for their existence (nothing, except God, at any rate).</p>
+<blockquote>
+<p>As for •corporeal substance and mind (i.e. created •thinking substance), they can be understood in terms of a single common concept, namely this one: things that don’t depend for their existence on anything except God. (<em>Principles</em> 1.52)</p>
+</blockquote>
+<p>Thus, for Descartes a material substance and a mind are both individual and independent kinds of thing.</p>
+<p>Leibniz insists not only on the independence requirement that Descartes articulates, but also that there must be <em>unity</em> to an individual substance such that there is some account of its status as <em>one</em> (as opposed to many) thing. Leibniz emphasizes this point clearly in the <em>New System</em>:</p>
+<blockquote>
+<p>I became aware that it is impossible to find the sources of real unity in matter alone, or in what is purely passive, since this is nothing but a collection or lumping together of parts ·and parts of parts. . . · ad infinitum. Now a real collection or multiplicity must involve true unities— ·things each of which is one thing in a more basic way than a collection is one thing·—and these true unities must come from elsewhere, i.e.cannot themselves be members of the collection. •They can’t be material things, because what is material can’t at the same time be perfectly indivisible, which is what is needed for true unity. (NS §2, p.2)</p>
+</blockquote>
+<p>Leibniz argues here that the ‘true unity’ required to attribute to matter the status of substance (as thus as recognizing individual material bodies as substances) cannot be found in matter itself. Essential to Leibniz’s argument here is his distinction between a mere collection and a genuine unity. Later in the <em>New System</em> Leibniz argues that a mass of matter</p>
+<blockquote>
+<p>however organized it may be…can only be thought of as like an army, a flock, a pond full of fish, or like a watch composed of springs and wheels. There wouldn’t be anything substantial or real in such a collection if there were no true substantial unities. (NE §11, p. 5)</p>
+</blockquote>
+<p>Leibniz’s point is that however organized an army or flock of birds may be, neither the army nor the flock is anything above and beyond its parts—it is merely an <em>aggregate</em>. Since there is nothing to an aggregate individual beyond its parts—in Leibniz’s terms, there is no principle of unity for the aggregate (though perhaps Leibniz would change his mind if he knew about the <a href="http://www.theatlantic.com/infocus/2014/02/the-murmurations-of-starlings/100690/">murmurations of starlings</a>)—there is no sense in which the whole aggregate is <em>independent</em> in the way required for it to be a substance.</p>
+<!-- NOTE: So Leibniz sees an intimate connection between the unity of a thing and its independence, at least for the purposes of this argument. Is that plausible? -->
+
+<p>The obvious move here is to say that some material bodies are unities—viz., <em>atoms</em>. Leibniz anticipates this with his claim that “what is material can’t at the same time be perfectly indivisible”. But this isn’t, of itself, a convincing argument since it is simply the denial of the atomist’s thesis that some material bodies are indivisible. The atomist claims that there is a ‘ground floor’ of materiality, where there are material bodies—atoms—without any parts. Leibniz, however, does provide something in the way of an argument against this.</p>
+<blockquote>
+<p>“•atoms of matter are contrary to reason; and anyway an atom, if there were such a thing, would still be composed of parts ·and so wouldn’t be a true unity after all·. One part’s being attached to another so strongly that they couldn’t be pulled apart (supposing we could make sense of this) wouldn’t alter the fact that these were two parts, one different from the other. It is only •atoms of substance, that is to say real unities absolutely devoid of parts, that can be •the sources of activity, •the absolutely basic reasons for the composition of things (·explaining why composite things have such togetherness, such non-basic unity, as they do have·), and, as it were, •the ultimate elements in the analysis of substantial things.” (NS §11, p.5)</p>
+</blockquote>
+<p>Leibniz claims several things here. First, he argues that the notion of a material atom is ‘contrary to reason’. Why would that be? One of Leibniz’s fundamental intellectual commitments is to what he calls the ‘<a href="http://plato.stanford.edu/entries/sufficient-reason/">Principle of Sufficient Reason</a>’ (PRS). PRS states that everything that exists must have an intelligible ground for its existence. Put another way, every fact must have an explanation.</p>
+<p>The claim that atoms of matter are contrary to reason, then, is the claim that their existence would violate the PRS. Leibniz’s idea here is that the existence of an material atom would mean the existence of an extended being which was not divisible. But Leibniz thinks that it is simply a contradiction to claim that an extended being is not divisible. This is because extended beings are extended in space, and just as it is always mathematically possible to divide the space which an object occupies into further spaces so too should it be possible to divide the object itself into further parts, each of which is an occupant of this space. This was particularly true of those, like <a href="http://plato.stanford.edu/entries/descartes-physics/#3">Descartes</a>, who thought of material extension as <em>identical</em> with spatial extension (i.e. that there was no distinction between matter and the space that it occupies). To argue, as the atomist does, that some material bodies are indivisible, is to assert that there is arbitrary stopping point in the cycle of division, an arbitrariness that goes against the PSR.</p>
+<p>Leibniz seems to be aware that this appeal to the PSR may not be fully convincing and so provides a second argument.</p>
+<blockquote>
+<p>an atom, if there were such a thing, would still be composed of parts ·and so wouldn’t be a true unity after all·. One part’s being attached to another so strongly that they couldn’t be pulled apart (supposing we could make sense of this) wouldn’t alter the fact that these were two parts, one different from the other.</p>
+</blockquote>
+<p>Here his argument again appeals to the claim that things extended in space are going to have parts, presumably corresponding to the different parts of space that they occupy. Leibniz argues that the indivisibility of an atom (assuming, for the sake of argument, that it is indivisible) is not enough to show that it lacks parts. If the atomist admits the existence of such parts then Leibniz can appeal to his independence argument. Things with parts are dependent on their parts and thus are not independent in the way required of substance. They are, in Leibniz’s terms, ‘accidental’ rather than ‘real’ unities.</p>
+<h2 id="matter-is-not-ultimately-real"><span class="header-section-number">2.2</span> Matter is not Ultimately Real</h2>
+<p>If Leibniz’s arguments against the substantive status of matter are successful then they show that matter is not to be understood as an ultimate, and independent, entity. But Leibniz does not stop with this point. He further argues that the very reality of matter should be called into question.</p>
+<p>Let’s look again at the aggregate passage:</p>
+<blockquote>
+<p>a simple mass of matter, however organized it may be…can only be thought of as like an army, a flock, a pond full of fish, or like a watch composed of springs and wheels. There wouldn’t be anything substantial or real in such a collection if there were no true substantial unities. (NE §11, p. 5)</p>
+</blockquote>
+<p>So matter, even understood as an aggregate, would not be real if there were not substantial unities which grounded it.<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a> Leibniz thinks that this must be a non-material entity—a ‘metaphysical point’, or what he would later call a ‘monad’. Looking again at the passage discussing unity near the beginning of the <em>New System</em>:</p>
+<blockquote>
+<p>Now a real collection or multiplicity must involve true unities— ·things each of which is one thing in a more basic way than a collection is one thing·—and these true unities must come from elsewhere, i.e.cannot themselves be members of the collection. •They can’t be material things, because what is material can’t at the same time be perfectly indivisible, which is what is needed for true unity. •And they can’t be mathematical points either: something continuous can’t be made up of points, because points are not things; rather, facts about them are just facts about extended things, e.g. facts about where they end, where their limits are. (·Thus, to say that two lines intersect at a certain point is not to say that there is a point at which the lines intersect; rather, it is to say where they intersect; in a fundamental account of this statement, the noun ‘point’ doesn’t have to occur at all·.) So in order to get a real unity—·a thing that is deep-down just one thing·—I had to bring in what might be called a real and living point, an atom of substance that is a complete being only because it contains some kind of form or activity.&quot; (NS §2, p.2)</p>
+</blockquote>
+<p>Leibniz argues that the reality of matter requires the existence of ‘true unities’, but matter is not the kind of thing that could itself be a ‘true unity’ so there must be something else—a ‘real and living point’—whose existence grounds and explains the existence of matter. How does Leibniz’s argument work?</p>
+<ol style="list-style-type: decimal">
+<li>Matter (material body) is nothing but a collection or aggregate of parts</li>
+<li>Any real aggregate must ultimately be composed of parts which are not themselves aggregates—viz., ‘true unities’</li>
+<li>True unities cannot be material (b/c they must be indivisible) or mathematical (b/c mathematical points are not real)</li>
+<li><span class="math">∴ </span> The reality of matter depends on a non-material true unity</li>
+</ol>
+<p>Would the atomist or ‘corpuscularian’ agree with this argument? Both would agree with the first premise, that material bodies are collections of parts. But why should we endorse premises (2) and (3)? Leibniz does nothing to motivate these premises beyond the kind of analogical arguments surrounding the unreality of aggregates like flocks of birds or piles of stones—aggregates are nothing more than the sum of their parts.</p>
+<p>In the background of Leibniz’s argument is something we might call the ‘Principle of Borrowed Reality’ (PBR). Leibniz makes this point quite clearly in a <a href="http://www.earlymoderntexts.com/pdfs/leibniz1686a.pdf">1686 letter</a> to the Jesuit priest and philosopher <a href="http://plato.stanford.edu/entries/arnauld/">Antoine Arnauld</a>:</p>
+<blockquote>
+<p>One will never find a body of which one can say that it is truly a [or one] substance. It will always be an aggregate of several. Or rather, it will not be a real being, since the parts that compose it are subject to the same difficulty, and since one never arrives at any real being, as <em>beings by aggregation have only as much reality as there is in their components</em>. From this it follows that the substance of a body, if they have one, must be indivisible, whether it is called soul or form does not matter to me (Leibniz to Arnauld, EMT 45; my emphasis)</p>
+</blockquote>
+<p>Is the PBR plausible? There is certainly something intuitive about it. A building is only as real as the materials that constitute it. A painting is only as real as the flecks of paint that make it up. What’s more, it seems that the corpuscularian is at a disadvantage here because they too would seem to want to endorse the principle, as it is part of the explanatory power of corpuscularianism (or any hierarchical metaphysical theory) that the macroscopic world is built out of, and ultimately depends upon, the features of the microscopic world and interactions between such microscopic entities.</p>
+<p>So, just as the finitist or atomist response to the issue of division is unsatisfactory because of its arbitraryness (and thus its violation of PSR), the infinitist answer to the issue of division violates the PBR. Thus, according to Leibniz, we cannot countenance matter as substantial or real. Leibniz’s positive views on the status of matter seem to change over the course of his life. At the point of writing the <em>New System</em> (1695) Leibniz considered matter to be real but not ultimately so, its existence and unity being dependent on the existence of substantial forms or souls.</p>
+<blockquote>
+<p>It is only metaphysical or substantial points (constituted by forms or souls) that are both exact and real, and without them there wouldn’t be any things at all, because without true unities there would be no multiplicity—·without true ones there would be no manies·. (NE §11, p. 5)</p>
+</blockquote>
+<p>By the time he writes the <em>Monadology</em> (1714) Leibniz has given up on the reality of matter altogether, arguing that it is only a perception existing in the mind of the perceiver. He states this clearly in a 1712 letter to Bartholomew des Bosses, Jesuit teacher of theology and a professor of mathematics at Cologne.</p>
+<blockquote>
+<p>I consider the explanation of all phenomena solely through the perceptions of monads functioning in harmony with each other, with corporeal substances rejected, to be useful for a fundamental investigation of things…It is true that things which happen in the soul must agree with those which happen outside of it. But for this it is enough for the things taking place in one soul to correspond with each other as well as with those happening in any other soul, and it is not necessary to assume anything outside of all souls or monads. According to this hypothesis, we mean nothing else when we say that Socrates is sitting down than that what we understand by ‘Socrates’ and by ‘sitting down’ is appearing to us and to others who are concerned. (Letter to des Bosses, 16 June, 1712)</p>
+</blockquote>
+<p>This position, subsequently called ‘<em>phenomenalism</em>’, construes the material world as nothing more than the orderly perceptual appearances of an underlying non-material order of mind-like substances or ‘monads’.</p>
+<h1 id="references" class="unnumbered">References</h1>
+<hr />
+<!-- -->
+
+
+<div class="references">
+<p>Adams, Robert Merrihew. 1994. <em>Leibniz: Determinist, Theist, Idealist</em>. Oxford: Oxford University Press.</p>
+<p>Beck, Lewis White. 1969. <em>Early German Philosophy</em>. Cambridge: Belknap Press of Harvard University Press.</p>
+<p>Bennett, Jonathan. 2001. <em>Learning from Six Philosophers: Descartes, Spinoza, Leibniz, Locke, Berkeley, Hume</em>. Oxford: Clarendon Press.</p>
+<p>Boudri, J. C. 2002. <em>What Was Mechanical About Mechanics?: the Concept of Force Between Metaphysics and Mechanics from Newton to Lagrange</em>. Dordrecht: Springer.</p>
+<p>Garber, Daniel. 2011. <em>Leibniz: Body, Substance, Monad</em>. Oxford University Press.</p>
+<p>Hartz, Glenn A. 1992. “Leibniz’s Phenomenalisms.” <em>The Philosophical Review</em> 101 (3) (July): 511–549. doi:<a href="http://dx.doi.org/10.2307/2186056">10.2307/2186056</a>. <a href="http://www.jstor.org/stable/2186056">http://www.jstor.org/stable/2186056</a>.</p>
+<p>———. 2006. <em>Leibniz’s Final System: Monads, Matter, and Animals</em>. Routledge.</p>
+<p>Hill, Benjamin. 2007. “Substantial Forms and the Rise of Modern Science.” <em>The Saint Anselm Journal</em> 5: 1. <a href="http://www.anselm.edu/Documents/Institute%20for%20Saint%20Anselm%20Studies/Abstracts/4.5.3.2c_51Hill.pdf">http://www.anselm.edu/Documents/Institute%20for%20Saint%20Anselm%20Studies/Abstracts/4.5.3.2c_51Hill.pdf</a>.</p>
+<p>Jolley, Nicholas. 2005. <em>Leibniz</em>. Oxford: Routledge.</p>
+<p>———, ed. 1995. <em>The Cambridge Companion to Leibniz</em>. Cambridge University Press.</p>
+<p>Kochiras, Hylarie. 2013. “Locke’s Philosophy of Science.” In <em>The Stanford Encyclopedia of Philosophy</em>, edited by Edward N. Zalta, Fall 2013. <a href="http://plato.stanford.edu/archives/fall2013/entries/locke-philosophy-science/">http://plato.stanford.edu/archives/fall2013/entries/locke-philosophy-science/</a>.</p>
+<p>McRae, Robert. 1976. <em>Leibniz: Perception, Apperception, and Thought</em>. Vol. 32. Toronto: University of Toronto Press. <a href="http://www.getcited.org/pub/101667776">http://www.getcited.org/pub/101667776</a>.</p>
+<p>Slowik, Edward. 2013. “Descartes’ Physics.” In <em>The Stanford Encyclopedia of Philosophy</em>, edited by Edward N. Zalta, Fall 2013. <a href="http://plato.stanford.edu/archives/fall2013/entries/descartes-physics/">http://plato.stanford.edu/archives/fall2013/entries/descartes-physics/</a>.</p>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>A less abstract, but no less pressing, version of this problem arises for corpuscular theory in explaining the basis of the coherence of matter. See <span class="citation">Hill (2007)</span> ;<span class="citation">Kochiras (2013)</span> for discussion.<a href="#fnref1">↩</a></p></li>
+</ol>
+</div>
+</body>
+</html>
+
+<!-- ##END MARKED WRAPPER## -->
+    </div>
+</body>
+</html>
