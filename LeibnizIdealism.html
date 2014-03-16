@@ -1,0 +1,551 @@
+<!DOCTYPE html>  
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>LeibnizIdealism</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+/*
+This document has been created with Marked.app <http://markedapp.com>, Copyright 2011 Brett Terpstra
+Please leave this notice in place, along with any additional credits below.
+---------------------------------------------------------------
+Title: Avenue
+Author: Bram de Haan <http://atelierbramdehaan.nl>
+Description: modern retro
+ */
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+a img {
+  border: none;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+button, input {
+  line-height: normal;
+}
+button, input, select, textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  /* vertical-align: middle; */
+}
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+  cursor: pointer;
+  /* overflow: visible; */
+}
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  padding: 0 !important;
+}
+#wrapper {
+  margin-bottom: 0;
+}
+#wrapper img {
+  max-width: 100%;
+  height: auto;
+}
+#wrapper dd {
+  margin-bottom: 1em;
+}
+#wrapper li > p:first-child {
+  margin: 0;
+}
+#wrapper caption, #wrapper col, #wrapper colgroup, #wrapper table, #wrapper tbody, #wrapper td, #wrapper tfoot, #wrapper th, #wrapper thead, #wrapper tr {
+  border-spacing: 0;
+}
+#wrapper table {
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-collapse: collapse;
+  display: table;
+  empty-cells: hide;
+  margin: -1px 0 23px;
+  padding: 0;
+  table-layout: fixed;
+  width: 100%;
+}
+#wrapper caption {
+  display: table-caption;
+  font-weight: 700;
+}
+#wrapper col {
+  display: table-column;
+}
+#wrapper colgroup {
+  display: table-column-group;
+}
+#wrapper tbody {
+  display: table-row-group;
+}
+#wrapper tfoot {
+  display: table-footer-group;
+}
+#wrapper thead {
+  display: table-header-group;
+  border-bottom: solid 1px #999;
+}
+#wrapper td, #wrapper th {
+  display: table-cell;
+}
+#wrapper tr {
+  display: table-row;
+}
+#wrapper table th, #wrapper table td {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  padding: 0 1em;
+}
+#wrapper dt, #wrapper th {
+  font-weight: 700;
+}
+#wrapper dd {
+  padding-left: 1.4em;
+}
+#wrapper table tr:nth-child(even) {
+  background: rgba(200, 200, 200, 0.25);
+}
+#wrapper figure {
+  display: inline-block;
+  position: relative;
+  margin: 1em 0 2em;
+}
+#wrapper figcaption {
+  font-family: AvenirNext-Italic, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  font-style: italic;
+  text-align: center;
+}
+#wrapper figure:hover > figcaption {
+  /* background: rgba(0,0,0,1) */
+}
+/* #wrapper pre { moved down to base styles; } */
+.poetry #wrapper pre {
+  display: block;
+  font-family: Georgia, Garamond, serif !important;
+  font-size: 110% !important;
+  font-style: italic;
+  line-height: 1.6;
+  margin-left: 1em;
+}
+.poetry #wrapper pre code {
+  font-family: Georgia, Garamond, serif !important;
+
+}
+#wrapper sup, #wrapper sub, #wrapper a.footnote {
+  font-size: 1.4ex;
+  height: 0;
+  line-height: 1;
+  position: relative;
+  vertical-align: super;
+}
+#wrapper sub {
+  vertical-align: sub;
+  top: -1px;
+}
+#wrapper .footnote {
+  font-size: .8rem;
+  vertical-align: super;
+}
+#wrapper .footnotes p {
+  font-size: 1.9ex;
+}
+#wrapper ul ul {
+  margin-left: 1em;
+}
+
+#wrapper ul ul,
+#wrapper ol ol {
+  margin-left: 1em;
+}
+#wrapper li ul,
+#wrapper li ol {
+  margin-bottom: 0;
+}
+
+@media print {
+  body {
+    overflow: auto;
+  }
+
+  img, pre, blockquote, table, figure, p {
+    page-break-inside: avoid;
+  }
+
+  #wrapper {
+    background: #fff;
+    color: #000;
+    font-size: 85%;
+    padding: 10px;
+    position: relative;
+    text-indent: 0;
+  }
+}
+
+@media screen {
+  .inverted, .inverted #wrapper {
+    background: #222;
+  }
+  .inverted pre,
+  .inverted img {
+    border-color: #111;
+    background: #1a1a1a;
+  }
+  .inverted pre * {
+    background: #1a1a1a !important;
+  }
+
+  .inverted hr {
+    border-color: #999 !important;
+  }
+
+  .inverted p, .inverted td, .inverted li, .inverted h1, .inverted h2, .inverted h3, .inverted h4, .inverted h5, .inverted h6, .inverted pre, .inverted code, .inverted th, .inverted .math, .inverted caption, .inverted dd, .inverted dt {
+    color: #f9f9f9 !important;
+  }
+
+  .inverted table tr:nth-child(odd), .inverted table th:nth-child(odd), .inverted table td:nth-child(odd) {
+    background: none;
+  }
+
+  .inverted a {
+    color: #ff5778;
+  }
+}
+.max-width {
+  max-width: 100%;
+  height: auto;
+}
+/* ::Base styles Almost exclusively single element selectors */
+/* ------------------------------------------------------------ */
+html {
+  font-size: 100%;
+}
+body {
+  font: 100%/1.388 AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  color: #111;
+  padding: 0 5% 1rem !important;
+}
+a {
+  color: crimson;
+}
+a:hover, a:focus, a:active {
+  color: #ff2450;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: AvenirNextCondensed-DemiBold, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  /* margin: 0; */
+  padding: .5em 0 0;
+}
+h2, h3, h4, h5 {
+  border-bottom: 1px solid #777;
+}
+h1 {
+  font-size: 2.25rem;
+  line-height: 1.11111;
+}
+h2 {
+  font-size: 1.875rem;
+  line-height: 1.33333;
+}
+h3 {
+  font-size: 1.375rem;
+  line-height: 1.45455;
+}
+h4 {
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+h5 {
+  font-size: 1.125rem;
+  line-height: 1.33333;
+}
+h6 {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+pre, label {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+p {
+  font-size: 1.388rem;
+  line-height: 1.33333;
+  /* margin: 0; */
+  padding: .5em 0;
+  max-width: 30em;
+}
+h2 + p,
+h3 + p,
+h4 + p,
+h5 + p {
+  padding-top: 0;
+  margin-top: 1px;
+  border-top: 1px solid #999;
+}
+ol, ul {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0 0 2em 0;
+}
+li {
+  line-height: auto;
+}
+pre {
+  display: block;
+  margin: 1.4em auto;
+  background: #fcf9f1;
+  /* f9f9f9; */
+  padding: 15px 10px 10px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  border: solid 1px  #f0e0b2;
+  font-family: Consolas, Menlo, Monaco, monospace !important;
+  font-size: .875rem;
+  max-width: 90%;
+}
+pre * {
+  background: #fcf9f1 !important;
+}
+code {
+  font-family: Consolas, Menlo, Monaco, monospace;
+}
+ul {
+  list-style-position: outside;
+  list-style-type: square;
+}
+ol {
+  list-style-position: outside;
+  list-style-type: decimal;
+}
+strong, b {
+  font-family: AvenirNext-Bold, AvenirNextCondensed-DemiBold, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  font-weight: 600;
+}
+em, i, q {
+  font-family: AvenirNext-BoldItalic, AvenirNext-Italic, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  font-style: italic;
+}
+blockquote {
+  padding-left: 1em;
+  border-left: 0.3125em solid #c0c0c0;
+  line-height: normal;
+  /* margin: 0; */
+}
+blockquote p {
+  font-family: AvenirNext-Italic, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  font-style: italic;
+  /* margin: 0; */
+  font-size: 1.25rem;
+  line-height: 1.2;
+  margin: 1.2em 0 1.2em 0;
+}
+img {
+ padding: 1em;
+ background-color: #e6e6e6;
+ border: 1px solid #ddd;
+ -webkit-border-radius: 3px;
+ -moz-border-radius: 3px;
+ -o-border-radius: 3px;
+ border-radius: 3px;
+}
+
+@media screen and (max-width: 750px) {
+  -webkit-text-size-adjust: none;
+}
+
+
+@media print{
+#generated-toc-clone,#generated-toc{display:none!important}
+}
+
+</style>
+<style>#wrapper { max-width:600px; margin:0 auto }</style>
+</head>
+<body class="normal poetry">
+  <div id="wrapper">
+      <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Class notes (3/18) – do not cite or circulate" />
+  <title>Leibniz’s Idealism</title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+<div id="header">
+<h1 class="title">Leibniz’s Idealism</h1>
+<h2 class="author">Class notes (3/18) – do not cite or circulate</h2>
+</div>
+<div id="TOC">
+<ul>
+<li><a href="#leibniz-chronology"><span class="toc-section-number">1</span> Leibniz — Chronology</a></li>
+<li><a href="#metaphysics"><span class="toc-section-number">2</span> Metaphysics</a><ul>
+<li><a href="#the-logical-conception-of-substance"><span class="toc-section-number">2.1</span> The Logical Conception of Substance</a></li>
+<li><a href="#five-conditions-on-substance"><span class="toc-section-number">2.2</span> Five Conditions on Substance</a></li>
+<li><a href="#monads"><span class="toc-section-number">2.3</span> Monads</a></li>
+<li><a href="#idealism-about-matter"><span class="toc-section-number">2.4</span> Idealism about Matter</a></li>
+</ul></li>
+<li><a href="#references">References</a></li>
+</ul>
+</div>
+<h1 id="leibniz-chronology"><span class="header-section-number">1</span> Leibniz — Chronology</h1>
+<p>Here’s a brief overview of Leibniz’s life. For further details see his <a href="http://plato.stanford.edu/entries/leibniz/">SEP entry</a>.</p>
+<ul>
+<li>Born in Leipzig in 1646, trained as a lawyer and defended his degree in law at, 20 in Altdorf in 1666.</li>
+<li>Lived in Paris from 1672-6 where he received much of his training in mathematics and physics, and independently from Newton invented the differential and integral calculus</li>
+<li>Appointed court councilor at Braunschweig-Lüneberg in Hanover in 1676.
+<ul>
+<li>Wrote some of his most important work (e.g. <em>Meditations</em>, <em>Discourse</em>, the <em>New System</em>, and the <em>Monadology</em>)</li>
+</ul></li>
+<li>Died in Hanover on November 14, 1716</li>
+<li>Some Contemporaries:
+<ul>
+<li>Descartes (1596-1650)</li>
+<li>Malebranche (1638-1715)</li>
+<li>Thomas Reid (1710-1796)</li>
+<li>Immanuel Kant (1724-1804)</li>
+</ul></li>
+</ul>
+<h1 id="metaphysics"><span class="header-section-number">2</span> Metaphysics</h1>
+<p>All of the leading philosophers of the seventeenth century begin from the idea that the most basic kind of being, in terms of which all else is to be explained, is substance. This means that substance must be, in an appropriate sense, causally and explanatorily self-sufficient. We saw this is our previous discussion of <a href="http://htmlpreview.github.io/?https://github.com/mclearc/ModernPhilosophyNotes/blob/master/LeibnizMatter.html#matter-is-not-a-substance">Descartes and Leibniz on material substance</a>. Sometimes this is put in terms of predication. Substances are the ultimate subjects of predication, which is to say that we predicate things of substances (e.g. ‘The stone is cold’, ‘John is tall’) and never predicate substances of anything else. Substances thus constitute the basic ‘furniture’ of reality.</p>
+<h2 id="the-logical-conception-of-substance"><span class="header-section-number">2.1</span> The Logical Conception of Substance</h2>
+<p>One of the central notions in Leibniz’s philosophy is that the logical structure of our thought mirrors the real structure of reality. Leibniz thus thinks that there are close connections between the nature of truth and the nature of substance. For example:</p>
+<ul>
+<li>All truth is analytic truth by virtue of containment<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>
+<ul>
+<li>in every true predication the concept of the predicate is contained in the concept of the subject</li>
+</ul></li>
+<li>Substance is the ultimate subject of predication, and that which cannot be predicated of anything else</li>
+<li>If x is a substance then there is a concept of x that contains all true predications concerning x<a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a>
+<ul>
+<li>finite beings grasp truths about substances via partial grasp of their complete concept</li>
+<li>God knows all truths about all substances via a perfect grasp of their complete concepts</li>
+</ul></li>
+</ul>
+<p>Take, for example, the historical figure <a href="http://en.wikipedia.org/wiki/Julius_caesar">Julius Caesar</a>. According to Leibniz, the statement ‘Caesar crossed the Rubicon in 49 BC’ is analytically true. An ‘<em>analytic truth</em>’ is a truth whose predicate does not, in some sense, go beyond what is given in stating the subject. There are obvious ‘stutter’ examples of this — ‘all red squares are red’ is analytically true since the predicate is so clearly part of the subject. But the same phenomena can occur covertly. For example, the statement ‘Bachelors are unmarried men’ is analytically true because part of what it is to be (or for the word ‘Bachelor’ to mean) a bachelor is to be an unmarried man.</p>
+<p>Leibniz thinks that <em>all</em> truth is analytic. So with our initial example statement ‘Caesar crossed the Rubicon in 49 BC’, Leibniz thinks that the relation between the subject (‘Caesar’) and the predicate (‘crossed the Rubicon in 49 BC’) is relevantly similar to the relation in the case of the ‘bachelor’ example. For any individual substance, Leibniz thinks there is a singular concept which picks it out and which ‘contains’ all the predicates of the substance (past, present, and future) in just the same way that ‘bachelor’ contains ‘is an unmarried man’.</p>
+<p>Thus, if the world is the totality of individual substances, God possesses a concept of each individual substance, and knows everything that is, has been, or will be true of that individual. This is discussed by Leibniz mostly clearly in his <a href="http://www.earlymoderntexts.com/pdfs/leibniz1686d.pdf"><em>Discourse on Metaphysics</em></a> (see §§8-16). This raises obvious issues for the freedom of rational beings such as ourselves. We’ll discuss this later in greater depth.</p>
+<h2 id="five-conditions-on-substance"><span class="header-section-number">2.2</span> Five Conditions on Substance</h2>
+<p>In the opening sections of the <em>Monadology</em> Leibniz articulates several conditions on his positive conception of substance. Many of these have been more or less explicit in his <a href="http://htmlpreview.github.io/?https://github.com/mclearc/ModernPhilosophyNotes/blob/master/LeibnizMatter.html">critique</a> of the Cartesian notion of material substance.</p>
+<ol style="list-style-type: decimal">
+<li><strong>Independence</strong>: A substance is that in which other things exist, which itself does not exist in anything else. (Here ‘in’ must mean something stronger than ‘depends upon,’ since created substance depends upon God for its existence.)</li>
+<li><strong>Persistence</strong>: A substance is that which persists as the same thing through change (i.e. it possesses an identity through change).</li>
+<li><strong>Activity</strong>: A substance is necessarily active, or involves a principle of change. Leibniz often refers to this principle as a substance’s “entelechy” or “primitive active force.”</li>
+<li><strong>Unity</strong>: A substance is that which is truly one. A substance cannot be broken down into any collection of simpler beings, themselves satisfying the <strong>Independence</strong> condition. (This is consistent with our being able to distinguish different aspects of a substance, e.g. its active and passive force, or form and matter, so long as these cannot exist independently of the complete substance.) Substances can only come into being via an act of creation (by God) and end by annihilation (again by God).</li>
+<li><strong>Individuation</strong>: A substance has a principle of individuation intrinsic to its nature. Thus no two substances can resemble each other completely while yet being distinct. This condition entails that substances satisfy the principle of the identity of indiscernibles (PII): for any two things, a and b, if a and b are non-identical, there is some property F, such that Fa and not-Fb. If a and b are Leibnizian substances, they satisfy PII by virtue of a property intrinsic to their natures.</li>
+</ol>
+<p>Conditions (1)-(5) must be satisfied by anything that is to count as a substance for Leibniz, but by themselves they do not comprise a fully worked-out theory of substance. Leibniz experiments with at least two such theories: (i) the corporeal substance theory; (ii) the monad theory. These theories serve different purposes, and are not necessarily competitors.</p>
+<p>The corporeal substance theory and monad theory are most plausibly seen as rival accounts of what to include in the category of ‘substance,’ i.e., the set of actual things that satisfy the necessary conditions for being a substance:</p>
+<ol style="list-style-type: lower-roman">
+<li><p>According to the corporeal substance theory, associated primarily with the middle (1680-1695) period of Leibniz’s career, substances are much like Aristotle’s “hylomorphic” substances: living bodies, which are composites of form and extended matter.</p></li>
+<li><p>According to the monadic theory, associated with late writings such as the <em>Monadology</em>, the only substances are simple, soul-like entitites, endowed with intrinsic properties of perception and appetition.</p></li>
+</ol>
+<p>There is a great deal of dispute as to whether Leibniz ever endorsed (i). It seems clear that he endorses (ii) in the <em>Monadology</em>, but whether this was his ‘mature’ or considered view, or just a view he articulated before his death, is not entirely clear. In his ‘middle’ period, in which the <em>Discourse</em> is written, Leibniz sometimes seems to think that something is a substance just in case it <em>has</em> a substantial form or soul. By the ‘late’ period of the <em>Monadology</em>, in contrast, Leibniz seems to think that <em>only</em> such souls or substantial forms (i.e. the ‘monads’) are substances.</p>
+<h2 id="monads"><span class="header-section-number">2.3</span> Monads</h2>
+<p>Leibniz articulates the fundamental characteristics of monads as follows (M §1-15):</p>
+<ol style="list-style-type: upper-alpha">
+<li>Monads are <em>simple</em>—i.e. without parts.</li>
+<li>Monads are <em>immaterial</em>—they lack extension, shape, etc. (This is required by their being simple).</li>
+<li>Monads are <em>indestructible</em>—there is no natural way for a monad to come into or go out of existence,they must be created or destroyed by an act of God. Indestructibility is also a result of simplicity.</li>
+<li>Monads are <em>windowless</em>—there is no interaction, causal or otherwise, between monads.
+<ol style="list-style-type: lower-roman">
+<li>No parts which may be rearranged, so no causation.</li>
+<li>No ‘influx’ of properties, since ‘wandering’ properties are incoherent.</li>
+</ol></li>
+<li>Monads <em>differ</em> from one another in virtue of their <em>perceptions</em> - each monad has a unique point of view on the universe</li>
+<li>The order in which a monad’s perceptions proceed is in accordance with its <em>appetite</em>. - “Appetite” here is not to be understood in terms of hunger but rather in terms of a striving or motive force.</li>
+</ol>
+<h2 id="idealism-about-matter"><span class="header-section-number">2.4</span> Idealism about Matter</h2>
+<p>If immaterial monads are the fundamental substances which constitute reality, then what of the material world that we perceive? Leibniz’s ‘idealist’ view has the following structure:</p>
+<ul>
+<li>Physical bodies ‘result’ from monads<a href="#fn3" class="footnoteRef" id="fnref3"><sup>3</sup></a>
+<ul>
+<li>monads ‘express’ bodies via ‘perception’<a href="#fn4" class="footnoteRef" id="fnref4"><sup>4</sup></a>
+<ul>
+<li>physical bodies (i.e. matter) are a kind of stable group hallucination which Leibniz terms a ‘well-founded phenomenon’<a href="#fn5" class="footnoteRef" id="fnref5"><sup>5</sup></a></li>
+</ul></li>
+</ul></li>
+</ul>
+<p>To say that a physical body ‘results’ from a monad (or the perceptions of many monads) is not to say that it is ‘built’ out of monads in the way that a brick house is built from bricks. Monads are not <em>parts</em> of bodies in the way that bricks are part of a house. Instead, the existence of matter involves nothing over and above the existence of particular perceptions in a monad or monads. Because the existence of matter depends on the existence of minds and their states, matter is said to be only ‘ideal’, in the sense that its reality is derivative from that of mind.</p>
+<h1 id="references" class="unnumbered">References</h1>
+<hr />
+<!-- -->
+
+
+
+
+<div class="references">
+<p>Adams, Robert Merrihew. 1994. <em>Leibniz: Determinist, Theist, Idealist</em>. Oxford: Oxford University Press.</p>
+<p>Baxter, Donald. 1995. “Corporeal Substances and True Unities.” <em>Studia Leibnitiana</em> 27 (2) (January): 157–184. <a href="http://www.jstor.org/stable/40694275">http://www.jstor.org/stable/40694275</a>.</p>
+<p>Brandom, Robert. 1981. “Leibniz and Degrees of Perception.” <em>Journal of the History of Philosophy</em> 19 (4): 447–479. doi:<a href="http://dx.doi.org/10.1353/hph.2008.0100">10.1353/hph.2008.0100</a>. <a href="http://muse.jhu.edu/journals/journal_of_the_history_of_philosophy/v019/19.4brandom.pdf">http://muse.jhu.edu/journals/journal_of_the_history_of_philosophy/v019/19.4brandom.pdf</a>.</p>
+<p>Garber, Daniel. 2011. <em>Leibniz: Body, Substance, Monad</em>. Oxford University Press.</p>
+<p>Kulstad, Mark. 1977. “Two Arguments on Petites Perceptions.” <em>Essays on the Philosophy of Leibniz, Rice University Studies</em> 63: 57–68.</p>
+<p>Kulstad, Mark A. 1977. “Leibniz’s Conception of Expression.” <em>Studia Leibnitiana</em> 9 (1) (January): 55–76. doi:<a href="http://dx.doi.org/10.2307/40693818">10.2307/40693818</a>. <a href="http://www.jstor.org/stable/40693818">http://www.jstor.org/stable/40693818</a>.</p>
+<p>Levey, Samuel. 2003. “On Unity: Leibniz-Arnauld Revisited.” Edited by Edward Minar. <em>Philosophical Topics</em> 31 (1): 245–275. doi:<a href="http://dx.doi.org/10.5840/philtopics2003311/212">10.5840/philtopics2003311/212</a>. <a href="http://0-www.pdcnet.org.library.unl.edu/philtopics/content/philtopics_2003_0031_0001_0245_0276">http://0-www.pdcnet.org.library.unl.edu/philtopics/content/philtopics_2003_0031_0001_0245_0276</a>.</p>
+<p>———. 2007. “On Unity and Simple Substance in Leibniz:” Edited by Glenn A. Hartz. <em>Leibniz Society Review</em> 17: 61–106. doi:<a href="http://dx.doi.org/10.5840/leibniz2007173">10.5840/leibniz2007173</a>. <a href="http://0-www.pdcnet.org.library.unl.edu/leibniz/content/leibniz_2007_0017_0000_0061_0106">http://0-www.pdcnet.org.library.unl.edu/leibniz/content/leibniz_2007_0017_0000_0061_0106</a>.</p>
+<p>Lodge, Paul. 2001. “Leibniz’s Notion of an Aggregate.” <em>British Journal for the History of Philosophy</em> 9 (3): 467–486. doi:<a href="http://dx.doi.org/10.1080/09608780110072461">10.1080/09608780110072461</a>. <a href="http://www.tandfonline.com/doi/abs/10.1080/09608780110072461">http://www.tandfonline.com/doi/abs/10.1080/09608780110072461</a>.</p>
+<p>Look, Brandon C. 2013. “Gottfried Wilhelm Leibniz.” In <em>The Stanford Encyclopedia of Philosophy</em>, edited by Edward N. Zalta, Fall 2013. <a href="http://plato.stanford.edu/archives/fall2013/entries/leibniz/">http://plato.stanford.edu/archives/fall2013/entries/leibniz/</a>.</p>
+<p>McRae, Robert. 1976. <em>Leibniz: Perception, Apperception, and Thought</em>. Vol. 32. Toronto: University of Toronto Press. <a href="http://www.getcited.org/pub/101667776">http://www.getcited.org/pub/101667776</a>.</p>
+<p>Rutherford, Donald. 2008. “Unity, Reality and Simple Substance: A Reply to Samuel Levey.” Edited by Glenn A. Hartz. <em>Leibniz Society Review</em> 18: 207–224. doi:<a href="http://dx.doi.org/10.5840/leibniz20081811">10.5840/leibniz20081811</a>. <a href="http://0-www.pdcnet.org.library.unl.edu/leibniz/content/leibniz_2008_0018_0000_0207_0224">http://0-www.pdcnet.org.library.unl.edu/leibniz/content/leibniz_2008_0018_0000_0207_0224</a>.</p>
+<p>Simmons, A. 2001. “Changing the Cartesian Mind: Leibniz on Sensation, Representation and Consciousness.” <em>The Philosophical Review</em> 110 (1): 31.</p>
+<p>Simmons, Alison. 2012. “Cartesian Consciousness Reconsidered.” <em>Philosophers’ Imprint</em> 12 (2) (January): 1–21.</p>
+<p>Swoyer, Chris. 1995. “Leibnizian Expression.” <em>Journal of the History of Philosophy</em> 33 (1): 65–99. doi:<a href="http://dx.doi.org/10.1353/hph.1995.0009">10.1353/hph.1995.0009</a>. <a href="http://muse.jhu.edu/journals/journal_of_the_history_of_philosophy/v033/33.1swoyer.pdf">http://muse.jhu.edu/journals/journal_of_the_history_of_philosophy/v033/33.1swoyer.pdf</a>.</p>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>in every true affirmative proposition, whether necessary or contingent, universal or particular, the notion of the predicate is in some way included in that of the subject. <em>Praedicatum in est subjecto</em>; otherwise I do not know what truth is. (G II 56; L 337)<a href="#fnref1">↩</a></p></li>
+<li id="fn2"><p>it is the nature of an individual substance or complete being to have a concept so complete that it is sufficient to make us understand and deduce from it all the predicates of the subject to which the concept is attributed. An accident, on the other hand, is a being whose concept does not include everything that can be attributed to the subject to which the concept is attributed (DM §8; L 307)<a href="#fnref2">↩</a></p></li>
+<li id="fn3"><p>Accurately speaking, however, matter is not composed of these constitutive unities but results from them, since matter or extended mass is nothing but a phenomenon grounded in things, like the rainbow or the mock-sun, and all reality belongs only to unities. Phenomena can therefore always be divided into lesser phenomena which could be observed by other, more subtle, animals and we can never arrive at smallest phenomena. Substantial unities are not parts but foundations of phenomena. (Letter to de Volder, L 536)<a href="#fnref3">↩</a></p></li>
+<li id="fn4"><p>although each created monad represents the whole universe, it represents more distinctly the body which is particularly affected by it and of which it is the entelechy. And as this body expresses the whole universe by the connection between all matter in the plenum, the soul also represents the whole universe in representing the body which belongs to it in a particular way. (Monadology §62)<a href="#fnref4">↩</a></p></li>
+<li id="fn5"><p>Matter and motion are not so much substances or things as the phenomena of perceivers, whose reality is located in the harmony of perceivers with themselves (at different times) and with the other perceivers. (G II,270; L 537)<a href="#fnref5">↩</a></p></li>
+</ol>
+</div>
+</body>
+</html>
+
+<!-- ##END MARKED WRAPPER## -->
+    </div>
+</body>
+</html>
