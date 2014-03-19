@@ -1,0 +1,476 @@
+<!DOCTYPE html>  
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>LeibnizFreedom</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+/*
+This document has been created with Marked.app <http://markedapp.com>, Copyright 2011 Brett Terpstra
+Please leave this notice in place, along with any additional credits below.
+---------------------------------------------------------------
+Title: Avenue
+Author: Bram de Haan <http://atelierbramdehaan.nl>
+Description: modern retro
+ */
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+a img {
+  border: none;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+button, input {
+  line-height: normal;
+}
+button, input, select, textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  /* vertical-align: middle; */
+}
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+  cursor: pointer;
+  /* overflow: visible; */
+}
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  padding: 0 !important;
+}
+#wrapper {
+  margin-bottom: 0;
+}
+#wrapper img {
+  max-width: 100%;
+  height: auto;
+}
+#wrapper dd {
+  margin-bottom: 1em;
+}
+#wrapper li > p:first-child {
+  margin: 0;
+}
+#wrapper caption, #wrapper col, #wrapper colgroup, #wrapper table, #wrapper tbody, #wrapper td, #wrapper tfoot, #wrapper th, #wrapper thead, #wrapper tr {
+  border-spacing: 0;
+}
+#wrapper table {
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-collapse: collapse;
+  display: table;
+  empty-cells: hide;
+  margin: -1px 0 23px;
+  padding: 0;
+  table-layout: fixed;
+  width: 100%;
+}
+#wrapper caption {
+  display: table-caption;
+  font-weight: 700;
+}
+#wrapper col {
+  display: table-column;
+}
+#wrapper colgroup {
+  display: table-column-group;
+}
+#wrapper tbody {
+  display: table-row-group;
+}
+#wrapper tfoot {
+  display: table-footer-group;
+}
+#wrapper thead {
+  display: table-header-group;
+  border-bottom: solid 1px #999;
+}
+#wrapper td, #wrapper th {
+  display: table-cell;
+}
+#wrapper tr {
+  display: table-row;
+}
+#wrapper table th, #wrapper table td {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  padding: 0 1em;
+}
+#wrapper dt, #wrapper th {
+  font-weight: 700;
+}
+#wrapper dd {
+  padding-left: 1.4em;
+}
+#wrapper table tr:nth-child(even) {
+  background: rgba(200, 200, 200, 0.25);
+}
+#wrapper figure {
+  display: inline-block;
+  position: relative;
+  margin: 1em 0 2em;
+}
+#wrapper figcaption {
+  font-family: AvenirNext-Italic, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  font-style: italic;
+  text-align: center;
+}
+#wrapper figure:hover > figcaption {
+  /* background: rgba(0,0,0,1) */
+}
+/* #wrapper pre { moved down to base styles; } */
+.poetry #wrapper pre {
+  display: block;
+  font-family: Georgia, Garamond, serif !important;
+  font-size: 110% !important;
+  font-style: italic;
+  line-height: 1.6;
+  margin-left: 1em;
+}
+.poetry #wrapper pre code {
+  font-family: Georgia, Garamond, serif !important;
+
+}
+#wrapper sup, #wrapper sub, #wrapper a.footnote {
+  font-size: 1.4ex;
+  height: 0;
+  line-height: 1;
+  position: relative;
+  vertical-align: super;
+}
+#wrapper sub {
+  vertical-align: sub;
+  top: -1px;
+}
+#wrapper .footnote {
+  font-size: .8rem;
+  vertical-align: super;
+}
+#wrapper .footnotes p {
+  font-size: 1.9ex;
+}
+#wrapper ul ul {
+  margin-left: 1em;
+}
+
+#wrapper ul ul,
+#wrapper ol ol {
+  margin-left: 1em;
+}
+#wrapper li ul,
+#wrapper li ol {
+  margin-bottom: 0;
+}
+
+@media print {
+  body {
+    overflow: auto;
+  }
+
+  img, pre, blockquote, table, figure, p {
+    page-break-inside: avoid;
+  }
+
+  #wrapper {
+    background: #fff;
+    color: #000;
+    font-size: 85%;
+    padding: 10px;
+    position: relative;
+    text-indent: 0;
+  }
+}
+
+@media screen {
+  .inverted, .inverted #wrapper {
+    background: #222;
+  }
+  .inverted pre,
+  .inverted img {
+    border-color: #111;
+    background: #1a1a1a;
+  }
+  .inverted pre * {
+    background: #1a1a1a !important;
+  }
+
+  .inverted hr {
+    border-color: #999 !important;
+  }
+
+  .inverted p, .inverted td, .inverted li, .inverted h1, .inverted h2, .inverted h3, .inverted h4, .inverted h5, .inverted h6, .inverted pre, .inverted code, .inverted th, .inverted .math, .inverted caption, .inverted dd, .inverted dt {
+    color: #f9f9f9 !important;
+  }
+
+  .inverted table tr:nth-child(odd), .inverted table th:nth-child(odd), .inverted table td:nth-child(odd) {
+    background: none;
+  }
+
+  .inverted a {
+    color: #ff5778;
+  }
+}
+.max-width {
+  max-width: 100%;
+  height: auto;
+}
+/* ::Base styles Almost exclusively single element selectors */
+/* ------------------------------------------------------------ */
+html {
+  font-size: 100%;
+}
+body {
+  font: 100%/1.388 AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  color: #111;
+  padding: 0 5% 1rem !important;
+}
+a {
+  color: crimson;
+}
+a:hover, a:focus, a:active {
+  color: #ff2450;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: AvenirNextCondensed-DemiBold, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  /* margin: 0; */
+  padding: .5em 0 0;
+}
+h2, h3, h4, h5 {
+  border-bottom: 1px solid #777;
+}
+h1 {
+  font-size: 2.25rem;
+  line-height: 1.11111;
+}
+h2 {
+  font-size: 1.875rem;
+  line-height: 1.33333;
+}
+h3 {
+  font-size: 1.375rem;
+  line-height: 1.45455;
+}
+h4 {
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+h5 {
+  font-size: 1.125rem;
+  line-height: 1.33333;
+}
+h6 {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+pre, label {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+p {
+  font-size: 1.388rem;
+  line-height: 1.33333;
+  /* margin: 0; */
+  padding: .5em 0;
+  max-width: 30em;
+}
+h2 + p,
+h3 + p,
+h4 + p,
+h5 + p {
+  padding-top: 0;
+  margin-top: 1px;
+  border-top: 1px solid #999;
+}
+ol, ul {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0 0 2em 0;
+}
+li {
+  line-height: auto;
+}
+pre {
+  display: block;
+  margin: 1.4em auto;
+  background: #fcf9f1;
+  /* f9f9f9; */
+  padding: 15px 10px 10px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  border: solid 1px  #f0e0b2;
+  font-family: Consolas, Menlo, Monaco, monospace !important;
+  font-size: .875rem;
+  max-width: 90%;
+}
+pre * {
+  background: #fcf9f1 !important;
+}
+code {
+  font-family: Consolas, Menlo, Monaco, monospace;
+}
+ul {
+  list-style-position: outside;
+  list-style-type: square;
+}
+ol {
+  list-style-position: outside;
+  list-style-type: decimal;
+}
+strong, b {
+  font-family: AvenirNext-Bold, AvenirNextCondensed-DemiBold, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  font-weight: 600;
+}
+em, i, q {
+  font-family: AvenirNext-BoldItalic, AvenirNext-Italic, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  font-style: italic;
+}
+blockquote {
+  padding-left: 1em;
+  border-left: 0.3125em solid #c0c0c0;
+  line-height: normal;
+  /* margin: 0; */
+}
+blockquote p {
+  font-family: AvenirNext-Italic, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  font-style: italic;
+  /* margin: 0; */
+  font-size: 1.25rem;
+  line-height: 1.2;
+  margin: 1.2em 0 1.2em 0;
+}
+img {
+ padding: 1em;
+ background-color: #e6e6e6;
+ border: 1px solid #ddd;
+ -webkit-border-radius: 3px;
+ -moz-border-radius: 3px;
+ -o-border-radius: 3px;
+ border-radius: 3px;
+}
+
+@media screen and (max-width: 750px) {
+  -webkit-text-size-adjust: none;
+}
+
+
+@media print{
+#generated-toc-clone,#generated-toc{display:none!important}
+}
+
+</style>
+<style>#wrapper { max-width:600px; margin:0 auto }</style>
+</head>
+<body class="normal poetry">
+  <div id="wrapper">
+      <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Class notes (3/20) – do not cite or circulate" />
+  <title>Leibniz on Free Will &amp; Evil</title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+<div id="header">
+<h1 class="title">Leibniz on Free Will &amp; Evil</h1>
+<h2 class="author">Class notes (3/20) – do not cite or circulate</h2>
+</div>
+<div id="TOC">
+<ul>
+<li><a href="#the-problem-of-freedom"><span class="toc-section-number">1</span> The Problem of Freedom</a></li>
+<li><a href="#leibniz-on-free-will"><span class="toc-section-number">2</span> Leibniz on Free Will</a><ul>
+<li><a href="#complete-individual-concepts"><span class="toc-section-number">2.1</span> Complete Individual Concepts</a></li>
+<li><a href="#freedom-of-choice"><span class="toc-section-number">2.2</span> Freedom of Choice</a></li>
+</ul></li>
+</ul>
+</div>
+<h1 id="the-problem-of-freedom"><span class="header-section-number">1</span> The Problem of Freedom</h1>
+<p>When philosophers talk about <a href="http://plato.stanford.edu/entries/freewill/">freedom of the will</a> they mean to indicate a capacity of agents to choose a desired course of action from among a set of relevant alternatives (note that the relevant alternatives might be rather sparse, so that the choice is simply whether to act or refrain from acting). This kind of freedom has been thought by many to be essential for attributions of <a href="http://plato.stanford.edu/entries/moral-responsibility/">moral responsibility</a>, and for the praise or blame that we parcel out to ourselves and others based on such attributions.</p>
+<p>So if we understand the will as a capacity to choose between a desired set of relevant alternatives, we can distinguish between cases where the capacity is clearly <em>constrained</em>, and thus where the will is not free, from cases where it seems clearly <em>unconstrained</em> (though this notion is ultimately rather problematic). Clear cases of the former include cases such as being brainwashed, or other cases of mind-control. In such cases the subject does not have proper <em>control</em> over her actions, and thus is not, in the relevant sense, expressing any agency in her behavior.</p>
+<p>Unconstrained cases are perhaps trickier. There seems nothing more obvious concerning the existence of an unconstrained will than when one spontaneously and unbidden from any external source, produces a volition (e.g. to raise one’s arm) and then acts accordingly (i.e. raises her arm). Now, there is a clear contrast, with regard to control, between this case and the mind-control or brainwashing case. But many have thought that there remains an issue regarding the relevant notion of freedom, for we can ask whether the volitions of the agent were <em>determined</em> in a sense which is incompatible with the characterization of the subject’s will as free.</p>
+<p>The sense of determination which people are concerned with is often termed <a href="http://plato.stanford.edu/entries/determinism-causal/">‘<em>causal determination</em>’’</a>. But we can speak of determinism more generally. Roughly speaking, determinism is the thesis that the present state of something (often philosophers just speak of the natural world as a whole) is necessitated by the condition of its previous states plus the laws of nature. There are typically thought to be two responses to determinism, either free will is <em>compatible</em> with determinism, or it is <em>incompatible</em>. In what follows, we’ll look at whether Leibniz was a compatibilist or incompatibilist, and his reasons for being so.</p>
+<h1 id="leibniz-on-free-will"><span class="header-section-number">2</span> Leibniz on Free Will</h1>
+<p>Understanding Leibniz’s views on freedom and determinism requires revisiting his notion of a substance, and the complete individual concepts which specify substances.</p>
+<h2 id="complete-individual-concepts"><span class="header-section-number">2.1</span> Complete Individual Concepts</h2>
+<p>In §8 of his <em>Discourse on Metaphysics</em> Leibniz says the following:</p>
+<blockquote>
+<p>the nature of •an individual substance or of a complete being is to have a notion so complete that it is sufficient to include, and to allow the deduction of, all the predicates of the subject to which that notion is attributed (EMT 5)</p>
+</blockquote>
+<p>So a complete concept (or ‘notion’) is one which specifies the ‘nature’ or essential features of a substance. From knowledge of the nature of a substance one can deduce all its other features, in just the same way that from the knowledge of the essence of a triangle one can deduce all of its other features. This also means that there cannot be two distinct substances with the same nature. Every substance has its own unique nature, and every complete concept specifies the nature of a unique substance.</p>
+<p>There is an obvious problem that thus arises on the view thus described for freedom of the will. If all the features of a substance may be derived complete concept, including everything that it has ever done, and everything that it will do, how could it be the case that human beings (who are substances after all) have the requisite freedom of will?</p>
+<p>Leibniz states this problem very clearly at the beginning of §13 of the <em>Discourse</em>.</p>
+<blockquote>
+<p>The foundations that I have laid down give rise to a big problem, which I must try to solve before moving on. I have said that the notion of an individual substance involves, once and for all, everything that can ever happen to it; and that by looking into that notion one can see in it everything that will ever be truly sayable of the substance, just as we can see in the nature of a circle all the properties that are deducible from it. But this seems to destroy the difference between contingent and necessary truths, to rule out human freedom, and to imply that all the events in the world—including our actions—are governed by an absolute fate. To this I reply that we have to distinguish what is certain from what is necessary. (EMT 7)</p>
+</blockquote>
+<p>To understand this distinction between what is ‘certain’ and what is ‘necessary’ we need to look a little more closely at Leibniz’s theory of modality.</p>
+<p>For Leibniz, a <em>world</em> is just a set of individual substances whose natures are such that they could all exist together (we can say that their natures are ‘compossible’ just in case their mutual coexistence does not result in a logical contradiction), plus whatever natural laws are compatible with those substances being as they are. Now, according to Leibniz, the creator of all these substances is God, and God always acts for the best (DM §5). This is in line with Leibniz’s endorsement of the Principle of Sufficient Reason (PSR). God always acts for a reason (to do otherwise would violate PSR) and God’s ultimate reason for acting can always be understood in terms of optimality, or bringing about the best. So PSR couples with this Optimality Principle (OP) entails that God actualizes the existence of a plenitude of substances whose natures are compossible, so as to bring about the creation of the best of all possible worlds.</p>
+<p>The notion of a <em>possible world</em> is the notion of a set of individual substances whose essences are compossible, and which God could have made actual. So the <em>actual world</em> is the set of compossible substances (or natures thereof) God chose to actualize according to PSR and OP, while the possible worlds are all those substances defined by complete concepts which ‘exist’ only in the divine intellect.</p>
+<p>So Leibniz can appeal to these ‘unactualized’ substances whose concepts exist in the divine intellect in order to explain our modal talk of possiblia. For example, if I say that it was possible for me to finish the race had I not broken my ankle, then Leibniz understands this as meaning that there is a world of compossible substances in which a being very much like me (though not <em>exactly</em> like me—call this my ‘counterpart’) did finish the race.</p>
+<h2 id="freedom-of-choice"><span class="header-section-number">2.2</span> Freedom of Choice</h2>
+<p>If Leibniz now has a means for accounting for the difference between actual and the possible, what about the <em>necessary</em>? Leibniz considers the truly necessary to be anything whose contrary is or entails a logical contradiction.<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a> It is here that Leibniz hopes to find some wiggle room for characterizing his particular flavor of compatibilism.</p>
+<blockquote>
+<p>there are two kinds of connection or following-from. One is absolutely necessary, and its contrary implies a contradiction; such deduction pertains to eternal truths, such as those of geometry. The other is necessary ·not absolutely, but· only ex hypothesi, and, so to speak, accidentally. ·It doesn’t bring us to It is necessary that P, but only to Given Q, it follows necessarily that P·. Something that is necessary only ex hypothesi is contingent in itself, and its contrary doesn’t imply a contradiction. This ·second· kind of connection is based not purely on ideas and on God’s understanding alone, but also on his free decrees, and on the history of the universe (EMT 7)</p>
+</blockquote>
+<p>Here Leibniz distinguishes between something’s being necessary and something’s merely following with necessity, given an antecedent condition. Leibniz then argues that while it is true that a person’s volitions, and ultimately their actions, follow from their nature as substances, this does not mean that those volitions or actions must <em>necessarily happen</em>.</p>
+<blockquote>
+<p>I say that whatever happens in accordance with its antecedents is assured but is not necessary; for someone to do the contrary ·of such an assured outcome· is not impossible in itself, although it is impossible ex hypothesi—·that is, impossible given what has gone before·. For if you were capable of carrying through the whole demonstration proving that this subject (Caesar) is connected with this predicate (his successful ·power-grabbing· enterprise), this would involve you in showing that Caesar’s dictatorship had its foundation in his notion or nature, that a reason can be found there—·in that notion or nature·—why he decided to cross the Rubicon rather than stop at it, and why he won rather than lost the day ·in the battle· at Pharsalus. ·You would be discovering· that it was rational and therefore assured that this would happen, but not that it is necessary in itself, or that the contrary implies a contradiction…Now, any truth which is founded on this sort of decision is contingent, even though it is certain, because •decisions have no effect whatsoever on the •possibility of things. And (to repeat myself) although God is sure always to choose the best, that doesn’t stop something less perfect from being and remaining possible in itself, even though it won’t happen—for what makes God reject it is its imperfection, not its being impossible ·which it is not·. And nothing is necessary if its opposite is possible. (DM §13; EMT 8)</p>
+</blockquote>
+<p>So, given God creation of this actual world, it is certain that Caesar would cross the Rubicon, and Judas would betray Jesus, and that you would eat what you did for breakfast this morning. But none of these certainties (or, we might say, conditional necessities) is incompatible with the freedom of will that Caesar, Judas, or you yourself exercise, since there is no absolute necessity to these events. There are other possible worlds (in the sense explained above) in which these events do not occur.</p>
+<div class="references">
+
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Contrary propositions are propositions which cannot both be true, though they might both be false. For example, ‘The wall is (completely) blue’ and ‘The wall is (completely) red’ are contraries. They cannot both be true, but they might both be false when, e.g., the wall is yellow. In contrast, contradictory statements are statements, one of which must be true. For example, ‘the wall is red’ and ‘the wall is not red’ are contradictory statements. A <em>contradiction</em> is a statement that is <em>always</em> false.<a href="#fnref1">↩</a></p></li>
+</ol>
+</div>
+</body>
+</html>
+
+<!-- ##END MARKED WRAPPER## -->
+    </div>
+</body>
+</html>
