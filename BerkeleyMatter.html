@@ -1,0 +1,594 @@
+<!DOCTYPE html>  
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>BerkeleyMatter</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+/*
+This document has been created with Marked.app <http://markedapp.com>, Copyright 2011 Brett Terpstra
+Please leave this notice in place, along with any additional credits below.
+---------------------------------------------------------------
+Title: Avenue
+Author: Bram de Haan <http://atelierbramdehaan.nl>
+Description: modern retro
+ */
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+a img {
+  border: none;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+button, input {
+  line-height: normal;
+}
+button, input, select, textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  /* vertical-align: middle; */
+}
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+  cursor: pointer;
+  /* overflow: visible; */
+}
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  padding: 0 !important;
+}
+#wrapper {
+  margin-bottom: 0;
+}
+#wrapper img {
+  max-width: 100%;
+  height: auto;
+}
+#wrapper dd {
+  margin-bottom: 1em;
+}
+#wrapper li > p:first-child {
+  margin: 0;
+}
+#wrapper caption, #wrapper col, #wrapper colgroup, #wrapper table, #wrapper tbody, #wrapper td, #wrapper tfoot, #wrapper th, #wrapper thead, #wrapper tr {
+  border-spacing: 0;
+}
+#wrapper table {
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-collapse: collapse;
+  display: table;
+  empty-cells: hide;
+  margin: -1px 0 23px;
+  padding: 0;
+  table-layout: fixed;
+  width: 100%;
+}
+#wrapper caption {
+  display: table-caption;
+  font-weight: 700;
+}
+#wrapper col {
+  display: table-column;
+}
+#wrapper colgroup {
+  display: table-column-group;
+}
+#wrapper tbody {
+  display: table-row-group;
+}
+#wrapper tfoot {
+  display: table-footer-group;
+}
+#wrapper thead {
+  display: table-header-group;
+  border-bottom: solid 1px #999;
+}
+#wrapper td, #wrapper th {
+  display: table-cell;
+}
+#wrapper tr {
+  display: table-row;
+}
+#wrapper table th, #wrapper table td {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  padding: 0 1em;
+}
+#wrapper dt, #wrapper th {
+  font-weight: 700;
+}
+#wrapper dd {
+  padding-left: 1.4em;
+}
+#wrapper table tr:nth-child(even) {
+  background: rgba(200, 200, 200, 0.25);
+}
+#wrapper figure {
+  display: inline-block;
+  position: relative;
+  margin: 1em 0 2em;
+}
+#wrapper figcaption {
+  font-family: AvenirNext-Italic, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  font-style: italic;
+  text-align: center;
+}
+#wrapper figure:hover > figcaption {
+  /* background: rgba(0,0,0,1) */
+}
+/* #wrapper pre { moved down to base styles; } */
+.poetry #wrapper pre {
+  display: block;
+  font-family: Georgia, Garamond, serif !important;
+  font-size: 110% !important;
+  font-style: italic;
+  line-height: 1.6;
+  margin-left: 1em;
+}
+.poetry #wrapper pre code {
+  font-family: Georgia, Garamond, serif !important;
+
+}
+#wrapper sup, #wrapper sub, #wrapper a.footnote {
+  font-size: 1.4ex;
+  height: 0;
+  line-height: 1;
+  position: relative;
+  vertical-align: super;
+}
+#wrapper sub {
+  vertical-align: sub;
+  top: -1px;
+}
+#wrapper .footnote {
+  font-size: .8rem;
+  vertical-align: super;
+}
+#wrapper .footnotes p {
+  font-size: 1.9ex;
+}
+#wrapper ul ul {
+  margin-left: 1em;
+}
+
+#wrapper ul ul,
+#wrapper ol ol {
+  margin-left: 1em;
+}
+#wrapper li ul,
+#wrapper li ol {
+  margin-bottom: 0;
+}
+
+@media print {
+  body {
+    overflow: auto;
+  }
+
+  img, pre, blockquote, table, figure, p {
+    page-break-inside: avoid;
+  }
+
+  #wrapper {
+    background: #fff;
+    color: #000;
+    font-size: 85%;
+    padding: 10px;
+    position: relative;
+    text-indent: 0;
+  }
+}
+
+@media screen {
+  .inverted, .inverted #wrapper {
+    background: #222;
+  }
+  .inverted pre,
+  .inverted img {
+    border-color: #111;
+    background: #1a1a1a;
+  }
+  .inverted pre * {
+    background: #1a1a1a !important;
+  }
+
+  .inverted hr {
+    border-color: #999 !important;
+  }
+
+  .inverted p, .inverted td, .inverted li, .inverted h1, .inverted h2, .inverted h3, .inverted h4, .inverted h5, .inverted h6, .inverted pre, .inverted code, .inverted th, .inverted .math, .inverted caption, .inverted dd, .inverted dt {
+    color: #f9f9f9 !important;
+  }
+
+  .inverted table tr:nth-child(odd), .inverted table th:nth-child(odd), .inverted table td:nth-child(odd) {
+    background: none;
+  }
+
+  .inverted a {
+    color: #ff5778;
+  }
+}
+.max-width {
+  max-width: 100%;
+  height: auto;
+}
+/* ::Base styles Almost exclusively single element selectors */
+/* ------------------------------------------------------------ */
+html {
+  font-size: 100%;
+}
+body {
+  font: 100%/1.388 AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  color: #111;
+  padding: 0 5% 1rem !important;
+}
+a {
+  color: crimson;
+}
+a:hover, a:focus, a:active {
+  color: #ff2450;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: AvenirNextCondensed-DemiBold, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  /* margin: 0; */
+  padding: .5em 0 0;
+}
+h2, h3, h4, h5 {
+  border-bottom: 1px solid #777;
+}
+h1 {
+  font-size: 2.25rem;
+  line-height: 1.11111;
+}
+h2 {
+  font-size: 1.875rem;
+  line-height: 1.33333;
+}
+h3 {
+  font-size: 1.375rem;
+  line-height: 1.45455;
+}
+h4 {
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+h5 {
+  font-size: 1.125rem;
+  line-height: 1.33333;
+}
+h6 {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+pre, label {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+p {
+  font-size: 1.388rem;
+  line-height: 1.33333;
+  /* margin: 0; */
+  padding: .5em 0;
+  max-width: 30em;
+}
+h2 + p,
+h3 + p,
+h4 + p,
+h5 + p {
+  padding-top: 0;
+  margin-top: 1px;
+  border-top: 1px solid #999;
+}
+ol, ul {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0 0 2em 0;
+}
+li {
+  line-height: auto;
+}
+pre {
+  display: block;
+  margin: 1.4em auto;
+  background: #fcf9f1;
+  /* f9f9f9; */
+  padding: 15px 10px 10px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  border: solid 1px  #f0e0b2;
+  font-family: Consolas, Menlo, Monaco, monospace !important;
+  font-size: .875rem;
+  max-width: 90%;
+}
+pre * {
+  background: #fcf9f1 !important;
+}
+code {
+  font-family: Consolas, Menlo, Monaco, monospace;
+}
+ul {
+  list-style-position: outside;
+  list-style-type: square;
+}
+ol {
+  list-style-position: outside;
+  list-style-type: decimal;
+}
+strong, b {
+  font-family: AvenirNext-Bold, AvenirNextCondensed-DemiBold, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  font-weight: 600;
+}
+em, i, q {
+  font-family: AvenirNext-BoldItalic, AvenirNext-Italic, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  font-style: italic;
+}
+blockquote {
+  padding-left: 1em;
+  border-left: 0.3125em solid #c0c0c0;
+  line-height: normal;
+  /* margin: 0; */
+}
+blockquote p {
+  font-family: AvenirNext-Italic, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  font-style: italic;
+  /* margin: 0; */
+  font-size: 1.25rem;
+  line-height: 1.2;
+  margin: 1.2em 0 1.2em 0;
+}
+img {
+ padding: 1em;
+ background-color: #e6e6e6;
+ border: 1px solid #ddd;
+ -webkit-border-radius: 3px;
+ -moz-border-radius: 3px;
+ -o-border-radius: 3px;
+ border-radius: 3px;
+}
+
+@media screen and (max-width: 750px) {
+  -webkit-text-size-adjust: none;
+}
+
+
+@media print{
+#generated-toc-clone,#generated-toc{display:none!important}
+}
+
+</style>
+<style>#wrapper { max-width:600px; margin:0 auto }</style>
+</head>
+<body class="normal poetry">
+  <div id="wrapper">
+      <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Class notes (4/1) – do not cite or circulate" />
+  <title>Berkeley on Matter and Ideas</title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+<div id="header">
+<h1 class="title">Berkeley on Matter and Ideas</h1>
+<h2 class="author">Class notes (4/1) – do not cite or circulate</h2>
+</div>
+<div id="TOC">
+<ul>
+<li><a href="#berkeleys-criticisms-of-materialism"><span class="toc-section-number">1</span> Berkeley’s Criticisms of Materialism</a><ul>
+<li><a href="#immediacy-sensible-qualities"><span class="toc-section-number">1.1</span> Immediacy &amp; Sensible Qualities</a></li>
+<li><a href="#matter-as-substrate"><span class="toc-section-number">1.2</span> Matter as Substrate</a></li>
+<li><a href="#resemblance"><span class="toc-section-number">1.3</span> Resemblance</a></li>
+<li><a href="#skepticism"><span class="toc-section-number">1.4</span> Skepticism</a></li>
+<li><a href="#berkeleys-master-argument"><span class="toc-section-number">1.5</span> Berkeley’s ‘Master Argument’</a></li>
+</ul></li>
+<li><a href="#references">References</a></li>
+</ul>
+</div>
+<!-- NOTE:  
+Dialogue 1:
+
+1.  Skepticism about matter (1ff)
+2.  Immediate & Mediate perception (3)
+3.  Sensible things are constituted entirely from sensible qualities (3)
+4.  The mind-dependence of sensible qualities (3-7)
+5.  Identifying primary & secondary qualities: the case of sound (8-9)
+6.  The non-reality of color (9-12)
+7.  Primary & Secondary qualities (12)
+8.  Primary qualities are also mind-dependent (13-16)
+9.  Against Abstract ideas (16)
+10. There are no objects of perception other than ideas (17-19)
+11. Against the notion of *material substratum* (19-21)
+12. The ‘Master Argument’ (21)
+13. Vision & perceptual constancy (22)
+14. Mediate perception & resemblance (23-4)
+15. Nothing is like an idea except other ideas (25)
+16. The belief that material objects existence independently of the mind
+    entails skepticism (25)
+
+Dialogue 2:
+
+1.  materialism & mind (27-8)
+2.  sensible things exist in God’s mind (29)
+3.  proof of God (30)
+4.  matter as intelligible idea (32)
+5.  matter cannot be a cause of ideas (32-3)
+6.  # Background
+-->
+
+<p><a href="http://plato.stanford.edu/entries/berkeley/">George Berkeley</a> (1685-1753) was bishop of <a href="http://en.wikipedia.org/wiki/Cloyne">Cloyne</a> in Ireland, and a well-known (in his day and ours) philosopher and scientist. His <a href="http://books.google.com/books?id=1o85AAAAcAAJ&amp;printsec=frontcover&amp;dq=editions:dyOzLl2K0NEC&amp;hl=en&amp;sa=X&amp;ei=DXU4U4q5LdOzsQTx34D4Ag&amp;ved=0CFQQ6AEwCA#v=onepage&amp;q&amp;f=false">theory of vision</a> published in 1709, was the most influential account of the psychology of vision of its time, and remained influential well into the 19th century.</p>
+<p>Berkeley published his most famous philosophical work in his mid-twenties. The <em>Treatise concerning the Principles of Human Knowledge</em> (1710) and the <em>Three Dialogues between Hylas and Philonous</em> (1713) contain his arguments against the Cartesian theory of matter, the Cartesian and Lockean conception of abstract ideas. The University of California, Berkeley is named in his honor.</p>
+<h1 id="berkeleys-criticisms-of-materialism"><span class="header-section-number">1</span> Berkeley’s Criticisms of Materialism</h1>
+<p>In the <em>Dialogues</em> Berkeley attacks ‘<em>materialism</em>’, which he understands as the doctrine that material things exist, rather than the doctrine that <em>only</em> material things exist. Berkeley thus contends that there is no such thing as mind-independent matter. In the two dialogues that we read, Berkeley argues, first, that belief in the mind-independent existence of matter leads to skepticism, and second, that the concept of matter itself is incoherent. Thus Berkeley, like Leibniz, advocates an <em>idealist</em> conception of reality, where all that really exists are mental entities and their ideas.</p>
+<p>However, Berkeley argues for his idealism in a very different manner from that of Leibniz. As we saw, Leibniz argues primarily from the definition of substance as an independent and unified being, and from the inherent divisibility and aggregative nature of matter. Berkeley, in contrast, argues from primarily epistemic premises concerning our access to a material world, and the assumption he takes to be held in common by figures such as Descartes and Locke, that all of our knowledge depends on our immediate access to our own <em>ideas</em>.</p>
+<p>In the first dialogue, Berkeley argues (via his mouthpiece Philonous, which means ‘lover of spirit’) that all that we immediately perceive are our own ideas, and that the belief in the existence of mind-independent material entities which are the supposed causes of these ideas, leads to skepticism.</p>
+<p>In the second dialogue, Berkeley then goes on to argue that the concept of matter is itself either incoherent or shows that the existence of matter is impossible. Let’s look at some of Berkeley’s arguments in the first dialogue.</p>
+<h2 id="immediacy-sensible-qualities"><span class="header-section-number">1.1</span> Immediacy &amp; Sensible Qualities</h2>
+<p>The first part of the dialogue is concerned with the following argument:</p>
+<ol style="list-style-type: decimal">
+<li>We immediately perceive only sensory qualities</li>
+<li>Sensory qualities are mind-dependent</li>
+<li>Mind-dependent objects of immediate perception are called ‘ideas’</li>
+<li><span class="math">∴ </span> We immediately perceive only our own ideas</li>
+</ol>
+<p>Berkeley motivates premise (1) early on in the first dialogue and it is central for his entire argument. Hylas says,</p>
+<blockquote>
+<p>by ‘sensible things’ I mean only things that are perceived by sense, and that the senses perceive only what they perceive immediately; because they don’t make inferences. So the deducing of causes or occasions from effects and appearances (which are the only things [i.e. effects and appearances] we perceive by sense) is entirely the business of reason. (TD: EMT 3)</p>
+</blockquote>
+<p>It’s hard to discern what <em>exactly</em> Berkeley means by the phrase ‘perceive immediately’, but it is clear that, at the very least, immediate perception is a form of <em>non-inferential</em> awareness. Moreover, the kind of non-inferential awareness that Berkeley is concerned with here is also meant to exclude cases where, through habituation or learning, one is no longer aware of making any inference, as with a literate person reading words on a page (cf. EMT 24). According to Berkeley, what is immediately perceived are the various shapes of the letters. The actual words and their meanings are inferred.</p>
+<blockquote>
+<p><strong>Phil</strong>: In reading a book, what I immediately perceive are the letters ·on the page·, but mediately or by means of these the notions of God, virtue, truth, etc. are suggested to my mind. Now, there’s no doubt that •the letters are truly sensible things, or things perceived by sense; but I want to know whether you take •the things suggested by them to be ‘perceived by sense’ too. <strong>Hyl</strong>: No, certainly, it would be absurd to think that God or virtue are sensible things, though they may be signified and suggested to the mind by sensible marks with which they have an arbitrary connection. (TD: EMT 3)</p>
+</blockquote>
+<p>This also suggests that there can be no immediate perception of anything that is not either itself immediately perceived, or otherwise <em>necessarily connected</em> with what is immediately perceived.</p>
+<p>Once Hylas admits that what we perceive are sensible objects, and that we perceive them immediately, Berkeley proceeds to demolish Hylas’s confidence in the belief that there are any mind-independent material objects. How does he do this?</p>
+<p>After getting Hylas to admit that sensible things are things constituted by their sensible qualities, and that what we perceive immediately are sensible qualities understood in terms of the list he gives on EMT 3, Philonous goes on to argue that the <em>reality</em> of such qualities must be understood as <em>mind-dependent</em> (premise (2) above). Philonous’s question (EMT 4) is whether we can make sense of the existence of a sensible quality like shape, color, or smell independent of its being perceived in the consciousness of some subject. Berkeley’s arguments here are ingenious and complex. We will focus on one in particular—viz., his argument against the primary/secondary quality distinction.</p>
+<p>Recall that the primary/secondary distinction is, according to Locke, a distinction between qualities (shape, size, motion, and solidity) that are real, intrinsic, and fundamentally explanatory, and qualities that are mind-dependent, relational, and explanatorily derivative. Hylas hopes to use this distinction to deny premise (2), that all sensory qualities are mind-dependent.</p>
+<blockquote>
+<p>Colours, sounds, tastes—in a word, all that are termed ‘secondary qualities’—have no existence outside the mind. But in granting this I don’t take anything away from the reality of matter or external objects, because various philosophers maintain what I just did about secondary qualities and yet are the far from denying matter. (TD: EMT 12)</p>
+</blockquote>
+<p>Berkeley’s strategy is to show that if one denies the mind-independence of the secondary qualities, the very same arguments used to do this hold equally of primary qualities. Berkeley uses a series of relativity arguments (EMT 13-15) to show that size, shape, motion, and solidity all admit of being relative to perceivers. He does this primarily by emphasizing differences between perception in other animals and in humans (EMT 13), and in the differences between how things appear in more precise instruments such as microscopes (EMT 10, 14).</p>
+<p>Berkeley also argues, against both Descartes and Locke, that we cannot form abstract ideas of the primary qualities in absence of secondary qualities. For example we cannot form, according to Berkeley, an abstract idea of pure shape or extension without any color.</p>
+<blockquote>
+<p><strong>Phil</strong>: I’m willing to let our present dispute be settled in the following way. If you can form in your thoughts a distinct abstract idea of motion or extendedness, having none of those sensible qualities—swift and slow, large and small, round and square, and the like—which we agree exist only in the mind, then I’ll capitulate. But if you can’t, it will be unreasonable for you to insist any longer on something of which you have no notion…I acknowledge, Hylas, that it is not difficult to form general propositions and reasonings about extendedness and motion, without mentioning any other qualities, and in that sense to treat them abstractedly. I can pronounce the word ‘motion’ by itself, but how does it follow from this that I can form in my mind the idea of motion without an idea of body? Theorems about extension and shapes can be proved without any mention of large or small or any other sensible quality, but how does it follow from this that the mind can form and grasp an abstract idea of extension, without any particular size or shape or ·other· sensible quality? (TD: EMT 16)</p>
+</blockquote>
+<p>Ultimately, Berkeley denies the coherence of Descartes’s <em>pure intellect</em>,</p>
+<blockquote>
+<p><strong>Phil</strong>: Since I can’t form abstract ideas at all, it is clearly impossible for me to form them with help from ‘pure intellect’, whatever faculty you mean that phrase to refer to…sensible things can only be perceived by the senses or represented by the imagination; so shape and size don’t belong to pure intellect because they are initially perceived through the senses. If you want to be surer about this, try and see if you can frame the idea of any shape, abstracted from all particularities of size and from other sensible qualities…since even the mind can’t possibly separate the ideas of •extendedness and motion from •all other sen- sible qualities, doesn’t it follow that where •the former exist •the latter must also exist? (TD: EMT 16)</p>
+</blockquote>
+<p>So, according to Berkeley, the kind of abstraction arguments that Descartes and Locke provide detailing our grasp of ideas such as extension, are not sufficient to show that qualities like extension can exist in the world in any way that is separate, or more fundamental than, qualities such as color. Is this a good argument?</p>
+<p>If Berkeley’s argument succeeds, then we cannot distinguish mind-independent matter from mind-dependent sensory objects on the basis of the primary/secondary quality distinction. This would be a major blow to realist explanatory theories such as those of Descartes and Locke.</p>
+<h2 id="matter-as-substrate"><span class="header-section-number">1.2</span> Matter as Substrate</h2>
+<p>Berkeley provides another argument for the mind-independence of matter that we’ll consider. Hylas says,</p>
+<blockquote>
+<p>when…I look in a different way at •sensible things, considering them as so many properties and qualities, I find that I have to suppose a <em>material substratum</em>, without which they can’t be conceived to exist…It is not itself sensible; only its properties and qualities are perceived by the senses…extendedness is only a quality, and matter is something that supports qualities. And isn’t it obvious that the supported thing is different from the supporting one? (TD: EMT 19)</p>
+</blockquote>
+<p>Hylas here enunciates a metaphysical principle that to which a great many thinkers, including Descartes, Locke, and Leibniz, all subscribed—viz., that a property cannot be instantiated (e.g. a particular instance of <em>scarlet</em> or <em>being-right-angled</em>) without being instantiated ‘in’ some substance as the subject and ‘support’ of that property.</p>
+<p>Berkeley (via Philonous) objects that all attempts to non-metaphorically articulate what this substance is that bears all sensible qualities fails.</p>
+<blockquote>
+<p><strong>Phil</strong>: So it seems that you have no idea at all, either positive or relative, of matter. You don’t know what it is in itself, or what relation it has to qualities…And yet you said that you couldn’t conceive the real existence of qualities without conceiving at the same time a material support for them…That amounted to saying that when you conceive the real existence of qualities you also conceive something that you can’t conceive! (TD: EMT 20)</p>
+</blockquote>
+<p>Berkeley’s claim here is that matter, as substrate is something totally unknown to us. It is neither knowable in itself, nor knowable with respect to what is known by us—viz., sensible qualities.</p>
+<h2 id="resemblance"><span class="header-section-number">1.3</span> Resemblance</h2>
+<p>Berkeley considers one final attempt at knowledge of mind-independent material objects. Hylas says that,</p>
+<blockquote>
+<p>I think there are two kinds of objects: one kind perceived immediately, and called ‘ideas’; the other kind are real things or external objects perceived by the mediation of ideas, which resemble and represent them. Now I grant that ideas don’t exist outside the mind; but the second sort of objects do. (TD: EMT 23)</p>
+</blockquote>
+<p>Hylas is attempting to argue that though we don’t <em>immediately</em> perceive material objects, we nevertheless <em>mediately</em> perceive them by way of our ideas of them, and the resemblance relations that hold between our ideas and the world.</p>
+<blockquote>
+<p><strong>Phil</strong>: You seem to hold, then, that our ideas, which are all that we immediately perceive, are pictures of external things; and that the latter are also perceived by sense because they have a conformity or resemblance to our ideas…And in the same way that Julius Caesar, in himself invisible, is nevertheless perceived by sight, so also real things, in themselves imperceptible, are perceived by sense. (EMT 23)</p>
+</blockquote>
+<p>Berkeley goes on to attack this notion. He first argues that we do not immediately perceive sensible objects, but only their qualities. We only <em>mediately</em> perceive sensible objects.</p>
+<blockquote>
+<p><strong>Phil</strong>:I don’t deny that we can be said in a certain sense to perceive sensible things mediately by sense: that is when the immediate perception of ideas by one sense suggests to the mind others, perhaps belonging to another sense, of a kind that have often been perceived to go with ideas of the former kind. For instance, when I hear a coach drive along the streets, all that I immediately perceive is the sound; but from my past experience that such a sound is connected with a coach, I am said to ‘hear the coach’…In short, the only things that are actually and strictly perceived by any sense are the ones that would have been perceived even if we had only just acquired that sense ·and were using it for the first time·. As for other things, clearly they are only suggested to the mind by past experience. (TD: EMT 24)</p>
+</blockquote>
+<p>So the existence of sensible objects is ‘suggested’ or otherwise inferred from our immediate perception of sensible qualities. This claim is crucial in what follows, for Berkeley then proceeds to argue that if all our knowledge is either immediately, via sensory ideas, or inferred from immediate sensory ideas, then we must be able to account for our knowledge of the resemblance of our ideas to material objects in such terms.</p>
+<blockquote>
+<p><strong>Phil</strong>: All I want is to learn from you how to come by knowledge of material things. Whatever we perceive is perceived either immediately by sense, or mediately by reason and reflection. But you have excluded sense; so please show me what reason you have to believe in their existence, or what means you can possibly adopt to prove, to my understanding or your own, that they exist.</p>
+</blockquote>
+<p>Berkeley thus argues that we have no basis for knowing that there is anything for our ideas to resemble, because this would require either immediate perception of such things (which we cannot have) or inferential knowledge of them (which we lack). This results in a kind of skeptical position concerning the existence of material objects (more on this in a moment).</p>
+<p>Berkeley also attacks the very coherence of the idea that there might be a resemblance relation that holds between an idea and something external to it. According to Berkeley nothing can resemble an idea except for other ideas (EMT 25). This is sometimes called Berkley’s ‘Likeness Principle’.<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a></p>
+<p>One worry Berkeley articulates is that, given that our ideas of things constantly change in the course of experience while the objects that they are ideas of presumably do not, there is no basis to determine which parts of our ever fluctuating ideas resemble objects and which do not, and we might even worry that there is nothing in such a flux of ideas that <em>could</em> resemble an enduring material object (EMT 25).</p>
+<blockquote>
+<p><strong>Phil</strong>: How, then, can things that are perpetually fleeting and variable as our ideas are be copies or likenesses of any thing that is fixed and constant? Since all sensible qualities—size, shape, colour, etc.—that is, our ideas, are continually changing with every alteration in the distance, medium, or instruments of sensation, how can any fixed material object be properly represented or depicted by several distinct things ·or ideas·, each of which is so unlike the others? Or if you say that the object resembles just one of our ideas, how can we distinguish that true copy from all the false ones?</p>
+</blockquote>
+<p>Is this a convincing argument?</p>
+<h2 id="skepticism"><span class="header-section-number">1.4</span> Skepticism</h2>
+<p>Berkeley argues that belief in the ultimate mind-independence of material bodies leads to skepticism (EMT 25).</p>
+<ol style="list-style-type: decimal">
+<li>We immediately perceive sensible qualities (ideas)</li>
+<li>We mediately perceive sensible objects</li>
+<li>We neither mediately nor immediately perceive material objects/matter—matter is <em>necessarily imperceptible</em></li>
+<li>All knowledge ultimately depends on mediate or immediate perception<br /></li>
+<li><span class="math">∴ </span> We can have no knowledge of the nature or existence of matter</li>
+</ol>
+<p>Berkeley has spent most of the first dialogue arguing for premises (1) - (3). Premise (4) is something that all of his interlocutors would agree with (though they might understand ‘perception’ in various different ways). His argument is valid. So we need to reject one of his premises if we’re to escape the conclusion. Which premise should we (or can we) reject?</p>
+<h2 id="berkeleys-master-argument"><span class="header-section-number">1.5</span> Berkeley’s ‘Master Argument’</h2>
+<p>Finally, in course of denying the existence of matter as substrate, Berkeley gives what has been called his ‘Master Argument’ (in the sense that he appears to place great weight on it, not in the sense that it is his best argument).</p>
+<blockquote>
+<p><strong>Hylas</strong>: As I was thinking of a tree in a solitary place with nobody there to see it, I thought that was conceiving a tree as existing unperceived or unthought of, overlooking the fact I myself conceived it all the while. But now I plainly see that all I can do is to form ideas in my own mind. I can conceive in my own thoughts the idea of a tree, or a house, or a mountain, but that is all. And this is far from proving that I can conceive them existing out of the minds of all spirits. (TD: EMT 21)</p>
+</blockquote>
+<p>Berkeley is alluding here to an argument that he puts forward in his <em>Treatise concerning the Principles of Human Knowledge</em>, and has been formulated by Kenneth Winkler (<span class="citation">Winkler (1989)</span>, 184) as follows,</p>
+<ol style="list-style-type: decimal">
+<li>We can conceive of a house or a tree existing independent of and out of all minds whatsoever only if we can conceive of the house or tree existing unconceived.</li>
+<li>But it is a contradiction to speak of conceiving a thing which is unconceived. An unconceived thing can no more be conceived than an unseen object can be seen.</li>
+<li><span class="math">∴ </span> We cannot conceive of a house or a tree (or anything else, for that matter) existing independent of and out of all minds.</li>
+</ol>
+<p>This argument might seem sophistical. It is, perhaps, more plausible if we consider it as placing (here I follow Winkler) a burden on the materialist to explain how they come by their conception of a mind-independent material entity. If Berkeley is right about the nature of sensible qualities, we only perceive their existence in virtue of perceiving them. Existence is not itself a sensible quality or something of which we are immediately aware, other than our immediate awareness of whatever quality is in question. As Winkler puts it,</p>
+<blockquote>
+<p>To exist is to be perceived or perceivable (<em>Principles</em> 3). Nothing in an idea can be said to represent existence. This means that whenever we frame an idea of a purportedly mind-independent object, what we have managed to do is, as far as the idea is concerned, no different from what we do when we conceive of something mind-dependent. All there is left to say about the idea is that we perceive it, or that some other spirit does or would perceive it; but why should this give us a conception of mind-independence, of a kind of existence having nothing to do with being perceivable or perceived? (<span class="citation">Winkler (1989)</span>, 187)</p>
+</blockquote>
+<p>If Winkler is right, then Berkeley’s argument present the materialist with a challenge—how do we come by the conception of a mind-independent material object if there is no idea of such an object which we can frame which is substantially different from our ideas of mind-dependent objects? By what right is this notion of objectivity so dear to the materialist to be held?</p>
+<p>If the argument is to be fully convincing though, we would need some reason as to why we cannot distinguish between the mental act of conceiving or otherwise entertaining a thought, and the content of the thought itself. If the content of the thought is that &lt;tree exists in the quad of which no one is currently conceiving&gt;, then it seems we have a perfectly coherent thought. The fact that this thought must be entertained by a thinking subject so that the following fact is true—viz., <em>I think that a tree exists in the quad of which no one is currently conceiving</em>—doesn’t seem to show that the <em>content</em> of the thought is incoherent. It just shows that there is a certain incoherence in conceiving of something that one insists is unconceived. But Berkeley gives us no reason as to why content and attitude cannot be separated in the suggested way, and thus gives us no ultimate reason to accept his argument.</p>
+<h1 id="references" class="unnumbered">References</h1>
+<hr />
+<!-- -->
+
+
+<div class="references">
+<p>Bennett, Jonathan. 2001. <em>Learning from Six Philosophers: Descartes, Spinoza, Leibniz, Locke, Berkeley, Hume</em>. Oxford: Clarendon Press.</p>
+<p>Bordner, S. Seth. 2011. “Berkeley’s ‘Defense’ of ‘Commonsense’.” <em>Journal of the History of Philosophy</em> 49 (3): 315–338. doi:<a href="http://dx.doi.org/10.1353/hph.2011.0076">10.1353/hph.2011.0076</a>. <a href="http://muse.jhu.edu/journals/journal_of_the_history_of_philosophy/v049/49.3.bordner.html">http://muse.jhu.edu/journals/journal_of_the_history_of_philosophy/v049/49.3.bordner.html</a>.</p>
+<p>Bracken, Harry M. 1965. <em>The Early Reception of Berkeley’s Immaterialism 1710–1733</em>. Second. The Hague: Springer.</p>
+<p>Downing, Lisa. 2013. “George Berkeley.” In <em>The Stanford Encyclopedia of Philosophy</em>, edited by Edward N. Zalta, Spring 2013. <a href="http://plato.stanford.edu/archives/spr2013/entries/berkeley/">http://plato.stanford.edu/archives/spr2013/entries/berkeley/</a>.</p>
+<p>Fogelin, Robert. 2001. <em>Routledge Philosophy Guidebook to Berkeley and the Principles of Human Knowledge</em>. Routledge. <a href="http://books.google.com.proxy.library.cornell.edu/books?hl=en&amp;lr=&amp;id=iYFpOYLlGO0C&amp;oi=fnd&amp;pg=PP2&amp;dq=berkeley+principles+fogelin&amp;ots=P2vrB10d9d&amp;sig=fMD14C9PclbCRPbFRT1o1WOnLgM">http://books.google.com.proxy.library.cornell.edu/books?hl=en&amp;lr=&amp;id=iYFpOYLlGO0C&amp;oi=fnd&amp;pg=PP2&amp;dq=berkeley+principles+fogelin&amp;ots=P2vrB10d9d&amp;sig=fMD14C9PclbCRPbFRT1o1WOnLgM</a>.</p>
+<p>Saidel, Eric. 1993. “Making Sense of Berkeley’s Challenge.” <em>History of Philosophy Quarterly</em> 10 (4) (October): 325–339. <a href="http://www.jstor.org/stable/27744072">http://www.jstor.org/stable/27744072</a>.</p>
+<p>Sellars, Wilfrid. 1978. “Berkeley and Descartes: Reflections on the Theory of Ideas.” In <em>Studies in Perception</em>, edited by P.K. Machamer and R.G. Turnbull, 259–311. Columbus: Ohio University Press.</p>
+<p>Turbayne, Colin Murray. 1982. <em>Berkeley: Critical and Interpretive Essays</em>. Minneapolis, MN: University of Minnesota Press.</p>
+<p>Winkler, Kenneth P. 1989. <em>Berkeley: An Interpretation</em>. Oxford: Clarendon Press.</p>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p><span class="citation">Winkler (1989)</span>; <span class="citation">Downing (2013)</span><a href="#fnref1">↩</a></p></li>
+</ol>
+</div>
+</body>
+</html>
+
+<!-- ##END MARKED WRAPPER## -->
+    </div>
+</body>
+</html>
