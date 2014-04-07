@@ -1,0 +1,570 @@
+<!DOCTYPE html>  
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>HumeMind</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+/*
+This document has been created with Marked.app <http://markedapp.com>, Copyright 2011 Brett Terpstra
+Please leave this notice in place, along with any additional credits below.
+---------------------------------------------------------------
+Title: Avenue
+Author: Bram de Haan <http://atelierbramdehaan.nl>
+Description: modern retro
+ */
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+a img {
+  border: none;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+button, input {
+  line-height: normal;
+}
+button, input, select, textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  /* vertical-align: middle; */
+}
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+  cursor: pointer;
+  /* overflow: visible; */
+}
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  padding: 0 !important;
+}
+#wrapper {
+  margin-bottom: 0;
+}
+#wrapper img {
+  max-width: 100%;
+  height: auto;
+}
+#wrapper dd {
+  margin-bottom: 1em;
+}
+#wrapper li > p:first-child {
+  margin: 0;
+}
+#wrapper caption, #wrapper col, #wrapper colgroup, #wrapper table, #wrapper tbody, #wrapper td, #wrapper tfoot, #wrapper th, #wrapper thead, #wrapper tr {
+  border-spacing: 0;
+}
+#wrapper table {
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-collapse: collapse;
+  display: table;
+  empty-cells: hide;
+  margin: -1px 0 23px;
+  padding: 0;
+  table-layout: fixed;
+  width: 100%;
+}
+#wrapper caption {
+  display: table-caption;
+  font-weight: 700;
+}
+#wrapper col {
+  display: table-column;
+}
+#wrapper colgroup {
+  display: table-column-group;
+}
+#wrapper tbody {
+  display: table-row-group;
+}
+#wrapper tfoot {
+  display: table-footer-group;
+}
+#wrapper thead {
+  display: table-header-group;
+  border-bottom: solid 1px #999;
+}
+#wrapper td, #wrapper th {
+  display: table-cell;
+}
+#wrapper tr {
+  display: table-row;
+}
+#wrapper table th, #wrapper table td {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  padding: 0 1em;
+}
+#wrapper dt, #wrapper th {
+  font-weight: 700;
+}
+#wrapper dd {
+  padding-left: 1.4em;
+}
+#wrapper table tr:nth-child(even) {
+  background: rgba(200, 200, 200, 0.25);
+}
+#wrapper figure {
+  display: inline-block;
+  position: relative;
+  margin: 1em 0 2em;
+}
+#wrapper figcaption {
+  font-family: AvenirNext-Italic, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  font-style: italic;
+  text-align: center;
+}
+#wrapper figure:hover > figcaption {
+  /* background: rgba(0,0,0,1) */
+}
+/* #wrapper pre { moved down to base styles; } */
+.poetry #wrapper pre {
+  display: block;
+  font-family: Georgia, Garamond, serif !important;
+  font-size: 110% !important;
+  font-style: italic;
+  line-height: 1.6;
+  margin-left: 1em;
+}
+.poetry #wrapper pre code {
+  font-family: Georgia, Garamond, serif !important;
+
+}
+#wrapper sup, #wrapper sub, #wrapper a.footnote {
+  font-size: 1.4ex;
+  height: 0;
+  line-height: 1;
+  position: relative;
+  vertical-align: super;
+}
+#wrapper sub {
+  vertical-align: sub;
+  top: -1px;
+}
+#wrapper .footnote {
+  font-size: .8rem;
+  vertical-align: super;
+}
+#wrapper .footnotes p {
+  font-size: 1.9ex;
+}
+#wrapper ul ul {
+  margin-left: 1em;
+}
+
+#wrapper ul ul,
+#wrapper ol ol {
+  margin-left: 1em;
+}
+#wrapper li ul,
+#wrapper li ol {
+  margin-bottom: 0;
+}
+
+@media print {
+  body {
+    overflow: auto;
+  }
+
+  img, pre, blockquote, table, figure, p {
+    page-break-inside: avoid;
+  }
+
+  #wrapper {
+    background: #fff;
+    color: #000;
+    font-size: 85%;
+    padding: 10px;
+    position: relative;
+    text-indent: 0;
+  }
+}
+
+@media screen {
+  .inverted, .inverted #wrapper {
+    background: #222;
+  }
+  .inverted pre,
+  .inverted img {
+    border-color: #111;
+    background: #1a1a1a;
+  }
+  .inverted pre * {
+    background: #1a1a1a !important;
+  }
+
+  .inverted hr {
+    border-color: #999 !important;
+  }
+
+  .inverted p, .inverted td, .inverted li, .inverted h1, .inverted h2, .inverted h3, .inverted h4, .inverted h5, .inverted h6, .inverted pre, .inverted code, .inverted th, .inverted .math, .inverted caption, .inverted dd, .inverted dt {
+    color: #f9f9f9 !important;
+  }
+
+  .inverted table tr:nth-child(odd), .inverted table th:nth-child(odd), .inverted table td:nth-child(odd) {
+    background: none;
+  }
+
+  .inverted a {
+    color: #ff5778;
+  }
+}
+.max-width {
+  max-width: 100%;
+  height: auto;
+}
+/* ::Base styles Almost exclusively single element selectors */
+/* ------------------------------------------------------------ */
+html {
+  font-size: 100%;
+}
+body {
+  font: 100%/1.388 AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  color: #111;
+  padding: 0 5% 1rem !important;
+}
+a {
+  color: crimson;
+}
+a:hover, a:focus, a:active {
+  color: #ff2450;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: AvenirNextCondensed-DemiBold, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  /* margin: 0; */
+  padding: .5em 0 0;
+}
+h2, h3, h4, h5 {
+  border-bottom: 1px solid #777;
+}
+h1 {
+  font-size: 2.25rem;
+  line-height: 1.11111;
+}
+h2 {
+  font-size: 1.875rem;
+  line-height: 1.33333;
+}
+h3 {
+  font-size: 1.375rem;
+  line-height: 1.45455;
+}
+h4 {
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+h5 {
+  font-size: 1.125rem;
+  line-height: 1.33333;
+}
+h6 {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+pre, label {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+p {
+  font-size: 1.388rem;
+  line-height: 1.33333;
+  /* margin: 0; */
+  padding: .5em 0;
+  max-width: 30em;
+}
+h2 + p,
+h3 + p,
+h4 + p,
+h5 + p {
+  padding-top: 0;
+  margin-top: 1px;
+  border-top: 1px solid #999;
+}
+ol, ul {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0 0 2em 0;
+}
+li {
+  line-height: auto;
+}
+pre {
+  display: block;
+  margin: 1.4em auto;
+  background: #fcf9f1;
+  /* f9f9f9; */
+  padding: 15px 10px 10px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  border: solid 1px  #f0e0b2;
+  font-family: Consolas, Menlo, Monaco, monospace !important;
+  font-size: .875rem;
+  max-width: 90%;
+}
+pre * {
+  background: #fcf9f1 !important;
+}
+code {
+  font-family: Consolas, Menlo, Monaco, monospace;
+}
+ul {
+  list-style-position: outside;
+  list-style-type: square;
+}
+ol {
+  list-style-position: outside;
+  list-style-type: decimal;
+}
+strong, b {
+  font-family: AvenirNext-Bold, AvenirNextCondensed-DemiBold, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  font-weight: 600;
+}
+em, i, q {
+  font-family: AvenirNext-BoldItalic, AvenirNext-Italic, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  font-style: italic;
+}
+blockquote {
+  padding-left: 1em;
+  border-left: 0.3125em solid #c0c0c0;
+  line-height: normal;
+  /* margin: 0; */
+}
+blockquote p {
+  font-family: AvenirNext-Italic, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  font-style: italic;
+  /* margin: 0; */
+  font-size: 1.25rem;
+  line-height: 1.2;
+  margin: 1.2em 0 1.2em 0;
+}
+img {
+ padding: 1em;
+ background-color: #e6e6e6;
+ border: 1px solid #ddd;
+ -webkit-border-radius: 3px;
+ -moz-border-radius: 3px;
+ -o-border-radius: 3px;
+ border-radius: 3px;
+}
+
+@media screen and (max-width: 750px) {
+  -webkit-text-size-adjust: none;
+}
+
+
+@media print{
+#generated-toc-clone,#generated-toc{display:none!important}
+}
+
+</style>
+<style>#wrapper { max-width:600px; margin:0 auto }</style>
+</head>
+<body class="normal poetry">
+  <div id="wrapper">
+      <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Class notes (4/8) – do not cite or circulate" />
+  <title>Hume’s Theory of Mind</title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+<div id="header">
+<h1 class="title">Hume’s Theory of Mind</h1>
+<h2 class="author">Class notes (4/8) – do not cite or circulate</h2>
+</div>
+<div id="TOC">
+<ul>
+<li><a href="#the-aim-of-the-enquiry"><span class="toc-section-number">1</span> The Aim of the <em>Enquiry</em></a></li>
+<li><a href="#humes-theory-of-mind"><span class="toc-section-number">2</span> Hume’s Theory of Mind</a><ul>
+<li><a href="#impressions-ideas"><span class="toc-section-number">2.1</span> Impressions &amp; Ideas</a></li>
+<li><a href="#association"><span class="toc-section-number">2.2</span> Association</a></li>
+</ul></li>
+<li><a href="#references">References</a></li>
+</ul>
+</div>
+<!-- NOTE: Reading Plan:
+Day One: Sections 1-3 of Enquiry on psychology
+Day Two: Sections 4-7 of Enquiry on causation
+Day Three: Excerpt from Treatise Appendix on Personal ID & Section 12 on skepticism -->
+
+<p><a href="http://plato.stanford.edu/entries/hume/">David Hume</a> (1711-1776) is often considered the last of the ‘triumvirate’ of great British philosophers consisting of himself, Locke, and Berkeley. Hume’s major philosophical works — <em>A Treatise of Human Nature</em> (1739-1740), the <em>Enquiries concerning Human Understanding</em> (1748) and <em>concerning the Principles of Morals</em> (1751), as well as the posthumously published <em>Dialogues concerning Natural Religion</em> (1779) — were scandalous in their time and remain widely and deeply influential in contemporary analytic philosophy. Hume’s first major work, the <em>Treatise on Human Nature</em>, published when he was only 28, was wildly unpopular. It sold very few copies, and Hume jested that it fell ‘dead-born from the press’. Hume aspired to, but never received, an academic post. He was turned down at both Edinburgh and Glasgow.</p>
+<p>Though Hume’s interests, philosophical and otherwise (he wrote an important <em>History of England</em>, in six volumes), ranged widely, he is perhaps best known for his model of the human mind, his critiques of causality, necessity, and induction, his views on personal identity, and his scathing attacks on religion. We will focus on his views of the mind, personal identity, and causation. It was this set of views which led most clearly to his rather devastating assessment of the study of metaphysics, surely one of the most famous pronouncements in the history of philosophy.</p>
+<blockquote>
+<p>34 When we run over libraries, persuaded of these principles, what havoc must we make? If we take in our hand any volume; of divinity or school metaphysics, for instance; let us ask, Does it contain any abstract reasoning concerning quantity or number? No. Does it contain any experimental reasoning concerning matter of fact and existence? No. Commit it then to the flames: For it can contain nothing but sophistry and illusion. (EMT 86)</p>
+</blockquote>
+<h1 id="the-aim-of-the-enquiry"><span class="header-section-number">1</span> The Aim of the <em>Enquiry</em></h1>
+<p>Hume sets out in the <em>Enquiry</em> to achieve two broad aims, one negative and the other positive. His negative aim is to demonstrate the fruitlessness of pursuing metaphysical questions. Such ‘abstruse questions’ arise</p>
+<blockquote>
+<p>either from •the fruitless efforts of human vanity, trying to penetrate into subjects that are utterly inaccessible to the understanding, or from •the craft of popular superstitions which, being unable to defend themselves by fair arguments, raise these entangling ·metaphysical· brambles to cover and protect their weakness. (EMT 4)</p>
+</blockquote>
+<p>In either case, according to Hume, metaphysics isn’t scientific (in the Aristotelian sense of being an organized and self-standing body of knowledge) and never will be.</p>
+<p>Hume believes that the negative aim of demonstrating the folly of metaphysical pursuits is demonstrated via the accomplishment of his positive aim, which he says is to,</p>
+<blockquote>
+<p>enquire seriously into the nature of human understanding, and through an exact analysis of its powers and capacity show that it’s utterly unfitted for such remote and abstruse subjects. (EMT 5)</p>
+</blockquote>
+<p>In some ways then, Hume’s <em>Enquiry</em> has much the same aim as Locke’s <em>Enquiry</em>. Both want to articulate the nature and limits of human knowledge by means of an investigation of the faculties by which such knowledge is acquired, and by doing so settle longstanding philosophical disputes. Also, like Locke, Hume will arrive at a conception of the human mind as far more limited than it had been taken to be by many, particularly those philosophers and theologians who had confidence in the capacity of the human mind to reveal fundamental truths concerning the nature of reality and the existence and nature of God.</p>
+<h1 id="humes-theory-of-mind"><span class="header-section-number">2</span> Hume’s Theory of Mind</h1>
+<p>Hume considers his project of articulating the nature of human understanding as akin to Newton’s unification of natural phenomena according to his mechanical laws.</p>
+<blockquote>
+<p>Astronomers were for a long time contented with proving, from the phenomena, the true motions, order, and size of the heavenly bodies; until at last a scientist, ·Isaac Newton·, came along and also determined the laws and forces by which the revolutions of the planets are governed and directed. Similar things have been done with regard to other parts of nature. And there is no reason to despair of equal success in our enquiries into the powers and organisation of the mind, if we carry them out as ably and alertly ·as those other scientists did their work·. (EMT 6)</p>
+</blockquote>
+<p>Hence, Hume intends to articulate the basic laws or forces by which the human mind operates, and thus unify the various phenomena that constitute human experience and knowledge under as limited a number of basic elements as possible, and show that the interaction of these elements according to some basic ‘laws’ will provide all we need to explain the nature and extent of human knowledge.</p>
+<h2 id="impressions-ideas"><span class="header-section-number">2.1</span> Impressions &amp; Ideas</h2>
+<p>Hume’s anatomy of the mind begins with its ‘perceptions’. These are of two basic kinds—<em>impressions</em> and <em>ideas</em>.</p>
+<blockquote>
+<p>So we can divide the mind’s perceptions into two classes, on the basis of their different degrees of force and liveliness. The less forcible and lively are commonly called ‘thoughts’ or ‘ideas’. The others have no name in our language or in most others, presumably because we don’t need a general label for them except when we are doing philosophy. Let us, then, take the liberty of calling them ‘impressions’, using that word in a slightly unusual sense. By the term ‘impression’, then, I mean all our more lively perceptions when we hear or see or feel or love or hate or desire or will. These are to be distinguished from ideas, which are the fainter perceptions of which we are conscious when we reflect on our impressions. (EMT 7-8)</p>
+</blockquote>
+<p>Impressions and ideas <em>differ</em> by virtue of differences along two dimensions—their ‘force’ and ‘liveliness’ or ‘vivacity’. It is hard to say exactly how we should construe these two dimensions. Certainly, they need to coherently apply to the deliverances of the five senses—sense impressions—as well as emotions and desires. We might get an idea what Hume is on about with the terms ‘force’ and ‘vivacity’ by thinking of the case with color impression. A color might have a greater or lesser degree of <em>brightness</em>. Construe this as its force. Alternatively, we might vary the degree to which the color is <em>saturated</em>. This is its vivacity. Perhaps something analogous could be said of sound with respect to loudness and pitch.</p>
+<p>Ideas are less forceful and vivid <em>copies</em> of impressions. As Hume puts it,</p>
+<blockquote>
+<p>all our ideas or more feeble perceptions are copies of our impressions or more lively ones. (EMT 8)</p>
+</blockquote>
+<p>This ‘Copy Principle’ strictly limits where our ideas can come from. It says not only that our ideas <em>can</em> come from our impressions, but that they can <em>only</em> come from our impressions, as their copies. Sense experience and introspection provide us with simple impressions from which simple ideas may be copied, but simple ideas come from no other source than as copies of simple impressions. Hume does, however, note one apparent counterexample to the Copy Principle, his ‘missing shade of blue.’</p>
+<blockquote>
+<p>There is, however, one counter-example that may prove that it isn’t absolutely impossible for an idea to occur without a corresponding impression…suppose that a sighted person has become perfectly familiar with colours of all kinds, except for one particular shade of blue (for instance), which he happens never to have met with. Let all the other shades of blue be placed before him, descending gradually from the deepest to the lightest: it is obvious that he will notice a blank in the place where the missing shade should go… Can he fill the blank from his own imagination, calling up in his mind the idea of that particular shade, even though it has never been conveyed to him by his senses? Most people, I think, will agree that he can. This seems to show that simple ideas are not always, in every instance, derived from corresponding impressions. (EMT 9)</p>
+</blockquote>
+<p>Hume thinks that this is a ‘singular’ example, whose existence shouldn’t affect the generality of his Copy Principle. But given the work to which he puts the Copy Principle in his critique of rationalist metaphysics, one might worry that the lacuna he points to here renders his broader critique much more doubtful. For example Hume argues that we can use the Copy Principle to assess the cognitive content of particular concepts in metaphysics.</p>
+<blockquote>
+<p>when we come to suspect that a philosophical term is being used without any meaning or idea (as happens all too often), we need only to ask: From what impression is that supposed idea derived? If none can be pointed out, that will confirm our suspicion ·that the term is meaningless, i.e. has no associated idea·. By bringing ideas into this clear light we may reasonably hope to settle any disputes that arise about whether they exist and what they are like. (EMT 9)</p>
+</blockquote>
+<p>Hume’s view here is that words express ideas in the minds of subject speaking or hearing the word. So if we begin to suspect the cognitive content of a particular philosophical term, e.g. ‘substantial form’, Hume thinks we should to look to the idea expressed by it. If we can find no fixed idea, then we have reason to criticize the use of the term. Alternatively, if we <em>do</em> find an idea, then Hume asks us to trace the idea (or its ‘parts’) to their corresponding impressions. If no such connection between idea and impression may be found, then the idea is a <em>fiction</em>, it does not have a cognitive content. It is, in an important sense, <em>meaningless</em>.</p>
+<p>Hume concludes that,</p>
+<blockquote>
+<p>although our thought seems to be so free, when we look more carefully we’ll find that it is really confined within very narrow limits, and that all this creative power of the mind amounts merely to the ability to combine, transpose, enlarge, or shrink the materials that the senses and experience provide us with. (EMT 8)</p>
+</blockquote>
+<p>Thus, human thought, and with it knowledge, extends only to the bounds of our simple impressions and what may be combined or recombined from those simple materials.</p>
+<h2 id="association"><span class="header-section-number">2.2</span> Association</h2>
+<p>In addition to the basic elements which populate the mind—its impressions and ideas—Hume thinks there is a binding force which governs their combination. This is what Hume calls ‘association’, and he argues that it comes in three basic types: resemblance, contiguity in time and space, and cause and effect. Hume considered his theory of association as one of the central contributions of his philosophical psychology. Association is the ‘glue’ holding together the perceptions which constitute the mind. All perceptions are capapable of standing in associative relations with other perceptions, and it is the existence of such relations that accounts for much of the ebb and flow of our mental lives, as well as the behaviour which results from this.</p>
+<p>Association based on resemblance is pretty clear — consider what happens when you look at cloud shapes and they make you think of particular kinds of objects or animals. Association based on contiguity might be illustrated by how certain locations (e.g. your childhood bedroom) evoke memories (e.g. growing up in your parents house).</p>
+<p>Finally, one associates impressions or ideas with respect to their causes and effects. Every time you drink a caffeinated beverage you enjoy a particular effect. According to Hume, repeated exposure to such events types naturally leads to causal association. The thought of drinking a cup of coffee brings to mind the feelings associated with its — i.e. its effects.</p>
+<p>Hume’s conception of association based on cause and effect is central to his conception of the nature of causal reasoning, which he considers the central tool for human beings in coming to have knowledge of the world. In the next set of notes, we’ll look at Hume’s critique of causal reasoning.</p>
+<hr />
+<!--
+§§ 1-4
+§1 - Philosophy
+
+1. what is 'moral philosophy'? (1)
+2. Two ways of treating of moral philosophy (1-2)
+    - virtue theoretic
+    - reason theoretic
+3. Problem with metaphysics (4)
+4. Issues in metaphysics can only be solved by figuring the 'nature of human understanding' (5)
+
+§2 - Ideas
+
+1. impressions vs. ideas (7-8)
+2. the limits of thought to the recombination of ideas (8)
+3. The 'Copy Principle' (8)
+    (1) When we analyse our thoughts or ideas—however complex or elevated they are—we always find them to be made up of simple ideas that were copied from earlier feelings or sensations.
+    (2) If a man can’t have some kind of sensation because there is something wrong with his eyes, ears etc., he will never be found to have corresponding ideas.
+4. A counterexample?: The missing shade of blue (9)
+5. A criterion of meaning (9)
+    >when we come to suspect that a philosophical term is being used without any meaning or idea (as happens all too often), we need only to ask: From what impression is that supposed idea derived? If none can be pointed out, that will confirm our suspicion ·that the term is meaningless, i.e. has no associated idea·. By bringing ideas into this clear light we may reasonably hope to settle any disputes that arise about whether they exist and what they are like.
+
+§3 - Association
+
+1. There is order & regularity to the relationships between ideas - they are interconnected in a particular set of ways (10)
+2. There are three basic kinds of connection or 'association' (11)
+    - resemblance
+    - contiguity in time or place
+    - cause & effect
+
+§4 - Skeptical Doubts
+
+1. Hume's Fork: Relations of ideas and matters of fact (11)
+    - relations of ideas: truths of mathematics & logic
+        + known just via thinking about the proposition, independent of any issue of what exists
+        + certain and self-evident
+        + necessary truths --- i.e. contrary or contradiction is impossible
+    - matters of fact: truths of the empirical world
+        + denial involves no contradiction
+        + contingent rather than necessary
+        + known only via experience
+        + cannot be arrived at (merely) through logical demonstration
+2. What gives us certainty (knowledge) of matters of fact beyond that which is currently present to the senses? (12)
+    - all reasoning based on relations of cause/effect
+    - which causes have which effects can never be know a priori (12)
+        + >Adam, even if his reasoning abilities were perfect from the start, couldn’t have inferred from the fluidity and transparency of water that it could drown him, or from the light and warmth of fire that it could burn him. The qualities of an object that appear to the senses never reveal the causes that produced the object or the effects that it will have
+    - all casual connections known via experience only
+        + formerly unknown effects of features of objects (marble plates)
+        + unusual events (gunpowder explosion; magnetism)
+        + effects of 'hidden' or 'secret' structure (nourishment from milk/bread)
+    - every event/object is distinct from its cause and cannot be (logically) derived from it
+        + >every effect is a distinct event from its cause. So it can’t be discovered in the cause, and the first invention or conception of it a priori must be wholly arbitrary. Also, even after it has been suggested, the linking of it with the cause must still appear as arbitrary, because plenty of other possible effects must seem just as consistent and natural from reason’s point of view (14)
+        + >The mind can’t possibly find the effect in the supposed cause, however carefully we examine it, for the effect is totally different from the cause and therefore can never be discovered in it. (13)
+3. Our conclusions based on association of cause and effect are not rational (15)
+    - All argument is either demonstrative or non-demonstrative (16)
+    - Argument concerning cause/effect relations and future events are non-demonstrative; they concern matters of fact, not relations between ideas
+    - There is no non-circular justification for knowledge of causes and effects beyond that of the present moment and the remembered past
+        + >According to my account, all arguments about existence are based on the relation of cause and effect; our knowledge of that relation is derived entirely from experience; and in drawing conclusions from experience we assume that the future will be like the past. So if we try to prove this assumption by probable arguments, i.e. arguments regarding existence, we shall obviously be going in a circle, taking for granted the very point that is in question. (16)
+    - all inferences from experience are based on the assumption that the future will resemble the past, and that similar powers will be combined with similar sensible qualities. (17)
+        + what justified this inference? Nothing that isn't non-circular!
+
+-->
+
+<h1 id="references" class="unnumbered">References</h1>
+<hr />
+<!-- -->
+
+
+
+<div class="references">
+<p>Garrett, Don. 1997. <em>Cognition and Commitment in Hume’s Philosophy</em>. Oxford: Oxford University Press.</p>
+<p>Norton, David Fate, and Jacqueline Taylor, ed. 2009. <em>The Cambridge Companion to Hume</em>. Cambridge: Cambridge University Press.</p>
+<p>Owen, David. 2002. <em>Hume’s Reason</em>. Oxford University Press.</p>
+<p>———. 2009. “Hume and the Mechanics of Mind : Impressions, Ideas, and Association.” In <em>The Cambridge Companion to Hume</em>, edited by David Fate Norton and Jacqueline Taylor, 70–104. Cambridge: Cambridge University Press.</p>
+<p>Read, Rupert, and Kenneth Richman, ed. 2000. <em>The New Hume Debate</em>. London: Routledge.</p>
+<p>Strawson, Galen. 1989. <em>The Secret Connexion: Causation, Realism, and David Hume</em>. London: Clarendon Press.</p>
+</div>
+</body>
+</html>
+
+<!-- ##END MARKED WRAPPER## -->
+    </div>
+</body>
+</html>
