@@ -1,0 +1,514 @@
+<!DOCTYPE html>  
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>HumeIdentity</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+/*
+This document has been created with Marked.app <http://markedapp.com>, Copyright 2011 Brett Terpstra
+Please leave this notice in place, along with any additional credits below.
+---------------------------------------------------------------
+Title: Avenue
+Author: Bram de Haan <http://atelierbramdehaan.nl>
+Description: modern retro
+ */
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+a img {
+  border: none;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+button, input {
+  line-height: normal;
+}
+button, input, select, textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  /* vertical-align: middle; */
+}
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+  cursor: pointer;
+  /* overflow: visible; */
+}
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  padding: 0 !important;
+}
+#wrapper {
+  margin-bottom: 0;
+}
+#wrapper img {
+  max-width: 100%;
+  height: auto;
+}
+#wrapper dd {
+  margin-bottom: 1em;
+}
+#wrapper li > p:first-child {
+  margin: 0;
+}
+#wrapper caption, #wrapper col, #wrapper colgroup, #wrapper table, #wrapper tbody, #wrapper td, #wrapper tfoot, #wrapper th, #wrapper thead, #wrapper tr {
+  border-spacing: 0;
+}
+#wrapper table {
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-collapse: collapse;
+  display: table;
+  empty-cells: hide;
+  margin: -1px 0 23px;
+  padding: 0;
+  table-layout: fixed;
+  width: 100%;
+}
+#wrapper caption {
+  display: table-caption;
+  font-weight: 700;
+}
+#wrapper col {
+  display: table-column;
+}
+#wrapper colgroup {
+  display: table-column-group;
+}
+#wrapper tbody {
+  display: table-row-group;
+}
+#wrapper tfoot {
+  display: table-footer-group;
+}
+#wrapper thead {
+  display: table-header-group;
+  border-bottom: solid 1px #999;
+}
+#wrapper td, #wrapper th {
+  display: table-cell;
+}
+#wrapper tr {
+  display: table-row;
+}
+#wrapper table th, #wrapper table td {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  padding: 0 1em;
+}
+#wrapper dt, #wrapper th {
+  font-weight: 700;
+}
+#wrapper dd {
+  padding-left: 1.4em;
+}
+#wrapper table tr:nth-child(even) {
+  background: rgba(200, 200, 200, 0.25);
+}
+#wrapper figure {
+  display: inline-block;
+  position: relative;
+  margin: 1em 0 2em;
+}
+#wrapper figcaption {
+  font-family: AvenirNext-Italic, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  font-style: italic;
+  text-align: center;
+}
+#wrapper figure:hover > figcaption {
+  /* background: rgba(0,0,0,1) */
+}
+/* #wrapper pre { moved down to base styles; } */
+.poetry #wrapper pre {
+  display: block;
+  font-family: Georgia, Garamond, serif !important;
+  font-size: 110% !important;
+  font-style: italic;
+  line-height: 1.6;
+  margin-left: 1em;
+}
+.poetry #wrapper pre code {
+  font-family: Georgia, Garamond, serif !important;
+
+}
+#wrapper sup, #wrapper sub, #wrapper a.footnote {
+  font-size: 1.4ex;
+  height: 0;
+  line-height: 1;
+  position: relative;
+  vertical-align: super;
+}
+#wrapper sub {
+  vertical-align: sub;
+  top: -1px;
+}
+#wrapper .footnote {
+  font-size: .8rem;
+  vertical-align: super;
+}
+#wrapper .footnotes p {
+  font-size: 1.9ex;
+}
+#wrapper ul ul {
+  margin-left: 1em;
+}
+
+#wrapper ul ul,
+#wrapper ol ol {
+  margin-left: 1em;
+}
+#wrapper li ul,
+#wrapper li ol {
+  margin-bottom: 0;
+}
+
+@media print {
+  body {
+    overflow: auto;
+  }
+
+  img, pre, blockquote, table, figure, p {
+    page-break-inside: avoid;
+  }
+
+  #wrapper {
+    background: #fff;
+    color: #000;
+    font-size: 85%;
+    padding: 10px;
+    position: relative;
+    text-indent: 0;
+  }
+}
+
+@media screen {
+  .inverted, .inverted #wrapper {
+    background: #222;
+  }
+  .inverted pre,
+  .inverted img {
+    border-color: #111;
+    background: #1a1a1a;
+  }
+  .inverted pre * {
+    background: #1a1a1a !important;
+  }
+
+  .inverted hr {
+    border-color: #999 !important;
+  }
+
+  .inverted p, .inverted td, .inverted li, .inverted h1, .inverted h2, .inverted h3, .inverted h4, .inverted h5, .inverted h6, .inverted pre, .inverted code, .inverted th, .inverted .math, .inverted caption, .inverted dd, .inverted dt {
+    color: #f9f9f9 !important;
+  }
+
+  .inverted table tr:nth-child(odd), .inverted table th:nth-child(odd), .inverted table td:nth-child(odd) {
+    background: none;
+  }
+
+  .inverted a {
+    color: #ff5778;
+  }
+}
+.max-width {
+  max-width: 100%;
+  height: auto;
+}
+/* ::Base styles Almost exclusively single element selectors */
+/* ------------------------------------------------------------ */
+html {
+  font-size: 100%;
+}
+body {
+  font: 100%/1.388 AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  color: #111;
+  padding: 0 5% 1rem !important;
+}
+a {
+  color: crimson;
+}
+a:hover, a:focus, a:active {
+  color: #ff2450;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: AvenirNextCondensed-DemiBold, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  /* margin: 0; */
+  padding: .5em 0 0;
+}
+h2, h3, h4, h5 {
+  border-bottom: 1px solid #777;
+}
+h1 {
+  font-size: 2.25rem;
+  line-height: 1.11111;
+}
+h2 {
+  font-size: 1.875rem;
+  line-height: 1.33333;
+}
+h3 {
+  font-size: 1.375rem;
+  line-height: 1.45455;
+}
+h4 {
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+h5 {
+  font-size: 1.125rem;
+  line-height: 1.33333;
+}
+h6 {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+pre, label {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+p {
+  font-size: 1.388rem;
+  line-height: 1.33333;
+  /* margin: 0; */
+  padding: .5em 0;
+  max-width: 30em;
+}
+h2 + p,
+h3 + p,
+h4 + p,
+h5 + p {
+  padding-top: 0;
+  margin-top: 1px;
+  border-top: 1px solid #999;
+}
+ol, ul {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0 0 2em 0;
+}
+li {
+  line-height: auto;
+}
+pre {
+  display: block;
+  margin: 1.4em auto;
+  background: #fcf9f1;
+  /* f9f9f9; */
+  padding: 15px 10px 10px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  border: solid 1px  #f0e0b2;
+  font-family: Consolas, Menlo, Monaco, monospace !important;
+  font-size: .875rem;
+  max-width: 90%;
+}
+pre * {
+  background: #fcf9f1 !important;
+}
+code {
+  font-family: Consolas, Menlo, Monaco, monospace;
+}
+ul {
+  list-style-position: outside;
+  list-style-type: square;
+}
+ol {
+  list-style-position: outside;
+  list-style-type: decimal;
+}
+strong, b {
+  font-family: AvenirNext-Bold, AvenirNextCondensed-DemiBold, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  font-weight: 600;
+}
+em, i, q {
+  font-family: AvenirNext-BoldItalic, AvenirNext-Italic, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  font-style: italic;
+}
+blockquote {
+  padding-left: 1em;
+  border-left: 0.3125em solid #c0c0c0;
+  line-height: normal;
+  /* margin: 0; */
+}
+blockquote p {
+  font-family: AvenirNext-Italic, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  font-style: italic;
+  /* margin: 0; */
+  font-size: 1.25rem;
+  line-height: 1.2;
+  margin: 1.2em 0 1.2em 0;
+}
+img {
+ padding: 1em;
+ background-color: #e6e6e6;
+ border: 1px solid #ddd;
+ -webkit-border-radius: 3px;
+ -moz-border-radius: 3px;
+ -o-border-radius: 3px;
+ border-radius: 3px;
+}
+
+@media screen and (max-width: 750px) {
+  -webkit-text-size-adjust: none;
+}
+
+
+@media print{
+#generated-toc-clone,#generated-toc{display:none!important}
+}
+
+</style>
+<style>#wrapper { max-width:600px; margin:0 auto }</style>
+</head>
+<body class="normal poetry">
+  <div id="wrapper">
+      <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Class notes (4/15) – do not cite or circulate" />
+  <title>Hume on Personal Identity &amp; Skepticism</title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+<div id="header">
+<h1 class="title">Hume on Personal Identity &amp; Skepticism</h1>
+<h2 class="author">Class notes (4/15) – do not cite or circulate</h2>
+</div>
+<div id="TOC">
+<ul>
+<li><a href="#hume-on-personal-identity"><span class="toc-section-number">1</span> Hume on Personal Identity</a><ul>
+<li><a href="#the-genealogical-argument"><span class="toc-section-number">1.1</span> The Genealogical Argument</a></li>
+<li><a href="#identity-and-fiction"><span class="toc-section-number">1.2</span> Identity and Fiction</a></li>
+<li><a href="#humes-skeptical-conclusion"><span class="toc-section-number">1.3</span> Hume’s Skeptical Conclusion</a></li>
+</ul></li>
+<li><a href="#references">References</a></li>
+</ul>
+</div>
+<h1 id="hume-on-personal-identity"><span class="header-section-number">1</span> Hume on Personal Identity</h1>
+<p>One of the central claims of Descartes’s philosophy is that we have privileged knowledge of our own existence and nature.</p>
+<blockquote>
+<p>I know that I exist and that nothing else belongs to my nature or essence except that I am a thinking thing; from this it follows that my essence consists solely in my being a thinking thing, even though there may be a body that is very closely joined to me. I have a vivid and clear idea of •myself as something that thinks and isn’t extended, and one of •body as something that is extended and does not think. So it is certain that •I am really distinct from •my body and can exist without it. (Med 6; EMT 29)</p>
+</blockquote>
+<p>This is also a central claim of Leibniz’s philosophy.</p>
+<blockquote>
+<p>Our intellectual ideas that we don’t get through the senses include the idea of being, which we have because we are beings, of unity, which we have because each of us is one, of substance, which we have because we are substances, of duration, which we have because we last through time, of change, which we have because we change, of action, which we have because we act, of perception, which we have because we perceive, and of pleasure, which we have because we have pleasure; and the same holds for hosts of other intellectual ideas that we have. (NE Preface; EMT 4)</p>
+</blockquote>
+<p>Hume is critical of the position that we have any knowledge of the nature of the self (as a mental substance), or any knowledge derived from our knowledge of the nature of the self (e.g. as a unified substance).</p>
+<h2 id="the-genealogical-argument"><span class="header-section-number">1.1</span> The Genealogical Argument</h2>
+<p>Hume puts his Copy Principle to work in his criticism of the idea of the self. The Copy Principle says that all ideas are copied from impressions. So for any idea, including the idea <em>self</em>, there must be a corresponding simple or complex impression from which it is copied. Hume then asks, from what impression do we derive our idea of <em>self</em>?</p>
+<blockquote>
+<p>We are every moment intimately conscious of what we call our self; we feel its existence and its continuing to exist, and are certain—more even than any demonstration could make us—both of its perfect identity and of its simplicity…To offer further evidence of the existence of one’s self would make it less evident, not more, because no fact we could use as evidence is as intimately present to our consciousness as is the existence of our self. If we doubt the latter, we can’t be certain of anything. Unfortunately, all these forthright assertions are in conflict with the very experience that is supposed to support them. We don’t so much as have an idea of self of the kind that is here described. From what impression could this idea be derived? (THN I.iv.6; EMT 132)</p>
+</blockquote>
+<p>Hume goes on to argue that all we have are distinct impressions of particular qualities, which can exist by themselves, and which provide no basis for thinking that they belong to one particular self.</p>
+<blockquote>
+<p>what are we to say about all our particular perceptions? They are all different, distinguishable, and separable from one other—they can be separately thought about, and can exist separately—with no need for anything to support their existence. In what way do they belong to self? How are they connected with it? For my part, when I look inward at what I call myself, I always stumble on some particular perception of heat or cold, light or shade, love or hatred, pain or pleasure, or the like. I never catch myself without a perception, and never observe anything but the perception. (THN I.iv.6; EMT 132)</p>
+</blockquote>
+<p>Hume’s contention here is that (i) all impressions are capable of existing and being thought of separately, which means we do not need to posit some distinct <em>subject</em> that has the impression; and (ii) introspection never yields any impression or corresponding idea of a <em>self</em> or <em>subject</em>, but only other impressions or ideas.</p>
+<p>Hume recognizes that his argument only shows that we lack any knowledge of the self insofar as it is to be identified with a particular impression. But what about the total collection of impressions? Might the subject be identified with this collection? This is Hume’s ‘bundle’ theory of the self.</p>
+<blockquote>
+<p>I am willing to affirm of the rest of mankind that each of us is nothing but a bundle or collection of different perceptions that follow each other enormously quickly and are in a perpetual flux and movement…It is not strictly true that •when a blue colour is seen and a whistling sound heard at the same time, one single unified mind has both these perceptions; nor is it strictly true that •the mind that has a certain perception at one time is the very same mind that has a perception at another time·…What constitutes the mind is just the successive perceptions (THN I.iv.6; EMT 133)</p>
+</blockquote>
+<p>Thus, according to Hume, when we talk about the ‘self’, the ‘thinking subject’, or the ‘mind’, what we are speaking of is a collection of perceptions, plus (presumably) their associative relations. This view entails three surprising conclusions. First, since the ‘bundle’ is in constant flux, there is no subject that persists from moment to moment. Bundles may resemble or be causally related to one another in various ways. But this is not sufficient to identify a persisting subject. A persisting identical subject is, according to Hume a <em>fiction</em>.</p>
+<p>Second, since a bundle is just an aggregate of perceptions, what distinguishes one bundle from another (e.g. my mind from yours) depends entirely on the associative relations that hold between parts of bundle (compare the spatial relations that distinguish one pile of stones from another). Since associative relations are entirely extrinsic to their perceptions (i.e. there is no contradiction involved in a perception’s standing in entirely different associative relations than it currently does), there is nothing significant about the perceptions which are the elements of any single bundle. They could just as easily have been elements of other bundles. As we will see, this point causes significant trouble for Hume, and he ultimately recants his whole positive account.</p>
+<p>Third, Hume’s position puts our knowledge of internal substance (i.e. the mind) on par with that of external substance by saying that in both cases, we have no such knowledge.</p>
+<blockquote>
+<p>Philosophers are beginning to be reconciled to the principle that we have no idea of external substance distinct from the ideas of particular qualities. This should pave the way for a similar principle regarding the mind, namely that we have no notion of it distinct from the particular perceptions. (THN III.Appendix; EMT 139-40)</p>
+</blockquote>
+<p>In this way Hume takes the arguments which Berkeley applied to external matter and applies them to the mind as well. It is in this sense that Hume can be seen as the most ‘radical’, but also consistent, of the British empiricists.</p>
+<h2 id="identity-and-fiction"><span class="header-section-number">1.2</span> Identity and Fiction</h2>
+<p>If Hume is correct then most everything we say and think regarding ourselves and others is false. So why do we believe such falsehoods? How did we get ourselves into such an epistemic muddle?</p>
+<p>Hume provides a theory of identity, what I will, following Jonathan Bennett (<span class="citation">Bennett (2001)</span>), call his ‘Similarity Theory’, which explains why we tend to make such false judgments. I’ll explain below.</p>
+<p>Hume cashes out the notion of identity over time (or ‘diachronic’ identity) in terms of persistence without alteration.</p>
+<blockquote>
+<p>We have a clear idea of an object that remains invariable and uninterrupted while time supposedly passes. We call this the idea of <em>identity</em> or <em>sameness</em>. (I.iv.6; EMT 133)</p>
+</blockquote>
+<p>This, in itself, is a bit surprising. For many philosophers, diachronic identity is wholly compatible with alteration from one moment to the next. Indeed, it is precisely this assumption that generates an issue concerning how things persist through change. Hume seems to dismiss this possibility in his definition.</p>
+<p>Hume thinks that we confuse this notion of (what I will call) strict identity with <em>similarity</em>.</p>
+<blockquote>
+<p>though these two ideas of identity and a sequence of related objects are perfectly distinct from one another and even contrary, yet in our everyday thinking they are often confused with one another, treated as though they were the same. (I.iv.6; EMT 133)</p>
+</blockquote>
+<p>In other words, Hume thinks we are inclined towards such false beliefs concerning personal identity because we regularly mistake similarity for strict identity. We end up engaging in such fictions as personal identity, however, for reasons that Hume thinks are entirely natural. He lists four such reasons.</p>
+<ul>
+<li>masses of matter which change a very small proportion of their parts (134-5)</li>
+<li>gradual change of all the parts of a thing (135)</li>
+<li>linguistic confusion between numeric and qualitative identity (136)</li>
+<li>attribution of identity to constantly changing entities (e.g rivers) (136)</li>
+</ul>
+<p>Hume then goes on to articulate his positive theory in which similarity or resemblance constitutes the basis for our thinking that we have an ideas of a persisting and subsistent subject. He argues that the mechanism by which we grasp the resemblance between one distinct bundle of perceptions and the next is <em>memory</em>.</p>
+<blockquote>
+<p>memory is just a faculty by which we raise up images of past perceptions; and an image of something must resemble it. So ·each memory involves a perception that resembles some past perception the person has had; and· the frequent occurrence of these resembling ·pairs of· perceptions in the chain of thought makes it easier for the imagination to move from one link in the chain to another, making the whole sequence seem like the continuation of a single object. In this way, therefore, memory doesn’t merely show the identity but also helps to create it, by bringing it about that many of the perceptions resemble one another. The account given in this paragraph applies equally to one’s sense of one’s own identity and to one’s thoughts about the identity of others. (I.iv.6; EMT 137)</p>
+</blockquote>
+<p>The capacity for memory is thus a necessary condition of coming to think of ourselves or others as persisting beings. Though there is no strict identity between momentarily existing bundles of perceptions, there is a resemblance of current ideas to past impressions, and the recognition of these resemblance relations leads, according to Hume, to beliefs regarding the persistence of a single thing—the thinking subject or self—through time.</p>
+<p>An obvious problems arises for this account however. What about those times which one does not remember (e.g perhaps after a heavy night of drinking, or a deep sleep)? We do tend to judge of ourselves and others that we exist even at times which we no longer remember, such as early childhood. Hume resolves this problems by appealing to <em>causation</em>. The causal connections between perceptions can account for the practice of beliefs concerning a persisting subject. So we might say that though memory originates the erronous belief in the existence of a persisting self, it is the set of causal relations that exist between our perceptions that entrenches this notion, and the judgmental practice that comes with it.</p>
+<blockquote>
+<p>If we had no memory, we would never have any notion of causation or, consequently, of the chain of causes and effects that constitute our self or person. Once we have acquired this notion of causation from our memory, we can extend the same chain of causes—and consequently the identity of our persons—beyond our memory, stretching it out to include times, circumstances and actions that we have entirely forgotten but which we suppose on general grounds to have existed. (I.iv.6; EMT 138)</p>
+</blockquote>
+<h2 id="humes-skeptical-conclusion"><span class="header-section-number">1.3</span> Hume’s Skeptical Conclusion</h2>
+<p>In the body of the <em>Treatise</em> Hume proposes a view of the self as a non-persisting ‘bundle’ of perceptions. In the Appendix to Book III of the <em>Treatise</em> Hume recants.</p>
+<blockquote>
+<p>In short, there are two principles that I cannot render consistent, nor can I give either of them up: (1) all our distinct perceptions are distinct existences, and (2) the mind never perceives any real connection among distinct existences. If our perceptions either inhered in something simple and individual, or if the mind perceived some real connection among them, there would be no difficulty. For my part, I must plead the privilege of a sceptic and confess that this problem is too hard for my understanding. I don’t say outright that it is absolutely insoluble. (THN III.Appendix; EMT 140)</p>
+</blockquote>
+<p>Why the sudden doubt? Hume does not make his underlying worry explicit. But he seems to be concerned with the following issue, which I first mentioned above—viz. what distinguishes a mind as <em>one mind</em>? (cf. <span class="citation">Bennett (2001)</span>, §309) Even if we accept Hume’s conclusion that there is no persisting subject, and that our beliefs concerning such a subject (whether ourselves or others) are false, we still have lots of facts about ersatz or pseudo-subjects (i.e. distinct but similar bundles whose perceptions are causally linked together) that we must account for. How do we do so? Well, given Hume’s point (1) above, we need some connection. As we’ve seen Hume argue in the <em>Enquiry</em> however, there is no real connection (e.g. a necessary causal connection) between distinct existences of which we we can be aware. So we are left with mere regularity, i.e. ‘causation’ in it’s mere associative sense. But Hume <em>defines</em> such associative causation in terms of the previous and persistent conjunction of perceptions <em>in one mind</em>. So Hume has a viciously circular position. He needs to appeal to causation to account for facts mental unity, and he needs the notion of mental unity to account for causation.</p>
+<h1 id="references" class="unnumbered">References</h1>
+<hr />
+<!-- -->
+
+
+<div class="references">
+<p>Allison, Henry E. 2008. <em>Custom and Reason in Hume</em>. Oxford: Oxford University Press.</p>
+<p>Bennett, Jonathan. 2001. <em>Learning from Six Philosophers: Descartes, Spinoza, Leibniz, Locke, Berkeley, Hume</em>. Vol. II. Oxford: Clarendon Press.</p>
+<p>Morris, William Edward. 2013. “David Hume.” In <em>The Stanford Encyclopedia of Philosophy</em>, edited by Edward N. Zalta, Spring 2013. <a href="http://plato.stanford.edu/archives/spr2013/entries/hume/">http://plato.stanford.edu/archives/spr2013/entries/hume/</a>.</p>
+<p>Norton, David Fate, and Jacqueline Taylor, ed. 2009. <em>The Cambridge Companion to Hume</em>. Cambridge: Cambridge University Press.</p>
+<p>Owen, David. 2002. <em>Hume’s Reason</em>. Oxford University Press.</p>
+<p>Strawson, Galen. 1989. <em>The Secret Connexion: Causation, Realism, and David Hume</em>. London: Clarendon Press.</p>
+</div>
+</body>
+</html>
+
+<!-- ##END MARKED WRAPPER## -->
+    </div>
+</body>
+</html>
