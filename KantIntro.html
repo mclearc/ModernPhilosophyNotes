@@ -1,0 +1,539 @@
+<!DOCTYPE html>  
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>KantIntro</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+/*
+This document has been created with Marked.app <http://markedapp.com>, Copyright 2011 Brett Terpstra
+Please leave this notice in place, along with any additional credits below.
+---------------------------------------------------------------
+Title: Avenue
+Author: Bram de Haan <http://atelierbramdehaan.nl>
+Description: modern retro
+ */
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+a img {
+  border: none;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+button, input {
+  line-height: normal;
+}
+button, input, select, textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  /* vertical-align: middle; */
+}
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+  cursor: pointer;
+  /* overflow: visible; */
+}
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  padding: 0 !important;
+}
+#wrapper {
+  margin-bottom: 0;
+}
+#wrapper img {
+  max-width: 100%;
+  height: auto;
+}
+#wrapper dd {
+  margin-bottom: 1em;
+}
+#wrapper li > p:first-child {
+  margin: 0;
+}
+#wrapper caption, #wrapper col, #wrapper colgroup, #wrapper table, #wrapper tbody, #wrapper td, #wrapper tfoot, #wrapper th, #wrapper thead, #wrapper tr {
+  border-spacing: 0;
+}
+#wrapper table {
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-collapse: collapse;
+  display: table;
+  empty-cells: hide;
+  margin: -1px 0 23px;
+  padding: 0;
+  table-layout: fixed;
+  width: 100%;
+}
+#wrapper caption {
+  display: table-caption;
+  font-weight: 700;
+}
+#wrapper col {
+  display: table-column;
+}
+#wrapper colgroup {
+  display: table-column-group;
+}
+#wrapper tbody {
+  display: table-row-group;
+}
+#wrapper tfoot {
+  display: table-footer-group;
+}
+#wrapper thead {
+  display: table-header-group;
+  border-bottom: solid 1px #999;
+}
+#wrapper td, #wrapper th {
+  display: table-cell;
+}
+#wrapper tr {
+  display: table-row;
+}
+#wrapper table th, #wrapper table td {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  padding: 0 1em;
+}
+#wrapper dt, #wrapper th {
+  font-weight: 700;
+}
+#wrapper dd {
+  padding-left: 1.4em;
+}
+#wrapper table tr:nth-child(even) {
+  background: rgba(200, 200, 200, 0.25);
+}
+#wrapper figure {
+  display: inline-block;
+  position: relative;
+  margin: 1em 0 2em;
+}
+#wrapper figcaption {
+  font-family: AvenirNext-Italic, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  font-style: italic;
+  text-align: center;
+}
+#wrapper figure:hover > figcaption {
+  /* background: rgba(0,0,0,1) */
+}
+/* #wrapper pre { moved down to base styles; } */
+.poetry #wrapper pre {
+  display: block;
+  font-family: Georgia, Garamond, serif !important;
+  font-size: 110% !important;
+  font-style: italic;
+  line-height: 1.6;
+  margin-left: 1em;
+}
+.poetry #wrapper pre code {
+  font-family: Georgia, Garamond, serif !important;
+
+}
+#wrapper sup, #wrapper sub, #wrapper a.footnote {
+  font-size: 1.4ex;
+  height: 0;
+  line-height: 1;
+  position: relative;
+  vertical-align: super;
+}
+#wrapper sub {
+  vertical-align: sub;
+  top: -1px;
+}
+#wrapper .footnote {
+  font-size: .8rem;
+  vertical-align: super;
+}
+#wrapper .footnotes p {
+  font-size: 1.9ex;
+}
+#wrapper ul ul {
+  margin-left: 1em;
+}
+
+#wrapper ul ul,
+#wrapper ol ol {
+  margin-left: 1em;
+}
+#wrapper li ul,
+#wrapper li ol {
+  margin-bottom: 0;
+}
+
+@media print {
+  body {
+    overflow: auto;
+  }
+
+  img, pre, blockquote, table, figure, p {
+    page-break-inside: avoid;
+  }
+
+  #wrapper {
+    background: #fff;
+    color: #000;
+    font-size: 85%;
+    padding: 10px;
+    position: relative;
+    text-indent: 0;
+  }
+}
+
+@media screen {
+  .inverted, .inverted #wrapper {
+    background: #222;
+  }
+  .inverted pre,
+  .inverted img {
+    border-color: #111;
+    background: #1a1a1a;
+  }
+  .inverted pre * {
+    background: #1a1a1a !important;
+  }
+
+  .inverted hr {
+    border-color: #999 !important;
+  }
+
+  .inverted p, .inverted td, .inverted li, .inverted h1, .inverted h2, .inverted h3, .inverted h4, .inverted h5, .inverted h6, .inverted pre, .inverted code, .inverted th, .inverted .math, .inverted caption, .inverted dd, .inverted dt {
+    color: #f9f9f9 !important;
+  }
+
+  .inverted table tr:nth-child(odd), .inverted table th:nth-child(odd), .inverted table td:nth-child(odd) {
+    background: none;
+  }
+
+  .inverted a {
+    color: #ff5778;
+  }
+}
+.max-width {
+  max-width: 100%;
+  height: auto;
+}
+/* ::Base styles Almost exclusively single element selectors */
+/* ------------------------------------------------------------ */
+html {
+  font-size: 100%;
+}
+body {
+  font: 100%/1.388 AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  color: #111;
+  padding: 0 5% 1rem !important;
+}
+a {
+  color: crimson;
+}
+a:hover, a:focus, a:active {
+  color: #ff2450;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: AvenirNextCondensed-DemiBold, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  /* margin: 0; */
+  padding: .5em 0 0;
+}
+h2, h3, h4, h5 {
+  border-bottom: 1px solid #777;
+}
+h1 {
+  font-size: 2.25rem;
+  line-height: 1.11111;
+}
+h2 {
+  font-size: 1.875rem;
+  line-height: 1.33333;
+}
+h3 {
+  font-size: 1.375rem;
+  line-height: 1.45455;
+}
+h4 {
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+h5 {
+  font-size: 1.125rem;
+  line-height: 1.33333;
+}
+h6 {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+pre, label {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+p {
+  font-size: 1.388rem;
+  line-height: 1.33333;
+  /* margin: 0; */
+  padding: .5em 0;
+  max-width: 30em;
+}
+h2 + p,
+h3 + p,
+h4 + p,
+h5 + p {
+  padding-top: 0;
+  margin-top: 1px;
+  border-top: 1px solid #999;
+}
+ol, ul {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0 0 2em 0;
+}
+li {
+  line-height: auto;
+}
+pre {
+  display: block;
+  margin: 1.4em auto;
+  background: #fcf9f1;
+  /* f9f9f9; */
+  padding: 15px 10px 10px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  border: solid 1px  #f0e0b2;
+  font-family: Consolas, Menlo, Monaco, monospace !important;
+  font-size: .875rem;
+  max-width: 90%;
+}
+pre * {
+  background: #fcf9f1 !important;
+}
+code {
+  font-family: Consolas, Menlo, Monaco, monospace;
+}
+ul {
+  list-style-position: outside;
+  list-style-type: square;
+}
+ol {
+  list-style-position: outside;
+  list-style-type: decimal;
+}
+strong, b {
+  font-family: AvenirNext-Bold, AvenirNextCondensed-DemiBold, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  font-weight: 600;
+}
+em, i, q {
+  font-family: AvenirNext-BoldItalic, AvenirNext-Italic, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  font-style: italic;
+}
+blockquote {
+  padding-left: 1em;
+  border-left: 0.3125em solid #c0c0c0;
+  line-height: normal;
+  /* margin: 0; */
+}
+blockquote p {
+  font-family: AvenirNext-Italic, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  font-style: italic;
+  /* margin: 0; */
+  font-size: 1.25rem;
+  line-height: 1.2;
+  margin: 1.2em 0 1.2em 0;
+}
+img {
+ padding: 1em;
+ background-color: #e6e6e6;
+ border: 1px solid #ddd;
+ -webkit-border-radius: 3px;
+ -moz-border-radius: 3px;
+ -o-border-radius: 3px;
+ border-radius: 3px;
+}
+
+@media screen and (max-width: 750px) {
+  -webkit-text-size-adjust: none;
+}
+
+
+@media print{
+#generated-toc-clone,#generated-toc{display:none!important}
+}
+
+</style>
+<style>#wrapper { max-width:600px; margin:0 auto }</style>
+</head>
+<body class="normal poetry">
+  <div id="wrapper">
+      <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Class notes (4/22) – do not cite or circulate" />
+  <title>Kant on the Synthetic A Priori</title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+<div id="header">
+<h1 class="title">Kant on the Synthetic A Priori</h1>
+<h2 class="author">Class notes (4/22) – do not cite or circulate</h2>
+</div>
+<div id="TOC">
+<ul>
+<li><a href="#human-knowledge"><span class="toc-section-number">1</span> Human Knowledge</a><ul>
+<li><a href="#the-a-priori"><span class="toc-section-number">1.1</span> The A Priori</a></li>
+<li><a href="#the-analyticsynthetic-distinction"><span class="toc-section-number">1.2</span> The Analytic/Synthetic Distinction</a></li>
+<li><a href="#the-synthetic-a-priori"><span class="toc-section-number">1.3</span> The Synthetic A Priori</a></li>
+<li><a href="#mathematics-and-the-synthetic-a-priori"><span class="toc-section-number">1.4</span> Mathematics and the Synthetic A Priori</a></li>
+</ul></li>
+<li><a href="#kants-copernican-revolution"><span class="toc-section-number">2</span> Kant’s ‘Copernican Revolution’</a><ul>
+<li><a href="#transcendental-idealism"><span class="toc-section-number">2.1</span> Transcendental Idealism</a></li>
+</ul></li>
+<li><a href="#references">References</a></li>
+</ul>
+</div>
+<!--
+
+1.  The distinction between pure and empirical knowledge
+2.  We have some items of a priori knowledge, and even the common
+    understanding is never without them
+3.  Philosophy needs a science to show that there can be a priori
+    knowledge, and to establish its principles and its scope
+4.  The difference between analytic and synthetic judgments
+5.  All theoretical sciences of reason contain synthetic a priori
+    judgments as principles
+6.  The general problem of pure reason
+7.  The idea and division of a special science called ‘critique of pure
+    reason’
+-->
+
+<p><a href="http://plato.stanford.edu/entries/kant/">Immanuel Kant</a> (1724–1804) was the most significant German philosopher of the eighteenth century, and was a key figure in the <a href="http://plato.stanford.edu/entries/kant/">Enlightenment</a>. He wrote most of his most famous philosophical works relatively late in his professional life, having only achieved a position as full professor in 1770, at the age of forty-six. From 1781 to 1798 Kant published a series of tremendously influential philosophical works, including the <em>Critique of Pure Reason</em> (1781/7), the <em>Groundwork of the Metaphysics of Morals</em> (1785), the <em>Metaphysical Foundations of Natural Science</em> (1786), the <em>Critique of Practical Reason</em> (1788), and the <em>Critique of the Power of Judgment</em> (1790).</p>
+<p>We’ll be primarily focusing on Kant’s project in the <em>Critique of Pure Reason</em>. There are certain aspects of Kant’s project there, which should be very familiar. For example, Kant, like Locke and Hume, wishes to articulate the nature and extent of human knowledge, and to do so in a manner which proceeds from an analysis of the nature of human cognitive capacities. Kant believes that human reason requires a ‘critique’ or examination as to whether it is fit to provide us with knowledge. Kant ultimately argues that human reason is not fit to provide us with knowledge of a mind-independent reality transcending human experience. In this sense Kant is deeply sympathetic with ‘empiricist’ critiques by Locke, Berkeley, and Hume of ‘rationalist’ philosophers such as Descartes and Leibniz.</p>
+<p>However, Kant also argues that we have much deeper and more extensive knowledge of the world we experience (or could possibly experience) than his empiricist predecessors would allow. For example, Kant argues that we have knowledge of necessary truths concerning aspects of the empirical world (such as that every event in the empirical world has a cause), as well as truths which are universal in extent. Thus Kant articulates a view that is directly opposed to the kinds of skeptical arguments Hume discusses in his <em>Treatise</em> and first <em>Enquiry</em>.</p>
+<p>Kant thus thinks that we have knowledge of the empirical world governed by necessary and universal laws, while nevertheless being almost wholly ignorant of the fundamental reality which underlies or grounds the existence of the empirical world. In this way Kant combines various aspects of both the traditional rationalist and empiricist positions. Like Locke and Hume, Kant thinks we must realize that the boundaries of human knowledge stop at experience, and thus that we must be extraordinarily circumspect concerning any claim made about how reality is like independent of all human experience. But, like Descartes and Leibniz, Kant thinks that central parts of human knowledge nevertheless exhibit characteristics of necessity and universality, and that, contrary to Hume’s skeptical arguments, we can have good reason to think that they do.</p>
+<p>Kant thus critiques pure reason in order to show its nature and limits, and thereby curb the pretensions of various metaphysical systems articulated on the basis of a firm faith that reason alone allows us to scrutinize the very depths of reality. But Kant also argues that the legitimate domain of reason is more extensive and more substantive than previous empiricist critiques had allowed. In this way Kant salvages much of the prevailing Enlightenment conception of reason as an organ for knowledge of the world.</p>
+<p>Below I characterize some of the central aspects of Kant’s epistemological framework and how that framework significantly revolutionized our understanding of the possible nature and extent of human knowledge.</p>
+<h1 id="human-knowledge"><span class="header-section-number">1</span> Human Knowledge</h1>
+<h2 id="the-a-priori"><span class="header-section-number">1.1</span> The A Priori</h2>
+<p>We’ve seen several philosophers (e.g. Descartes, Leibniz, Hume) argue that there are kinds of knowledge that may be had just by thinking, or are universal and necessary in scope. Hume’s conception of knowledge made this especially clear. According to Hume, knowledge of necessary and universal truths must be a function purely of knowledge of the relations of ideas.</p>
+<p>Kant agrees with Hume that a priori knowledge is independent of experience. In fact, he sees it as definitive of ‘pure’ a priori knowledge that it be completely independent of experience. He contrasts such knowledge with ‘empirical’ knowledge or knowledge a posteriori. A priori knowledge may be more or less ‘pure’ according to whether or not the concepts which make it up are themselves a priori knowable. Kant uses the example ‘ever alteration has a cause’ as an example of <em>impure</em> a priori knowledge, since the concept &lt;alteration&gt; is empirical.</p>
+<p>One important point about Kant’s use of ‘independence’ in describing the a priori. Kant does not think that a priori knowledge is independent of experience in the sense that one need have <em>no</em> experience in order to have the knowledge. On the contrary, Kant thinks that <em>all</em> of our knowledge depends on our having experience of some kind or another, though he doesn’t think this dependence entails that all our judgments are ultimately <em>justified</em> by experience. This is way Kant says that</p>
+<blockquote>
+<p>although all our knowledge begins with experience, that doesn’t mean that it all comes from experience. (EMT 17)</p>
+</blockquote>
+<p>There seems to be two reasons for Kant’s thinking this. First, we need experience in order for our cognitive faculties to function and develop. Second, we may need particular experiences in order to acquire certain concepts (e.g. red experiences in order to acquire the concept &lt;red&gt;). This is what distinguishes pure from impure a priori judgments. Impure a priori judgments are partially constituted by concepts which themselves must come from experience.</p>
+<p>If a priori knowledge is, for Kant, knowledge that is (in some sense to be further specified) independent of experience, that fact is not the only mark or indicator that some bit of knowledge is a priori. In addition, Kant argues, any bit of knowledge that is necessary and/or universal in scope is itself a priori.</p>
+<blockquote>
+<p>Necessity and strict universality, therefore, are secure indications that an item of knowledge is a priori, and they always go together. Sometimes one of them is easier to apply as a criterion, sometimes the other… [but] each of them is an infallible test of apriority. (Introduction, EMT 17-18)</p>
+</blockquote>
+<p>Kant argues that the conception of a priori knowledge is presupposed in many empirical judgments as well as in particular sciences. He specifically points to mathematics (‘5+7=12’) and to physical judgments (‘every alteration has a cause’). One of Kant’s arguments (which he hints at on EMT 18) is that all of our empirical knowledge (even that knowledge which we think we have unproblematically) presupposed a priori knowledge.</p>
+<p>Kant thinks that there are many examples of judgments which we claim to know a priori, but he is interested primarily in a specific subset of those which constitute the subject matter of <em>metaphysics</em>—viz. judgments concerning God, the soul (or mind), and immortality. One of Kant’s primary aims is to determine whether metaphysical knowledge is possible, and if it is possible, what the extent and nature of that knowledge might be. Metaphysical knowledge is problematic, Kant argues, because unlike other forms of a priori knowledge, such as logic and mathematics, it is not at all obvious which metaphysical judgments are in fact correct and thus known, and which are merely thought to be so. This is exemplified, Kant thinks, by the contentious disputes in which philosophers have long been involved. Kant thus hopes that, by giving a critique of reason, he can demonstrate the extent to which metaphysics might count as a science, and thus rest on a secure set of claims.</p>
+<h2 id="the-analyticsynthetic-distinction"><span class="header-section-number">1.2</span> The Analytic/Synthetic Distinction</h2>
+<p>A judgment is known (or knowable) a priori if it is known independently of experience. Kant thinks that this is not the only dimension according to which one can analyze a judgment. Kant argues that all judgments, in addition to being classifiable as either a priori or a posteriori (or empirical), may also be classified as being either <a href="http://plato.stanford.edu/entries/analytic-synthetic/">analytic or synthetic</a>.</p>
+<p>An analytic judgment is one in which the predicate is ‘contained’ in the concept. One way of understanding this notion of ‘containment’ is via a claim about meaning. Accordingly, analytic judgments are those whose truth is known merely in virtue of knowing the means of the concepts constituting the judgment. For example, in the judgment ‘All bachelors are unmarried’ the concept &lt;unmarried&gt; is part of the meaning of &lt;bachelor&gt; and so the truth of the judgment is grasped just by knowing the relevant meanings.</p>
+<p>Kant also introduces several other markers of analyticity. In total Kant provides us with four different marks of analyticity. He says that in an analytic judgment the predicate is</p>
+<ol style="list-style-type: decimal">
+<li>‘contained’ within the subject</li>
+<li>‘identical’ with the subject</li>
+<li>analytic judgments are ones which are ‘explicative’ rather than ‘ampliative’</li>
+<li>analytic judgments are those knowable by means of application of the principle of non-contradiction</li>
+</ol>
+<p>Which, if any of these markers is best thought of as the main characteristic of an analytic judgment? This is a disputed issue (cf. <span class="citation">Anderson (2005)</span>; <span class="citation">Proops (2005)</span>), though certainly, in all cases Kant is thinking of ‘atomic’ judgments of subject-predicate form.</p>
+<h2 id="the-synthetic-a-priori"><span class="header-section-number">1.3</span> The Synthetic A Priori</h2>
+<p>Kant argues, in ways similar to Locke, Hume, and Leibniz, that analytic judgments are knowable a priori. Staying with the ‘containment’ metaphor, since the predicate is contained in the subject of an analytic judgment, there is no need to look beyond the judgment to the world (so to speak) in order to determine the truth value of the judgment. In this Kant is obviously in agreement with Locke, Hume, and Leibniz. Kant agrees with his empiricist predecessors in claiming that all a posteriori judgments are synthetic. Since the predicate is adding something new to the subject we must look beyond the judgment to the world—what we can experience—in order that we might determine the relevant judgments truth or falsity.</p>
+<p>Kant’s main innovation to the a priori/posteriori and analytic/synthetic schemas is to note that the analytic a priori and the synthetic a posteriori do not exhaust the realm of possible judgments. There are also <em>synthetic a priori</em> judgments that are possible. Kant argues that causal judgments are a clear example.</p>
+<blockquote>
+<p>Take the proposition ‘Every event has its cause’…the concept of <em>cause</em> lies entirely outside the concept of <em>event</em>; it signifies something different from the general concept of <em>event</em>, and isn’t in any way contained in it. So how do I come to say of events in general something quite different from that concept, and to learn that the concept <em>cause</em> belongs to the concept <em>event</em>—indeed belongs to it necessarily, although not by being contained in that concept? What is the unknown something-or-other that the understanding is relying on when it thinks it has found, outside the concept of A, a predicate B that it believes to be connected with it? (EMT 21)</p>
+</blockquote>
+<p>Kant argues here that our judgments concerning events presuppose that they do not just <em>occur</em> but are <em>caused to occur</em>, that we know this to be true necessarily and universally, and that we have no explanation of this fact unless the judgments we make in such cases are synthetic a priori judgments. The question remains, however, just how such synthetic a priori judgments could be possible. What is it that could link the concepts in a subject-predicate judgment such that the truth of the judgment holds necessarily and universally, while its nevertheless being true that the predicate is not contained in the subject of the judgment, and thus that the judgment is not analytic?</p>
+<blockquote>
+<p>·It is terrifically important that we solve this problem, identify the something-or-other that makes synthetic a priori judgments possible. Why? Because· the entire final aim of our speculative a priori knowledge depends on such •synthetic principles, ones that •amplify. (EMT 21)</p>
+</blockquote>
+<p>Kant argues that we need to explain how synthetic a priori judgments are possible, and that the explanation of the possibility of significant portions of our knowledge rests on this, including mathematics and natural science, as well as the very possibility of metaphysics.</p>
+<h2 id="mathematics-and-the-synthetic-a-priori"><span class="header-section-number">1.4</span> Mathematics and the Synthetic A Priori</h2>
+<p>Recall that for Hume, mathematical knowledge was a function merely of knowledge of relations of ideas, in other words, that math is analytic and a priori. Kant disputes this. Our mathematical knowledge is certainly a priori, he thinks, but it is not explained in terms of relations of ideas or concepts (i.e. in terms of containment or any of the other marks of analyticity). Instead, Kant argues that mathematical knowledge must be <em>synthetic</em>, but since it is necessary and universal, also <em>a priori</em>.</p>
+<blockquote>
+<p>Mathematical judgments are all synthetic. This proposition seems to have escaped the notice of those who have worked on analysing human reason, and indeed to be directly opposed to all their conjectures; yet it is unquestionably true, and has very important consequences. (EMT 22)</p>
+</blockquote>
+<p>Kant uses two examples in his argument concerning mathematics. The first is the judgment ‘7+5=12’ and the second is the geometric judgment that ‘the shortest distance between two points is a straight line’. Though both judgments are knowable a priori, Kant thinks that in neither of these two cases, can we explain the truth of the judgments analytically.</p>
+<blockquote>
+<p>you might initially think that the proposition <em>7 + 5 = 12</em> is a merely analytic proposition that follows, via the principle of contradiction, from the concept of <em>sum of 7 and 5</em>. But if you look at it more closely you’ll find that the concept of <em>sum of 7 and 5</em> contains nothing more than <em>number in which 7 and 5 are united</em>—that is all. When I have the thought of the sum of 5 and 7, I do <em>not</em> thereby have the thought of 12; no matter how long I spend analysing my concept of such a possible sum, I won’t find 12 in it. ·To arrive at 12· we have to •go beyond these concepts (EMT 22)</p>
+</blockquote>
+<p>Kant’s argument here is that while it might be analytically true that the sum of 7 and 5 is <em>a number</em> (and also that it must be a <em>natural number</em>), it is not clear from analysis alone that the sum is equal to 12, or any other pair of natural numbers which might sum to 12.</p>
+<p>Kant seems to think that to the extent one finds the answer twelve <em>obvious</em> one is adverting, either explicitly or implicitly, to some particular experience of adding units, such as counting on one’s fingers, or adding up objects (e.g. apples, chairs, blocks, etc.).</p>
+<p>Also, if ‘7+5=12’ is known analytically, then in thinking it one is equivalently thinking of any or all the numbers which are equal to 12, including <em>very large</em> numbers (e.g. any numbers <em>m</em> and <em>n</em> which might yield 12). This certainly doesn’t reflect our experience when calculating such sums, which may yield further evidence that the judgment isn’t analytically true.</p>
+<h1 id="kants-copernican-revolution"><span class="header-section-number">2</span> Kant’s ‘Copernican Revolution’</h1>
+<p>In a famous passage Kant compares his critical philosophy to the central contribution on Nicolas Copernicus.</p>
+<blockquote>
+<p>Until now it has been assumed that all our knowledge must conform to the objects ·that it is knowledge of·; but working on that basis we have never succeeded in learning anything—never added anything to our stock of knowledge—in an a priori way through concepts. So let us now ·change our tack· and experiment with doing metaphysics on the basis of the assumption that the objects must conform to our knowledge. That would fit better with the upshot that we want, namely a priori knowledge of the objects that will tell us something definite about them before they are given to us. This would be like Copernicus’s basic idea: having found that he wasn’t getting far with explaining the movements of the heavenly bodies while assuming that the whole flock of them was revolving around the observer, he tried making the observer revolve and leaving the stars at rest. (Bxvi–xvii; EMT 9)</p>
+</blockquote>
+<p>So just as Copernicus sought to explain the apparent motions of objects in the heavens in terms of the movement of the earthbound observer, so too Kant attempts to account for the apparently characteristics of objects in terms of our cognitive faculties and the cognitive conditions under which we know the objective world. In Kantian phrase, instead of assuming that our knowledge of the object must conform it <em>it</em>, we assume that it conforms to <em>our knowledge</em>.</p>
+<h2 id="transcendental-idealism"><span class="header-section-number">2.1</span> Transcendental Idealism</h2>
+<p>Kant’s name for the position he articulates according to which objects must conform to our way of knowing them ‘Transcendental Idealism’. Though the exact meaning of Transcendental Idealism is much disputed by Kant’s interpreters, it is clear that he intends at least two things by it.</p>
+<p>First, according to Transcendental Idealism, space and time are neither independent subsisting entities (as was suggested by Newton), nor object-dependent orders of relations between entities (as was argued by Leibniz). Instead, they are mind-dependent ‘forms of intuition’. They are the characteristic ways in which we experience things rather than independent things that we experience, or relations between things that we experience. Space and time are ‘empirically real’ — they are fundamental features of the empirical world that we experience. But they are not real ‘in themselves’. They have no ultimate reality apart from subjective experience.</p>
+<p>Second, in addition to the transcendental ideality of space and time, to which all experienced objects must conform, Kant argues that empirical reality is itself structured by a privileged set of a priori concepts.</p>
+<blockquote>
+<p>That’s the first part of my proposed as-it-were-Copernican revolution; now for the second part·…Any beliefs I reach about what an object is like will involve me in using concepts of it—·if I come to think that something is solid, say, I’ll have to bring my concept of solidity to bear on it·. Now there are two ways in which my concepts might fit the objects of my inquiries. One is this: •My concepts, which I employ in my beliefs about what the object is like, conform to the objects. If that is right, though, I am back in my old difficulty, namely that it seems impossible for me to know anything a priori about the object. The second alternative is this: •The objects conform to my concepts, or—the same thing in different words–•The experience in which the objects are known conforms to my concepts. ·The focus on experience is legitimate, because· it is only in experience that the objects can be known as things that are given. This second alternative offers a gleam of hope: experience is a kind of knowledge in which the understanding must be involved (Bxvii; EMT 10)</p>
+</blockquote>
+<p>Kant here argues that the object which appear to one in perceptual experience, or ‘intuition’ as he calls it, also must conform to our basic conceptual scheme. He explains what he means here in the last sentence: objects must conform to our conceptual scheme because that scheme makes possible the experience of them.</p>
+<p>We’ll discuss Kant’s ‘Copernican’ strategy here in another class. However, the basic idea is that Kant will show that what makes synthetic a priori knowledge possible is the structure of our cognitive faculties including the pure forms of intuition and a privileged set of a priori concepts. These forms and concepts jointly make experience possible and allow us to draw inferences that hold with necessity and universality concerning objects encountered in experience. What’s more, Kant argues that because a priori concepts are necessary for experience in general, we can know that those concepts are applied legitimately, since he is taking it as obvious that we have experience. While we won’t have time to explore all of Kant’s arguments for this position, we will explore one—viz. his argument that we can know with certainty that, in opposition to Hume, necessary causal connections really hold between distinct objects or events, and thus that lawful scientific knowledge of objects is possible.</p>
+<h1 id="references" class="unnumbered">References</h1>
+<!-- -->
+
+
+<div class="references">
+<p>Anderson, R. Lanier. 2005. “The Wolffian Paradigm and Its Discontents: Kants Containment Definition of Analyticity in Historical Context.” <em>Archiv Für Geschichte Der Philosophie</em> 87 (7): 22–74.</p>
+<p>Beck, Lewis White. 1955. “Can Kant’s Synthetic Judgments Be Made Analytic?” <em>Kant-Studien</em> 47 (1-4): 168–181. doi:<a href="http://dx.doi.org/10.1515/kant.1956.47.1-4.168">10.1515/kant.1956.47.1-4.168</a>.</p>
+<p>De Jong, W. R. 1995. “Kant’s Analytic Judgments and the Traditional Theory of Concepts.” <em>Journal of the History of Philosophy</em> 33: 613–642.</p>
+<p>De Jong, Willem R. 2010. “The Analytic-Synthetic Distinction and the Classical Model of Science: Kant, Bolzano and Frege.” <em>Synthese</em> 174 (2) (May): 237–261. doi:<a href="http://dx.doi.org/10.1007/s11229-008-9420-9">10.1007/s11229-008-9420-9</a>. <a href="http://0-link.springer.com.library.unl.edu/article/10.1007/s11229-008-9420-9">http://0-link.springer.com.library.unl.edu/article/10.1007/s11229-008-9420-9</a>.</p>
+<p>Gardner, Sebastian. 1999. <em>Kant and the Critique of Pure Reason</em>. Routledge.</p>
+<p>Hanna, Robert. 2001. <em>Kant and the Foundations of Analytic Philosophy</em>. Oxford: Oxford University Press.</p>
+<p>Proops, I. 2005. “Kant’s Conception of Analytic Judgment.” <em>Philosophy and Phenomenological Research</em> 70 (3): 588–612.</p>
+<p>Van Cleve, James. 1999. <em>Problems from Kant</em>. Oxford University Press.</p>
+</div>
+</body>
+</html>
+
+<!-- ##END MARKED WRAPPER## -->
+    </div>
+</body>
+</html>
