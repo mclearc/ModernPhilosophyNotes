@@ -1,0 +1,547 @@
+<!DOCTYPE html>  
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>KantSpace</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+/*
+This document has been created with Marked.app <http://markedapp.com>, Copyright 2011 Brett Terpstra
+Please leave this notice in place, along with any additional credits below.
+---------------------------------------------------------------
+Title: Avenue
+Author: Bram de Haan <http://atelierbramdehaan.nl>
+Description: modern retro
+ */
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+a img {
+  border: none;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+button, input {
+  line-height: normal;
+}
+button, input, select, textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  /* vertical-align: middle; */
+}
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+  cursor: pointer;
+  /* overflow: visible; */
+}
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  padding: 0 !important;
+}
+#wrapper {
+  margin-bottom: 0;
+}
+#wrapper img {
+  max-width: 100%;
+  height: auto;
+}
+#wrapper dd {
+  margin-bottom: 1em;
+}
+#wrapper li > p:first-child {
+  margin: 0;
+}
+#wrapper caption, #wrapper col, #wrapper colgroup, #wrapper table, #wrapper tbody, #wrapper td, #wrapper tfoot, #wrapper th, #wrapper thead, #wrapper tr {
+  border-spacing: 0;
+}
+#wrapper table {
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-collapse: collapse;
+  display: table;
+  empty-cells: hide;
+  margin: -1px 0 23px;
+  padding: 0;
+  table-layout: fixed;
+  width: 100%;
+}
+#wrapper caption {
+  display: table-caption;
+  font-weight: 700;
+}
+#wrapper col {
+  display: table-column;
+}
+#wrapper colgroup {
+  display: table-column-group;
+}
+#wrapper tbody {
+  display: table-row-group;
+}
+#wrapper tfoot {
+  display: table-footer-group;
+}
+#wrapper thead {
+  display: table-header-group;
+  border-bottom: solid 1px #999;
+}
+#wrapper td, #wrapper th {
+  display: table-cell;
+}
+#wrapper tr {
+  display: table-row;
+}
+#wrapper table th, #wrapper table td {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  padding: 0 1em;
+}
+#wrapper dt, #wrapper th {
+  font-weight: 700;
+}
+#wrapper dd {
+  padding-left: 1.4em;
+}
+#wrapper table tr:nth-child(even) {
+  background: rgba(200, 200, 200, 0.25);
+}
+#wrapper figure {
+  display: inline-block;
+  position: relative;
+  margin: 1em 0 2em;
+}
+#wrapper figcaption {
+  font-family: AvenirNext-Italic, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  font-style: italic;
+  text-align: center;
+}
+#wrapper figure:hover > figcaption {
+  /* background: rgba(0,0,0,1) */
+}
+/* #wrapper pre { moved down to base styles; } */
+.poetry #wrapper pre {
+  display: block;
+  font-family: Georgia, Garamond, serif !important;
+  font-size: 110% !important;
+  font-style: italic;
+  line-height: 1.6;
+  margin-left: 1em;
+}
+.poetry #wrapper pre code {
+  font-family: Georgia, Garamond, serif !important;
+
+}
+#wrapper sup, #wrapper sub, #wrapper a.footnote {
+  font-size: 1.4ex;
+  height: 0;
+  line-height: 1;
+  position: relative;
+  vertical-align: super;
+}
+#wrapper sub {
+  vertical-align: sub;
+  top: -1px;
+}
+#wrapper .footnote {
+  font-size: .8rem;
+  vertical-align: super;
+}
+#wrapper .footnotes p {
+  font-size: 1.9ex;
+}
+#wrapper ul ul {
+  margin-left: 1em;
+}
+
+#wrapper ul ul,
+#wrapper ol ol {
+  margin-left: 1em;
+}
+#wrapper li ul,
+#wrapper li ol {
+  margin-bottom: 0;
+}
+
+@media print {
+  body {
+    overflow: auto;
+  }
+
+  img, pre, blockquote, table, figure, p {
+    page-break-inside: avoid;
+  }
+
+  #wrapper {
+    background: #fff;
+    color: #000;
+    font-size: 85%;
+    padding: 10px;
+    position: relative;
+    text-indent: 0;
+  }
+}
+
+@media screen {
+  .inverted, .inverted #wrapper {
+    background: #222;
+  }
+  .inverted pre,
+  .inverted img {
+    border-color: #111;
+    background: #1a1a1a;
+  }
+  .inverted pre * {
+    background: #1a1a1a !important;
+  }
+
+  .inverted hr {
+    border-color: #999 !important;
+  }
+
+  .inverted p, .inverted td, .inverted li, .inverted h1, .inverted h2, .inverted h3, .inverted h4, .inverted h5, .inverted h6, .inverted pre, .inverted code, .inverted th, .inverted .math, .inverted caption, .inverted dd, .inverted dt {
+    color: #f9f9f9 !important;
+  }
+
+  .inverted table tr:nth-child(odd), .inverted table th:nth-child(odd), .inverted table td:nth-child(odd) {
+    background: none;
+  }
+
+  .inverted a {
+    color: #ff5778;
+  }
+}
+.max-width {
+  max-width: 100%;
+  height: auto;
+}
+/* ::Base styles Almost exclusively single element selectors */
+/* ------------------------------------------------------------ */
+html {
+  font-size: 100%;
+}
+body {
+  font: 100%/1.388 AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  color: #111;
+  padding: 0 5% 1rem !important;
+}
+a {
+  color: crimson;
+}
+a:hover, a:focus, a:active {
+  color: #ff2450;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: AvenirNextCondensed-DemiBold, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  /* margin: 0; */
+  padding: .5em 0 0;
+}
+h2, h3, h4, h5 {
+  border-bottom: 1px solid #777;
+}
+h1 {
+  font-size: 2.25rem;
+  line-height: 1.11111;
+}
+h2 {
+  font-size: 1.875rem;
+  line-height: 1.33333;
+}
+h3 {
+  font-size: 1.375rem;
+  line-height: 1.45455;
+}
+h4 {
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+h5 {
+  font-size: 1.125rem;
+  line-height: 1.33333;
+}
+h6 {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+pre, label {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+p {
+  font-size: 1.388rem;
+  line-height: 1.33333;
+  /* margin: 0; */
+  padding: .5em 0;
+  max-width: 30em;
+}
+h2 + p,
+h3 + p,
+h4 + p,
+h5 + p {
+  padding-top: 0;
+  margin-top: 1px;
+  border-top: 1px solid #999;
+}
+ol, ul {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0 0 2em 0;
+}
+li {
+  line-height: auto;
+}
+pre {
+  display: block;
+  margin: 1.4em auto;
+  background: #fcf9f1;
+  /* f9f9f9; */
+  padding: 15px 10px 10px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  border: solid 1px  #f0e0b2;
+  font-family: Consolas, Menlo, Monaco, monospace !important;
+  font-size: .875rem;
+  max-width: 90%;
+}
+pre * {
+  background: #fcf9f1 !important;
+}
+code {
+  font-family: Consolas, Menlo, Monaco, monospace;
+}
+ul {
+  list-style-position: outside;
+  list-style-type: square;
+}
+ol {
+  list-style-position: outside;
+  list-style-type: decimal;
+}
+strong, b {
+  font-family: AvenirNext-Bold, AvenirNextCondensed-DemiBold, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  font-weight: 600;
+}
+em, i, q {
+  font-family: AvenirNext-BoldItalic, AvenirNext-Italic, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  font-style: italic;
+}
+blockquote {
+  padding-left: 1em;
+  border-left: 0.3125em solid #c0c0c0;
+  line-height: normal;
+  /* margin: 0; */
+}
+blockquote p {
+  font-family: AvenirNext-Italic, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  font-style: italic;
+  /* margin: 0; */
+  font-size: 1.25rem;
+  line-height: 1.2;
+  margin: 1.2em 0 1.2em 0;
+}
+img {
+ padding: 1em;
+ background-color: #e6e6e6;
+ border: 1px solid #ddd;
+ -webkit-border-radius: 3px;
+ -moz-border-radius: 3px;
+ -o-border-radius: 3px;
+ border-radius: 3px;
+}
+
+@media screen and (max-width: 750px) {
+  -webkit-text-size-adjust: none;
+}
+
+
+@media print{
+#generated-toc-clone,#generated-toc{display:none!important}
+}
+
+</style>
+<style>#wrapper { max-width:600px; margin:0 auto }</style>
+</head>
+<body class="normal poetry">
+  <div id="wrapper">
+      <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Class notes (4/24) – do not cite or circulate" />
+  <title>Kant on Space &amp; Incongruent Counterparts</title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+<div id="header">
+<h1 class="title">Kant on Space &amp; Incongruent Counterparts</h1>
+<h2 class="author">Class notes (4/24) – do not cite or circulate</h2>
+</div>
+<div id="TOC">
+<ul>
+<li><a href="#the-problem-with-space"><span class="toc-section-number">1</span> The Problem with Space</a><ul>
+<li><a href="#the-metaphysical-exposition-of-space"><span class="toc-section-number">1.1</span> The Metaphysical Exposition of Space</a></li>
+<li><a href="#the-ideality-of-space"><span class="toc-section-number">1.2</span> The Ideality of Space</a></li>
+<li><a href="#incongruent-counterparts"><span class="toc-section-number">1.3</span> Incongruent Counterparts</a></li>
+</ul></li>
+<li><a href="#references">References</a></li>
+</ul>
+</div>
+<h1 id="the-problem-with-space"><span class="header-section-number">1</span> The Problem with Space</h1>
+<p>One of the major philosophical disputes in the seventeenth and eighteenth centuries concerned the issue of space. What is space? By the mid-eighteenth century there were two major competing positions. On the one hand, following Newton, many philosophers and scientists construed space as a kind of <em>subsisting entity</em>. On this view space (and correspondingly time) exists independently of any possible <em>objects</em> that may occupy space, and independently of any possible <em>relations</em> between such space-occupying objects. Space is, on this view, a kind of container in which objects are placed. Spatial relations (e.g. position, relative motion) are determined by the relations which objects have to this container space, and the relations of this spaces (or spatial regions) to one another. Call this the ‘<em>absolute</em>’ conception of space.</p>
+<p>In contrast to the conception of space as absolute, Leibniz proposed that space is merely a set of relations that hold between independently specifiable objects. This ‘<em>relationalist</em>’ conception of space says that space is <em>not</em> something that exists over and above the objects which occupy it. It is merely the order of possible relations between distinct existing substances. So while we could, on the relationalist view, conceive of empty space, insofar as we conceive of the possible relations which substances might enter into, space could not exist as something independent of any such possible objects.</p>
+<p>In the <em>Critique of Pure Reason</em> Kant argues against <em>both</em> of these theories of the metaphysics of space. His suggestion is that space is neither a subsisting entity nor a set of relations, but rather a product of our subjective apprehension of objects that are distinct from us. It is, in his phrase, a ‘form of intuition’.</p>
+<h2 id="the-metaphysical-exposition-of-space"><span class="header-section-number">1.1</span> The Metaphysical Exposition of Space</h2>
+<p><a href="http://plato.stanford.edu/entries/kant-spacetime">Kant’s arguments</a> concerning the nature of space and the nature of our representation of it occur in the ‘Metaphysical Exposition’ of the first <em>Critique</em>. Kant makes four arguments here, which raise a variety of questions concerning their proper interpretation. Part of the complexity of interpretation is due to the complex nature of Kant’s arguments. He is trying to do several things simultaneously. First, he is intervening in a debate concerning the ontological status of space—is it a subsisting thing (absolutism) or is it an order of relations (relationalism)? Second, he is concerned with answering the question as to the origin of our representation of space. Space is different from the objects that are in it. So where does this representation come from? Third, Kant is concerned with the content or nature of the representation of space. Is it a fundamentally intellectual (conceptual) kind of representation?</p>
+<p>Kant’s first two arguments (EMT 29) run as follows:</p>
+<blockquote>
+<ol style="list-style-type: lower-roman">
+<li>Space is not an empirical concept that has been derived from outer experiences. Here is why. When I relate some of my sensations to something outside me (i.e. to something in a spatial position different from mine), and also when I relate them to things that are outside one another—not merely as different but as in different places—I must be <em>already</em> representing <em>space</em> as the ground of the other representations—·i.e. as the framework or background or setting within which these spatial relations can exist·. So the representation of space can’t be obtained through experience from the relations amongst outer appearances; on the contrary, outer experience can’t be had except <em>through</em> this representation.</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="2" style="list-style-type: lower-roman">
+<li>Space is a necessary a priori representation, which underlies all outer intuitions. We can’t construct a representation of a state of affairs in which there isn’t any space, though we can very well have the thought of space with no objects in it. So we have to regard space as a pre-condition for the possibility of appearances, not as a conceptual construct out of them. Space is an a priori representation that necessarily underlies outer appearances.</li>
+</ol>
+</blockquote>
+<p>There are a variety of possible targets for these arguments, but one target seems clear—viz. the claim that the representation of space is drawn from the content of our experience. This is particularly clear from the first argument, as Kant seems to be denying the Lockean claim (<em>Essay</em>, II.xiii.2-4) that the representation of space is derived from the representation of the distances between objects. Kant’s point (or a point) in the first argument is that we cannot represent one object as <em>distant</em> from another without already representing them as being in one space in which they may be related. Kant’s second argument is perhaps less persuasive, for it argues that we cannot represent a lack of space. Certainly, this fact would seem to go against the empiricist view of space as something we learn from experience. But it seems that the empiricist might counter that once the representation of space is gained via experience, we cannot part with it psychologically, and so cannot represent its absence.</p>
+<p>Thus, with these first two arguments Kant attempts to refute a particular position concerning the <em>source</em> of our representation of space—viz. experience. The representation of space is not to be found in the content of our experience, rather, outer experience presupposes that its content will consist of spatially related items. Spatial representation is thus presupposed by our having any representation of anything distinct from ourselves or other things at all. Thus, if the first two arguments are correct, the representation of space is a priori and not empirical.</p>
+<p>Kant’s third and fourth arguments (EMT 30) run as follows:</p>
+<blockquote>
+<ol start="3" style="list-style-type: lower-roman">
+<li>The representation of space isn’t a discursive or general <em>concept</em>, but rather a pure <em>intuition</em>. As a start on seeing why, note this: •We can only represent a single space; any talk of ‘many spaces’ is always understood to refer to <em>parts</em> of the one unique space. •And space isn’t an upshot of the assembling of these parts, with the parts coming first and the whole arising out of them. On the contrary, our only thought of the parts is of them as in the one space. •Space is <em>essentially</em> single; it is only by marking out boundaries within it that we get complexity in it, and that’s also how we get the general concept of <em>spaces</em> or of <em>a</em> <em>space</em>. Thus, all our spatial •concepts have underlying them an a priori •intuition of space. Similarly, all geometrical propositions (e.g. that two sides of any triangle are together greater than the third) never come from general concepts (e.g. of <em>line</em> and <em>triangle</em>), but rather are derived from intuition, and indeed derived a priori with absolute certainty.</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="4" style="list-style-type: lower-roman">
+<li>Space is represented as an infinite given magnitude. There’s no way of thinking a <em>concept</em> as containing an infinite set of representations within itself. . . .; but that’s how space is thought (for all the parts of space, even to infinity, are simultaneous). So the basic representation of space is an a priori •intuition, not a •concept.</li>
+</ol>
+</blockquote>
+<p>Kant’s aim (or one aim) in the third and fourth arguments is to deny a particular view concerning the content or nature of the representation of space. Spatial representation is not fundamentally intellectual or conceptual, but rather ‘intuitive’. This is not to say that spatial representation is <em>sensory</em>. We do not have a sensory representation of an infinite space! Kant is trying to carve out room for a position according to which we have a non-sensory but non-conceptual representation of an infinite space, which makes possible our representation of particular spatial expanses. There are similarities here between Kant’s argument and previous rationalist arguments concerning the priority of the infinite over the finite. Kant’s third argument above is that the single infinite expanse of space is prior to, in the sense of being presupposed by, the existence of any particular spatial region. Kant’s fourth argument reinforces this by arguing that <em>if</em> spatial representation were conceptual (on Kant’s understanding of conceptual representation) then we would have to represent an infinite number of spaces or spatial regions. This would present us with an infinite task, which we would obviously be unable to accomplish. Since Kant thinks we clearly do represent space as an infinite expanse, we must be doing so <em>non-conceptually</em>.</p>
+<h2 id="the-ideality-of-space"><span class="header-section-number">1.2</span> The Ideality of Space</h2>
+<p>Thus far Kant has made arguments for two of our three topics. He’s argued that the source of our representation is not empirical, and thus that the representation of space is a priori. He has also argued that the nature or ‘content’ of the representation is intuitive rather than conceptual. But what about the ontology of space? Is space a subsisting thing, capable of existince independent of any and all objects or their relations(absolutism)? Or is it merely the set of possible relations which objects may stand in (relationalism)?</p>
+<p>After Kant gives the arguments discussed above he draws two surprising conclusions (EMT 30-1). First, he argues that</p>
+<blockquote>
+<ol style="list-style-type: lower-alpha">
+<li>Space isn’t a •property of, or set of •relations amongst, things in themselves.</li>
+</ol>
+</blockquote>
+<p>This is surprising because, from what Kant has said in the above arguments, he has only been discussing our <em>representation</em> of space. But here he makes a claim concerning the <em>metaphysical status</em> of space—viz. that it is nothing ‘in itself’. He then goes on to explain what space actually is.</p>
+<blockquote>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>Space is nothing but the form of all appearances of outer sense.</li>
+</ol>
+</blockquote>
+<p>So, according to Kant, space is nothing in itself but rather only a representation—viz. the form by which we represent distinct objects. How does he get to this conclusion?</p>
+<p>First, Kant rejects a presupposition he thinks both the absolutist and the relationalist about space hold in common—viz. that space is something independent of the mind in general and our perception (or intuition) in particular.<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a> In Kant’s terminology space is <em>ideal</em> in virtue of being mind-dependent. Kant makes this point clearer later in the <em>Critique</em> (EMT 185).</p>
+<blockquote>
+<p>By <em>transcendental idealism</em> I mean this doctrine: Appearances are all to be regarded as mere representations, not as things in themselves, so that time and space are only •sensible forms of our intuition, not •states given as existing by themselves and •not conditions of objects viewed as things in themselves. To this idealism there is opposed a <em>transcendental realism</em> that regards time and space as given in themselves, independently of our sensibility. The transcendental realist thus interprets outer appearances (taking for granted that they are real) as things-in-themselves, which exist independently of us and of our sensibility, and are therefore outside us—taking the phrase ‘outside us’ in its most radical sense. (A369)</p>
+</blockquote>
+<p>This perhaps makes clearer why Kant thought he was making a move with respect to the debate between absolutists and relationalists about space—both positions assume that space is ‘transcendentally real’. But why think that space is ‘transcendentally ideal’ in the first place? What licenses the move from a claim about space as an a priori intuitive representation to the claim that space is <em>only</em> the form of outer intuition?</p>
+<p>According to Kant, intuition is an ‘immediate’ and ‘singular’ awareness of an object. This contrasts with the conceptual representation of an object, which is ‘mediate’ and ‘general’. The role of intuition, Kant says, is to present us with objects, while concepts allow for thought of such objects (EMT 28). Kant’s argument for the ideality of space proceeds from this definition of intuition (cf. <span class="citation">Allais (2010)</span>)</p>
+<ol style="list-style-type: decimal">
+<li>Intuition necessarily involves the presentation of an object</li>
+<li>We have an a priori intuition of space (and time)</li>
+<li>A priori intuition cannot, by definition, involve the presence of an actual object</li>
+<li><span class="math">∴ </span> Space is nothing other than a ‘pure’ a priori intuition</li>
+</ol>
+<p>Kant’s thinking here is that the role of intuition is to present its subject with an object. Intuition is what makes the difference between merely thinking or daydreaming about something and actually having it <em>present</em> to one. But, if this is right then there cannot be some <em>actual</em> thing which is present to one in an a priori intuition, since the definition of the a priori requires that the intuition be independent of experience and thus of any actual object.</p>
+<p>Thus, (1) follows from Kant’s definition of intuition. (2) follows from the arguments of the Metaphysical exposition concerning the a priority and intuitive status of our representation of space. (3) is the crucial premise, but this seems to follow from the fact that a pure intuition must present something, and that something, in the absence of any experience, cannot be an actual object, but merely a feature of the mind itself. This gets us (4), that space is nothing other than a form of mental representation and not something subsisting in itself, or an order of possible relations between objects, independent of the mind.</p>
+<h2 id="incongruent-counterparts"><span class="header-section-number">1.3</span> Incongruent Counterparts</h2>
+<p>In §13 of the <em>Prolegomena</em>, which was a sort of summary version of the argument of the <em>Critique of Pure Reason</em>, intended to introduce Kant’s readers to the main themes of that work, Kant makes an argument concerning what he calls ‘incongruent counterparts’, perfectly similar objects that are mirror images of each other, such as left and right hands. This argument, he thinks, shows us that space cannot be mind-independent, but must be an intuition.</p>
+<p>Kant was highly enamored of this argument. He used it first in 1768, to argue that space was Newtonian (absolute) rather than Leibnizian (relational). In 1770, he used the argument for a different conclusion, that our knowledge of space is via intuitive not conceptual representation. The <em>Prolegomena</em> argument of 1783 is for a still different conclusion, that space is ideal. So what exactly is the argument and how could it serve all these conclusions?</p>
+<p>Let’s look briefly at the first two uses of the argument (cf. <span class="citation">Van Cleve (1991a)</span>; <span class="citation">Van Cleve (1991b)</span>). Kant’s argument against the Leibnizian relationalist position hinges on the fact that according to the Leibnizian relationalist, all spatial relations are a function of the intrinsic features of the relevant objects. So any change in spatial features is due to some change in the intrinsic, non-relational features of the object. In brief, Kant’s 1698 argument against Leibnizian relationalism says that incongruent counterparts like left and right hands are intrinsically exactly similar. This means that their orientation in space cannot be due to their ‘internal’ intrinsic, non-relational features, but must rather be due to something else—viz. their relation to some absolute space which contains them.</p>
+<p>Kant’s 1770 argument takes up this point and applies it to our representation of space. If, Kant argues, our representation of space were ultimately purely conceptual (as the Leibnizian argues), then we should be able, by means of concepts alone, to distinguish incongruent counterparts. But, he argues, conceptual representation of (e.g.) a left and a right hand will not differ since such counterparts do not differ (let us suppose) in any qualitatively intrinsic way (e.g. neither figure nor internal angles would differ), nor in any quantitative way (they differ not according to size, etc.). So since there is no intrinsic difference between the two hands, there is nothing conceptually to distinguish one as the left and the other as the right. We must represent their difference by some other means, which Kant argue is by means of intuition.</p>
+<p>The <em>Prolegomena</em>’s conclusion that consideration of incongruent counterparts demonstrates that space is ideal is deeply contested. The conclusion is not the only thing that is contested, unfortunately, for it is not at all clear how the argument goes. The passage (EMT 19-20) is below:</p>
+<blockquote>
+<p>If two things are completely the same in every respect of quantity and quality that can be known about each separately, you would expect it to follow that each can be replaced by the other in all cases and in all respects, without the exchange causing any recognizable difference. That is the case with two-dimensional figures in geometry, but not with three-dimensional ones: it can happen that two of them have a complete inner agreement yet also have an outer relation such that one can’t be replaced by the other. . . . What can be more like my hand, and more equal in all points, than its image in the mirror? Yet I can’t put such a hand as is seen in the mirror in the place of its original: for if the original was a right hand, the hand in the mirror is a left hand, which could never serve as a substitute for the other. Here are no inner differences that any understanding could think—·that is, no differences that can be expressed in concepts·—and yet the differences are inner as far as the senses tell us, for the left hand can’t be enclosed in the same boundaries as the right (they aren’t congruent), despite all their equality and similarity. For example, the glove of one hand can’t be used on the other. So the two hands are intrinsically different in a manner that can’t be captured in concepts—it can only be shown through the fact that a spatial region that exactly contains one won’t contain the other. How can this be? Well, these objects are not representations of the things as they are in themselves, but are sensible intuitions, i.e. appearances, which come about through the relation to •our sensibility of •certain things that are unknown in themselves. When this sensibility is exercised as outer intuition, its form is space; and the intrinsic nature of any region of space is fixed by how that region relates to space as a whole, the one big space of which it is a part. (The part is made possible by the whole: ·a small region of space can exist only if there’s a larger region of which it is a part·. This never happens with things in themselves, but it can happen with mere appearances.) Thus, to make intelligible to ourselves the difference between similar and equal yet incongruent things (e.g. snails winding opposite ways), we must relate them to the right and the left hand. That means that it must be done through intuition; it can’t be done through any concept. ·That is, it must be done by showing, and can’t be done by telling·. (Pr §13)</p>
+</blockquote>
+<p>One possible reading of the argument (cf. <span class="citation">Van Cleve (1999)</span>, ch. 2) goes as follows:</p>
+<ol style="list-style-type: decimal">
+<li>Incongruent counterparts are different in virtue of their differing relations to space as a whole.</li>
+<li>All relations among things in themselves are reducible to the nonrelational qualities of the relata.</li>
+<li>Therefore, if space and figures within it are things in themselves, one incongruent counterpart must differ internally from the other.</li>
+<li>But, in fact, the counterparts do not differ internally.</li>
+<li>Therefore, space itself and incongruent counterpart figures within it are not things in themselves.</li>
+</ol>
+<p>According to this interpretation of Kant’s argument, Kant’s key move is with premise (2), which we might call the ‘reducibility premise’. The idea here is that, according to many philosophers with whose views Kant was engaged (such as Leibniz), differences between distinct objects (or substances) were supposed to be grounded in differences between the intrinsic features of those substances. Here we see a connection to Kant’s 1698 argument. The Reducibility premise requires that spatial differences like left-handedness ground out in intrinsic differences between left and right hands. But there are no such differences (and the same goes for other kinds of incongruent counterparts) so space and the things in it must not be things in themselves, or more simply, they must not be real mind-independent things.</p>
+<p>This argument may be successful, or at least valid. But there are worries. First, premise (2) is not explicitly stated in the Kant’s text. Second, we need not appeal to space as a whole in the argument. All we need is that the ‘handedness’ of the incongruent counterparts need not reduce to their internal features, whatever their relation to space as a whole. Second, it is not even necessary to point to <em>incongruent</em> counterparts. Such elements of the argument are wholly dispensable. All the argument needs is for there to be some set of relations that are not reducible to their relata. There are many spatial relations, such as distance, which do not seem to so reduce. So why did Kant focus on incongruent counterparts then?</p>
+<p>It’s obvious that Kant put great stock in the argument from incongruent counterparts, and used it to push a variety of different conclusions. Unfortunately it is not obvious exactly what the argument is supposed to be, nor how the fact of such incongruent counterparts could entail three such different conclusions.</p>
+<h1 id="references" class="unnumbered">References</h1>
+<hr />
+<!-- -->
+
+
+
+<div class="references">
+<p>Allais, Lucy. 2009. “Kant, Non-Conceptual Content and the Representation of Space.” <em>Journal of the History of Philosophy</em> 47 (3): 383–413.</p>
+<p>———. 2010. “Kant’s Argument for Transcendental Idealism in the Transcendental Aesthetic.” <em>Proceedings of the Aristotelian Society</em> 110 (1/1): 47–75. doi:<a href="http://dx.doi.org/10.1111/j.1467-9264.2010.00279.x">10.1111/j.1467-9264.2010.00279.x</a>.</p>
+<p>Allison, Henry E. 1976. “The Non-Spatiality of Things in Themselves for Kant.” <em>Journal of the History of Philosophy</em> 14 (3): 313–321. doi:<a href="http://dx.doi.org/10.1353/hph.2008.0364">10.1353/hph.2008.0364</a>.</p>
+<p>Carrier, Martin. 1992. “Kant’s Relational Theory of Absolute Space.” <em>Kant-Studien</em> 83 (4): 399–416. <a href="http://0-www.degruyter.com.library.unl.edu/view/j/kant.1992.83.issue-4/kant.1992.83.4.399/kant.1992.83.4.399.xml">http://0-www.degruyter.com.library.unl.edu/view/j/kant.1992.83.issue-4/kant.1992.83.4.399/kant.1992.83.4.399.xml</a>.</p>
+<p>Carson, Emily. 1997. “Kant on Intuition and Geometry.” <em>Canadian Journal of Philosophy</em> 27 (4) (December): 489–512.</p>
+<p>Domski, Mary. 2013. “Kant and Newton on the a Priori Necessity of Geometry.” <em>Studies in History and Philosophy of Science Part A</em> 44 (3) (September): 438–447. doi:<a href="http://dx.doi.org/10.1016/j.shpsa.2012.10.007">10.1016/j.shpsa.2012.10.007</a>. <a href="http://www.sciencedirect.com/science/article/pii/S0039368112000829">http://www.sciencedirect.com/science/article/pii/S0039368112000829</a>.</p>
+<p>Friedman, Michael. 2012. “Kant on Geometry and Spatial Intuition.” <em>Synthese</em> 186 (1) (May): 231–255. doi:<a href="http://dx.doi.org/10.1007/s11229-012-0066-2">10.1007/s11229-012-0066-2</a>. <a href="http://link.springer.com/article/10.1007/s11229-012-0066-2">http://link.springer.com/article/10.1007/s11229-012-0066-2</a>.</p>
+<p>Janiak, Andrew. 2012. “Kant’s Views on Space and Time.” In <em>The Stanford Encyclopedia of Philosophy</em>, edited by Edward N. Zalta, Winter 2012. <a href="http://plato.stanford.edu/archives/win2012/entries/kant-spacetime/">http://plato.stanford.edu/archives/win2012/entries/kant-spacetime/</a>.</p>
+<p>Jauernig, Anja. 2008. “Kant’s Critique of the Leibnizian Philosophy : Contra the Leibnizians, but Pro Leibniz.” In <em>Kant and the Early Moderns</em>, edited by Daniel Garber and B<span>é</span>atrice Longuenesse, 41–63. Princeton, NJ: Princeton University Press.</p>
+<p>Parsons, Charles. 1979. “Mathematical Intuition.” <em>Proceedings of the Aristotelian Society</em> 80 (January): 145–168. <a href="http://www.jstor.org/stable/4544956">http://www.jstor.org/stable/4544956</a>.</p>
+<p>———. 1992. “The Transcendental Aesthetic.” In <em>The Cambridge Companion to Kant</em>, edited by Paul Guyer, 3:62–100. Cambridge: Cambridge University Press.</p>
+<p>———. [1969] 1983. “Kant’s Philosophy of Arithmetic.” In <em>Mathematics in Philosophy: Selected Essays</em>, 110–149. Ithaca: Cornell University Press.</p>
+<p>Shabel, Lisa. 2003. “Reflections on Kant’s Concept (and Intuition) of Space.” <em>Studies In History and Philosophy of Science Part A</em> 34 (1): 45–57.</p>
+<p>Van Cleve, James. 1991a. “Introduction to the Arguments of 1770 and 1783.” In <em>The Philosophy of Right and Left</em>, edited by James Van Cleve and Robert E. Frederick, 15–26. The University of Western Ontario Series in Philosophy of Science 46. Dordrecht: Springer Netherlands. <a href="http://0-link.springer.com.library.unl.edu/chapter/10.1007/978-94-011-3736-2_2">http://0-link.springer.com.library.unl.edu/chapter/10.1007/978-94-011-3736-2_2</a>.</p>
+<p>———. 1991b. “Incongruent Counterparts and Things in Themselves.” In <em>The Philosophy of Right and Left</em>, edited by James Van Cleve and Robert E. Frederick, 341–351. The University of Western Ontario Series in Philosophy of Science 46. Dordrecht: Springer Netherlands. <a href="http://0-link.springer.com.library.unl.edu/chapter/10.1007/978-94-011-3736-2_23">http://0-link.springer.com.library.unl.edu/chapter/10.1007/978-94-011-3736-2_23</a>.</p>
+<p>———. 1999. <em>Problems from Kant</em>. Oxford University Press.</p>
+<p>Van Cleve, James, and Robert E. Frederick, ed. 1991. <em>The Philosophy of Right and Left: Incongruent Counterparts and the Nature of Space</em>. The University of Western Ontario Series in Philosophy of Science. Dordrecht: Springer Netherlands.</p>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>For further discussion see <span class="citation">Jauernig (2008)</span>; <span class="citation">Janiak (2012)</span><a href="#fnref1">↩</a></p></li>
+</ol>
+</div>
+</body>
+</html>
+
+<!-- ##END MARKED WRAPPER## -->
+    </div>
+</body>
+</html>
