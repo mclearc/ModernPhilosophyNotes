@@ -1,0 +1,541 @@
+<!DOCTYPE html>  
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>KantCausation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+/*
+This document has been created with Marked.app <http://markedapp.com>, Copyright 2011 Brett Terpstra
+Please leave this notice in place, along with any additional credits below.
+---------------------------------------------------------------
+Title: Avenue
+Author: Bram de Haan <http://atelierbramdehaan.nl>
+Description: modern retro
+ */
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+a img {
+  border: none;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+button, input {
+  line-height: normal;
+}
+button, input, select, textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  /* vertical-align: middle; */
+}
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+  cursor: pointer;
+  /* overflow: visible; */
+}
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  padding: 0 !important;
+}
+#wrapper {
+  margin-bottom: 0;
+}
+#wrapper img {
+  max-width: 100%;
+  height: auto;
+}
+#wrapper dd {
+  margin-bottom: 1em;
+}
+#wrapper li > p:first-child {
+  margin: 0;
+}
+#wrapper caption, #wrapper col, #wrapper colgroup, #wrapper table, #wrapper tbody, #wrapper td, #wrapper tfoot, #wrapper th, #wrapper thead, #wrapper tr {
+  border-spacing: 0;
+}
+#wrapper table {
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-collapse: collapse;
+  display: table;
+  empty-cells: hide;
+  margin: -1px 0 23px;
+  padding: 0;
+  table-layout: fixed;
+  width: 100%;
+}
+#wrapper caption {
+  display: table-caption;
+  font-weight: 700;
+}
+#wrapper col {
+  display: table-column;
+}
+#wrapper colgroup {
+  display: table-column-group;
+}
+#wrapper tbody {
+  display: table-row-group;
+}
+#wrapper tfoot {
+  display: table-footer-group;
+}
+#wrapper thead {
+  display: table-header-group;
+  border-bottom: solid 1px #999;
+}
+#wrapper td, #wrapper th {
+  display: table-cell;
+}
+#wrapper tr {
+  display: table-row;
+}
+#wrapper table th, #wrapper table td {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  padding: 0 1em;
+}
+#wrapper dt, #wrapper th {
+  font-weight: 700;
+}
+#wrapper dd {
+  padding-left: 1.4em;
+}
+#wrapper table tr:nth-child(even) {
+  background: rgba(200, 200, 200, 0.25);
+}
+#wrapper figure {
+  display: inline-block;
+  position: relative;
+  margin: 1em 0 2em;
+}
+#wrapper figcaption {
+  font-family: AvenirNext-Italic, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  font-style: italic;
+  text-align: center;
+}
+#wrapper figure:hover > figcaption {
+  /* background: rgba(0,0,0,1) */
+}
+/* #wrapper pre { moved down to base styles; } */
+.poetry #wrapper pre {
+  display: block;
+  font-family: Georgia, Garamond, serif !important;
+  font-size: 110% !important;
+  font-style: italic;
+  line-height: 1.6;
+  margin-left: 1em;
+}
+.poetry #wrapper pre code {
+  font-family: Georgia, Garamond, serif !important;
+
+}
+#wrapper sup, #wrapper sub, #wrapper a.footnote {
+  font-size: 1.4ex;
+  height: 0;
+  line-height: 1;
+  position: relative;
+  vertical-align: super;
+}
+#wrapper sub {
+  vertical-align: sub;
+  top: -1px;
+}
+#wrapper .footnote {
+  font-size: .8rem;
+  vertical-align: super;
+}
+#wrapper .footnotes p {
+  font-size: 1.9ex;
+}
+#wrapper ul ul {
+  margin-left: 1em;
+}
+
+#wrapper ul ul,
+#wrapper ol ol {
+  margin-left: 1em;
+}
+#wrapper li ul,
+#wrapper li ol {
+  margin-bottom: 0;
+}
+
+@media print {
+  body {
+    overflow: auto;
+  }
+
+  img, pre, blockquote, table, figure, p {
+    page-break-inside: avoid;
+  }
+
+  #wrapper {
+    background: #fff;
+    color: #000;
+    font-size: 85%;
+    padding: 10px;
+    position: relative;
+    text-indent: 0;
+  }
+}
+
+@media screen {
+  .inverted, .inverted #wrapper {
+    background: #222;
+  }
+  .inverted pre,
+  .inverted img {
+    border-color: #111;
+    background: #1a1a1a;
+  }
+  .inverted pre * {
+    background: #1a1a1a !important;
+  }
+
+  .inverted hr {
+    border-color: #999 !important;
+  }
+
+  .inverted p, .inverted td, .inverted li, .inverted h1, .inverted h2, .inverted h3, .inverted h4, .inverted h5, .inverted h6, .inverted pre, .inverted code, .inverted th, .inverted .math, .inverted caption, .inverted dd, .inverted dt {
+    color: #f9f9f9 !important;
+  }
+
+  .inverted table tr:nth-child(odd), .inverted table th:nth-child(odd), .inverted table td:nth-child(odd) {
+    background: none;
+  }
+
+  .inverted a {
+    color: #ff5778;
+  }
+}
+.max-width {
+  max-width: 100%;
+  height: auto;
+}
+/* ::Base styles Almost exclusively single element selectors */
+/* ------------------------------------------------------------ */
+html {
+  font-size: 100%;
+}
+body {
+  font: 100%/1.388 AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  color: #111;
+  padding: 0 5% 1rem !important;
+}
+a {
+  color: crimson;
+}
+a:hover, a:focus, a:active {
+  color: #ff2450;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: AvenirNextCondensed-DemiBold, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  /* margin: 0; */
+  padding: .5em 0 0;
+}
+h2, h3, h4, h5 {
+  border-bottom: 1px solid #777;
+}
+h1 {
+  font-size: 2.25rem;
+  line-height: 1.11111;
+}
+h2 {
+  font-size: 1.875rem;
+  line-height: 1.33333;
+}
+h3 {
+  font-size: 1.375rem;
+  line-height: 1.45455;
+}
+h4 {
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+h5 {
+  font-size: 1.125rem;
+  line-height: 1.33333;
+}
+h6 {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+pre, label {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+p {
+  font-size: 1.388rem;
+  line-height: 1.33333;
+  /* margin: 0; */
+  padding: .5em 0;
+  max-width: 30em;
+}
+h2 + p,
+h3 + p,
+h4 + p,
+h5 + p {
+  padding-top: 0;
+  margin-top: 1px;
+  border-top: 1px solid #999;
+}
+ol, ul {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0 0 2em 0;
+}
+li {
+  line-height: auto;
+}
+pre {
+  display: block;
+  margin: 1.4em auto;
+  background: #fcf9f1;
+  /* f9f9f9; */
+  padding: 15px 10px 10px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  border: solid 1px  #f0e0b2;
+  font-family: Consolas, Menlo, Monaco, monospace !important;
+  font-size: .875rem;
+  max-width: 90%;
+}
+pre * {
+  background: #fcf9f1 !important;
+}
+code {
+  font-family: Consolas, Menlo, Monaco, monospace;
+}
+ul {
+  list-style-position: outside;
+  list-style-type: square;
+}
+ol {
+  list-style-position: outside;
+  list-style-type: decimal;
+}
+strong, b {
+  font-family: AvenirNext-Bold, AvenirNextCondensed-DemiBold, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  font-weight: 600;
+}
+em, i, q {
+  font-family: AvenirNext-BoldItalic, AvenirNext-Italic, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  font-style: italic;
+}
+blockquote {
+  padding-left: 1em;
+  border-left: 0.3125em solid #c0c0c0;
+  line-height: normal;
+  /* margin: 0; */
+}
+blockquote p {
+  font-family: AvenirNext-Italic, AvenirNext-Regular, Futura, "Century Gothic", AppleGothic, Corbel, "Myriad Pro", "Lucida Grande", "Trebuchet Ms", sans-serif;
+  font-style: italic;
+  /* margin: 0; */
+  font-size: 1.25rem;
+  line-height: 1.2;
+  margin: 1.2em 0 1.2em 0;
+}
+img {
+ padding: 1em;
+ background-color: #e6e6e6;
+ border: 1px solid #ddd;
+ -webkit-border-radius: 3px;
+ -moz-border-radius: 3px;
+ -o-border-radius: 3px;
+ border-radius: 3px;
+}
+
+@media screen and (max-width: 750px) {
+  -webkit-text-size-adjust: none;
+}
+
+
+@media print{
+#generated-toc-clone,#generated-toc{display:none!important}
+}
+
+</style>
+<style>#wrapper { max-width:600px; margin:0 auto }</style>
+</head>
+<body class="normal poetry firstload">
+  <div id="wrapper">
+      <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Class notes (4/29) – do not cite or circulate" />
+  <title>Kant on the Categories &amp; Causation</title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+<div id="header">
+<h1 class="title">Kant on the Categories &amp; Causation</h1>
+<h2 class="author">Class notes (4/29) – do not cite or circulate</h2>
+</div>
+<div id="TOC">
+<ul>
+<li><a href="#the-problem-with-a-priori-concepts"><span class="toc-section-number">1</span> The Problem with A Priori Concepts</a></li>
+<li><a href="#a-transcendental-deduction"><span class="toc-section-number">2</span> A Transcendental Deduction</a></li>
+<li><a href="#the-second-analogy"><span class="toc-section-number">3</span> The Second Analogy</a><ul>
+<li><a href="#the-argument"><span class="toc-section-number">3.1</span> The Argument</a></li>
+</ul></li>
+<li><a href="#references">References</a></li>
+</ul>
+</div>
+<h1 id="the-problem-with-a-priori-concepts"><span class="header-section-number">1</span> The Problem with A Priori Concepts</h1>
+<p>Kant’s mature philosophical system is notable for the strictures it sets on the kind of knowledge human beings (or finite rational beings more generally) can achieve through reason alone. Importantly, Kant thinks that pure reason may achieve relatively little on its own. All of our ampliative knowledge that is also necessary and universal consists in what Kant calls ‘synthetic a priori’ judgments or propositions. The central question he then pursues concerns how knowledge of such synthetic a priori propositions is possible. <a href="http://htmlpreview.github.io/?https://github.com/mclearc/ModernPhilosophyNotes/blob/master/KantSpace.html">We previously discussed</a> Kant’s arguments concerning the role (the representations of) space and time play in grounding necessary and universal mathematical knowledge. Thus, mathematical knowledge is synthetic because it goes beyond mere conceptual analysis to deal with the structure of (our representation of) space itself. It is a priori because the structure of (our representation of) space is a priori accessible to us, being merely the form of our intuition and not a real mind independent thing (a ‘thing in itself’).</p>
+<p>However, in addition to the representation of space and time, Kant also thinks that possession of a particular privileged set of a priori concepts is necessary for knowledge of the empirical world. But this raises a problem. How could an a priori concept, which is not itself derived from any particular experience, be nevertheless legitimately applicable to objects of experience? To make things even more difficult, it is not the mere possibility of the application of a priori concepts to objects of experience that worries Kant, for this could just be a matter of pure luck. Kant wants even more than mere possibility, for he wants to show that with regard to a privileged set of a priori concepts, they apply necessarily and universally to all objects of experience and do so in a way that we are in a position to know a priori.</p>
+<p>Kant’s strategy for demonstrating how this is possible hinges on showing that the experience of objects which he thinks all would agree that we have nevertheless depends on the application of such a priori concepts. Kant makes this clear in his elaboration of his ‘Copernican Turn’ in philosophy:</p>
+<blockquote>
+<p>Any beliefs I reach about what an object is like will involve me in using concepts of it—·if I come to think that something is solid, say, I’ll have to bring my concept of solidity to bear on it·. Now there are two ways in which my concepts might fit the objects of my inquiries. One is this: •My concepts, which I employ in my beliefs about what the object is like, conform to the objects. If that is right, though, I am back in my old difficulty, namely that it seems impossible for me to know anything a priori about the object. The second alternative is this: •The objects conform to my concepts, or—the same thing in different words–•The experience in which the objects are known conforms to my concepts. ·The focus on experience is legitimate, because· it is only in experience that the objects can be known as things that are given. This second alternative offers a gleam of hope: experience is a kind of knowledge in which the understanding must be involved (Bxvii; EMT 10)</p>
+</blockquote>
+<p>Kant’s strategy is thus to show how a priori concepts legitimately apply to their objects in virtue of being partly constitutive of the objects of representation, rather than the traditional view in which the objects of representation were the ground of our concepts. Now, what exactly this means is deeply contested, as it is rather unclear what Kant intends us to understand by his Transcendental Idealism. For example, does Kant intend that the objects of representation are <em>themselves</em> nothing other than representations? This would be a form of phenomenalism similar to that offered by Berkeley. Kant, however, seems to want to deny that his view is similar to Berkeley’s, asserting instead that the objects of representation really exist independently of the mind, and that it is only the <em>way</em> that they are represented that is mind-dependent.</p>
+<blockquote>
+<p>I have myself given this theory of mine the name •‘transcendental idealism’, but that can’t entitle anyone to muddle it either with the •empirical idealism of Descartes or with the •mystical and visionary idealism of Berkeley. (My critique ·of pure reason· contains the proper antidote to phantoms like Berkeley’s. As for Descartes: all he had was an insoluble problem, which led him to think that everyone is at liberty to deny the existence of the corporeal world because it could never be proved satisfactorily.) Doubting the existence of things constitutes ‘idealism’ in the ordinary sense; but the doctrine I have labelled as ‘idealism’—·in the phrase ‘transcendental idealism’·—doesn’t concern the existence of things, since it never entered my head to doubt that they exist. Rather, it concerns the sensory representation of things, especially of space and time. (<em>Prolegomena</em>, EMT 24)</p>
+</blockquote>
+<p>I’m mostly going to set this issue to the side in what follows. But it is important to consider, insofar as Kant takes himself to be replying to Hume’s arguments about the nature of the empirical world and the nature and extent of our knowledge of it.</p>
+<h1 id="a-transcendental-deduction"><span class="header-section-number">2</span> A Transcendental Deduction</h1>
+<p>In order to prove that there are a priori concepts which legitimately apply to the objects of experience, Kant articulates <a href="http://plato.stanford.edu/entries/kant-transcendental/">a special sort of argument</a> which he calls a ‘transcendental deduction’. As <span class="citation">Henrich (1989)</span> points out, the notion of a ‘deduction’ that Kant uses, is a legal one intended to provide a historical justification for the legitimacy of a property claim. In Kant’s case however, it is transformed into a justification of the applicability (in the sense discussed above) of the a priori concepts which Kant calls the ‘categories’. These are the concepts given in Kant’s ‘Table of Categories’ (A80/B106; EMT 52); they are Unity, Plurality, and Totality (the Categories of Quantity); Reality, Negation, and Limitation (the Categories of Quality); Inherence and Subsistence, Causality and Dependence, and Community (the Categories of Relation), and Possibility-Impossibility, Existence-Nonexistence, Necessity-Contingency (the Categories of Modality).<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a></p>
+<p>With regard to each category, Kant’s aim is to show that it has ‘objective validity’—i.e. legitimate application to the objects of experience. Disputes concerning various membsers of the table should be familiar. Hume famously disputes the legitimacy of our concept <em>cause</em>. Hume thinks (in Kant’s terms) that no ‘empirical deduction’ of the concept is possible—i.e. that the concept cannot be traced to the occurrence of a corresponding impression. Kant concurs with Hume on this point, but argues that this doesn’t show that the concept is illegitimate, for it be both a priori and legitimately applied in virtue of being a necessary condition for experience to occur.</p>
+<p>For Kant then a ‘transcendental deduction’ starts from a premise concerning some feature of human experience, a premise which reasonable interlocutors might be expected to endorse, and then argues to a substantive philosophical conclusion concerning the presuppositions or necessary conditions of the truth of that premise. Since Kant’s concern here is the a priori categories, his aim is to show that a presupposition or necessary condition of some relatively uncontroversial feature of experience is the applicability of the a priori concept(s) in question to the objects of experience. Below we’ll concern ourselves with Kant’s answer to Hume regarding the objective legtimacy of the concept <em>cause</em>.</p>
+<h1 id="the-second-analogy"><span class="header-section-number">3</span> The Second Analogy</h1>
+<p>Kant discusses the category of <em>cause</em> in the second of his three ‘Analogies’. The Analogies are part of the ‘Analytic of Principles’ in which Kant discusses each of the twelve categories and their relation to the objects of experience at much greater length than he does in the argument of the Transcendental Deduction, where he is concerned with the categories general relation to objects of experience.</p>
+<p>Kant aims to prove the truth of a particular principle or general rule in the second Analogy. He states this as follows:</p>
+<blockquote>
+<p>All alterations take place in conformity with the law of the connection of cause and effect (EMT 111)</p>
+</blockquote>
+<p>There are some important lacunae with respect to Kant’s statement of the principle. First, Kant’s principle does not apply to all events, but only to those which we might be able to <em>experience</em>. Hence its scope is restricted to empirical events, and it is an open question whether the set of all empirical events exhausts the set of possible events. However, even this limited version of the causal principle is enough to argue against Hume, who denied that we have any knowledge of the cause (understood as necessary connection) of any event.</p>
+<p>Second, Hume supposes that any idea (or concept) of <em>cause</em> will involve its being copied or otherwise generated from one or more impressions. Kant supposes no such thing. Instead, Kant argues that the experience of causation <em>presupposes</em> the application in experience of the concept <em>cause</em>. This partly is why Kant considers his argument for the legitimacy of the concept to be a ‘transcendental’ as opposed to a merely ‘empirical’ deduction of the concept.</p>
+<h2 id="the-argument"><span class="header-section-number">3.1</span> The Argument</h2>
+<p>Above I defined a transcendental argument as one which starts from premises which no reasonable interlocutor would deny. Given that Kant’s aim is to argue against Hume, we must ask whether Kant starts from a premise concerning causation which Hume would grant. As Lewis White Beck effectively argued, Kant does indeed agree with Hume’s thesis that all our knowledge of causal connections proceeds via induction, that is, we come to know that A causes B (or A-type events cause B-type events) by observing the constant conjunction of A and B in our experience. Now, a presupposition of observing the constant conjunction of A and B is that we perceive a temporal succession of events. One event (A) comes <em>before</em> another (B). This much must be assumed by Hume if his argument about constant conjunction is to make sense. Kant’s ingenious move is to argue that Hume’s assumption of an awareness of temporal succession presupposes a grasp of the difference between the subjective order of our perceptual states and the objective temporal order of the events or objects we perceive. Kant illustrates this by way of an example involving a ship moving downstream.</p>
+<blockquote>
+<p>in an appearance that contains a happening in which state A of the perception is followed by state B, B <em>can’t</em> be apprehended except as following A; the perception A <em>can’t</em> follow B but can only precede it. For example: I see a ship being sailed downstream. My perception of its lower position <em>follows</em> the perception of its position higher up in the river, and it <em>couldn’t</em> happen that in apprehending this appearance I first perceived the ship lower down and then afterwards higher up. In this case the order in which the perceptions occur in apprehension is fixed, and my apprehension has to stay with this order. (CPR B237; EMT 113)</p>
+</blockquote>
+<p>Kant’s point here is that <em>given</em> an objective succession of events (the ship’s moving down the river from point A to point B) our perceptions of those events have to proceed in a particular order (cf. <span class="citation">Watkins (2005)</span>, 212). The order of one’s perceptions is thus parasitic on the objective order of the events. Kant then asks us to consider the following contrast case.</p>
+<blockquote>
+<p>For instance, there is a house in front of me; I take in successively the various aspects of its appearance; but no-one will say that various aspects of the house are also successive…In the ‘house’ example, my perceptions could begin with the apprehension of the roof and end with the basement, or could begin from below and end above; and ·in taking in the view of the house from a single position·, I could go from right to left or from left to right. Thus, in the series of these perceptions there was no determinate order making it <em>necessary</em> for me to start at some one point. But in the perception of an <em>event</em> there is always a rule that makes the order in which the perceptions (in the apprehension of this appearance) occur in a <em>necessary</em> order. (CPR B235, 237-8; EMT 112, 113)</p>
+</blockquote>
+<p>Kant’s point here is that, in contrast to the ship case, the subjective order of our perceptions is not made necessary (or better, does not track) an objective succession of events. Since the house is a persisting object, our subjective apprehension of it could come in any of a variety of orderings, including an ordering that is simply the reverse of that in which we actually perceived the house. This raises a problem. A subjective succession of experiences is necessary, but not sufficient, for an awareness of an objective temporal order to what one experiences. So how do we get from the one to the other? Put another way, we distinguish the representation of a persisting object, such as a house, from a series of events, such as a ship moving downriver. But in both cases there is no difference subjectively in what occurs, viz. a succession of subjective perceptual experiences. So how is it that we can distinguish in the ship case that we have an objective succession of events, while in the house case we have one persisting object, whose parts (e.g. roof, walls, windows, etc.) we could perceive in any of a variety of orderings?</p>
+<p>Kant rules out several possibilities. We can’t distinguish objective succession from objective simultaneity by perception of any necessary connection because (and here Kant agrees with Hume) experience “to be sure tells us what is, but not that it must necessarily be so and not otherwise” (A 1). Second, the supposed irreversibility of our perception of successive events cannot tell us anything because one can only be aware of the necessary contrast between ‘reversible’ and ‘irreversible’ perceptions if one is <em>already</em> aware that there is an irreversible order (e.g. B’s following A) to what one is perceiving, such that one’s perceptions must be in accord with it. Third, one cannot appeal to some independently perceivable temporal succession (‘absolute’ time), because Kant has already ruled out the possibility of perceiving time itself (B 245; EMT 115). Fourth, one cannot appeal to the perception of any mind-independent object (a ‘thing in itself’), since these too have been ruled out as wholly inaccessible to our conscious awareness.</p>
+<p>So Kant has issued a challenge: granted that a subject of experience has a grasp of the distinction between objective succession of events (the occurrence of events of type A followed by events of type B) and the objective simultaneity of the features of an object (e.g. the various features of a house), what account for such awareness? The Humean must grant that we make such a distinction, for the Humean argument against our understanding causation as necessary connection presupposes that we can distinguish the objective sequence of events from our subjective train of sense experiences.</p>
+<p>Kant’s claim then, is that it is only if there is a rule ordering our representations, such that what makes it possible for us to grasp two events as related by objective temporal succession is that one event <em>caused</em> the other. Here is a reconstruction of the whole argument, as articulated by Georges Dicker (<span class="citation">Dicker (2004)</span>, 173).</p>
+<ol style="list-style-type: decimal">
+<li>We cannot know by observation that an event—that is, a transition from a state A to a state B—is occurring by knowing that the perceptions of A and B occur in the order A, B; by knowing that the perceptions of A and B are irreversible; by knowing that A precedes B by reference to absolute time; or by knowing that these perceptions are of successive states of things-in-them- selves.</li>
+<li>If (1), then the only way we can know by perception that an event—that is, a transition from a state A to a state B—is occurring is by knowing that B follows A according to a rule, that is, that the event has a cause.</li>
+<li>If the only way we can know by perception that an event—that is, a transi- tion from a state A to a state B—is occurring is by knowing that B follows A according to a rule, that is, that the event has a cause, then any event such that we can know of its occurrence by perception must have a cause.</li>
+<li><span class="math">∴ </span> Any event such that we can know of its occurrence by perception must have a cause.</li>
+</ol>
+<p>Kant’s conclusion here is limited in several ways. First, it concerns only knowledge that empirical events have causes. Second, it presupposes that we have knowledge of the objective succession of events. Thirds, it presupposes that we correctly grasp the distinction between objective succession and objective simultaneity. But, despite these presuppositions, the argument seems an effective answer to the Humean, for the Humean analysis of causation requires that we have a grasp of objective succession, for this is used to explain how our associative powers get their grip on causal judgment. Hence, while Kant’s argument concerning causation may not be effective against all comers, particularly against the skeptic who might deny that we have any cognitive grasp of objective succession, it nevertheless seems effective against Hume’s argument.</p>
+<h1 id="references" class="unnumbered">References</h1>
+<hr />
+<!-- -->
+
+
+<!--
+> I perceive that appearances follow one another, i.e. that there is a
+> state of things at one time and then the opposite state at the next
+> time. So I really •connect two perceptions in time. Now, •connection
+> is not the work of mere sense and intuition; in this case—·i.e. in the
+> perception of happenings·—it is the imagination’s power of putting the
+> contents of inner sense into temporal order. But imagination can
+> •connect these two states in either of two ways, depending on which it
+> puts temporally first. They can’t be put in the right order just by
+> perceiving when each occurred, because time itself can’t be perceived,
+> ·which means that no state of affairs has its when—the time to which
+> it belongs—as an empirically perceptible feature of it·. All I am
+> conscious of is that my imagination sets one state before and the
+> other after, not that one state objectively precedes the other; which
+> is to say that the *objective relation* of appearances that follow
+> upon one another is not to be settled through mere perception. For
+> this relation to be known as objectively settled, the relation between
+> the two states must be thought in a way that fixes one ordering of
+> them as necessary and the other ordering as ruled out. But the concept
+> that carries with it a *necessity* that items be brought together in
+> one way rather than another has to be a pure concept that lies in the
+> understanding, ·i.e. a category·; it can’t come from perception; and
+> in this present case it is the concept of the *relation of cause and*
+> *effect*. ·It does the ordering job that I have been talking about,
+> because· the cause fixes the objective temporal position of the effect
+> as its consequence. . . . Experience itself—in other words, empirical
+> knowledge of appearances—is thus possible only if we bring the
+> sequence of appearances (and therefore all alteration) under the law
+> of causality; and it also follows that appearances, as objects of
+> experience, are themselves possible only in conformity with that law.
+> (EMT 111-12)
+-->
+
+<div class="references">
+<p>Beck, Lewis White. 1978a. “Six Short Pieces on the Second Analogy of Experience.” In <em>Essays on Kant and Hume</em>, 130–64. New Haven, CT: Yale University Press.</p>
+<p>———. 1978b. <em>Essays on Kant and Hume</em>. New Haven, CT: Yale University Press.</p>
+<p>Brandt, Reinhard. 1995. <em>The Table of Judgments: Critique of Pure Reason A67-76; B92-101</em>. Edited by Eric Watkins. Atascadero, CA: Ridgeview.</p>
+<p>Dicker, Georges. 2004. <em>Kant’s Theory of Knowledge : An Analytical Introduction</em>. Oxford: Oxford University Press.</p>
+<p>Guyer, Paul. 1987. <em>Kant and the Claims of Knowledge</em>. Cambridge: Cambridge University Press.</p>
+<p>———. 2010. “The Deduction of the Categories: The Metaphysical and Transcendental Deductions.” In <em>The Cambridge Companion to Kants Critique of Pure Reason</em>, 118–150. Cambridge: Cambridge University Press.</p>
+<p>Henrich, Dieter. 1989. “Kant’s Notion of a Deduction and the Methodological Background of the First Critique.” In <em>Kant’s Transcendental Deductions: The Three Critiques and the Opus Postumum</em>, edited by Eckart F<span>ö</span>rster, 29–46. Stanford: Stanford University Press.</p>
+<p>Hoeppner, Till. 2011. “Kants Begriff Der Funktion Und Die Vollstandigkeit Der Urteils-Und Kategorientafel.” <em>Zeitschrift Für Philosophische Forschung</em> 65 (2): 193–217.</p>
+<p>Longuenesse, Beatrice. 2006. “Kant on a Priori Concepts: the Metaphysical Deduction of the Categories.” In <em>The Cambridge Companion to Kant and Modern Philosophy</em>, edited by Paul Guyer, 129–168. Cambridge: Cambridge University Press.</p>
+<p>Pereboom, Derk. 2009. “Kant’s Transcendental Arguments.” <em>Stanford Encyclopedia of Philosophy</em>. <a href="http://stanford.library.usyd.edu.au/entries/kant-transcendental/">http://stanford.library.usyd.edu.au/entries/kant-transcendental/</a>.</p>
+<p>Reich, Klaus. 1992. <em>The Completeness of Kant’s Table of Judgments</em>. Stanford University Press.</p>
+<p>Thompson, M. 1989. “Unity, Plurality, and Totality as Kantian Categories in Kant’s Critical Philosophy.” <em>The Monist</em> 72 (2): 168–189.</p>
+<p>Van Cleve, James. 1999. <em>Problems from Kant</em>. Oxford University Press.</p>
+<p>Watkins, Eric. 2005. <em>Kant and the Metaphysics of Causality</em>. Cambridge, UK; New York: Cambridge University Press. <a href="http://search.ebscohost.com/login.aspx?direct=true&amp;scope=site&amp;db=nlebk&amp;db=nlabk&amp;AN=127051">http://search.ebscohost.com/login.aspx?direct=true&amp;scope=site&amp;db=nlebk&amp;db=nlabk&amp;AN=127051</a>.</p>
+<p>Wolff, Michael. 1995. <em>Die Vollständigkeit Der Kantischen Urteilstafel: mit Einem Essay über Freges Begriffsschrift</em>. Frankfurt am Main: Vittorio Klostermann.</p>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>There is a great deal of dispute concerning the derivation and organization of the content of the Table of Categories. Why these concepts and not others? We won’t concern ourselves with that question here, but it is one well worth considering. For further discussion see <span class="citation">Thompson (1989)</span>; <span class="citation">Brandt (1995)</span>; <span class="citation">Reich (1992)</span>; <span class="citation">Wolff (1995)</span>; <span class="citation">Longuenesse (2006)</span>; <span class="citation">Guyer (2010)</span>; <span class="citation">Hoeppner (2011)</span>.<a href="#fnref1">↩</a></p></li>
+</ol>
+</div>
+</body>
+</html>
+
+<!-- ##END MARKED WRAPPER## -->
+    </div>
+</body>
+</html>
